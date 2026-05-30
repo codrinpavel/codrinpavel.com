@@ -1,0 +1,4 @@
+@use "../mixins" as *;
+@use "../tokens" as *;
+
+@include util(text, font-size, tokens("font-size"), font-size);

@@ -1,0 +1,61 @@
+@use "../mixins" as *;
+@use "../tokens" as *;
+
+@layer base, components, utilities, app;
+
+/* TODO refactor this */
+:root {
+  --grid-margin: 20px;
+  --grid-screenwidth: 1680px;
+  --column-gap: var(--size-2xl);
+  --row-gap: var(--size-2xl);
+  --header-height: 80px;
+
+  @include mq(md) {
+    --grid-margin: 32px;
+  }
+
+  @include mq(lg) {
+    --grid-margin: 48px;
+  }
+}
+
+
+/* TODO make variables available in CSS */
+:root {
+  @each $key, $val in tokens("size") {
+    --size-#{$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("ratio") {
+    --ratio-#{$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("font-weight") {
+    --font-weight-#{""+$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("font-family") {
+    --font-family-#{$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("font-size") {
+    --font-size-#{$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("blur") {
+    --blur-#{$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("radius") {
+    --radius-#{$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("shadow") {
+    --shadow-#{$key}: #{$val};
+  }
+
+  @each $key, $val in tokens("colors", "default") {
+    --color-#{$key}: #{$val};
+  }
+}

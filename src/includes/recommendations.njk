@@ -1,0 +1,22 @@
+<section id="recommendations">
+  <div class="wrapper">
+    <div class="recommendations">
+      <ul>
+        {% for item in quotes %}
+          <li>
+            <figure class="quote">
+              <blockquote>
+                <p>{{ item.content | safe }}</p>
+              </blockquote>
+
+              <figcaption>
+                <cite>{{ item.name }}</cite>
+                <span>{{ item.title }} at {{ item.company }}</span>
+              </figcaption>
+            </figure>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

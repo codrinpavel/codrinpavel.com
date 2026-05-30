@@ -1,0 +1,59 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  filter: invert(100%);
+  mix-blend-mode: exclusion;
+  font-weight: 400;
+
+  > div {
+    margin-top: var(--size-lg);
+  }
+
+  .mynameis {
+    font-size: var(--font-size-4xl);
+    line-height: 1;
+    font-weight: 900;
+    display: inline-block;
+  }
+
+  nav {
+    ol {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      &::after {
+        content: '↓';
+        margin-left: 8px;
+        display: inline-block;
+      }
+
+      &.is-active {
+        font-weight: bold;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &[href="#top"] {
+        &::after {
+          transform: rotate(180deg);
+        }
+
+        &.is-active {
+          display: none;
+        }
+      }
+    }
+
+    /* items before active */
+    li:has(~ li .is-active) a::after {
+      transform: rotate(180deg);
+    }
+  }
+}

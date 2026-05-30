@@ -1,0 +1,45 @@
+@use "../tokens" as *;
+@use 'sass:map';
+
+/*
+ * Media query shorthand
+ * Defaults to min-width
+ *
+ * Usage: @include mq(lg) { ... }
+ */
+
+@mixin mq($name) {
+  $min: map.get(tokens("breakpoints"), $name);
+
+  @if ($min > 0) {
+    @media (min-width: $min ) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
+
+
+/*
+ * Container query shorthand
+ * Defaults to min-width
+ *
+ * Usage: @include cq(lg) { ... }
+ */
+
+@mixin cq($name) {
+  $min: map.get(tokens("breakpoints"), $name);
+
+  @if ($min > 0) {
+    @container (min-width: #{$min} ) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}

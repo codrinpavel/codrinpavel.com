@@ -1,0 +1,47 @@
+#recommendations {
+  height: 300vh;
+  view-timeline-name: --recommendations;
+  view-timeline-axis: block;
+
+  .wrapper {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.recommendations {
+  ul {
+    display: flex;
+  }
+
+  li {
+    width: 75vw;
+    flex-shrink: 0;
+    padding-right: var(--size-10xl);
+
+    animation: hs linear both;
+    animation-timeline: --recommendations;
+    animation-range: entry 125% exit -25%;
+  }
+
+  .quote {
+    max-width: 60em;
+  }
+}
+
+@keyframes hs {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-200%);
+  }
+}

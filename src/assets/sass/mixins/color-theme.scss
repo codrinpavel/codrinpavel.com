@@ -1,0 +1,79 @@
+@use 'sass:math';
+
+// (1) Set base color variables and classes.
+// (2) Generates color variable scales.
+// (3) Generates css classes scales.
+// 
+// Nameless (default) scales:
+// --color-50 ... --color-950 {}
+// .color-50 ... .color-950
+// .bg-50 ... .bg-950
+// 
+// Named scales
+// --color-primary-50 ... --color-primary-950
+// .color-primary-50 ... .color-primary-950
+// .bg-primary-50 ... .bg-primary-950
+
+@mixin generate-color-scale($color: null, $name: null, $isDefault: false) {
+  $colorName: null;
+  $colorVariable: var(--color-theme);
+
+  @if($name) {
+    $colorName: #{$name}-;
+    $colorVariable: var(--color-#{$name});
+  }
+
+  // (1) Set theme based color classes
+  @if($isDefault) {
+    :root {
+      --color-theme: #{$color};
+    }
+  }
+
+  @if($name) {
+    .theme-#{$name} {
+      --color-theme: #{$color};
+    }
+  }
+
+  // (2) Generate variables scales
+  :where(:root, [class*="theme-"]) {
+    // (1) Set base theme color 
+    @if($name) {
+      --color-#{$name}: #{$color};
+    }
+
+    // Generate lighter shades (towards white)
+    @for $i from 1 through 9 {
+      $percentage: 100 - $i * 10;
+      --color-#{$colorName}#{$i * 50}: color-mix(in srgb, rgba(255,255,255) #{$percentage}%, #{$colorVariable} #{$i * 10}%);
+    }
+
+    // Base color
+    --color-#{$colorName}500: #{$colorVariable};
+
+    // Generate darker shades (towards black)
+    @for $i from 1 through 9 {
+      $percentage: $i * 10;
+      --color-#{$colorName}#{500 + $i * 50}: color-mix(in srgb, rgba(0,0,0) #{$percentage}%, #{$colorVariable} #{100 - $percentage}%);
+    }
+  }
+
+  // (3) Generates css classes scales.
+  @for $i from 1 through 19 {
+    $step: $i * 50;
+    $color: var(--color-#{$colorName}#{$step});
+
+    //.color-#{$colorName}#{$step} {color: rgb(from #{$color} r g b / var(--color-opacity, 1))}
+    //.bg-#{$colorName}#{$step} {background-color: rgb(from #{$color} r g b / var(--bg-opacity, 1))}
+    .border-#{$colorName}#{$step} {border-color: rgb(from #{$color} r g b / var(--border-opacity, 1))}
+    .border-image-#{$colorName}#{$step} {border-image: linear-gradient(rgb(from #{$color} r g b / var(--border-image-opacity, 1)) 0 0) fill 0 / 0 0 / 0 var(--border-image-right, 100vw) 0 var(--border-image-left, 100vw);}
+
+    // gradient utilities
+    //.from-#{$colorName}#{$step} {--gr-from: rgb(from #{$color} r g b / var(--bg-gradient-from-opacity, 1))}
+    //.to-#{$colorName}#{$step} {--gr-to: rgb(from #{$color} r g b / var(--bg-gradient-to-opacity, 1))}
+  }
+}
+
+// Generate nameless scale (e.g. --color-300)
+@include generate-color-scale();

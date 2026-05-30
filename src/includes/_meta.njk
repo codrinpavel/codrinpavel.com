@@ -1,0 +1,40 @@
+{%- set canonical = page.url | url | absurl -%}
+{%- set metaTitle = (meta_title or title or global.meta_title) | striptags(true) | trim | safe -%}
+{%- set metaDescription = (meta_description or global.meta_description) | striptags(true) | truncate(360) | trim | safe -%}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:type" content="website">
+
+{# Hide from SE #}
+{% if disallow_search_engines or global.disallow_search_engines %}
+  <meta name="robots" content="noindex, nofollow">
+{%- endif -%}
+
+{# Title #}
+{% if metaTitle %}
+  <title>{{ metaTitle }}</title>
+  <meta property="og:title" content="{{ metaTitle }}">
+  <meta name="twitter:title" content="{{ metaTitle }}">
+{%- endif -%}
+
+{# Description #}
+{% if metaDescription %}
+  <meta name="description" content="{{ metaDescription }}">
+  <meta property="og:description" content="{{ metaDescription }}">
+  <meta name="twitter:description" content="{{ metaDescription }}">
+{%- endif -%}
+
+{# Image #}
+{% if global.meta_image -%}
+  <meta property="og:image" content="{{ global.meta_image | url | absurl }}">
+  <meta name="twitter:image" content="{{ global.meta_image | url | absurl }}">
+  <meta name="twitter:card" content="summary_large_image">
+{%- endif -%}
+
+{# OG and Twitter #}
+{% if global.site_name %}
+  <meta property="og:site_name" content="{{ global.site_name }}">
+{%- endif %}

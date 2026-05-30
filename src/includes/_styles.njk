@@ -1,0 +1,9 @@
+{% set stylesheets = ["01.theme", "02.base", "03.components", "04.utilities", "05.app"] %}
+
+{%- if global.environment == "production" -%}
+  <!--INLINE CSS-->
+{%- else -%}
+  {% for file in stylesheets %}
+    <link href="/assets/min/{{file}}/{{file}}.min.css" rel="stylesheet"/>
+  {% endfor %}
+{%- endif -%}

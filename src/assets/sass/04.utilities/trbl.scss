@@ -1,0 +1,8 @@
+@use "../mixins" as *;
+@use "../tokens" as *;
+
+@include util(inset, inset, tokens("size"), size);
+@include util(top, top, tokens("size"), size);
+@include util(right, right, tokens("size"), size);
+@include util(bottom, bottom, tokens("size"), size);
+@include util(left, left, tokens("size"), size);

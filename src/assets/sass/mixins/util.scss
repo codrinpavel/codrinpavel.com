@@ -1,0 +1,31 @@
+@use "query" as *;
+@use "../tokens" as *;
+@use 'sass:list';
+@use 'sass:meta';
+
+@mixin util($className, $property, $value: false, $useVars: false) {
+  $breakpoints: tokens("breakpoints");
+
+  @each $bp, $bpVal in $breakpoints {
+    @include mq(#{$bp}) {
+      // Default (first) breakpoint has no prefix
+      $bpName: if(sass(list.index($breakpoints, $bp $bpVal) > 1): "#{$bp}\\:"; else: "");
+
+      // Map-based: mode = "keys" or "values"
+      @if meta.type-of($value)=="map" { 
+        @each $key, $val in $value {
+          .#{$bpName}#{$className}-#{"" + $key} {
+            #{$property}: if(sass($useVars): var(--#{$useVars}-#{$key}); else: $val);
+          }
+        }
+      }
+
+      // Single value
+      @else {
+        .#{$bpName}#{$className} {
+          #{$property}: #{$value};
+        }
+      }
+    }
+  }
+}

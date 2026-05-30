@@ -1,0 +1,6 @@
+@use 'sass:meta';
+
+@layer components {
+  @include meta.load-css("wrapper");
+  @include meta.load-css("quote");
+}

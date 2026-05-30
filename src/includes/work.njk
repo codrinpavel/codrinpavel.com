@@ -1,0 +1,91 @@
+<section class="relative py-10xl" id="work" aria-labelledby="work-heading">
+  <div class="wrapper">
+    <h2 id="work-heading" class="sr-only">Work</h2>
+
+    <div class="columns justify-between">
+      <div class="md:columns-3">
+        <nav class="work-filters" aria-label="Work filters">
+          <ul class="mb-2xl">
+            <li>
+              <button type="button" class="type-large" aria-pressed="false" data-filter="all">collected works</button>
+            </li>
+            <li>
+              <button type="button" class="type-large" aria-pressed="true" data-filter="award">awards + recognition</button>
+            </li>
+            <li>
+              <button type="button" class="type-large" aria-pressed="false" data-filter="fortune">enterprise + fortune 500</button>
+            </li>
+          </ul>
+
+          <hr/>
+
+          <div class="stat" data-tags="all">
+            <p class="text-sm">delivered</p>
+            <span class="type-large mb-sm">80+ projects</span>
+            <p class="font-light">across websites, platforms, reports, and interactive experiences for brands, agencies, and startups.</p>
+          </div>
+
+          <div class="stat--award" data-tags="award">
+            <p class="text-sm">recipient of</p>
+            <span class="type-large mb-sm">30+ Industry Awards</span>
+            <p class="font-light">from GDUSA, WMA, LACP, ARC, and iNOVA for UI/UX and digital experiences.</p>
+          </div>
+
+          <div class="stat--fortune" data-tags="fortune">
+            <p class="text-sm">supporting</p>
+            <span class="type-large mb-sm">Fortune 500</span>
+            <p class="font-light">organizations across energy, healthcare, aviation, pharmaceuticals, finance, education, and government.</p>
+          </div>
+        </nav>
+      </div>
+
+      <div class="md:columns-8 mt-10xl">
+        <table class="work-table" data-filter="all">
+          <caption class="sr-only">Client work by project and year</caption>
+
+          <thead class="sr-only">
+            <tr>
+              <th scope="col">Client</th>
+              <th scope="col">Project</th>
+              <th scope="col">Year</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {%- for item in work | sortByYear -%}
+              {% set url = item.wayback and("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url)or item.url %}
+
+              <tr data-client="{{ item.client }}" data-tags="all, {{ item.tags | join(', ') if item.tags }}">
+                <td>
+                  <span class="type-large">{{- item.client | lower -}}</span>
+                </td>
+
+                <td>
+                  {%- if item.inactive -%}
+                    {{- item.project | lower | safe -}}
+                  {%- else -%}
+                    <a href="{{ url }}" class="link" target="_blank" rel="noopener noreferrer">{{- item.project | lower | safe -}}</a>
+                  {%- endif -%}
+
+                  {%- if item.awards -%}
+                    <ol class="mt-xs lowercase text-sm  color-faint">
+                      {%- for award in item.awards -%}
+                        <li class="mb-2xs font-light">
+                          <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer">· {{ award.organization }}|{{ award.title }}</a>
+                        </li>
+                      {%- endfor -%}
+                    </ol>
+                  {%- endif -%}
+                </td>
+
+                <td class="font-light">
+                  <time>{{ item.year }}</time>
+                </td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" class="loading">
+  <head>
+    {% include "_meta.njk" %}
+    {% include "_favicon.njk" %}
+    {% include "_styles.njk" %}
+  </head>
+
+  <body>
+    {% include "header.njk" %}
+
+    <main id="main-content" aria-label="Main Content">
+      {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+    {% include "_scripts.njk" %}
+  </body>
+</html>
