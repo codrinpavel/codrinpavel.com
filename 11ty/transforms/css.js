@@ -26,6 +26,7 @@ export default async function (content) {
         'dist/assets/min/05.app/05.app.min.css',
       ],
       defaultExtractor: content => content.match(/\b[A-Za-z0-9-_:/]+\b/g) || [],
+      dynamicAttributes: ['hidden'],
       rejected: true,
       safelist: {
         greedy: [
