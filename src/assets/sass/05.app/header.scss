@@ -12,7 +12,10 @@ header {
   padding-top: var(--size-lg);
 
   @include mq(md, max) {
-    nav {display: none;}
+    nav {
+      display: none;
+    }
+
     .columns {
       align-items: center;
     }
@@ -31,6 +34,7 @@ header {
       display: flex;
       flex-direction: column;
       gap: 6px;
+      margin-bottom: 6px;
     }
 
     a {
