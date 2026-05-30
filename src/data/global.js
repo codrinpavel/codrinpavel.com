@@ -8,7 +8,7 @@ export default function () {
     year: new Date().getFullYear(),
     site_name: 'Codrin Pavel',
     meta_title: 'Codrin Pavel',
-    meta_description: "Codrin Pavel - Solutions Consultant and Front-end Developer",
-    meta_image: '/assets/img/social_image.jpg',  // place in src/assets/favicon
+    meta_description: "Independent, design-driven frontend developer with 15+ years of experience, working remotely from an island in Spain.",
+    //meta_image: '/assets/img/social_image.jpg',  // place in src/assets/favicon
   }
 };
