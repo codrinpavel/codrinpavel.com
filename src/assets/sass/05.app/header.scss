@@ -1,3 +1,5 @@
+@use "../mixins" as *;
+
 header {
   position: fixed;
   top: 0;
@@ -7,9 +9,13 @@ header {
   filter: invert(100%);
   mix-blend-mode: exclusion;
   font-weight: 400;
+  padding-top: var(--size-lg);
 
-  > div {
-    margin-top: var(--size-lg);
+  @include mq(md, max) {
+    nav {display: none;}
+    .columns {
+      align-items: center;
+    }
   }
 
   .mynameis {
@@ -17,12 +23,14 @@ header {
     line-height: 1;
     font-weight: 900;
     display: inline-block;
+    white-space: nowrap;
   }
 
   nav {
     ol {
       display: flex;
       flex-direction: column;
+      gap: 6px;
     }
 
     a {

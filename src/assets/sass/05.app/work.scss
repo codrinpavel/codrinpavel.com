@@ -1,3 +1,5 @@
+@use "../mixins" as *;
+
 .work-filters {
   position: sticky;
   top: var(--size-10xl);
@@ -30,16 +32,46 @@ table {
 
     &:has([hidden]) {
       border-top: 0;
+
+      @include mq(md, max) {
+        display: none;
+      }
     }
 
     &:first-child {
       font-size: var(--font-size-lg);
       width: 47%;
+
+      @include mq(md, max) {
+        display: block;
+        width: 100%;
+        .type-large {
+          font-weight: bold;
+        }
+
+        &:has([hidden]) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      @include mq(md, max) {
+        display: inline-block;
+        border: 0;
+        width: 80%;
+      }
     }
 
     &:last-child {
       text-align: right;
       padding-right: 0;
+
+      @include mq(md, max) {
+        display: inline-block;
+        border: 0;
+        width: 20%;
+      }
     }
   }
 }

@@ -8,16 +8,22 @@
  * Usage: @include mq(lg) { ... }
  */
 
-@mixin mq($name) {
-  $min: map.get(tokens("breakpoints"), $name);
+@function breakpoint-min($name) {
+  @return max(0, map.get(tokens("breakpoints"), $name));
+}
+
+@mixin mq($name, $type: min) {
+  $min: breakpoint-min($name);
 
   @if ($min > 0) {
-    @media (min-width: $min ) {
+    @if ($type == max) {
+      $min: $min - 1px;
+    }
+
+    @media ( #{$type}-width: $min ) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @content;
   }
 }
