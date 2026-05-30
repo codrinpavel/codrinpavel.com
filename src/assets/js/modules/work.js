@@ -25,7 +25,7 @@ function updateClientHeadings() {
   let lastClient = null;
 
   table.querySelectorAll('tr[data-client]').forEach((row) => {
-    const heading = row.querySelector('td:first-child .heading');
+    const heading = row.querySelector('td:first-child .type-large');
 
     if (!heading) return;
 
