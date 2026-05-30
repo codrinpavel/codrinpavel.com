@@ -6,11 +6,21 @@ import autoprefixer from 'autoprefixer';
 
 const dev = process.env.ELEVENTY_ENV !== 'production';
 
+const cssnanoOptions = {
+  preset: ['default', {
+    mergeRules: false,
+    discardDuplicates: false,
+    discardOverridden: false,
+    cssDeclarationSorter: false,
+    orderedValues: false,
+  }],
+};
+
 const postcssPlugin = (dev) => [
   postcss({
     extract: true,
-    minimize: !dev, // uses CSSnano
-    sourceMap: dev ? "inline" : false,
+    minimize: dev ? false : cssnanoOptions,
+    sourceMap: dev ? 'inline' : false,
     plugins: [autoprefixer()],
   })
 ];

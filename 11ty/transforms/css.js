@@ -18,40 +18,34 @@ export default async function (content) {
     // 1.
     const purgeCSSResults = await new PurgeCSS().purge({
       content: [{ raw: content }],
-      css: ['dist/assets/min/main.min.css'],
-      defaultExtractor: content => content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-      keyframes: false,
+      css: [
+        'dist/assets/min/01.theme/01.theme.min.css',
+        'dist/assets/min/02.base/02.base.min.css',
+        'dist/assets/min/03.components/03.components.min.css',
+        'dist/assets/min/04.utilities/04.utilities.min.css',
+        'dist/assets/min/05.app/05.app.min.css',
+      ],
+      defaultExtractor: content => content.match(/\b[A-Za-z0-9-_:/]+\b/g) || [],
+      rejected: true,
       safelist: {
         greedy: [
           /^js/,
-          /^is/,
-          /^has/,
+          /hr/,
           /sr-only/,
-          /class/,
-          /target/,
-          /path/,
-          /circle/,
-          /stroke/,
-          /fill/,
-          /rowspan/,
-          /colspan/,
-          /aria/,
-          /:where/
+          /animation/
         ]
       }
     });
 
     // 2.
-    const results = purgeCSSResults[0].css.replaceAll(
-      '/assets/',
-      `${Config.BASEPATH}/assets/`
-    );
+    let results = '';
+    purgeCSSResults.forEach((result, i) => {
+      console.log(result.rejected);
+      results += result.css.replaceAll('/assets/', Config.BASEPATH + '/assets/');
+    });
 
     // 3.
-    return content.replace(
-      '<!--INLINE CSS-->',
-      `<style>${results}</style>`
-    );
+    return content.replace('<!--INLINE CSS-->', '<style>' + results + '</style>');
   }
 
   return content;
