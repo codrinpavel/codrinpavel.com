@@ -3,4 +3,8 @@
 .hero {
   padding-block: var(--size-10xl);
   min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
