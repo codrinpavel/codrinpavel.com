@@ -28,24 +28,26 @@
   }
 
   &::after {
+    --size: 11px;
+    --scale: calc(350vmax / var(--size));
+
     content: '';
     display: block;
-    width: 11px;
-    height: 10px;
-    background-color: currentColor;
+    width: var(--size);
+    height: var(--size);
+    transform: scale(var(--scale));
+    transform-origin: center center;
+
+    position: fixed;
+    top: 34px;
+    left: 82px;
+
     align-self: flex-end;
+    background-color: currentColor;
     border-radius: 100%;
     pointer-events: none;
 
-    animation: 1800ms clogo_after ease-in-out forwards;
-
-    position: fixed;
-    top: -50vw;
-    left: -50vw;
-
-    width: 200vw;
-    height: 200vw;
-    border-radius: 400vw;
+    animation: 1800ms clogo_after ease forwards;
   }
 }
 
@@ -56,20 +58,17 @@
 }
 
 @keyframes clogo_after {
-  35% {
-    top: -50vw;
-    left: -50vw;
-  }
-
   99.9% {
     pointer-events: none;
   }
 
-  100% {
-    width: 11px;
+  99% {
     height: 10px;
-    top: 34px;
-    left: 82px;
+  }
+
+  100% {
+    transform: scale(1);
     pointer-events: auto;
+    height: 10px;
   }
 }

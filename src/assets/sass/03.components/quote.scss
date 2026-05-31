@@ -1,17 +1,25 @@
 .quote {
+  border-top: 1px solid currentColor;
+  font-weight: 300;
+  font-size: var(--font-size-ml);
+
   p {
-    &::before,
+    max-width: 26em;
+    margin-block: var(--size-4xl);
+    font-weight: 300;
+
+    &::before {
+      content: "„";
+    }
+
     &::after {
       content: "”";
     }
   }
 
-  figcaption {
-    margin-top: var(--size-lg);
-  }
-
   cite {
     font-style: normal;
+    font-weight: 500;
 
     &::before {
       content: '—';
@@ -24,6 +32,6 @@
 
   span {
     display: block;
-    font-weight: 300;
+    margin-top: 2px;
   }
 }

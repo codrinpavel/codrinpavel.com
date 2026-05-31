@@ -1,7 +1,7 @@
 .animate-wave {
   display: flex;
   flex-wrap: wrap;
-  gap: .2em;
+  column-gap: .2em;
 }
 
 .wave-word {
@@ -15,11 +15,28 @@
   animation-fill-mode: forwards;
 
   animation-delay: var(--word-delay);
+
+  span {
+    display: inline-block;
+    animation: 750ms weight-wave ease-in-out forwards;
+    animation-delay: calc(var(--i) * 70ms + var(--word-delay) + 200ms);
+    font-variation-settings: "wght" 300;
+  }
 }
 
 @keyframes waveFadeUp {
   to {
     opacity: 1;
     transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes weight-wave {
+  0%, 100% {
+    font-variation-settings: "wght" 300;
+  }
+
+  45% {
+    font-variation-settings: "wght" 750;
   }
 }

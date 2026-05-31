@@ -34,7 +34,7 @@ function createWaveAnimation(selector, options = {}) {
       .join("");
 
 
-      const w = document.querySelectorAll(".wave-word");
+      const w = document.querySelectorAll(".hero .wave-word");
       const target = w[w.length - 2];
 
       if (target) {

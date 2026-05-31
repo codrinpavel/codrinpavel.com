@@ -1,35 +1,74 @@
 @use "../mixins" as *;
 
 .hero {
-  padding-top: var(--size-10xl);
+  height: 300vh;
+  view-timeline-name: --hero;
+  view-timeline-axis: block;
+
   min-height: 100dvh;
 
   display: flex;
   flex-direction: column;
 
-  font-size: var(--font-size-3xl);
-
-  p {
-    max-width: 19em;
-    font-weight: 350;
+  .wrapper {
+    padding-top: var(--size-10xl);
+    position: sticky;
+    top: 0;
+    height: 100dvh;
   }
 
-  .wave-word {
-    span {
-      display: inline-block;
-      animation: 750ms weight-wave ease-in-out forwards;
-      animation-delay: calc(var(--i) * 70ms + var(--word-delay) + 200ms);
-      font-variation-settings: "wght" 350;
+  &__track {
+    --track-gap: calc(var(--size-4xl) * 1);
+    display: flex;
+    gap: var(--track-gap);
+    align-items: flex-start;
+    padding-top: var(--size-8xl);
+
+    animation: hero linear both;
+    animation-timeline: --hero;
+    animation-range: entry 100% exit 0%;
+
+    &--intro {
+      font-size: var(--font-size-4xl);
+
+      p {
+        max-width: 19em;
+        font-weight: 300;
+      }
+    }
+
+    &--item {
+      width: 100%;
+      flex-shrink: 0;
     }
   }
 
-  @keyframes weight-wave {
-    0%, 100% {
-      font-variation-settings: "wght" 350;
+  @include mq(md) {
+    &__track {
+      &--intro {
+        padding-left: calc(33.3333334% + var(--column-gap) / 2);
+        font-size: var(--font-size-3xl);
+      }
     }
+  }
 
-    45% {
-      font-variation-settings: "wght" 850;
+  @include mq(lg) {
+    height: 600vh;
+
+    &__track {
+      &--intro {
+        padding-left: calc(50% + var(--column-gap) / 2);
+      }
     }
+  }
+}
+
+@keyframes hero {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(calc(-300% - calc(var(--track-gap) * 3)));
   }
 }
