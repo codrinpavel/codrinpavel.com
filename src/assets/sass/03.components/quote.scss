@@ -1,17 +1,13 @@
 .quote {
   border-top: 1px solid currentColor;
-  font-weight: 300;
+  font-weight: var(--font-weight-light);
   font-size: var(--font-size-ml);
 
   p {
     max-width: 26em;
     margin-block: var(--size-4xl);
-    font-weight: 300;
 
-    &::before {
-      content: "„";
-    }
-
+    &::before,
     &::after {
       content: "”";
     }

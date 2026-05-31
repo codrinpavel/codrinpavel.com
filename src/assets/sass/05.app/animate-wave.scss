@@ -1,7 +1,6 @@
 .animate-wave {
   display: flex;
   flex-wrap: wrap;
-  column-gap: .2em;
 }
 
 .wave-word {
@@ -9,18 +8,15 @@
   opacity: 0;
   transform: translateY(var(--wave-distance, 16px)) rotate(2deg);
 
-  animation-name: waveFadeUp;
-  animation-duration: var(--wave-duration, 600ms);
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-
+  animation: var(--wave-duration, 600ms) waveFadeUp ease forwards;
   animation-delay: var(--word-delay);
 
   span {
     display: inline-block;
+    font-variation-settings: "wght" 300;
+
     animation: 750ms weight-wave ease-in-out forwards;
     animation-delay: calc(var(--i) * 70ms + var(--word-delay) + 200ms);
-    font-variation-settings: "wght" 300;
   }
 }
 

@@ -1,3 +1,4 @@
+{#
 <section class="relative py-10xl" id="work" aria-labelledby="heading-work">
   <div class="wrapper">
     <h2 id="heading-work" class="sr-only">Work</h2>
@@ -7,10 +8,10 @@
         <nav class="work-filters" aria-label="Work filters">
           <ul class="mb-2xl">
             <li>
-              <button type="button" class="type-large" aria-pressed="false" data-filter="all">collected works</button>
+              <button type="button" class="type-large" aria-pressed="true" data-filter="all">collected works</button>
             </li>
             <li>
-              <button type="button" class="type-large" aria-pressed="true" data-filter="award">awards + recognition</button>
+              <button type="button" class="type-large" aria-pressed="false" data-filter="award">awards + recognition</button>
             </li>
             <li>
               <button type="button" class="type-large" aria-pressed="false" data-filter="fortune">enterprise + fortune 500</button>
@@ -39,7 +40,7 @@
         </nav>
       </div>
 
-      <div class="md:columns-8 mt-10xl">
+      <div class="md:columns-12 mt-10xl">
         <table class="work-table" data-filter="all">
           <caption class="sr-only">Client work by project and year</caption>
 
@@ -53,39 +54,63 @@
 
           <tbody>
             {%- for item in work | sortByYear -%}
-              {% set url = item.wayback and("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url)or item.url %}
+              {% set url = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
 
-              <tr data-client="{{ item.client }}" data-tags="all, {{ item.tags | join(', ') if item.tags }}" {%- if not item.awards -%}hidden{% endif %}>
-                <td>
-                  <span class="type-large">{{- item.client | lower -}}</span>
-                </td>
+              <tr data-client="{{ item.client }}" data-tags="all, {{ item.tags | join(', ') if item.tags }}">
+                <td>{{- item.client -}}</td>
 
                 <td>
                   {%- if item.inactive -%}
-                    {{- item.project | lower | safe -}}
+                    {{- item.project  | safe -}}
                   {%- else -%}
-                    <a href="{{ url }}" class="link" target="_blank" rel="noopener noreferrer">{{- item.project | lower | safe -}}</a>
+                    <a class="link" href="{{ url }}" class="link" target="_blank" rel="noopener noreferrer">{{- item.project | safe -}}</a>
                   {%- endif -%}
 
                   {%- if item.awards -%}
-                    <ol class="mt-xs lowercase text-sm color-faint">
+                    <ol class="work-table__awards flex flex-col row-gap-md">
                       {%- for award in item.awards -%}
-                        <li class="mb-2xs font-light">
-                          <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer">· {{ award.organization }}|{{ award.title }}</a>
+                        <li>
+                          <a class="link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">{{ award.organization }}&mdash;{{ award.title }}</a>
                         </li>
                       {%- endfor -%}
                     </ol>
                   {%- endif -%}
                 </td>
 
-                <td class="font-light">
-                  <time>{{ item.year }}</time>
-                </td>
+                <td>{{ item.year }}</td>
               </tr>
             {%- endfor -%}
           </tbody>
         </table>
       </div>
     </div>
+  </div>
+</section>
+#}
+
+<section class="pb-5xl" id="work" aria-labelledby="heading-work">
+  <div class="wrapper">
+    <h2 id="heading-work">Complete Works</h2>
+
+    <ul class="work type-eyebrow">
+      {%- for item in work | sortByYear -%}
+        {% set url = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
+
+        <li {% if item.inactive %}class="is-disabled"{% endif %}>
+          {%- if not item.inactive -%}
+          <a href="{{ url }}" target="_blank" rel="noopener noreferrer">
+          {%- endif -%}
+            <p>{{- item.client -}}</p>
+            <p>{{- item.project  | safe -}}</p>
+            <p>
+              <span>{{- item.year -}}</span>
+              {%- if not item.inactive -%}<span class="hidden">View</span>{%- endif -%}
+            </p>
+          {%- if not item.inactive -%}
+          </a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
   </div>
 </section>

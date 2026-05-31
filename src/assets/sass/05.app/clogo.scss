@@ -1,19 +1,11 @@
 .clogo {
-  position: fixed;
-  top: 10px;
-  left: 20px;
-  z-index: 9999;
-
   display: inline-flex;
   align-items: center;
 
   color: var(--color-black-text);
   font-size: 50px;
-  line-height: 1;
+  line-height: .746em;
   font-weight: 900;
-
-  filter: invert(100%);
-  mix-blend-mode: exclusion;
 
   &::before {
     content: '';
@@ -35,18 +27,15 @@
     display: block;
     width: var(--size);
     height: var(--size);
-    transform: scale(var(--scale));
-    transform-origin: center center;
-
-    position: fixed;
-    top: 34px;
-    left: 82px;
+    margin-left: 4px;
 
     align-self: flex-end;
     background-color: currentColor;
     border-radius: 100%;
     pointer-events: none;
 
+    transform: scale(var(--scale));
+    transform-origin: center center;
     animation: 1800ms clogo_after ease forwards;
   }
 }

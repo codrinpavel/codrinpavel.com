@@ -20,16 +20,16 @@ function createWaveAnimation(selector, options = {}) {
         const delay = baseDelay + i * settings.stagger;
 
         return `
-            <span class="overflow-hidden">
-              <span
-                class="wave-word"
-                style="
-                  --wave-duration:${settings.duration}ms;
-                  --wave-distance:${settings.distance};
-                  --word-delay:${delay}ms;
-                "
-              >${word}</span>
-            </span>`;
+          <span class="overflow-hidden">
+            <span
+              class="wave-word"
+              style="
+                --wave-duration:${settings.duration}ms;
+                --wave-distance:${settings.distance};
+                --word-delay:${delay}ms;
+              "
+            >${word}&nbsp;</span>
+          </span>`;
       })
       .join("");
 
@@ -38,12 +38,10 @@ function createWaveAnimation(selector, options = {}) {
       const target = w[w.length - 2];
 
       if (target) {
-        const text = target.textContent.trim();
+        const text = target.textContent;
 
         target.innerHTML = [...text]
-          .map((char, i) =>
-            `<span style="--i:${i}">${char === " " ? "&nbsp;" : char}</span>`
-          )
+          .map((char, i) => `<span style="--i:${i}">${char}</span>`)
           .join("");
       }
   });

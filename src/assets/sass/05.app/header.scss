@@ -1,28 +1,59 @@
 @use "../mixins" as *;
 
-.header__container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-
-  width: 100%;
-  padding-block: var(--size-2xl);
-
-  filter: invert(100%);
-  mix-blend-mode: exclusion;
-
+.site-header {
   nav {
     text-transform: uppercase;
     font-size: 13px;
 
-    a.is-active .wave-word {
-      color: var(--color-faint);
+    a {
+      opacity: 0;
+
+      transform: translateY(16px) rotate(2deg);
+      animation: var(--wave-duration, 600ms) navFadeUp ease forwards;
+      animation-delay: var(--delay, 0s);
+    }
+
+    a.is-active::before {
+      width: 1em;
+      margin-right: -1em;
+      left: -1em;
+    }
+  }
+
+  @include mq(md, max) {
+    .clogo {
+      position: fixed;
+      inset: 16px 0 auto var(--grid-margin);
+      z-index: 9999;
+
+      filter: invert(100%);
+      mix-blend-mode: exclusion;
+    }
+
+    nav {
+      position: fixed;
+      inset: auto 0 0;
+      z-index: 9998;
+      background: var(--color-white);
+      margin: 0;
+      padding: var(--grid-margin);
+      padding-block: var(--size-2xl);
     }
   }
 
   @include mq(md) {
-    top: 0;
-    bottom: auto;
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 9999;
+    filter: invert(100%);
+    mix-blend-mode: exclusion;
+    padding-block: var(--size-xl);
+  }
+}
+
+@keyframes navFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
   }
 }

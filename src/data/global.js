@@ -6,8 +6,8 @@ export default function () {
 
     // Site data
     year: new Date().getFullYear(),
-    site_name: 'Codrin Pavel',
-    meta_title: 'Codrin Pavel',
+    site_name: 'My name is &mdash;C.',
+    meta_title: 'My name is &mdash;C.',
     meta_description: "Independent, design-driven frontend developer with 15+ years of experience, working remotely from an island in Spain.",
     //meta_image: '/assets/img/social_image.jpg',  // place in src/assets/favicon
   }
