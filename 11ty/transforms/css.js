@@ -33,7 +33,9 @@ export default async function (content) {
           /^js/,
           /hr/,
           /sr-only/,
-          /animation/
+          /animation/,
+          /wave-word/,
+          /overflow-hidden/
         ]
       }
     });

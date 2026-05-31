@@ -11,5 +11,25 @@
 
   p {
     max-width: 19em;
+    font-weight: 350;
+  }
+
+  .wave-word {
+    span {
+      display: inline-block;
+      animation: 750ms weight-wave ease-in-out forwards;
+      animation-delay: calc(var(--i) * 70ms + var(--word-delay) + 200ms);
+      font-variation-settings: "wght" 350;
+    }
+  }
+
+  @keyframes weight-wave {
+    0%, 100% {
+      font-variation-settings: "wght" 350;
+    }
+
+    45% {
+      font-variation-settings: "wght" 850;
+    }
   }
 }

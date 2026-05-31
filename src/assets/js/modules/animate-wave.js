@@ -28,10 +28,24 @@ function createWaveAnimation(selector, options = {}) {
                   --wave-distance:${settings.distance};
                   --word-delay:${delay}ms;
                 "
-              >${word}&nbsp;</span>
+              >${word}</span>
             </span>`;
       })
       .join("");
+
+
+      const w = document.querySelectorAll(".wave-word");
+      const target = w[w.length - 2];
+
+      if (target) {
+        const text = target.textContent.trim();
+
+        target.innerHTML = [...text]
+          .map((char, i) =>
+            `<span style="--i:${i}">${char === " " ? "&nbsp;" : char}</span>`
+          )
+          .join("");
+      }
   });
 }
 
