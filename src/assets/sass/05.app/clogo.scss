@@ -1,0 +1,75 @@
+.clogo {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+
+  color: var(--color-black-text);
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 900;
+
+  filter: invert(100%);
+  mix-blend-mode: exclusion;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 7.5px;
+    background-color: currentColor;
+    position: relative;
+    top: 3px;
+
+    animation: 500ms clogo_before 2050ms ease forwards;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 11px;
+    height: 10px;
+    background-color: currentColor;
+    align-self: flex-end;
+    border-radius: 100%;
+    pointer-events: none;
+
+    animation: 1800ms clogo_after ease-in-out forwards;
+
+    position: fixed;
+    top: -50vw;
+    left: -50vw;
+
+    width: 200vw;
+    height: 200vw;
+    border-radius: 400vw;
+  }
+}
+
+@keyframes clogo_before {
+  100% {
+    width: 50px;
+  }
+}
+
+@keyframes clogo_after {
+  35% {
+    top: -50vw;
+    left: -50vw;
+  }
+
+  99.9% {
+    pointer-events: none;
+  }
+
+  100% {
+    width: 11px;
+    height: 10px;
+    top: 34px;
+    left: 82px;
+    pointer-events: auto;
+  }
+}

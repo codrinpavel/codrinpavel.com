@@ -18,9 +18,11 @@ $tokens: (
     ),
 
     default: (
-      "white":  hsl(28, 10%, 84%),
-      "black":  hsl(32, 10%, 10%),
-      "faint":  hsl(51, 8%, 35%),
+      "white":  hsl(26, 28%, 95%),
+      "black":  hsl(0, 0%, 9%),
+      "white-text": hsl(274, 6%, 76%),
+      "black-text":  hsl(94, 8%, 18%),
+      "faint":  hsl(40, 3%, 60%),
       "border": hsl(34, 12%, 78%),
     ),
 
@@ -30,7 +32,7 @@ $tokens: (
   ),
 
   font-family: (
-    sans: "system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif"
+    sans: "'Inter Tight',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
   ),
 
   font-size: (
@@ -41,7 +43,7 @@ $tokens: (
     lg: fluid(18px, 22px),
     xl: fluid(22px, 28px),
     2xl: fluid(26px, 32px),
-    3xl: fluid(22px, 40px),
+    3xl: fluid(24px, 36px),
     4xl: fluid(38px, 52px),
     5xl: fluid(44px, 64px),
     6xl: fluid(48px, 80px),

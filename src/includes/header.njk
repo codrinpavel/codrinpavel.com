@@ -1,22 +1,31 @@
 <header>
-  <div class="wrapper">
-    <div class="columns columns-3 justify-between">
-      <div>
-        <a href="/" class="mynameis" title="Codrin Pavel">&mdash;c.</a>
-      </div>
+  <div class="blend">
+    <a href="/" class="clogo" title="Codrin Pavel">c</a>
+  </div>
 
-      <nav class="ml-auto">
-        <ol>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#recommendations">Recommendations</a></li>
-          <li><a href="#work">Work</a></li>
-        </ol>
-        <a href="#top" class="is-active">back to top</a>
-      </nav>
+  <div class="header__container">
+    <div class="wrapper">
+      <div class="columns md:columns-6 items-center justify-end">
+        {#
+        <nav class="ml-auto">
+          <ol>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+            <li><a href="#work">Work</a></li>
+          </ol>
+          <a href="#top" class="is-active">back to top</a>
+        </nav>
+        #}
 
-      <div class="flex gap-xl items-start justify-between">
-        <a href="mailto:hello@codrin.eu" target="_blank" rel="noopener noreferrer">hello@codrin.eu</a>
-        <a href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <nav class="flex gap-5xl items-start">
+          <a class="animate-wave" data-delay="2400" href="#industries">Case studies</a>
+          <a class="animate-wave" data-delay="2500" href="#work">Work</a>
+
+        {#
+          <a class="animate-wave" data-delay="2400" href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a class="animate-wave" data-delay="2500" href="mailto:hello@codrin.eu" target="_blank" rel="noopener noreferrer">hello@codrin.eu</a>
+        #}
+        </nav>
       </div>
     </div>
   </div>

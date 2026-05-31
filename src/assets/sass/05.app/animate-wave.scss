@@ -1,0 +1,24 @@
+.animate-wave {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wave-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(var(--wave-distance, 16px)) rotate(2deg);
+
+  animation-name: waveFadeUp;
+  animation-duration: var(--wave-duration, 600ms);
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+  animation-delay: var(--word-delay);
+}
+
+@keyframes waveFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
