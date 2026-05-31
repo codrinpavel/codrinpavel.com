@@ -19,10 +19,20 @@ body {
   overflow-y: scroll;
 }
 
-main {
-  position: relative;
-  z-index: 2;
+main,
+footer {
+  opacity: 0;
+  animation: 1s body 1.5s ease forwards;
 }
+footer {
+  animation-delay: 2.5s;
+}
+
+  @keyframes body {
+    100% {
+      opacity: 1;
+    }
+  }
 
 hr {
   background-color: var(--color-border);
