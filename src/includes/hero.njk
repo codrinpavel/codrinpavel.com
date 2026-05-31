@@ -10,6 +10,12 @@
 
         {% for item in quotes %}
           <figure class="quote hero__track--item">
+            <span class="type-eyebrow quote__page">
+              {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
+              &mdash;
+              {{ loop.length < 10 and '0' ~ loop.length or loop.length }}
+            </span>
+
             <blockquote>
               <p>{{ item.content | safe }}</p>
             </blockquote>

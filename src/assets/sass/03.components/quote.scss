@@ -1,15 +1,33 @@
 .quote {
-  border-top: 1px solid currentColor;
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-ml);
 
+  &__page {
+    display: block;
+    margin-bottom: var(--size-lg);
+    margin-top: var(--size-sm);
+    color: var(--color-faint);
+  }
+
+  blockquote {
+    border-top: .5px solid var(--color-black);
+    padding-block: var(--size-4xl);
+  }
+
   p {
     max-width: 26em;
-    margin-block: var(--size-4xl);
 
     &::before,
     &::after {
       content: "”";
+    }
+  }
+
+  figcaption {
+    span {
+      display: block;
+      margin-top: var(--size-3xs);
+      padding-left: 1em;
     }
   }
 
@@ -24,10 +42,5 @@
     &::after {
       content: ',';
     }
-  }
-
-  span {
-    display: block;
-    margin-top: 2px;
   }
 }
