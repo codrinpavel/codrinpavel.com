@@ -6,6 +6,10 @@
     animation-timeline: view();
     animation-range: entry 20% cover 15%;
 
+    @include mq(md, max) {
+      animation-range: entry 100% cover 25%;
+    }
+
     &:not(:last-child) {
       border-bottom: .5px solid var(--color-black);
     }
@@ -39,12 +43,9 @@
     flex-grow: 1;
     margin: 0;
 
-    &:first-child {
-      flex: 0 0 40%;
-    }
-
     &:last-child {
       text-align: right;
+      flex-shrink: 0;
     }
   }
 
@@ -53,11 +54,17 @@
       flex: 0 0 calc(50% - var(--column-gap) / 2);
     }
   }
+
+  @include mq(md, max) {
+    p:nth-child(2) {
+      display: none;
+    }
+  }
 }
 
 @keyframes tableitem {
   from {
-    transform: translateX(4%);
+    transform: translateX(calc(var(--grid-margin) / 2));
     opacity: 0;
   }
 
