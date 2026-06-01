@@ -1,0 +1,38 @@
+{% set totalAwards = 0 %}
+
+{% for group in awards %}
+  {% set totalAwards = totalAwards + group.awards.length %}
+{% endfor %}
+
+<section class="py-10xl" id="recognition" aria-labelledby="heading-recognition">
+  <div class="wrapper">
+    <div class="columns justify-between">
+      <div class="md:columns-4 sticky top-zero">
+        <h2 id="heading-recognition">Awards & Recognition<sup>{{totalAwards}}</sup></h2>
+        <p>Selected by international juries for excellence in digital design, sustainability communication, and interactive storytelling.</p>
+      </div>
+
+      <div class="md:columns-6">
+        <ul class="pb-lg">
+          {% for group in awards %}
+            <li class="award">
+              <h3 class="color-black-text text-lg font-normal">
+                {{ group.organization }}
+              </h3>
+
+              <ul>
+                {% for award in group.awards %}
+                  <li class="uppercase">
+                    <a class="link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">
+                      {{ award.title }} {{ award.year }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
