@@ -1,10 +1,11 @@
-<section id="case-studies" class="pb-10xl" aria-labelledby="heading-case-studies">
+<section id="case-studies" aria-labelledby="heading-case-studies">
   <div class="wrapper">
     <h2 id="heading-case-studies" class="sr-only">Case Studies</h2>
+
     {% for study in studies %}
       <div class="study js-snap">
-        <div class="columns md:columns-4 lg:columns-2">
-          <div class="md:columns-12 lg:columns-3">
+        <div class="columns columns-6 md:columns-4 lg:columns-2 row-gap-8xl">
+          <div class="columns-10 md:columns-12 lg:columns-3">
             <h3>Work</h3>
             <p>{{ study.description }}</p>
           </div>

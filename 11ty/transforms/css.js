@@ -32,6 +32,7 @@ export default async function (content) {
         greedy: [
           /^js/,
           /^is/,
+          /^has/,
           /hr/,
           /sr-only/,
           /animation/,

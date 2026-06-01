@@ -1,10 +1,14 @@
+@use "../mixins" as *;
+
 .study {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  row-gap: var(--size-8xl);
 
   min-height: 100svh;
-  padding-block: var(--size-10xl);
+  padding-top: calc(var(--size-10xl) + var(--size-6xl));
+  padding-bottom: var(--size-10xl);
 
   + .study {
     border-top: 1px solid var(--color-faint);
@@ -16,25 +20,33 @@
     height: auto;
     filter: grayscale(100%);
     opacity: .85;
-
-    animation: studyLogo ease both;
-    animation-timeline: view();
-    animation-range: cover 50%;
   }
 
-  .columns > div {
-    --step: 50px;
-    transform: translateY(calc(var(--index) * var(--step)));
-    opacity: .2;
+  @include mq(md, max) {
+    flex-direction: column-reverse;
+  }
 
-    animation: studyColumns ease both;
-    animation-timeline: view();
-    animation-range: entry 100% cover 60%;
+  @include mq(md) {
+    .columns > div {
+      opacity: .2;
+      --step: 50px;
+      transform: translateY(calc(var(--index) * var(--step)));
 
-    &:nth-child(1) { --index: 1; }
-    &:nth-child(2) { --index: 2; }
-    &:nth-child(3) { --index: 3; }
-    &:nth-child(4) { --index: 4; }
+      animation: studyColumns ease both;
+      animation-timeline: view();
+      animation-range: entry 100% cover 60%;
+
+      &:nth-child(1) { --index: 1; }
+      &:nth-child(2) { --index: 2; }
+      &:nth-child(3) { --index: 3; }
+      &:nth-child(4) { --index: 4; }
+    }
+
+    svg {
+      animation: studyLogo ease both;
+      animation-timeline: view();
+      animation-range: cover 50%;
+    }
   }
 }
 
