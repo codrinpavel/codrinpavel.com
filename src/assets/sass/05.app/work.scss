@@ -1,5 +1,40 @@
 @use "../mixins" as *;
 
+#work h2 {
+  padding-bottom: 0;
+  margin-bottom: var(--size-5xl);
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 100%;
+    inset: 100% calc(-1 * var(--grid-margin)) 0;
+
+    height: var(--size-5xl);
+
+    pointer-events: none;
+    z-index: -1;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    background: linear-gradient(
+        to bottom,
+        var(--color-white) 0%,
+        color-mix(in srgb, var(--color-white) 85%, transparent) 35%,
+        color-mix(in srgb, var(--color-white) 45%, transparent) 70%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,1) 45%,
+        rgba(0,0,0,0) 100%
+    );
+  }
+}
+
 .work {
   li {
     animation: tableitem linear both;
@@ -11,7 +46,7 @@
     }
 
     &:not(:last-child) {
-      border-bottom: .5px solid var(--color-black);
+      border-bottom: 1px solid var(--color-faint);
     }
 
     &.is-disabled {
@@ -33,6 +68,7 @@
       span {
         display: none;
       }
+
       .hidden {
         display: block;
       }
@@ -73,89 +109,3 @@
     opacity: 1;
   }
 }
-
-
-/*
-.work-filters {
-  position: sticky;
-  top: var(--size-10xl);
-  z-index: 99;
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-xs);
-  }
-}
-
-.work-table {
-  text-transform: none;
-  border-collapse: collapse;
-  line-height: var(--font-size-lg);
-  width: 100%;
-  //max-width: 940px;
-  font-weight: 400;
-
-  tr:not(:has(a)) {
-    color: var(--color-faint);
-  }
-
-  &__awards {
-    display: none;
-  }
-
-  &[data-filter="award"] {
-    td > .link {
-      display: none;
-    }
-    .work-table__awards {
-      display: flex;
-    }
-  }
-
-  td {
-    padding: var(--size-ml) var(--size-xl);
-    padding-left: 0;
-    border-top: .5px solid var(--color-black);
-    vertical-align: top;
-
-    &:has([hidden]) {
-      border-top: 0;
-
-      @include mq(md, max) {
-        display: none;
-      }
-    }
-
-    &:first-child {
-      @include mq(md, max) {
-        display: block;
-        width: 100%;
-
-        &:has([hidden]) {
-          display: none;
-        }
-      }
-    }
-
-    &:nth-child(2) {
-      @include mq(md, max) {
-        display: inline-block;
-        border: 0;
-        width: 80%;
-      }
-    }
-
-    &:last-child {
-      text-align: right;
-      padding-right: 0;
-
-      @include mq(md, max) {
-        display: inline-block;
-        border: 0;
-        width: 20%;
-      }
-    }
-  }
-}
-*/
