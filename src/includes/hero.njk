@@ -9,12 +9,23 @@
         </div>
 
         {% for item in quotes %}
-          <figure class="quote hero__track--item">
-            <span class="type-eyebrow quote__page">
-              {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
-              &mdash;
-              {{ loop.length < 10 and '0' ~ loop.length or loop.length }}
-            </span>
+          <figure class="quote hero__track--item" id="quote-{{ loop.index < 10 and '0' ~ loop.index or loop.index }}">
+            <header>
+              {% if loop.last %}
+              <span class="type-eyebrow">
+                {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
+                &mdash;
+                {{ loop.length < 10 and '0' ~ loop.length or loop.length }}
+              </span>
+              {% else %}
+                <button class="type-eyebrow" data-index="{{ loop.index + 1 }}">
+                  {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
+                  &mdash;
+                  {{ loop.length < 10 and '0' ~ loop.length or loop.length }}
+                  <span>→</span>
+                </button>
+              {% endif %}
+            </header>
 
             <blockquote>
               <p>{{ item.content | safe }}</p>

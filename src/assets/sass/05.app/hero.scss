@@ -24,7 +24,7 @@
 
     animation: hero linear both;
     animation-timeline: --hero;
-    animation-range: entry 100% exit 0%;
+    animation-range: contain 0%;
 
     &--intro p {
       max-width: 19em;
