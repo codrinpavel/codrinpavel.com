@@ -2,7 +2,7 @@
 
 @layer components {
   @include meta.load-css("wrapper");
-  @include meta.load-css('clogo');
+  @include meta.load-css("clogo");
   @include meta.load-css("quote");
-  @include meta.load-css('animate-wave');
+  @include meta.load-css("animate-wave");
 }

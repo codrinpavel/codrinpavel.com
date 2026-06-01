@@ -1,0 +1,63 @@
+.clogo {
+  display: inline-flex;
+  align-items: center;
+
+  color: var(--color-black-text);
+  font-size: 50px;
+  line-height: .746em;
+  font-weight: 900;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 7.5px;
+    background-color: currentColor;
+    position: relative;
+    top: 3px;
+
+    animation: 500ms clogo_before 2050ms ease forwards;
+  }
+
+  &::after {
+    --size: 11px;
+    --scale: calc(350vmax / var(--size));
+
+    content: '';
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    margin-left: 4px;
+
+    align-self: flex-end;
+    background-color: currentColor;
+    border-radius: 100%;
+    pointer-events: none;
+
+    transform: scale(var(--scale));
+    transform-origin: center center;
+    animation: 1800ms clogo_after ease forwards;
+  }
+}
+
+@keyframes clogo_before {
+  100% {
+    width: 50px;
+  }
+}
+
+@keyframes clogo_after {
+  99.9% {
+    pointer-events: none;
+  }
+
+  99% {
+    height: 10px;
+  }
+
+  100% {
+    transform: scale(1);
+    pointer-events: auto;
+    height: 10px;
+  }
+}

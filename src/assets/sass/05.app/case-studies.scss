@@ -1,0 +1,52 @@
+.study {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100svh;
+  padding-block: var(--size-10xl);
+
+  + .study {
+    border-top: 1px solid var(--color-faint);
+    margin-top: var(--size-9xl);
+  }
+
+  svg {
+    width: 50vmin;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: .85;
+
+    animation: studyLogo ease both;
+    animation-timeline: view();
+    animation-range: cover 50%;
+  }
+
+  .columns > div {
+    --step: 50px;
+    transform: translateY(calc(var(--index) * var(--step)));
+    opacity: .2;
+
+    animation: studyColumns ease both;
+    animation-timeline: view();
+    animation-range: entry 100% cover 60%;
+
+    &:nth-child(1) { --index: 1; }
+    &:nth-child(2) { --index: 2; }
+    &:nth-child(3) { --index: 3; }
+    &:nth-child(4) { --index: 4; }
+  }
+}
+
+@keyframes studyLogo {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes studyColumns {
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

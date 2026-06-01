@@ -1,0 +1,40 @@
+<section id="case-studies" class="pb-10xl" aria-labelledby="heading-case-studies">
+  <div class="wrapper">
+    <h2 id="heading-case-studies" class="sr-only">Case Studies</h2>
+    {% for study in studies %}
+      <div class="study js-snap">
+        <div class="columns md:columns-4 lg:columns-2">
+          <div class="md:columns-12 lg:columns-3">
+            <h3>Work</h3>
+            <p>{{ study.description }}</p>
+          </div>
+
+          <div class="lg:ml-3">
+            <h3>Focus Areas</h3>
+            <ul>
+              {% for item in study.focus %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div>
+            <h3>Tech Stack</h3>
+            <ul>
+              {% for item in study.development %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div>
+            <h3>Project Type</h3>
+            <p>{{ study.industry }}</p>
+          </div>
+        </div>
+
+        {% svg study.logo %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
