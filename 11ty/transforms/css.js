@@ -31,6 +31,7 @@ export default async function (content) {
       safelist: {
         greedy: [
           /^js/,
+          /^is/,
           /hr/,
           /sr-only/,
           /animation/,
