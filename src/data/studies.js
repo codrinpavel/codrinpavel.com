@@ -30,17 +30,17 @@ export default function () {
       focus: [
         "Accessibility",
         "WCAG",
-        "WordPress Development",
         "Core Web Vitals",
-        "Responsive Design"
+        "Responsive Design",
+        "WordPress Development",
       ],
       development: [
         "WordPress",
+        "SCSS",
         "PHP",
         "JavaScript",
-        "SCSS",
-        "ACF",
-        "Gutenberg"
+        "WP ACF",
+        "Gutenberg",
       ],
     },
     {
@@ -52,12 +52,12 @@ export default function () {
       focus: [
         "Core Web Vitals",
         "Accessibility",
-        "SEO",
         "Responsive Design",
         "CMS-Driven Development",
-        "Social Platform Integrations",
+        "Social Platforms Integrations",
         "Ad Tech Integrations",
-        "A/B Testing"
+        "A/B Testing",
+        "SEO",
       ],
       development: [
         "RebelMouse CMS",
@@ -66,7 +66,7 @@ export default function () {
         "JavaScript",
         "SCSS",
         "Google Analytics",
-        "Google Tag Manager"
+        "Google Tag Manager",
       ],
     }
   ]

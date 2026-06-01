@@ -1,7 +1,7 @@
 :where(p) {
   margin: 0;
 
-  + p {
+  +p {
     margin-top: var(--size-2xl);
   }
 }
@@ -19,24 +19,53 @@ ol {
 }
 
 h2 {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-
   font-size: var(--font-size-4xl);
   line-height: 1.2;
   font-weight: var(--font-weight-light);
-
-  padding-top: var(--size-10xl);
-  padding-bottom: var(--size-5xl);
-  margin: 0;
-  background-color: var(--color-white);
+  margin: 0 0 var(--size-2xl);
 
   sup {
     vertical-align: super;
     text-transform: uppercase;
     font-size: .4em;
     color: var(--color-faint);
+  }
+
+  .is-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    margin-bottom: var(--size-5xl);
+    padding-top: var(--size-10xl);
+    background-color: var(--color-white);
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 100%;
+      inset: 100% calc(-1 * var(--grid-margin)) 0;
+
+      height: var(--size-5xl);
+
+      pointer-events: none;
+      z-index: -1;
+
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+
+      background: linear-gradient(to bottom,
+          var(--color-white) 0%,
+          color-mix(in srgb, var(--color-white) 85%, transparent) 35%,
+          color-mix(in srgb, var(--color-white) 45%, transparent) 70%,
+          transparent 100%);
+
+      mask-image: linear-gradient(to bottom,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 1) 45%,
+          rgba(0, 0, 0, 0) 100%);
+    }
   }
 }
 

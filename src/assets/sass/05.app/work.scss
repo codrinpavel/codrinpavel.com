@@ -1,40 +1,5 @@
 @use "../mixins" as *;
 
-#work h2 {
-  padding-bottom: 0;
-  margin-bottom: var(--size-5xl);
-  &::after {
-    content: "";
-    position: absolute;
-
-    top: 100%;
-    inset: 100% calc(-1 * var(--grid-margin)) 0;
-
-    height: var(--size-5xl);
-
-    pointer-events: none;
-    z-index: -1;
-
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-
-    background: linear-gradient(
-        to bottom,
-        var(--color-white) 0%,
-        color-mix(in srgb, var(--color-white) 85%, transparent) 35%,
-        color-mix(in srgb, var(--color-white) 45%, transparent) 70%,
-        transparent 100%
-    );
-
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(0,0,0,1) 0%,
-        rgba(0,0,0,1) 45%,
-        rgba(0,0,0,0) 100%
-    );
-  }
-}
-
 .work {
   li {
     animation: tableitem linear both;

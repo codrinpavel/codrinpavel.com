@@ -17,13 +17,15 @@ export default function () {
       url: "https://www.brilliantearth.com/about/mission/report-2024/",
       awards: [
         {
+          year: 2025,
           organization: "GDUSA",
           title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/e3563948-f4c7-4797-91f6-754b1d4d054c",
         },
         {
+          year: 2025,
           organization: "iNOVA",
-          title: "Best of Sustainability Reports",
+          title: "Grand Winner - Best of Sustainability Reports",
           url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book25.pdf#page=9",
         },
       ]
@@ -43,11 +45,13 @@ export default function () {
       url: "https://brandnewbrand.org/",
       awards: [
         {
+          year: 2024,
           organization: "WMA",
           title: "Outstanding Website",
           url: "https://www.webaward.org/winner/37404/ideas-on-purpose-wins-2024-webaward-for-brand-new-brand-.html",
         },
         {
+          year: 2024,
           organization: "GDUSA",
           title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/0c0060c0-669b-4760-a897-69cdb60526d5",
@@ -69,8 +73,9 @@ export default function () {
       wayback: "20240924193718",
       awards: [
         {
+          year: 2024,
           organization: "iNOVA",
-          title: "Best of Sustainability Reports",
+          title: "Grand Winner - Best of Sustainability Reports",
           url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book24.pdf#page=5",
         },
       ]
@@ -100,11 +105,7 @@ export default function () {
       wayback: "20220205061426",
       awards: [
         {
-          organization: "WMA",
-          title: "Outstanding Website",
-          url: "https://www.webaward.org/winner/35660/ideas-on-purpose-wins-2020-webaward-for-dominion-energy-sustainability-report-microsite.html",
-        },
-        {
+          year: 2022,
           organization: "GDUSA",
           title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/95323723-e359-4d7c-b7b6-ef0045b45eef",
@@ -120,13 +121,15 @@ export default function () {
       wayback: "20210421075237",
       awards: [
         {
+          year: 2021,
           organization: "GDUSA",
           title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/ef213a58-603d-428d-9fc3-94498d4a68bc",
         },
         {
+          year: 2021,
           organization: "LACP",
-          title: "Silver Winner",
+          title: "Silver Winner Worldwide",
           url: "https://www.lacp.com/2020vision/awards-annual-report-competition-dominion-energy-inc-online-digital-report-4212b.htm",
         },
       ]
@@ -140,9 +143,16 @@ export default function () {
       wayback: "20200629133002",
       awards: [
         {
+          year: 2019,
           organization: "ARC",
-          title: "Bronze, Summary Annual Review",
+          title: "Bronze Winnner - Summary Annual Review",
           url: "https://mercommawards.com/arc/archive/2019/categoryWinners/summary.htm",
+        },
+        {
+          year: 2020,
+          organization: "WMA",
+          title: "Outstanding Website",
+          url: "https://www.webaward.org/winner/35660/ideas-on-purpose-wins-2020-webaward-for-dominion-energy-sustainability-report-microsite.html",
         },
       ]
     },
@@ -155,13 +165,15 @@ export default function () {
       wayback: "20181221122549",
       awards: [
         {
+          year: 2019,
           organization: "GDUSA",
           title: "Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|358",
         },
         {
+          year: 2019,
           organization: "LACP",
-          title: "Gold Winner",
+          title: "Gold Winner Worldwide",
           url: "https://www.lacp.com/201718vision/awards-annual-report-competition-13065.htm",
         },
       ]
@@ -191,8 +203,9 @@ export default function () {
       wayback: "20211119163649",
       awards: [
         {
+          year: 2022,
           organization: "GDUSA",
-          title: "Digital Design Competition Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/f2dc5fc3-184f-4760-acc8-a16af522941f",
         },
       ]
@@ -214,6 +227,7 @@ export default function () {
       url: "https://www.nrmp.org/",
       awards: [
         {
+          year: 2022,
           organization: "WMA",
           title: "Outstanding Website",
           url: "https://www.webaward.org/winner/36354/ideas-on-purpose-wins-2022-webaward-for-national-resident-matching-program-website.html",
@@ -262,6 +276,7 @@ export default function () {
       wayback: "20210702130518",
       awards: [
         {
+          year: 2022,
           organization: "GDUSA",
           title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/cd09b376-8b80-4102-8508-fe0e906ff1df",
@@ -285,7 +300,7 @@ export default function () {
       url: "https://2020-annual-report.fnih.org/",
     },
     {
-      year: 2020,
+      year: 2019,
       client: "FNIH",
       long: "Foundation for the National Institutes of Health",
       project: "2019 Annual Report",
@@ -293,8 +308,9 @@ export default function () {
       url: "https://2019-annual-report.fnih.org/",
       awards: [
         {
+          year: 2020,
           organization: "LACP",
-          title: "Gold Winner",
+          title: "Gold Winner Worldwide",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-21303b.htm",
         },
       ]
@@ -308,11 +324,13 @@ export default function () {
       url: "https://2018-annual-report.fnih.org/",
       awards: [
         {
+          year: 2019,
           organization: "LACP",
-          title: "Platinum Winner",
+          title: "Platinum Winner Worldwide",
           url: "https://www.lacp.com/2018vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-1377a.htm",
         },
         {
+          year: 2019,
           organization: "GDUSA",
           title: "Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|357",
@@ -328,6 +346,7 @@ export default function () {
       wayback: "20210516061645",
       awards: [
         {
+          year: 2021,
           organization: "GDUSA",
           title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/9b0c9964-20f0-4997-b240-1ae03c03170d",
@@ -351,18 +370,21 @@ export default function () {
       wayback: "20220225092644",
       awards: [
         {
+          year: 2020,
           organization: "ARC",
-          title: "Gold, Integrated AR & CSR",
+          title: "Gold Winner - Integrated AR & CSR",
           url: "https://mercommawards.com/arc/archive/2020/categoryWinners/interactive.htm#int",
         },
         {
+          year: 2020,
           organization: "GDUSA",
           title: "Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda20&ids=0|10455",
         },
         {
+          year: 2020,
           organization: "LACP",
-          title: "Gold Winner",
+          title: "Gold Winner Worldwide",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-agco-sustainability-report-21284b.htm",
         },
       ]
@@ -375,6 +397,7 @@ export default function () {
       url: "https://www.bronxconservatory.org/",
       awards: [
         {
+          year: 2021,
           organization: "WMA",
           title: "Non-Profit Standard of Excellence",
           url: "https://www.webaward.org/winner/36065/ideas-on-purpose-wins-2021-webaward-for-bronx-conservatory-of-music.html",
@@ -411,6 +434,7 @@ export default function () {
       wayback: "20200722204954",
       awards: [
         {
+          year: 2020,
           organization: "WMA",
           title: "Financial Services Standard of Excellence",
           url: "https://www.webaward.org/winner/35658/ideas-on-purpose-wins-2020-webaward-for-global-infrastructure-partners-website.html",
@@ -432,13 +456,15 @@ export default function () {
       url: "https://cdn.tradeweb.com/sites/2019AnnualReport/index.html",
       awards: [
         {
+          year: 2020,
           organization: "GDUSA",
           title: "Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda20&ids=0|10457",
         },
         {
+          year: 2020,
           organization: "LACP",
-          title: "Gold Winner",
+          title: "Gold Winner Worldwide",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-tradeweb-online-report-21286a.htm",
         },
       ]
@@ -465,11 +491,13 @@ export default function () {
       url: "https://www.ideasonpurpose.com/",
       awards: [
         {
+          year: 2019,
           organization: "GDUSA",
           title: "Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|356",
         },
         {
+          year: 2019,
           organization: "WMA",
           title: "Best Design Website",
           url: "https://www.webaward.org/winner/35253/ideas-on-purpose-wins-2019-webaward-for-ideas-on-purpose-website.html",
