@@ -1,6 +1,5 @@
 .quote {
   font-weight: var(--font-weight-light);
-  font-size: var(--font-size-ml);
 
   &__page {
     display: block;
@@ -11,7 +10,8 @@
 
   blockquote {
     border-top: .5px solid var(--color-black);
-    padding-block: var(--size-4xl);
+    padding-top: var(--size-4xl);
+    padding-bottom: var(--size-2xl);
   }
 
   p {
