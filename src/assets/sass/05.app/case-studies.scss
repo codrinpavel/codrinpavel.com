@@ -7,13 +7,8 @@
   row-gap: var(--size-8xl);
 
   min-height: 100svh;
-  padding-top: calc(var(--size-10xl) + var(--size-6xl));
+  padding-top: var(--size-header-offset);
   padding-bottom: var(--size-10xl);
-
-  + .study {
-    border-top: 1px solid var(--color-faint);
-    margin-top: var(--size-9xl);
-  }
 
   svg {
     width: 50vmin;
@@ -45,7 +40,7 @@
     svg {
       animation: studyLogo ease both;
       animation-timeline: view();
-      animation-range: cover 50%;
+      animation-range: 50% 80%;
     }
   }
 }

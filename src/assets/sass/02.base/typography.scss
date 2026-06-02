@@ -35,9 +35,8 @@ h2 {
     position: sticky;
     top: 0;
     z-index: 1;
-
+    padding-top: var(--size-header-offset-xs);
     margin-bottom: var(--size-5xl);
-    padding-top: var(--size-10xl);
     background-color: var(--color-white);
 
     &::after {

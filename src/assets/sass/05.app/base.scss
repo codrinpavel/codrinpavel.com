@@ -31,34 +31,6 @@ body {
   overflow-y: scroll;
 }
 
-main,
-footer {
-  opacity: 0;
-  animation: 1s body 1.5s ease forwards;
-}
-
-footer {
-  animation-delay: 2.5s;
-}
-
-@keyframes body {
-  100% {
-    opacity: 1;
-  }
-}
-
-hr {
-  background-color: var(--color-faint);
-  width: 80px;
-  height: 1px;
-  border: 0;
-  margin: var(--size-md) 0 var(--size-2xl);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 :where(a) {
   color: inherit;
   text-decoration: none;
@@ -98,11 +70,6 @@ hr {
     background-color: currentColor;
     transition: all 300ms;
   }
-}
-
-section {
-  box-shadow: 0 -.5px 0 0 var(--color-black);
-  background: var(--color-white);
 }
 
 .fullscreen {

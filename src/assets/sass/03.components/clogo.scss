@@ -1,3 +1,10 @@
+:root {
+  --preloader-duration: 1800ms;
+  --logo-wait: calc(var(--preloader-duration) + 250ms);
+  --logo-duration: 500ms;
+  --preloader-done: calc(var(--logo-wait) + var(--logo-duration) + 300ms);
+}
+
 .clogo {
   display: inline-flex;
   align-items: center;
@@ -16,7 +23,7 @@
     position: relative;
     top: 3px;
 
-    animation: 500ms clogo_before 2050ms ease forwards;
+    animation: var(--logo-duration) clogo_before var(--logo-wait) ease forwards;
   }
 
   &::after {
@@ -36,7 +43,23 @@
 
     transform: scale(var(--scale));
     transform-origin: center center;
-    animation: 1800ms clogo_after ease forwards;
+    animation: var(--preloader-duration) clogo_after ease forwards;
+  }
+}
+
+main,
+footer {
+  opacity: 0;
+  animation: 1s body var(--preloader-done) ease forwards;
+}
+
+footer {
+  animation-delay: calc(var(--preloader-done) + 1s);
+}
+
+@keyframes body {
+  100% {
+    opacity: 1;
   }
 }
 

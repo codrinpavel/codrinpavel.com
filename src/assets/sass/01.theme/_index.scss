@@ -10,10 +10,11 @@
   --grid-screenwidth: 1680px;
   --column-gap: var(--size-2xl);
   --row-gap: var(--size-2xl);
-  --header-height: 80px;
+  --header-height: 70px;
 
   @include mq(md) {
     --grid-margin: 32px;
+    --header-height: calc(var(--size-xl) * 2 + 37px);
   }
 
   @include mq(lg) {
@@ -22,7 +23,6 @@
 }
 
 
-/* TODO make variables available in CSS */
 :root {
   @each $key, $val in tokens("size") {
     --size-#{$key}: #{$val};

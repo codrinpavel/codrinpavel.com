@@ -3,6 +3,7 @@ import lenis from './lenis';
 const sections = [...document.querySelectorAll(".js-snap")];
 let sectionTops = [];
 let snapTimeout;
+let isSnapping = false;
 
 function updateSectionTops() {
   sectionTops = sections.map(section => ({
@@ -15,6 +16,7 @@ updateSectionTops();
 window.addEventListener("resize", updateSectionTops);
 
 lenis.on("scroll", ({ scroll }) => {
+  if (isSnapping) return;
   clearTimeout(snapTimeout);
 
   snapTimeout = setTimeout(() => {
@@ -30,11 +32,15 @@ lenis.on("scroll", ({ scroll }) => {
     });
 
     if (!candidate) return;
+    isSnapping = true;
 
     lenis.scrollTo(candidate.el, {
       offset: 0,
       duration: 0.8,
       easing: t => 1 - Math.pow(1 - t, 3),
+      onComplete: () => {
+        isSnapping = false;
+      },
     });
   }, 120);
 });

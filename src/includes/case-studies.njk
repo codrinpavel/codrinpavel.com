@@ -36,6 +36,10 @@
 
         {% svg study.logo %}
       </div>
+
+      {% if not loop.last %}
+        <hr/>
+      {% endif %}
     {% endfor %}
   </div>
 </section>
