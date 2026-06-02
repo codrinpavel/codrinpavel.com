@@ -33,18 +33,17 @@
   width: 100%;
 
   &__container {
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
 
-    min-height: 100svh;
     padding-top: var(--size-header-offset-xs);
     padding-bottom: var(--size-10xl);
-
     margin-left: var(--size-2xl);
 
     > span:first-child {
-      margin-left: -.11em;
-      //border-top: 1px solid var(--color-border);
+      border-top: 1px solid var(--color-border);
+      text-indent: -0.07em;
     }
   }
 
