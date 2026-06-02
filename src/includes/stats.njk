@@ -1,0 +1,21 @@
+<section class="stats" id="stats" aria-labelledby="heading-stats">
+  <h2 id="heading-stats" class="sr-only">At a Glance</h2>
+  <div class="wrapper">
+    <div class="overflow-hidden">
+      <div class="stats__track">
+        {% for stat in stats %}
+          <div class="stat">
+            <span class="text-7xl">{{ stat.figure }}</span><br>
+            <span class="text-xl font-light">{{ stat.title }}</span>
+
+            <ul class="mt-auto">
+              {% for bullet in stat.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -22,7 +22,8 @@ $tokens: (
       "black":  hsl(0, 0%, 9%),
       "white-text": hsl(274, 6%, 76%),
       "black-text": hsl(94, 8%, 18%),
-      "faint":  hsl(40, 3%, 60%)
+      "faint":  hsl(40, 3%, 60%),
+      "border": hsl(0, 0%, 9%),
     ),
 
     theme: (
@@ -46,7 +47,7 @@ $tokens: (
     4xl: fluid(32px, 52px),
     5xl: fluid(44px, 64px),
     6xl: fluid(48px, 80px),
-    7xl: fluid(56px, 96px),
+    7xl: fluid(100px, 200px),
   ),
 
   font-weight: (

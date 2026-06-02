@@ -6,6 +6,7 @@
   @include meta.load-css('hero');
   @include meta.load-css('case-studies');
   @include meta.load-css('work');
-  @include meta.load-css('award');
+  @include meta.load-css('awards');
+  @include meta.load-css('stats');
   @include meta.load-css('footer');
 }

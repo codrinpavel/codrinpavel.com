@@ -32,19 +32,18 @@ function createWaveAnimation(selector, options = {}) {
           </span>`;
       })
       .join("");
-
-
-      const w = document.querySelectorAll(".hero .wave-word");
-      const target = w[w.length - 2];
-
-      if (target) {
-        const text = target.textContent;
-
-        target.innerHTML = [...text]
-          .map((char, i) => `<span style="--i:${i}">${char}</span>`)
-          .join("");
-      }
   });
+
+  const w = document.querySelectorAll(".hero .wave-word");
+  const target = w[w.length - 2];
+
+  if (target) {
+    const text = target.textContent;
+
+    target.innerHTML = [...text]
+      .map((char, i) => `<span style="--i:${i}">${char}</span>`)
+      .join("");
+  }
 }
 
 createWaveAnimation(".animate-wave");

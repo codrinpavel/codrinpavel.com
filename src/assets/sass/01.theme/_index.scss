@@ -10,11 +10,10 @@
   --grid-screenwidth: 1680px;
   --column-gap: var(--size-2xl);
   --row-gap: var(--size-2xl);
-  --header-height: 70px;
+  --header-height: calc(16px * 2 + 29px);
 
   @include mq(md) {
     --grid-margin: 32px;
-    --header-height: calc(var(--size-xl) * 2 + 37px);
   }
 
   @include mq(lg) {

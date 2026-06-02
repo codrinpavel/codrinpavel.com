@@ -1,0 +1,75 @@
+@use "../mixins" as *;
+
+.stats {
+  height: 300vh;
+  view-timeline-name: --stats;
+  view-timeline-axis: block;
+
+  .wrapper {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+  }
+
+  &__track {
+    --track-gap: var(--size-4xl);
+    display: flex;
+    gap: var(--track-gap);
+    align-items: flex-start;
+
+    animation: stats_mobile linear both;
+    animation-timeline: --stats;
+    animation-range: contain 10%;
+
+    @include mq(md) {
+      animation: stats linear both;
+      animation-timeline: --stats;
+      animation-range: contain 10%;
+    }
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+  width: calc(100% - calc(var(--track-gap) / 2));
+  min-height: 100svh;
+
+  padding-top: var(--size-header-offset-xs);
+  padding-bottom: var(--size-5xl);
+
+  > span:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  li {
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--size-sm) 0;
+  }
+
+  @include mq(md) {
+    width: calc(50% - calc(var(--track-gap) / 2));
+  }
+}
+
+@keyframes stats_mobile {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(calc(-400% - var(--grid-margin) * 2 - var(--track-gap) * 1.5));
+  }
+}
+
+@keyframes stats {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(calc(-150% - var(--track-gap) * 1.5));
+  }
+}

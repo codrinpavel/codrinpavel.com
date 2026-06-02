@@ -5,50 +5,42 @@
   --preloader-done: calc(var(--logo-wait) + var(--logo-duration) + 300ms);
 }
 
-.clogo {
-  display: inline-flex;
-  align-items: center;
-
-  color: var(--color-black-text);
-  font-size: 50px;
-  line-height: .746em;
-  font-weight: 900;
-
-  &::before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 7.5px;
-    background-color: currentColor;
-    position: relative;
-    top: 3px;
-
-    animation: var(--logo-duration) clogo_before var(--logo-wait) ease forwards;
+.site-logo {
+  svg {
+    overflow: visible;
   }
 
-  &::after {
-    --size: 11px;
+  path {
+    transform-box: fill-box;
+    will-change: transform;
+  }
+
+  .dash {
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: var(--logo-duration) logo_dash ease var(--logo-wait) forwards;
+  }
+
+  .c {
+    transform: translateX(-50px);
+    transform-origin: left center;
+    animation: var(--logo-duration) logo_move ease var(--logo-wait) forwards;
+  }
+
+  .dot {
+    --size: 10px;
     --scale: calc(350vmax / var(--size));
 
-    content: '';
-    display: block;
-    width: var(--size);
-    height: var(--size);
-    margin-left: 4px;
-
-    align-self: flex-end;
-    background-color: currentColor;
-    border-radius: 100%;
-    pointer-events: none;
-
-    transform: scale(var(--scale));
+    transform: translateX(-50px) scale(var(--scale));
     transform-origin: center center;
-    animation: var(--preloader-duration) clogo_after ease forwards;
+    animation: var(--preloader-duration) logo_dot ease forwards,
+               var(--logo-duration) logo_move ease var(--logo-wait) forwards;
   }
 }
 
 main,
 footer {
+  will-change: opacity;
   opacity: 0;
   animation: 1s body var(--preloader-done) ease forwards;
 }
@@ -58,29 +50,17 @@ footer {
 }
 
 @keyframes body {
-  100% {
-    opacity: 1;
-  }
+  100% { opacity: 1 }
 }
 
-@keyframes clogo_before {
-  100% {
-    width: 50px;
-  }
+@keyframes logo_move {
+  100% { transform: translateX(0) }
 }
 
-@keyframes clogo_after {
-  99.9% {
-    pointer-events: none;
-  }
+@keyframes logo_dash {
+  100% { transform: scaleX(1) }
+}
 
-  99% {
-    height: 10px;
-  }
-
-  100% {
-    transform: scale(1);
-    pointer-events: auto;
-    height: 10px;
-  }
+@keyframes logo_dot {
+  100% { transform: translateX(-50px) scale(1) }
 }

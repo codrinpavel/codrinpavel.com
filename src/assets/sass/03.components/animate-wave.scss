@@ -1,6 +1,7 @@
 .animate-wave {
   display: flex;
   flex-wrap: wrap;
+  contain: layout;
 }
 
 .wave-word {
@@ -14,6 +15,8 @@
   span {
     display: inline-block;
     font-variation-settings: "wght" 300;
+    font-optical-sizing: none;
+    will-change: font-variation-settings;
 
     animation: 750ms weight-wave ease-in-out forwards;
     animation-delay: calc(var(--i) * 70ms + var(--word-delay) + 200ms);

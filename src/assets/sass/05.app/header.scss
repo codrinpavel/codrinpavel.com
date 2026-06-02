@@ -2,6 +2,9 @@
 
 .site-header {
   nav {
+    display: flex;
+    column-gap: var(--size-5xl);
+
     text-transform: uppercase;
     font-size: 13px;
 
@@ -21,7 +24,7 @@
   }
 
   @include mq(md, max) {
-    .clogo {
+    .site-logo {
       position: fixed;
       inset: 16px 0 auto var(--grid-margin);
       z-index: 9999;
@@ -31,6 +34,8 @@
     }
 
     nav {
+      justify-content: space-between;
+
       position: fixed;
       inset: auto 0 0;
       z-index: 9998;
@@ -39,7 +44,6 @@
       padding: var(--size-2xl) var(--grid-margin);
 
       backdrop-filter: blur(20px);
-
       background: linear-gradient(to top, var(--color-white) 70%, transparent);
     }
   }
