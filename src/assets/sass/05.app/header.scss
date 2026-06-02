@@ -35,6 +35,7 @@
 
     nav {
       justify-content: space-between;
+      column-gap: var(--size-sm);
 
       position: fixed;
       inset: auto 0 0;

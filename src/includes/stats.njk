@@ -5,14 +5,16 @@
       <div class="stats__track">
         {% for stat in stats %}
           <div class="stat">
-            <span class="text-7xl">{{ stat.figure }}</span><br>
-            <span class="text-xl font-light">{{ stat.title }}</span>
+            <div class="stat__container">
+              <span class="text-7xl">{{ stat.figure }}</span>
+              <span class="text-xl font-light mb-2xl">{{ stat.title }}</span>
 
-            <ul class="mt-auto">
-              {% for bullet in stat.bullets %}
-                <li>{{ bullet }}</li>
-              {% endfor %}
-            </ul>
+              <ul class="mt-auto">
+                {% for bullet in stat.bullets %}
+                  <li>{{ bullet }}</li>
+                {% endfor %}
+              </ul>
+            </div>
           </div>
         {% endfor %}
       </div>

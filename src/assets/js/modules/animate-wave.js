@@ -3,21 +3,21 @@ function createWaveAnimation(selector, options = {}) {
     stagger: 20,
     duration: 700,
     distance: "1em",
-    ...options
+    ...options,
   };
 
   const elements = document.querySelectorAll(selector);
 
+  let i = 0;
+
   elements.forEach((el) => {
     const text = el.textContent.trim();
     const words = text.split(/\s+/);
-
-    // read delay from html attribute
     const baseDelay = Number(el.dataset.delay || 0);
 
     el.innerHTML = words
-      .map((word, i) => {
-        const delay = baseDelay + i * settings.stagger;
+      .map((word, wordIndex) => {
+        const delay = baseDelay + wordIndex * settings.stagger;
 
         return `
           <span class="overflow-hidden">
@@ -33,17 +33,6 @@ function createWaveAnimation(selector, options = {}) {
       })
       .join("");
   });
-
-  const w = document.querySelectorAll(".hero .wave-word");
-  const target = w[w.length - 2];
-
-  if (target) {
-    const text = target.textContent;
-
-    target.innerHTML = [...text]
-      .map((char, i) => `<span style="--i:${i}">${char}</span>`)
-      .join("");
-  }
 }
 
 createWaveAnimation(".animate-wave");
