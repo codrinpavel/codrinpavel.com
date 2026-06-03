@@ -2,7 +2,6 @@
   --preloader-duration: 1800ms;
   --logo-wait: calc(var(--preloader-duration) + 250ms);
   --logo-duration: 500ms;
-  --preloader-done: calc(var(--logo-wait) + var(--logo-duration) + 300ms);
 }
 
 .site-logo {
@@ -38,19 +37,23 @@
   }
 }
 
-main,
-footer {
-  will-change: opacity;
-  opacity: 0;
-  animation: 1s body var(--preloader-done) ease forwards;
+main {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 99;
+    inset: 0;
+    background: var(--color-white);
+    will-change: clip-path;
+    clip-path: inset(0 0 0 0);
+    animation: 1.4s overlay var(--logo-wait) ease-out forwards;
+  }
 }
 
-footer {
-  animation-delay: calc(var(--preloader-done) + 1s);
-}
-
-@keyframes body {
-  100% { opacity: 1 }
+@keyframes overlay {
+  100% { clip-path: inset(0 0 0 100%); }
 }
 
 @keyframes logo_move {

@@ -23,7 +23,7 @@
 
   @include mq(md) {
     .columns > div {
-      opacity: .2;
+      opacity: 1;
       --step: 50px;
       transform: translateY(calc(var(--index) * var(--step)));
 

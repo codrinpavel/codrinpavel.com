@@ -11,9 +11,9 @@
 
     <main id="main-content" aria-label="Main Content">
       {{ content | safe }}
+      {% include "footer.njk" %}
     </main>
 
-    {% include "footer.njk" %}
     {% include "_scripts.njk" %}
   </body>
 </html>

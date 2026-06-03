@@ -2,7 +2,7 @@ function createWaveAnimation(selector, options = {}) {
   const settings = {
     stagger: 20,
     duration: 700,
-    distance: "1em",
+    distance: "1.15em",
     ...options,
   };
 
