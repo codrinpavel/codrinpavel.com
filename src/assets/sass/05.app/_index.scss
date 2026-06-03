@@ -1,6 +1,7 @@
 @use 'sass:meta';
 
 @layer app {
+  @include meta.load-css('inter');
   @include meta.load-css('base');
   @include meta.load-css('header');
   @include meta.load-css('hero');
