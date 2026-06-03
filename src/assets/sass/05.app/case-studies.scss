@@ -7,8 +7,8 @@
   row-gap: var(--size-8xl);
 
   min-height: 100svh;
-  padding-top: var(--size-header-offset);
-  padding-bottom: var(--size-10xl);
+  padding-top: var(--size-header-offset-xs);
+  padding-bottom: var(--size-5xl);
 
   svg {
     width: 50vmin;
@@ -18,7 +18,9 @@
   }
 
   @include mq(md, max) {
-    flex-direction: column-reverse;
+    svg {
+      order: -1;
+    }
   }
 
   @include mq(md) {

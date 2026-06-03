@@ -1,6 +1,13 @@
 @use "../mixins" as *;
 
 .site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 9999;
+  filter: invert(100%);
+  mix-blend-mode: exclusion;
+  padding-block: var(--size-xl);
+
   nav {
     display: flex;
     column-gap: var(--size-5xl);
@@ -24,38 +31,9 @@
   }
 
   @include mq(md, max) {
-    .site-logo {
-      position: fixed;
-      inset: 16px 0 auto var(--grid-margin);
-      z-index: 9999;
-
-      filter: invert(100%);
-      mix-blend-mode: exclusion;
-    }
-
     nav {
-      justify-content: space-between;
-      column-gap: var(--size-sm);
-
-      position: fixed;
-      inset: auto 0 0;
-      z-index: 9998;
-
-      margin: 0;
-      padding: var(--size-2xl) var(--grid-margin);
-
-      backdrop-filter: blur(20px);
-      background: linear-gradient(to top, var(--color-white) 70%, transparent);
+      display: none;
     }
-  }
-
-  @include mq(md) {
-    position: fixed;
-    inset: 0 0 auto;
-    z-index: 9999;
-    filter: invert(100%);
-    mix-blend-mode: exclusion;
-    padding-block: var(--size-xl);
   }
 }
 

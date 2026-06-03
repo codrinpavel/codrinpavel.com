@@ -130,8 +130,8 @@ $tokens: (
     8xl: fluid(56px, 80px),
     9xl: fluid(64px, 96px),
     10xl: fluid(80px, 120px),
-    header-offset: calc(var(--header-height) + var(--size-10xl)),
-    header-offset-xs: calc(var(--header-height) + var(--size-5xl)),
+    header-offset: calc(var(--header-height) + 15vh),
+    header-offset-xs: calc(var(--header-height) + 5vh),
     max: 1e5px,
   ),
 );

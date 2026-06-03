@@ -1,8 +1,9 @@
 @use "../mixins" as *;
 
-footer {
+.site-footer {
   min-height: 100dvh;
-  padding-block: var(--size-10xl);
+  padding-top: var(--size-header-offset);
+  padding-bottom: var(--size-5xl);
 
   display: flex;
   flex-direction: column;

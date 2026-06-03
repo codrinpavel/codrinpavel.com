@@ -10,7 +10,7 @@
   --grid-screenwidth: 1940px;
   --column-gap: var(--size-2xl);
   --row-gap: var(--size-2xl);
-  --header-height: calc(16px * 2 + 29px);
+  --header-height: calc(var(--size-xl) * 2 + 29px);
 
   @each $key, $val in tokens("size") {
     --size-#{$key}: #{$val};
