@@ -43,6 +43,9 @@
 
     .figure {
       font-size: max(var(--font-size-7xl), 20vh);
+      font-weight: 300;
+      letter-spacing: -.12em;
+      line-height: 1.2;
       border-top: 1px solid var(--color-border);
       text-indent: -0.07em;
     }
