@@ -33,9 +33,9 @@ export default function () {
       "figure": "1B+",
       "title": "Audience Reach",
       "bullets": [
-        "Enterprise & nonprofit organizations",
-        "News, media & publishing platforms",
-        "National consumer brands",
+        "Axios, The Dodo & other major media platforms",
+        "High-traffic publishing ecosystems",
+        "National & global audiences",
       ]
     },
     {

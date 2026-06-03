@@ -71,19 +71,3 @@ body {
     transition: all 300ms;
   }
 }
-
-.fullscreen {
-  min-height: 100svh;
-  padding-block: var(--size-10xl);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@include mq(md) {
-  .editorial-columns {
-    column-count: 2;
-    column-gap: var(--size-5xl);
-  }
-}

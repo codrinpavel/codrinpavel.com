@@ -1,6 +1,22 @@
+@use "../mixins" as *;
+
 footer {
+  min-height: 100dvh;
+  padding-block: var(--size-10xl);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   color: var(--color-white-text);
   background: var(--color-black);
   z-index: -1;
   inset: 0;
+}
+
+@include mq(md) {
+  .editorial-columns {
+    column-count: 2;
+    column-gap: var(--size-5xl);
+  }
 }
