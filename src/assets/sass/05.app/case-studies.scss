@@ -3,7 +3,6 @@
 .study {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   row-gap: var(--size-8xl);
 
   min-height: 100svh;
@@ -24,7 +23,9 @@
   }
 
   @include mq(md) {
-    .columns > div {
+    justify-content: space-between;
+
+    .columns>div {
       --step: 50px;
       transform: translateY(calc(var(--index) * var(--step)));
 
@@ -32,10 +33,21 @@
       animation-timeline: view();
       animation-range: 0% 70%;
 
-      &:nth-child(1) { --index: 1; }
-      &:nth-child(2) { --index: 2; }
-      &:nth-child(3) { --index: 3; }
-      &:nth-child(4) { --index: 4; }
+      &:nth-child(1) {
+        --index: 1;
+      }
+
+      &:nth-child(2) {
+        --index: 2;
+      }
+
+      &:nth-child(3) {
+        --index: 3;
+      }
+
+      &:nth-child(4) {
+        --index: 4;
+      }
     }
 
     svg {

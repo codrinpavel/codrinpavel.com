@@ -24,7 +24,7 @@
     animation-range: contain 0%;
 
     &--item {
-      padding-top: var(--size-header-offset);
+      padding-top: var(--size-header-offset-xs);
       width: 100%;
       flex-shrink: 0;
 
@@ -34,6 +34,7 @@
     }
 
     &--intro p {
+      margin-top: calc(40px + var(--size-4xl));
       max-width: 19em;
     }
   }

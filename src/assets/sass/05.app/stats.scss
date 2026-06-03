@@ -41,7 +41,8 @@
     padding-bottom: var(--size-5xl);
     margin-left: var(--size-2xl);
 
-    > span:first-child {
+    .figure {
+      font-size: max(var(--font-size-7xl), 20vh);
       border-top: 1px solid var(--color-border);
       text-indent: -0.07em;
     }

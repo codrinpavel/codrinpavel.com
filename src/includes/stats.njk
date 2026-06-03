@@ -1,12 +1,12 @@
-<section class="stats" id="stats" aria-labelledby="heading-stats">
-  <h2 id="heading-stats" class="sr-only">At a Glance</h2>
+<section class="stats" id="at-a-glance" aria-labelledby="heading-at-a-glance">
+  <h2 id="heading-at-a-glance" class="sr-only">At a Glance</h2>
   <div class="wrapper">
     <div class="overflow-hidden">
       <div class="stats__track">
         {% for stat in stats %}
           <div class="stat">
             <div class="stat__container">
-              <span class="text-7xl">{{ stat.figure }}</span>
+              <span class="figure">{{ stat.figure }}</span>
               <span class="text-xl font-light mb-2xl">{{ stat.title }}</span>
 
               <ul class="mt-auto">
