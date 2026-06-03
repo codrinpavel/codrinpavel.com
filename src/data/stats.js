@@ -4,9 +4,8 @@ export default function () {
       "figure": "15+",
       "title": "Years",
       "bullets": [
-        "Since 2009",
+        "Leading projects from concept to launch since 2009",
         "8+ years in ESG & corporate comms",
-        "Enterprise & media experience",
         "Long-term client partnerships"
       ]
     },
@@ -14,9 +13,10 @@ export default function () {
       "figure": "80+",
       "title": "Projects",
       "bullets": [
-        "ESG & annual reports",
-        "Websites & platforms",
-        "Interactive digital experiences"
+        "24 CSR, DEI, ESG & Annual Report Websites",
+        "24 Media, News & Editorial Platforms",
+        "22 Corporate, Brand & Investor Relations Websites",
+        "17 Nonprofit, Education & Healthcare Websites"
       ]
     },
     {
@@ -33,9 +33,9 @@ export default function () {
       "figure": "1B+",
       "title": "Audience Reach",
       "bullets": [
-        "Major media platforms",
-        "High-traffic publishing",
-        "Global audiences"
+        "Enterprise & nonprofit organizations",
+        "News, media & publishing platforms",
+        "National consumer brands",
       ]
     },
     {
@@ -45,7 +45,7 @@ export default function () {
         "Investor relations",
         "ESG reporting",
         "Corporate communications",
-        "Multi-year enterprise work"
+        "Multi-year enterprise engagements"
       ]
     },
   ]
