@@ -4,7 +4,7 @@
   li {
     animation: tableitem linear both;
     animation-timeline: view();
-    animation-range: entry 20% cover 15%;
+    animation-range: 0% 15%;
 
     @include mq(md, max) {
       animation-range: entry 100% cover 25%;
@@ -27,6 +27,20 @@
     padding-block: var(--size-lg);
   }
 
+  p {
+    flex-grow: 1;
+    margin: 0;
+
+    &:last-child {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    p:nth-child(2) {
+      display: none;
+    }
+  }
+
   a:hover,
   a:focus-visible {
     p:last-child {
@@ -40,25 +54,12 @@
     }
   }
 
-  p {
-    flex-grow: 1;
-    margin: 0;
-
-    &:last-child {
-      text-align: right;
-      flex-shrink: 0;
-    }
-  }
-
   @include mq(md) {
     p:first-child {
       flex: 0 0 calc(50% - var(--column-gap) / 2);
     }
-  }
-
-  @include mq(md, max) {
     p:nth-child(2) {
-      display: none;
+      display: block;
     }
   }
 }
