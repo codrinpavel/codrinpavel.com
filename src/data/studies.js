@@ -20,6 +20,13 @@ export default function () {
         "SCSS",
         "Nunjucks"
       ],
+      images: [
+        "work/dominion-energy-2021-dei-report/home-hero.png",
+        "work/dominion-energy-2020-dei-report/home-detail.png",
+        "work/dominion-energy-2018-scr-report/interior-detail.png",
+        "work/dominion-energy-2021-dei-report/home-detail.png",
+        "work/dominion-energy-2023-scr-report/interior-detail.png",
+      ]
     },
     {
       client: "National Resident Matching Program (NRMP)",
@@ -42,6 +49,14 @@ export default function () {
         "WP ACF",
         "Gutenberg",
       ],
+      images: [
+        "work/nrmp-the-match/social_image.jpg",
+        "work/nrmp-the-match/home-hero.png",
+        "work/nrmp-the-match/interior-detail-3.png",
+        "work/nrmp-the-match/interior-detail.png",
+        "work/nrmp-program-directory/home-hero.png",
+        "work/nrmp-program-directory/social_image.jpg",
+      ]
     },
     {
       client: "Axios",
@@ -68,6 +83,14 @@ export default function () {
         "Google Analytics",
         "Google Tag Manager",
       ],
+      images: [
+        "work/axios/social_image.png",
+        "work/axios/home-hero.png",
+        "work/axios/interior-profile.png",
+        "work/axios/interior-newsletters.png",
+        "work/axios/interior-newsletter.png",
+        "work/axios/interior-team.png",
+      ]
     }
   ]
 };

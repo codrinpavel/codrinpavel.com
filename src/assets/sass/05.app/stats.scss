@@ -12,25 +12,25 @@
   }
 
   &__track {
+    --count: 5;
+    --item-width: 100%;
+
     display: flex;
     align-items: flex-start;
     margin-left: calc(-1 * var(--size-2xl));
 
-    animation: stats_mobile linear both;
+    animation: stats linear both;
     animation-timeline: --stats;
     animation-range: contain 10%;
 
     @include mq(md) {
-      animation: stats linear both;
-      animation-timeline: --stats;
-      animation-range: contain 10%;
+      --item-width: calc(5 / 12 * 100%);
     }
   }
 }
 
 .stat {
-  flex-shrink: 0;
-  width: 100%;
+  flex: 0 0 var(--item-width);
 
   &__container {
     min-height: 100svh;
@@ -55,20 +55,6 @@
     border-bottom: 1px solid var(--color-border);
     padding: var(--size-sm) 0;
   }
-
-  @include mq(md) {
-    width: 50%;
-  }
-}
-
-@keyframes stats_mobile {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-400%);
-  }
 }
 
 @keyframes stats {
@@ -77,6 +63,6 @@
   }
 
   to {
-    transform: translateX(-150%);
+    transform: translateX(calc(-1 * ((var(--count) * var(--item-width)) - 100%)));
   }
 }

@@ -4,13 +4,13 @@
 
     {% for study in studies %}
       <div class="study js-snap">
-        <div class="columns columns-6 md:columns-4 lg:columns-2 row-gap-8xl">
-          <div class="columns-10 md:columns-12 lg:columns-3">
+        <div class="columns row-gap-8xl">
+          <div class="columns-8 lg:columns-3">
             <h3>Project</h3>
             <p>{{ study.description }}</p>
           </div>
 
-          <div class="lg:ml-3">
+          <div class="columns-6 lg:columns-2 lg:ml-2">
             <h3>Focus Areas</h3>
             <ul>
               {% for item in study.focus %}
@@ -19,7 +19,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="columns-6 lg:columns-2">
             <h3>Tech Stack</h3>
             <ul>
               {% for item in study.development %}
@@ -28,13 +28,22 @@
             </ul>
           </div>
 
-          <div>
+          <div class="columns-6 lg:columns-2">
             <h3>Project Type</h3>
             <p>{{ study.industry }}</p>
           </div>
+
+          <div class="columns-12 lg:columns-5">
+            {% svg study.logo %}
+          </div>
+
+          <div class="columns-12 lg:columns-6">
+            {% for image in study.images %}
+            {% img image %}
+            {% endfor %}
+          </div>
         </div>
 
-        {% svg study.logo %}
       </div>
 
       {% if not loop.last %}
