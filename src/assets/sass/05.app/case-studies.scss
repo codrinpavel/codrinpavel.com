@@ -21,7 +21,7 @@
     display: block;
     animation: grayscale ease both;
     animation-timeline: view();
-    animation-range: 0% 100%;
+    animation-range: 20% 80%;
 
     &:not(:last-child) {
       margin-bottom: var(--size-5xl);
