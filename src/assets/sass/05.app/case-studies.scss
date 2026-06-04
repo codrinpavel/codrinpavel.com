@@ -12,16 +12,20 @@
   svg {
     width: 50vmin;
     height: auto;
-    filter: grayscale(100%);
+    //filter: grayscale(100%);
     opacity: .85;
   }
 
   picture {
-    clip-path: inset(1px);
     display: block;
     animation: grayscale ease both;
     animation-timeline: view();
     animation-range: 20% 80%;
+
+    img {
+      clip-path: inset(2px 1px 0 0);
+      display: block;
+    }
 
     &:not(:last-child) {
       margin-bottom: var(--size-5xl);

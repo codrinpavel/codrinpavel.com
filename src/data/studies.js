@@ -3,7 +3,7 @@ export default function () {
     {
       client: "Dominion Energy",
       industry: "Sustainability & Corporate Reporting",
-      logo: "dominion-energy.svg",
+      logo: "dominion-energy-color.svg",
       description:
         "Led frontend development for multiple award-winning CSR, ESG, and DEI reporting platforms for Dominion Energy, delivering responsive, WCAG-compliant frontend experiences optimized for speed and reliability.",
       focus: [
@@ -31,7 +31,7 @@ export default function () {
     {
       client: "National Resident Matching Program (NRMP)",
       industry: "Healthcare & Graduate Medical Education (GME)",
-      logo: "nrmp.svg",
+      logo: "nrmp-color.svg",
       description:
         "Developed the frontend experience for NRMP.org as part of a broader redesign initiative, delivering a responsive, accessible, and performance-focused WordPress platform supporting complex educational resources and organizational communications.",
       focus: [
@@ -61,7 +61,7 @@ export default function () {
     {
       client: "Axios",
       industry: "Digital Publishing & Media",
-      logo: "axios.svg",
+      logo: "axios-color.svg",
       description:
         "Led frontend development and launch for Axios.com, delivering high-performance editorial publishing experiences optimized for accessibility, Core Web Vitals, SEO, and scalable CMS-driven content delivery, supporting millions of monthly readers.",
       focus: [

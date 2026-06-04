@@ -56,7 +56,7 @@
 
   @include mq(md) {
     p:first-child {
-      flex: 0 0 calc(50% - var(--column-gap) / 2);
+      flex: 0 0 calc(5/12 * 100% - var(--column-gap) / 2);
     }
     p:nth-child(2) {
       display: block;
