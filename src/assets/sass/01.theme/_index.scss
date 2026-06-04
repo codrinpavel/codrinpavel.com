@@ -1,9 +1,10 @@
+@use 'sass:meta';
 @use "../mixins" as *;
 @use "../tokens" as *;
 
 @layer base, components, utilities, app;
 
-//@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@include meta.load-css('inter');
 
 :root {
   --grid-margin: 20px;
