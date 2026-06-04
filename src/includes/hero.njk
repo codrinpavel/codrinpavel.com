@@ -1,37 +1,10 @@
 <section class="hero" id="top" aria-labelledby="heading-hero">
   <div class="wrapper">
-    <h1 id="heading-hero" class="sr-only">About me</h1>
+    <h1 id="heading-hero" class="sr-only">About</h1>
 
-    <div class="overflow-hidden">
-      <div class="hero__track">
-        <div class="hero__track--item">
-          <div class="hero__track--intro heading">
-            <p class="animate-wave" data-delay="2800">Design-driven frontend developer focused on accessibility and optimization, creating award-winning experiences that are beautifully performant.</p>
-          </div>
-        </div>
-
-        {% for item in quotes %}
-        <div class="hero__track--item">
-          <figure class="quote" id="quote-{{ loop.index < 10 and '0' ~ loop.index or loop.index }}">
-            <header>
-              <span class="type-eyebrow">
-                {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
-                &mdash;
-                {{ loop.length < 10 and '0' ~ loop.length or loop.length }}
-              </span>
-            </header>
-
-            <blockquote>
-              <p>{{ item.content | safe }}</p>
-            </blockquote>
-
-            <figcaption>
-              <cite>{{ item.name }}</cite>
-              <span>{{ item.title }} at {{ item.company }}</span>
-            </figcaption>
-          </figure>
-        </div>
-        {% endfor %}
+    <div class="columns md:columns-8 lg:columns-7 justify-end">
+      <div class="hero__track--intro heading">
+        <p class="animate-wave" data-delay="2800">Design-driven frontend developer focused on accessibility and optimization, creating award-winning experiences that are beautifully performant.</p>
       </div>
     </div>
   </div>

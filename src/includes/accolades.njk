@@ -1,0 +1,32 @@
+<section class="accolades" id="accolades" aria-labelledby="heading-accolades">
+  <h1 id="heading-accolades" class="sr-only">Accolades</h1>
+
+  <div class="wrapper">
+    <div class="overflow-hidden">
+      <div class="accolades__track">
+        {% for item in accolades %}
+          <div class="accolades__track--item">
+            <figure class="quote">
+              <header>
+                <span class="type-eyebrow">
+                  {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
+                &mdash;
+                {{ loop.length < 10 and '0' ~ loop.length or loop.length }}
+                </span>
+              </header>
+
+              <blockquote>
+                <p>{{ item.content | safe }}</p>
+              </blockquote>
+
+              <figcaption>
+                <cite>{{ item.name }}</cite>
+                <span>{{ item.title }} at {{ item.company }}</span>
+              </figcaption>
+            </figure>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

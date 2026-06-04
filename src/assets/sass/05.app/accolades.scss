@@ -1,0 +1,44 @@
+.accolades {
+  height: calc(100vh + 300vw);
+  view-timeline-name: --accolades;
+  view-timeline-axis: block;
+
+  .wrapper {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+  }
+
+  &__track {
+    padding-top: var(--size-header-offset);
+
+    --count: 3;
+    --item-width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    margin-left: calc(-1 * var(--size-2xl));
+
+    animation: accolades linear both;
+    animation-timeline: --accolades;
+    animation-range: contain 10%;
+
+    &--item {
+      flex: 0 0 var(--item-width);
+
+      .quote {
+        margin-left: var(--size-2xl);
+      }
+    }
+  }
+}
+
+@keyframes accolades {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(calc(-1 * ((var(--count) * var(--item-width)) - 100%)));
+  }
+}
