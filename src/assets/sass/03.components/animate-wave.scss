@@ -1,16 +1,14 @@
 .animate-wave {
-  //display: flex;
-  //flex-wrap: wrap;
-  //contain: layout;
-  //font-weight: "wght" 375;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.wave-word {
-  //display: inline-block;
-  //transform: translateY(var(--wave-distance, 16px)) rotate(2deg);
-//
-  //animation: var(--wave-duration, 600ms) waveFadeUp ease forwards;
-  //animation-delay: var(--word-delay);
+.wave-word {--word-delay: 6s;
+  display: inline-block;
+  transform: translateY(var(--wave-distance, 16px)) rotate(2deg);
+
+  animation: var(--wave-duration, 600ms) waveFadeUp ease forwards;
+  animation-delay: var(--word-delay);
 }
 
 @keyframes waveFadeUp {
