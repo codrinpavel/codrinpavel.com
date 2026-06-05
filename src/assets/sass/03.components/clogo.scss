@@ -30,10 +30,9 @@
     --size: 10px;
     --scale: calc(350vmax / var(--size));
 
-    transform: translateX(-50px) scale(var(--scale));
+    transform: scale(var(--scale));
     transform-origin: center center;
-    animation: var(--preloader-duration) logo_dot ease forwards,
-               var(--logo-duration) logo_move ease var(--logo-wait) forwards;
+    animation: calc(var(--logo-wait) + var(--logo-duration)) logo_dot ease forwards;
   }
 }
 
@@ -47,23 +46,38 @@ main {
     inset: 0;
     background: var(--color-white);
     will-change: clip-path;
-    clip-path: inset(0 0 0 0);
+    transform: translateX(0%);
     animation: 1.4s overlay var(--logo-wait) ease-out forwards;
   }
 }
 
 @keyframes overlay {
-  100% { clip-path: inset(0 0 0 100%); }
-}
-
-@keyframes logo_move {
-  100% { transform: translateX(0) }
+  100% { transform: translateX(101%) }
 }
 
 @keyframes logo_dash {
   100% { transform: scaleX(1) }
 }
 
+@keyframes logo_move {
+  100% { transform: translateX(0) }
+}
+
 @keyframes logo_dot {
   100% { transform: translateX(-50px) scale(1) }
+}
+
+
+@keyframes logo_dot {
+  70.588% {
+    transform: translateX(-50px) scale(1);
+  }
+
+  80.392% {
+    transform: translateX(-50px) scale(1);
+  }
+
+  100% {
+    transform: translateX(0) scale(1);
+  }
 }
