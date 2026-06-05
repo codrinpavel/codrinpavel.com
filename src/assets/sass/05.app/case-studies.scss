@@ -1,6 +1,9 @@
 @use "../mixins" as *;
 
 .study {
+  contain: layout;
+  content-visibility: auto;
+
   display: flex;
   flex-direction: column;
   row-gap: var(--size-8xl);

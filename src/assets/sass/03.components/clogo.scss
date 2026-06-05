@@ -30,10 +30,10 @@
     --size: 10px;
     --scale: calc(350vmax / var(--size));
 
-    transform: translateX(-50px) scale(var(--scale));
-    transform-origin: center center;
-    animation: var(--preloader-duration) logo_dot ease forwards,
-               var(--logo-duration) logo_move ease var(--logo-wait) forwards;
+   //transform: translateX(-50px) scale(var(--scale));
+   //transform-origin: center center;
+   //animation: var(--preloader-duration) logo_dot ease forwards;
+    animation: var(--logo-duration) logo_move ease var(--logo-wait) forwards;
   }
 }
 
@@ -41,7 +41,7 @@ main {
   position: relative;
 
   &::after {
-    content: '';
+    //content: '';
     position: absolute;
     z-index: 99;
     inset: 0;

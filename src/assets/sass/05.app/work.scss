@@ -1,6 +1,9 @@
 @use "../mixins" as *;
 
 .work {
+  contain: layout;
+  content-visibility: auto;
+
   li {
     animation: tableitem linear both;
     animation-timeline: view();

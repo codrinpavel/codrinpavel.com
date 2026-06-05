@@ -1,4 +1,6 @@
 .award {
+  contain: layout;
+  content-visibility: auto;
   display: flex;
 
   &:not(:first-child) {

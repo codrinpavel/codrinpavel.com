@@ -1,18 +1,18 @@
 @use "../mixins" as *;
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 
-* {
+html {
   scrollbar-width: none;
 }
 
-* {
+html {
   -ms-overflow-style: none;
 }
 
-body, html {
+html {
   -webkit-overflow-scrolling: touch;
 }
 

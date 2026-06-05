@@ -1,4 +1,6 @@
 .accolades {
+  contain: layout;
+  content-visibility: auto;
   height: calc(100vh + 100vw);
   view-timeline-name: --accolades;
   view-timeline-axis: block;

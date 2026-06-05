@@ -14,11 +14,11 @@
     text-transform: uppercase;
 
     a {
-      opacity: 0;
-
-      transform: translateY(16px) rotate(2deg);
-      animation: var(--wave-duration, 600ms) navFadeUp ease forwards;
-      animation-delay: var(--delay, 0s);
+      //opacity: 0;
+//
+      //transform: translateY(16px) rotate(2deg);
+      //animation: var(--wave-duration, 600ms) navFadeUp ease forwards;
+      //animation-delay: var(--delay, 0s);
     }
 
     a.is-active::before {

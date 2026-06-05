@@ -4,8 +4,6 @@
 
 @layer base, components, utilities, app;
 
-@include meta.load-css('inter');
-
 :root {
   --grid-margin: 20px;
   --grid-screenwidth: 1940px;
