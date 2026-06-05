@@ -1,0 +1,44 @@
+@use "../mixins" as *;
+
+.at-a-glance {
+  height: 300vh;
+  view-timeline-name: --at-a-glance;
+  view-timeline-axis: block;
+
+  .wrapper {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+  }
+
+  .track {
+    animation-timeline: --at-a-glance;
+
+    @include mq(md) {
+      --item-width: calc(5 / 12 * 100%);
+    }
+  }
+}
+
+.stat {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: var(--size-header-offset-xs);
+  padding-bottom: var(--size-5xl);
+
+  .figure {
+    font-size: max(var(--font-size-7xl), 20vh);
+    font-weight: 375;
+    letter-spacing: -.06em;
+    line-height: 1.2;
+    border-top: 1px solid var(--color-border);
+    text-indent: -0.07em;
+  }
+
+  li {
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--size-sm) 0;
+  }
+}

@@ -6,14 +6,4 @@ hr {
   margin: 0;
   padding: 0;
   background: var(--color-border);
-
-  //animation: separator ease both;
-  //animation-timeline: view(block);
-  //animation-range: 60% 80%;
-}
-
-@keyframes separator {
-  to {
-    background: var(--color-white);
-  }
 }

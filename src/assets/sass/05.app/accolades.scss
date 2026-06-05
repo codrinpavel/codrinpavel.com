@@ -1,6 +1,5 @@
 .accolades {
   contain: layout;
-  content-visibility: auto;
   height: calc(100vh + 100vw);
   view-timeline-name: --accolades;
   view-timeline-axis: block;
@@ -11,36 +10,11 @@
     height: 100svh;
   }
 
-  &__track {
-    padding-top: var(--size-header-offset);
-
-    --count: 3;
+  .track {
     --item-width: 100%;
+    --count: 3;
 
-    display: flex;
-    align-items: flex-start;
-    margin-left: calc(-1 * var(--size-2xl));
-
-    animation: accolades linear both;
     animation-timeline: --accolades;
-    animation-range: contain 10%;
-
-    &--item {
-      flex: 0 0 var(--item-width);
-
-      .quote {
-        margin-left: var(--size-2xl);
-      }
-    }
-  }
-}
-
-@keyframes accolades {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(calc(-1 * ((var(--count) * var(--item-width)) - 100%)));
+    padding-top: var(--size-header-offset);
   }
 }

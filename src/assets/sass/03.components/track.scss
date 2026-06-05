@@ -1,0 +1,26 @@
+.track {
+  --item-width: 100%;
+  --count: 5;
+
+  display: flex;
+  align-items: flex-start;
+  margin-left: calc(-1 * var(--size-2xl));
+
+  transform: translateX(0%);
+  animation: track linear both;
+  animation-range: contain 10%;
+
+  &--item {
+    flex: 0 0 var(--item-width);
+
+    > * {
+      margin-left: var(--size-2xl);
+    }
+  }
+}
+
+@keyframes track {
+  to {
+    transform: translateX(calc(-1 * ((var(--count) * var(--item-width)) - 100%)));
+  }
+}

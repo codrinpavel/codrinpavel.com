@@ -12,7 +12,5 @@
 }
 
 @keyframes waveFadeUp {
-  to {
-    transform: translateY(0) rotate(0deg);
-  }
+  to { transform: translateY(0) rotate(0deg) }
 }
