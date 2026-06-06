@@ -23,10 +23,10 @@ export default function () {
       "figure": "25+",
       "title": "Awards",
       "bullets": [
-        "GDUSA award-winning work",
-        "WebAward-winning projects",
-        "iNOVA Grand Winners",
-        "LACP & ARC recognition"
+        "GDUSA Digital Design Awards",
+        "WebAwards Standards of Excellence",
+        "iNOVA Awards Grand Winners",
+        "LACP Worldwide Winners"
       ]
     },
     {

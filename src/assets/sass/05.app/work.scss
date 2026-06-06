@@ -7,6 +7,7 @@
     animation: tableitem linear both;
     animation-timeline: view();
     animation-range: 0% 15%;
+    will-change: transform, opacity;
 
     @include mq(md, max) {
       animation-range: entry 100% cover 25%;
@@ -22,7 +23,9 @@
   }
 
   a,
+  button,
   li.is-disabled {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: var(--column-gap);
@@ -43,6 +46,8 @@
     }
   }
 
+  button:hover,
+  button:focus-visible,
   a:hover,
   a:focus-visible {
     p:last-child {
@@ -60,6 +65,7 @@
     p:first-child {
       flex: 0 0 calc(5/12 * 100% - var(--column-gap) / 2);
     }
+
     p:nth-child(2) {
       display: block;
     }

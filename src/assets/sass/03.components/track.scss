@@ -9,6 +9,7 @@
   transform: translateX(0%);
   animation: track linear both;
   animation-range: contain 10%;
+  will-change: transform;
 
   &--item {
     flex: 0 0 var(--item-width);

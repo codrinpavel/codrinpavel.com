@@ -3,12 +3,13 @@
   flex-wrap: wrap;
 }
 
-.wave-word {--word-delay: 6s;
-  display: inline-block;
+.wave-word {
+  display: block;
   transform: translateY(var(--wave-distance, 16px)) rotate(2deg);
 
   animation: var(--wave-duration, 600ms) waveFadeUp ease forwards;
   animation-delay: var(--word-delay);
+  will-change: transform;
 }
 
 @keyframes waveFadeUp {

@@ -21,11 +21,11 @@ export default function () {
         "Nunjucks"
       ],
       images: [
-        "work/dominion-energy-2021-dei-report/home-hero.png",
-        "work/dominion-energy-2020-dei-report/home-detail.png",
-        "work/dominion-energy-2018-scr-report/interior-detail.png",
-        "work/dominion-energy-2021-dei-report/home-detail.png",
-        "work/dominion-energy-2023-scr-report/interior-detail.png",
+        "case-studies/de/home-hero.png",
+        "case-studies/de/home-detail.png",
+        "case-studies/de/interior-detail-2.png",
+        "case-studies/de/home-detail-2.png",
+        "case-studies/de/interior-detail.png",
       ]
     },
     {
@@ -50,12 +50,12 @@ export default function () {
         "Gutenberg",
       ],
       images: [
-        "work/nrmp-the-match/social_image.jpg",
-        "work/nrmp-the-match/home-hero.png",
-        "work/nrmp-the-match/interior-detail-3.png",
-        "work/nrmp-the-match/interior-detail.png",
-        "work/nrmp-program-directory/home-hero.png",
-        "work/nrmp-program-directory/social_image.jpg",
+        "case-studies/nrmp/social_image.jpg",
+        "case-studies/nrmp/home-hero.png",
+        "case-studies/nrmp/interior-detail-3.png",
+        "case-studies/nrmp/interior-detail.png",
+        "case-studies/nrmp-programs/home-hero.png",
+        "case-studies/nrmp-programs/social_image.jpg",
       ]
     },
     {
@@ -84,12 +84,12 @@ export default function () {
         "Google Tag Manager",
       ],
       images: [
-        "work/axios/social_image.png",
-        "work/axios/home-hero.png",
-        "work/axios/interior-profile.png",
-        "work/axios/interior-newsletters.png",
-        "work/axios/interior-newsletter.png",
-        "work/axios/interior-team.png",
+        "case-studies/axios/social_image.png",
+        "case-studies/axios/home-hero.png",
+        "case-studies/axios/interior-profile.png",
+        "case-studies/axios/interior-newsletters.png",
+        "case-studies/axios/interior-newsletter.png",
+        "case-studies/axios/interior-team.png",
       ]
     }
   ]

@@ -40,7 +40,7 @@ export default function () {
     {
       year: 2023,
       client: "Ideas On Purpose",
-      project: "Brand <em>New</em> Brand! website",
+      project: "Brand New Brand website",
       tags: ["featured", "award"],
       url: "https://brandnewbrand.org/",
       awards: [
@@ -61,6 +61,7 @@ export default function () {
     {
       year: 2022,
       client: "GWBS",
+      long: "Groombridge, Wu, Baughman & Stone",
       project: "Company Website",
       url: "https://www.groombridgewu.com/",
     },
@@ -258,6 +259,7 @@ export default function () {
       tags: ["nonprofit"],
       url: "https://programdirectory.nrmp.org/",
     },
+    /*
     {
       year: 2024,
       client: "NRMP",
@@ -266,6 +268,7 @@ export default function () {
       tags: ["nonprofit"],
       url: "https://forms.nrmp.org/",
     },
+    */
     {
       year: 2021,
       client: "FNIH",
@@ -408,7 +411,8 @@ export default function () {
       year: 2022,
       client: "Lucas' Fitness Lab",
       project: "Organization Website",
-      inactive: true
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2020,
@@ -563,6 +567,7 @@ export default function () {
     },
     {
       year: 2018,
+      wayback: 20180315093517,
       client: "Popdust",
       project: "Entertainment Publication",
       tags: ["media"],
@@ -574,9 +579,12 @@ export default function () {
       project: "Entertainment Publication",
       tags: ["media"],
       url: "https://www.paypath.com/",
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2018,
+      wayback: 20160420152431,
       client: "One Country",
       project: "News and Media Website",
       tags: ["media"],
@@ -584,6 +592,7 @@ export default function () {
     },
     {
       year: 2018,
+      wayback: 20180224060527,
       client: "GeistM",
       project: "Agency Website",
       url: "https://geistm.com/",
@@ -601,7 +610,7 @@ export default function () {
       year: 2017,
       client: "GSK",
       long: "GlaxoSmithKline",
-      project: "Flonase Be>Greater",
+      project: "Flonase Be Greater",
       tags: ["fortune", "media"],
       url: "https://begreater.flonase.com/",
       wayback: "20180326213621"
@@ -610,10 +619,12 @@ export default function () {
       year: 2016,
       client: "GSK",
       long: "GlaxoSmithKline",
-      project: "Flonase Be>Greater",
+      project: "Flonase Be Greater",
       tags: ["fortune", "media"],
       url: "https://gart.flonase.com/the-greater-american-roadtrip/",
-      wayback: "20170629052449"
+      wayback: "20170629052449",
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2018,
@@ -637,6 +648,7 @@ export default function () {
       project: "Company Website",
       tags: ["media"],
       url: "http://www.gearbrain.com/",
+      wayback: 20170824031436
     },
     {
       year: 2016,
@@ -644,13 +656,16 @@ export default function () {
       project: "Digital Publication",
       tags: ["media"],
       url: "http://www.topdust.com/",
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2016,
       client: "We Are Mel",
       project: "Company Website",
       url: "http://www.wearemel.com/",
-      inactive: true
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2016,
@@ -713,12 +728,6 @@ export default function () {
     },
     {
       year: 2016,
-      client: "Power To Fly",
-      project: "Company Blog",
-      url: "https://powertofly.com/",
-    },
-    {
-      year: 2016,
       client: "Time Inc.",
       project: "The Outfit",
       tags: ["media"],
@@ -767,7 +776,8 @@ export default function () {
       client: "ABIS Studio",
       project: "Company Website",
       url: "https://www.abisstudio.ro/",
-      inactive: true
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2012,
@@ -783,7 +793,9 @@ export default function () {
       project: "Organization Website",
       url: "https://domuscaritatis.ro/",
       tags: ["nonprofit"],
-      wayback: "20120112043727"
+      wayback: "20120112043727",
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2014,
@@ -811,7 +823,8 @@ export default function () {
       client: "Cristina Dumitru",
       project: "Personal Website",
       url: "https://cristinadumitru.ro/",
-      inactive: true
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2022,
@@ -850,14 +863,16 @@ export default function () {
       client: "Harosa & Nemeti",
       project: "Law Firm Website",
       url: "http://harosa-nemeti.ro/",
-      inactive: true
+      inactive: true,
+      nothumb: true
     },
     {
       year: 2009,
       client: "Avocatul dvs",
       project: "Law Firm Website",
       url: "http://avocatuldumneavoastra.ro/",
-      inactive: true
+      inactive: true,
+      nothumb: true
     }
   ]
 };

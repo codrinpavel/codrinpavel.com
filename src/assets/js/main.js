@@ -4,6 +4,7 @@ import './modules/footer.js';
 
 // animations
 import './modules/animate-wave.js';
+import './modules/w.js';
 
 
 //import './modules/lenis-snap.js';
