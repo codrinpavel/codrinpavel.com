@@ -743,12 +743,12 @@ export default function () {
       wayback: "20180228182750"
     },
     {
-      year: 2015,
+      year: 2017,
       client: "Simple Organic Life",
       project: "Publication Website",
       tags: ["media"],
       url: "http://www.simpleorganiclife.org/",
-      wayback: "20150306165143"
+      wayback: "20170304183922if_"
     },
     {
       year: 2012,
@@ -834,7 +834,7 @@ export default function () {
     },
     {
       year: 2010,
-      client: "aiodesign",
+      client: "AIOdesign",
       project: "Portfolio Website",
       url: "https://aiodesign.ro/",
     },

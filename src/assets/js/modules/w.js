@@ -1,12 +1,11 @@
 import lenis from "./lenis.js";
 
-const items = [...document.querySelectorAll('.w li')];
+const items = [...document.querySelectorAll('.w li:not(.is-disabled)')];
 const activeClass = 'is-active';
 const visibleItems = new Set();
 
 let activeItem = null;
 let isScrolling = false;
-let scrollTimeout = null;
 
 function setActive(item) {
   document

@@ -4,6 +4,7 @@
       <div class="md:columns-4 lg:columns-3 w__header">
         <div class="sticky top-header-offset-xs">
           <h2 id="heading-work">Work<sup>{{work.length}}</sup></h2>
+          <p class="text-md">Delivered for nonprofits, foundations, media organizations, and Fortune 500 companies since 2009.</p>
         </div>
         <div class="w__meta">
           {%- for item in work | sortByYear -%}
@@ -14,10 +15,10 @@
         </div>
       </div>
 
-      <div class="md:columns-4 lg:columns-3">
-        <ul>
+      <div class="md:columns-4 lg:columns-3 py-10xl">
+        <ul class="flex flex-col justify-start items-start py-10xl">
           {%- for item in work | sortByYear -%}
-            <li data-id="work-{{loop.index}}" {% if item.inactive %}class="is-disabled"{% endif %}>{{- item.client -}}</li>
+            <li data-id="work-{{loop.index}}" {% if item.nothumb %}class="is-disabled"{% endif %}>{{- item.client -}}</li>
           {%- endfor -%}
         </ul>
       </div>
@@ -26,9 +27,21 @@
         <div class="w__image">
         {%- for item in work | sortByYear -%}
           {% if not item.nothumb %}
-            {% set url = 'work/' ~ item.client | lower | replace(' ', '-') | replace('|', '') ~ '-' ~ item.project | lower | replace(' ', '-') ~ '-' ~ item.year ~ '.png' %}
+            {% set image_url = 'work/' ~ item.client | lower | replace(' ', '-') | replace('|', '') ~ '-' ~ item.project | lower | replace(' ', '-') ~ '-' ~ item.year ~ '.png' %}
+
             <figure data-id="work-{{loop.index}}">
-                {% img url %}
+              {% img image_url %}
+
+              <figcaption>
+                <span>{{ item.year }}</span>
+
+                {%- if not item.inactive -%}
+                  {% set link = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
+                  <a href="{{ link }}" target="_blank" rel="noopener noreferrer">
+                    {{ item.wayback and "View Archived Version" or "View Live Website" }} →
+                  </a>
+                {%- endif -%}
+              </figcaption>
             </figure>
           {%- endif -%}
         {%- endfor -%}
