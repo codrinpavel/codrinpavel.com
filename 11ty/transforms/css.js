@@ -45,7 +45,7 @@ export default async function (content) {
     // 2.
     let results = '';
     purgeCSSResults.forEach((result, i) => {
-      console.log(result.rejected);
+      //console.log(result.rejected);
       results += result.css.replaceAll('/assets/', Config.BASEPATH + '/assets/');
     });
 
