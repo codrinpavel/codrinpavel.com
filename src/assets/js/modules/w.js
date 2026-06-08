@@ -1,3 +1,12 @@
+/**
+ * Work module
+ * 
+ * Set .is-active on the element closest to the middle of the screen
+ * and all other matching elements by [data-id]
+ * 
+ * Handle hover and click
+ */
+
 import lenis from "./lenis.js";
 
 const items = [...document.querySelectorAll('.w li:not(.is-disabled)')];
@@ -6,6 +15,17 @@ const visibleItems = new Set();
 
 let activeItem = null;
 let isScrolling = false;
+
+function updateOpacity() {
+  if (!activeItem) return;
+
+  const activeIndex = items.indexOf(activeItem);
+
+  items.forEach(item => {
+    const distance = Math.abs(items.indexOf(item) - activeIndex);
+    item.style.opacity = 1 / (distance + 1);
+  });
+}
 
 function setActive(item) {
   document
@@ -19,6 +39,7 @@ function setActive(item) {
   }
 
   activeItem = item;
+  updateOpacity();
 }
 
 function updateActive() {

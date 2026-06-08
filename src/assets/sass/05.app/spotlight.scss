@@ -1,0 +1,71 @@
+@use "../mixins" as *;
+
+.spotlight {
+  &__video {
+    height: 200svh;
+    position: relative;
+    z-index: 101;
+    background-color: var(--color-white);
+    view-timeline-name: --spotlight;
+    view-timeline-axis: block;
+    padding-block: 5vh;
+
+    .wrapper {
+      height: 100%;
+
+      position: sticky;
+      top: var(--grid-margin);
+      height: calc(100vh - var(--grid-margin)*2);
+    }
+
+    figure {
+      position: relative;
+      height: 100%;
+      flex-shrink: 0;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+
+      transform: scale(.6);
+      filter: grayscale(1);
+
+      animation: spotlight ease-in both;
+      animation-timeline: --spotlight;
+      animation-range: 0% 50%;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin: auto;
+    }
+
+    button {
+      position: absolute;
+      z-index: 1;
+      inset: 16px 16px auto auto;
+      color: white;
+    }
+  }
+}
+
+.study {
+  padding-top: var(--size-10xl);
+
+  h3 {
+    margin-bottom: var(--size-lg);
+  }
+}
+
+@keyframes spotlight {
+  50% {
+    filter: grayscale(.8);
+  }
+  65% {
+    filter: grayscale(0);
+  }
+  to {
+    filter: grayscale(0);
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,52 @@
+<svg width="32" height="32" viewBox="0 0 28 28" fill="none">
+  <circle
+    class="progress-track"
+    cx="14"
+    cy="14"
+    r="13"
+  />
+
+  <circle
+    class="progress-ring"
+    cx="14"
+    cy="14"
+    r="13"
+  />
+
+  <path
+    d="M10.2667 8.3999V19.5999"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    class="play-shape"
+    d="M 11.27 8.3999 L 18.7334 13.9999 L 11.27 19.5999"
+    stroke="white"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <animate
+      class="button-pause"
+      attributeName="d"
+      dur="0.25s"
+      begin="none"
+      fill="freeze"
+      from="M 11.27 8.3999 L 18.7334 13.9999 L 11.27 19.5999"
+      to="M17.7334 8.3999 L17.7334 13.9999 L17.7334 19.5999"
+    />
+
+    <animate
+      class="button-play"
+      attributeName="d"
+      dur="0.25s"
+      begin="none"
+      fill="freeze"
+      from="M17.7334 8.3999 L17.7334 13.9999 L17.7334 19.5999"
+      to="M 11.27 8.3999 L18.7334 13.9999 L11.27 19.5999"
+    />
+  </path>
+</svg>

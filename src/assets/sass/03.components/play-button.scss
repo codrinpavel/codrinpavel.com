@@ -1,0 +1,49 @@
+.video-btn {
+  --duration: 1s;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.progress-track,
+.progress-ring {
+  stroke-width: 2;
+  fill: none;
+}
+
+.progress-track {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.progress-ring {
+  stroke: white;
+  stroke-linecap: round;
+
+  /*
+    r = 13
+    circumference = 2 * PI * 13 = 81.681
+  */
+  stroke-dasharray: 81.681;
+  stroke-dashoffset: 81.681;
+
+  transform: rotate(-90deg);
+  transform-origin: 14px 14px;
+
+  animation: svg-progress var(--duration) linear infinite paused;
+}
+
+.video-btn.is-playing .progress-ring {
+  animation-play-state: running;
+}
+
+@keyframes svg-progress {
+  from {
+    stroke-dashoffset: 81.681;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

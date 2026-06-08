@@ -1,0 +1,53 @@
+<section id="spotlight" class="spotlight" aria-labelledby="heading-spotlight">
+  <h2 id="heading-spotlight" class="sr-only">Spotlight</h2>
+
+  <div class="study">
+    <div class="wrapper">
+      <div class="columns columns-6 row-gap-4xl">
+        <div class="columns-12">
+          {% svg spotlight.logo %}
+        </div>
+
+        <div class="lg:columns-4">
+          <h3>2019&mdash;2022 Annual Reports</h3>
+          <p class="text-md">{{ spotlight.description }}</p>
+        </div>
+
+        <div class="lg:columns-2 ml-2">
+          <h3>Focus Areas</h3>
+          <ul>
+            {% for item in spotlight.focus %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="lg:columns-2">
+          <h3>Tech Stack</h3>
+          <ul>
+            {% for item in spotlight.development %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="lg:columns-2">
+          <h3>Project Type</h3>
+          <p>{{ spotlight.industry }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spotlight__video">
+    <div class="wrapper">
+      <figure>
+        <video id="spotlight-video" width="1440" height="900" src="{{ '/assets/video/fnih.mp4' | url }}" muted playsinline loop></video>
+        <button type="button" class="video-btn" aria-label="Play video" aria-controls="spotlight-video" id="spotlight-video-toggle">
+          {% svg "play-button.svg" %}
+        </button>
+        <figcaption class="sr-only">Animated homepage designs from the Foundation for the National Institutes of Health (FNIH) annual reports, featuring the 2018, 2019, and 2020 editions.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

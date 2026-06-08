@@ -8,8 +8,12 @@
         {% for stat in stats %}
         <div class="track--item">
           <div class="stat">
-            <span class="figure">{{ stat.figure }}</span>
-            <span class="text-xl font-light mb-2xl">{{ stat.title }}</span>
+            <span class="figure use-inview">
+              {% for char in stat.figure.split('') %}
+                <i style="--index:{{loop.index}}">{{ char }}</i>
+              {% endfor %}
+            </span>
+            <span class="text-xl font-normal mb-2xl">{{ stat.title }}</span>
 
             <ul class="mt-auto">
               {% for bullet in stat.bullets %}
