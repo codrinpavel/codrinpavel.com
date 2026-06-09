@@ -4,17 +4,20 @@
 }
 
 .wave-word {
-  --wave-distance: 1.3em;
+  --wave-duration: 1s;
+  --wave-distance: .8em;
   --word-delay: 700ms;
 
   display: block;
-  transform: translateY(var(--wave-distance, 16px)) rotate(2deg);
+  opacity: 0;
+  transform: translateY(var(--wave-distance, 16px));
 
-  animation: var(--wave-duration, 600ms) waveFadeUp ease forwards;
+  animation: var(--wave-duration) waveFadeUp ease forwards;
   animation-delay: var(--word-delay);
   will-change: transform;
 }
 
 @keyframes waveFadeUp {
-  to { transform: translateY(0) rotate(0deg) }
+  30% { opacity: 0 }
+  to { opacity: 1; transform: translateY(0);}
 }

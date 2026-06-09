@@ -13,14 +13,12 @@
   }
 
   .track {
-    --count: 3;
-
     animation-timeline: --accolades;
     padding-top: var(--size-header-offset);
   }
 
   @include mq(md) {
-    height: 150vh;
+    height: 300vh;
 
     .track {
       --item-width: calc(5 / 12 * 100%);
