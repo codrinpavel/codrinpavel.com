@@ -1,0 +1,26 @@
+<section class="pt-10xl" id="work" aria-labelledby="heading-work">
+  <div class="wrapper">
+    <h2 id="heading-work">Complete Works<sup>{{work.length}}</sup></h2>
+
+    <ul class="work type-eyebrow pb-lg">
+      {%- for item in work | sortByYear -%}
+        {% set url = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
+
+        <li {% if item.inactive %}class="is-disabled"{% endif %}>
+          {%- if not item.inactive -%}
+          <a href="{{ url }}" target="_blank" rel="noopener noreferrer">
+          {%- endif -%}
+            <p>{{- item.client -}}</p>
+            <p>{{- item.project  | safe -}}</p>
+            <p>
+              <span>{{- item.year -}}</span>
+              {%- if not item.inactive -%}<span class="hidden">View</span>{%- endif -%}
+            </p>
+          {%- if not item.inactive -%}
+          </a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>

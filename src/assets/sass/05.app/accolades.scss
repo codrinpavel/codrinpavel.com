@@ -1,6 +1,8 @@
+@use "../mixins" as *;
+
 .accolades {
   contain: layout;
-  height: calc(100vh + 25vw);
+  height: 300vh;
   view-timeline-name: --accolades;
   view-timeline-axis: block;
 
@@ -11,10 +13,17 @@
   }
 
   .track {
-    --item-width: calc(5 / 12 * 100%);
     --count: 3;
 
     animation-timeline: --accolades;
     padding-top: var(--size-header-offset);
+  }
+
+  @include mq(md) {
+    height: 150vh;
+
+    .track {
+      --item-width: calc(5 / 12 * 100%);
+    }
   }
 }

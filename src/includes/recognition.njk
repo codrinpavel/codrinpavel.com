@@ -1,7 +1,7 @@
 <section class="pt-header-offset" id="recognition" aria-labelledby="heading-recognition">
   <div class="wrapper">
     <div class="columns justify-between">
-      <div class="md:columns-4 lg:columns-3">
+      <div class="columns-11 md:columns-4 lg:columns-3 mb-4xl">
         <div class="sticky top-header-offset">
           <h2 id="heading-recognition">Awards & Recognition</h2>
           <p>Selected by international juries for excellence in digital design, sustainability communication, and interactive storytelling.</p>
@@ -12,9 +12,9 @@
         <ul>
           {% for group in awards %}
             <li class="columns award">
-              <h3 class="columns-2">{{ group.organization }} &times;{{group.awards.length}}</h3>
+              <h3 class="columns-4 md:columns-2">{{ group.organization }} &times;{{group.awards.length}}</h3>
 
-              <ul class="columns-8">
+              <ul class="columns-6 md:columns-8">
                 {% for award in group.awards %}
                   <li>
                     <a class="type-headline link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">

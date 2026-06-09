@@ -3,42 +3,56 @@
 .spotlight {
   padding-top: var(--size-header-offset);
 
-  > .wrapper,
+  @include mq(md, max) {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  >.wrapper,
   &__video {
     padding-bottom: var(--size-5xl);
   }
 
-  > .wrapper {
-    position: sticky;
-    top: var(--size-header-offset);
-
-    min-height: calc(100svh - var(--size-header-offset));
+  >.wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: var(--size-5xl);
 
     svg {
-      width: calc(25% - var(--column-gap));
+      width: calc(25vmax - var(--column-gap));
       height: auto;
       filter: grayscale(1);
+
+      @include mq(md, max) {
+        display: none;
+      }
+    }
+
+    @include mq(md) {
+      position: sticky;
+      top: var(--size-header-offset);
+      min-height: calc(100svh - var(--size-header-offset));
     }
   }
 
   &__video {
-    margin-top: var(--size-header-offset);
-    position: relative;
-    z-index: 101;
-    height: 200svh;
+    @include mq(md) {
+      margin-top: var(--size-header-offset);
+      position: relative;
+      z-index: 101;
+      height: 200svh;
 
-    view-timeline-name: --spotlight;
-    view-timeline-axis: block;
+      view-timeline-name: --spotlight;
+      view-timeline-axis: block;
 
-    .wrapper {
-      height: 100%;
-
-      position: sticky;
-      top: var(--size-xl);
-      height: calc(100vh - var(--size-xl)*2);
+      .wrapper {
+        position: sticky;
+        top: var(--size-xl);
+        height: calc(100vh - var(--size-xl)*2);
+      }
     }
 
     figure {
@@ -48,12 +62,14 @@
       border-radius: 8px;
       overflow: hidden;
 
-      transform: scale(.6);
-      filter: grayscale(1);
+      @include mq(md) {
+        transform: scale(.6);
+        filter: grayscale(1);
 
-      animation: spotlight ease-in both;
-      animation-timeline: --spotlight;
-      animation-range: 0% 50%;
+        animation: spotlight ease-in both;
+        animation-timeline: --spotlight;
+        animation-range: 0% 50%;
+      }
     }
 
     video {
@@ -76,9 +92,11 @@
   50% {
     filter: grayscale(.8);
   }
+
   65% {
     filter: grayscale(0);
   }
+
   to {
     filter: grayscale(0);
     transform: scale(1);

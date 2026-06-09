@@ -1,26 +1,51 @@
-<section class="pt-header-offset-xs" id="work" aria-labelledby="heading-work">
+<section class="w pb-10xl pt-header-offset-xs" id="work" aria-labelledby="heading-work">
   <div class="wrapper">
-    <h2 id="heading-work">Complete Works<sup>{{work.length}}</sup></h2>
+    <div class="columns">
+      <div class="md:columns-4 lg:columns-3 w__header">
+        <div class="sticky top-header-offset-xs">
+          <h2 id="heading-work">Work<sup>{{work.length}}</sup></h2>
+          <p class="text-md">Delivered for nonprofits, foundations, media organizations, and Fortune 500 companies since 2009.</p>
+        </div>
+        <div class="w__meta">
+          {%- for item in work | sortByYear -%}
+            <div data-id="work-{{loop.index}}">
+              <h3 class="mb-zero">{{ item.long or item.client | safe }} &mdash; {{ item.project | safe }}</h3>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
 
-    <ul class="work type-eyebrow pb-lg">
-      {%- for item in work | sortByYear -%}
-        {% set url = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
+      <div class="md:columns-4 lg:columns-3 py-10xl">
+        <ul class="flex flex-col justify-start items-start py-10xl">
+          {%- for item in work | sortByYear -%}
+            <li data-id="work-{{loop.index}}" {% if item.nothumb %}class="is-disabled"{% endif %}>{{- item.client -}}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
 
-        <li {% if item.inactive %}class="is-disabled"{% endif %}>
-          {%- if not item.inactive -%}
-          <a href="{{ url }}" target="_blank" rel="noopener noreferrer">
+      <div class="md:columns-4 lg:columns-6">
+        <div class="w__image">
+        {%- for item in work | sortByYear -%}
+          {% if not item.nothumb %}
+            {% set image_url = 'work/' ~ item.client | lower | replace(' ', '-') | replace('|', '') ~ '-' ~ item.project | lower | replace(' ', '-') ~ '-' ~ item.year ~ '.png' %}
+
+            <figure data-id="work-{{loop.index}}">
+              {% img image_url %}
+
+              <figcaption>
+                <span>{{ item.year }}</span>
+
+                {%- if not item.inactive -%}
+                  {% set link = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
+                  <a href="{{ link }}" target="_blank" rel="noopener noreferrer">
+                    {{ item.wayback and "View Archived Version" or "View Live Website" }} →
+                  </a>
+                {%- endif -%}
+              </figcaption>
+            </figure>
           {%- endif -%}
-            <p>{{- item.client -}}</p>
-            <p>{{- item.project  | safe -}}</p>
-            <p>
-              <span>{{- item.year -}}</span>
-              {%- if not item.inactive -%}<span class="hidden">View</span>{%- endif -%}
-            </p>
-          {%- if not item.inactive -%}
-          </a>
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-    </ul>
+        {%- endfor -%}
+      </div>
+    </div>
   </div>
 </section>

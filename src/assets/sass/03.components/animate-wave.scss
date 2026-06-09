@@ -4,6 +4,9 @@
 }
 
 .wave-word {
+  --wave-distance: 1.3em;
+  --word-delay: 700ms;
+
   display: block;
   transform: translateY(var(--wave-distance, 16px)) rotate(2deg);
 

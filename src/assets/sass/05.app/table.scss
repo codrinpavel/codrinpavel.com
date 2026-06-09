@@ -1,0 +1,85 @@
+@use "../mixins" as *;
+
+.work {
+  contain: layout;
+
+  li {
+    animation: tableitem linear both;
+    animation-timeline: view();
+    animation-range: 0% 15%;
+    will-change: transform, opacity;
+
+    @include mq(md, max) {
+      animation-range: entry 100% cover 25%;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    &.is-disabled {
+      color: var(--color-faint);
+    }
+  }
+
+  a,
+  button,
+  li.is-disabled {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--column-gap);
+    padding-block: var(--size-lg);
+  }
+
+  p {
+    flex-grow: 1;
+    margin: 0;
+
+    &:last-child {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  button:hover,
+  button:focus-visible,
+  a:hover,
+  a:focus-visible {
+    p:last-child {
+      span {
+        display: none;
+      }
+
+      .hidden {
+        display: block;
+      }
+    }
+  }
+
+  @include mq(md) {
+    p:first-child {
+      flex: 0 0 calc(5/12 * 100% - var(--column-gap) / 2);
+    }
+
+    p:nth-child(2) {
+      display: block;
+    }
+  }
+}
+
+@keyframes tableitem {
+  from {
+    transform: translateX(calc(var(--grid-margin) / 2));
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
