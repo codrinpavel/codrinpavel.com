@@ -27,29 +27,19 @@
 
   >.wrapper,
   &__video {
-    padding-bottom: var(--size-5xl);
+    padding-bottom: var(--size-ml);
   }
 
   >.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: var(--size-5xl);
-
     svg {
-      width: calc(25vmax - var(--column-gap));
+      width: 120px;
       height: auto;
       filter: grayscale(1);
-
-      @include mq(md, max) {
-        display: none;
-      }
     }
 
     @include mq(md) {
       position: sticky;
       top: var(--size-header-offset);
-      min-height: calc(100svh - var(--size-header-offset));
     }
   }
 
@@ -65,8 +55,8 @@
 
       .wrapper {
         position: sticky;
-        top: var(--size-xl);
-        height: calc(100vh - var(--size-xl)*2);
+        top: var(--size-ml);
+        height: calc(100vh - var(--size-ml) * 2);
       }
     }
 

@@ -1,28 +1,27 @@
-{% set index = 0 %}
-
 <section class="recognition" id="recognition" aria-labelledby="heading-recognition">
   <div class="wrapper">
-    <div class="columns justify-between">
-      <div class="columns-11 md:columns-4 lg:columns-3 mb-4xl">
-        <div class="sticky top-header-offset use-inview">
-          <h2 id="heading-recognition" style="--index: 1;">Awards & Recognition</h2>
-          <p style="--index: 2;">Selected by international juries for excellence in digital design, sustainability communication, and interactive storytelling.</p>
-        </div>
+    <div class="columns">
+      <div class="columns-11 md:ml-2 lg:ml-1">
+        <h2 id="heading-recognition">Awards & Recognition</h2>
       </div>
 
-      <div class="md:columns-7">
+      <div class="columns-12">
         <ul>
+          {% set index = 0 %}
           {% for group in awards %}
             <li class="columns award">
-              <h3 class="columns-4 md:columns-2">{{ group.organization }} &times;{{group.awards.length}}</h3>
+              <div class="columns-4 md:columns-4 lg:columns-2 md:ml-2 lg:ml-1">
+                <h3>{{ group.organization }} &times;{{group.awards.length}}</h3>
+              </div>
 
-              <ul class="columns-6 md:columns-8">
+              <ul class="columns-8 md:columns-6 lg:columns-7">
                 {% for award in group.awards %}
                   {% set index = index + 1 %}
 
                   <li style="--index: {{index}}">
                     <a class="type-headline link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">
-                      {{ award.title }} {{ award.year }}
+                      {{ award.title }}
+                      {{ award.year }}
                     </a>
                   </li>
                 {% endfor %}

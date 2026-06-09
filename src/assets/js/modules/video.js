@@ -4,6 +4,7 @@ const pauseAnim = button.querySelector(".button-pause");
 const playAnim = button.querySelector(".button-play");
 
 let wasPlaying = null;
+let manuallyPaused = false;
 
 video.addEventListener("loadedmetadata", () => {
   button.style.setProperty("--duration", `${video.duration}s`);
@@ -11,8 +12,10 @@ video.addEventListener("loadedmetadata", () => {
 
 const observer = new IntersectionObserver(
   ([entry]) => {
-    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-      video.play();
+    const inView = entry.isIntersecting && entry.intersectionRatio >= 0.5;
+
+    if (inView) {
+      if (!manuallyPaused) video.play();
     } else {
       video.pause();
     }
@@ -24,7 +27,13 @@ observer.observe(video);
 
 // Button
 button.addEventListener("click", () => {
-  video.paused ? video.play() : video.pause();
+  if (video.paused) {
+    manuallyPaused = false;
+    video.play();
+  } else {
+    manuallyPaused = true;
+    video.pause();
+  }
 });
 
 function updateButton() {

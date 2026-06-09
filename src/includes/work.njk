@@ -1,10 +1,43 @@
-<section class="w pb-10xl pt-header-offset-xs" id="work" aria-labelledby="heading-work">
+{% set sortedWork = work | sortByYear %}
+{% set midpoint = (sortedWork.length / 2) | round(0, 'ceil') %}
+
+<section class="work pt-header-offset" id="work" aria-labelledby="heading-work">
+  <div class="wrapper">
+    <div class="columns">
+      <div class="columns-11 md:ml-2 lg:ml-1">
+        <h2>Selected Work, 2009&mdash;2026</h2>
+      </div>
+
+      <ul class="columns-6 md:columns-3 lg:columns-3 md:ml-2 lg:ml-1 type-headline ">
+        {%- for item in sortedWork -%}
+          {% if loop.index0 < midpoint %}
+            <li data-id="work-{{loop.index}}" {% if item.nothumb %}class="is-disabled"{% endif %}>
+              {{- item.client -}}<span>&mdash; {{- item.project | safe -}}, {{ item.year }}</span>
+            </li>
+          {% endif %}
+        {%- endfor -%}
+      </ul>
+
+      <ul class="columns-6 md:columns-3 lg:columns-3 md:ml-1 lg:ml-0 type-headline ">
+        {%- for item in sortedWork -%}
+          {% if loop.index0 >= midpoint %}
+            <li data-id="work-{{loop.index}}" {% if item.nothumb %}class="is-disabled"{% endif %}>
+              {{- item.client -}}<span>&mdash; {{- item.project | safe -}}, {{ item.year }}</span>
+            </li>
+          {% endif %}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+<!--
+<section class="work pb-10xl pt-header-offset" id="work" aria-labelledby="heading-work">
   <div class="wrapper">
     <div class="columns">
       <div class="md:columns-4 lg:columns-3 w__header">
-        <div class="sticky top-header-offset-xs">
+        <div class="sticky top-header-offset">
           <h2 id="heading-work">Work<sup>{{work.length}}</sup></h2>
-          <p class="text-md">Delivered for nonprofits, foundations, media organizations, and Fortune 500 companies since 2009.</p>
+          <p>Delivered for nonprofits, foundations, media organizations, and Fortune 500 companies since 2009.</p>
         </div>
         <div class="w__meta">
           {%- for item in work | sortByYear -%}
@@ -15,15 +48,15 @@
         </div>
       </div>
 
-      <div class="md:columns-4 lg:columns-3 py-10xl">
-        <ul class="flex flex-col justify-start items-start py-10xl">
+      <div class="md:columns-4 lg:columns-3 lg:ml-2">
+        <ul class="flex flex-col">
           {%- for item in work | sortByYear -%}
             <li data-id="work-{{loop.index}}" {% if item.nothumb %}class="is-disabled"{% endif %}>{{- item.client -}}</li>
           {%- endfor -%}
         </ul>
       </div>
 
-      <div class="md:columns-4 lg:columns-6">
+      <div class="md:columns-4 lg:columns-4">
         <div class="w__image">
         {%- for item in work | sortByYear -%}
           {% if not item.nothumb %}
@@ -38,7 +71,7 @@
                 {%- if not item.inactive -%}
                   {% set link = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
                   <a href="{{ link }}" target="_blank" rel="noopener noreferrer">
-                    {{ item.wayback and "View Archived Version" or "View Live Website" }} →
+                    {{ item.wayback and "Archived Version" or "Live Website" }} →
                   </a>
                 {%- endif -%}
               </figcaption>
@@ -49,3 +82,4 @@
     </div>
   </div>
 </section>
+-->

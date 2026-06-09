@@ -16,17 +16,6 @@ const visibleItems = new Set();
 let activeItem = null;
 let isScrolling = false;
 
-function updateOpacity() {
-  if (!activeItem) return;
-
-  const activeIndex = items.indexOf(activeItem);
-
-  items.forEach(item => {
-    const distance = Math.abs(items.indexOf(item) - activeIndex);
-    item.style.opacity = 1 / (distance + 1);
-  });
-}
-
 function setActive(item) {
   document
     .querySelectorAll(`.${activeClass}`)
@@ -39,7 +28,6 @@ function setActive(item) {
   }
 
   activeItem = item;
-  updateOpacity();
 }
 
 function updateActive() {

@@ -5,11 +5,11 @@
 @layer base, components, utilities, app;
 
 :root {
-  --grid-margin: var(--size-2xl);
+  --grid-margin: var(--size-ml);
   --grid-screenwidth: 1940px;
   --column-gap: var(--size-2xl);
   --row-gap: var(--size-2xl);
-  --header-height: calc(var(--size-xl) * 2 + 19px);
+  --header-height: calc(var(--size-ml) * 2 + 19px);
 
   @include mq(lg) {
     --header-offset: calc(var(--header-height) + 15vh);

@@ -18,12 +18,12 @@ $tokens: (
     ),
 
     default: (
-      "white": hsl(26, 28%, 96%),// hsl(40, 23%, 98%),
+      "white": hsl(0, 0%, 98%),// hsl(26, 28%, 96%),// hsl(40, 23%, 98%),
       "black":  hsl(0, 0%, 6%),
       "white-text": hsl(274, 6%, 76%),
       "black-text": hsl(0, 0%, 0%),// hsl(94, 8%, 18%),
       "balance-text": #333935,
-      "faint":  hsl(0, 0%, 41%),
+      "faint":  hsl(0, 0%, 46%),
       "border": hsl(0, 0%, 9%),
     ),
 
@@ -38,7 +38,7 @@ $tokens: (
 
   font-size: (
     xs: fluid(10px, 12px),
-    sm: fluid(11px, 13px),
+    sm: 12px,
     md: fluid(12px, 14px),
     ml: fluid(16px, 20px),
     lg: fluid(18px, 22px),
@@ -132,7 +132,6 @@ $tokens: (
     9xl: fluid(64px, 96px),
     10xl: fluid(80px, 120px),
     header-offset: calc(var(--header-height) + 15vmin),
-    header-offset-xs: calc(var(--header-height) + 5vmin),
     max: 1e5px,
   ),
 );

@@ -1,4 +1,35 @@
-.w {
+.work {
+  li {
+    color: var(--color-black-text);
+    cursor: default;
+    line-height: 1.8em;
+    transition: opacity 600ms;
+
+    span {
+      display: none;
+    }
+
+    &:hover,
+    &.is-active {
+      opacity: 1 !important;
+      span {
+        display: inline;
+      }
+    }
+
+    &.is-disabled {
+      color: var(--color-faint);
+    }
+  }
+
+  &:has(li:hover, li.is-active) {
+    li {
+      opacity: .2;
+    }
+  }
+}
+
+/*.w {
   &__header {
     position: relative;
     display: flex;
@@ -26,15 +57,13 @@
   }
 
   li {
-    font-size: 16px;
-    line-height: 2.5em;
-    font-weight: 475;
-    opacity: .3;
-    transition: opacity 250ms;
+    line-height: 2.2em;
+    font-weight: 500;
     cursor: default;
+    color: var(--color-faint);
 
     &.is-active {
-      opacity: 1;
+      color: var(--color-text-black);
     }
 
     &.is-disabled {
@@ -45,8 +74,8 @@
 
   &__image {
     position: sticky;
-    top: var(--size-header-offset-xs);
-    height: calc(100svh - var(--size-header-offset-xs) - var(--size-5xl));
+    top: var(--size-header-offset);
+    height: calc(100svh - var(--size-header-offset) - var(--size-5xl));
 
     figure {
       height: 100%;
@@ -75,7 +104,8 @@
 
     img {
       width: auto;
-      max-height: calc(100svh - var(--size-header-offset-xs) *2);
+      max-height: calc(100svh - var(--size-header-offset) *2);
     }
   }
 }
+*/

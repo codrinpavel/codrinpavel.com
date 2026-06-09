@@ -15,7 +15,7 @@
     animation-timeline: --at-a-glance;
 
     @include mq(md) {
-      --item-width: calc(5 / 12 * 100%);
+      --item-width: 50%;//calc(5 / 12 * 100%);
     }
   }
 }

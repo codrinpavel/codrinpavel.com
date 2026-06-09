@@ -20,10 +20,6 @@
     margin-bottom: var(--size-5xl);
   }
 
-  li:not(:last-child) {
-    margin-bottom: var(--size-ml);
-  }
-
   li {
     transform: translateX(calc(var(--index) * .2em));
     opacity: 0;
@@ -41,6 +37,11 @@
     animation-timeline: view();
     animation-range: 0% 20%;
     will-change: transform, opacity;
+  }
+
+  a {
+    line-height: 1.8em;
+    color: var(--color-black-text);
   }
 }
 

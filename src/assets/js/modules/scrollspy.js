@@ -1,4 +1,4 @@
-const links = [...document.querySelectorAll('a[href^="#"]')];
+const links = [...document.querySelectorAll('nav a[href^="#"]')];
 
 const items = links
   .map(link => {

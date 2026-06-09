@@ -1,7 +1,7 @@
 export default function () {
   return [
     {
-      "content": "He possesses a unique combination of a remarkable technical aptitude and the ability to interpret and distill client feedback and apply it to achieve the desired goals. He cares deeply about the quality of the end product.",
+      "content": "Codrin possesses a unique combination of a remarkable technical aptitude and the ability to interpret and distill client feedback and apply it to achieve the desired goals. He cares deeply about the quality of the end product.",
       "name": "Ryan Bujeker",
       "title": "Digital Engagement Director",
       "company": "United"
@@ -19,7 +19,7 @@ export default function () {
       "company": "Ideas On Purpose"
     },
     {
-      "content": "Codrin is skillful at finding solutions for both the designer and client needs. He leads by example and is caring, not only with the projects, but also the people who are in his team.",
+      "content": "Skillful at finding solutions for both the designer and client needs. Codrin leads by example and is caring, not only with the projects, but also the people who are in his team.",
       "name": "James Kwak",
       "title": "Senior Designer",
       "company": "Ideas On Purpose"

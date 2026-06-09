@@ -43,18 +43,20 @@ main {
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: 0 1px;
-  transition: background-size .3s;
+  transition: background-size .3s, color .3s;
 
   &:hover,
   &:focus-visible {
     background-position: 0 100%;
     background-size: 100% 1px;
+    color: var(--color-black-text);
   }
 }
 
 .dashlink {
   display: flex;
   align-items: center;
+  width: fit-content;
 
   &::before {
     content: "";

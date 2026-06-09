@@ -21,7 +21,7 @@
     height: 300vh;
 
     .track {
-      --item-width: calc(5 / 12 * 100%);
+      --item-width: 50%; //calc(5 / 12 * 100%);
     }
   }
 }

@@ -32,11 +32,19 @@ h2, h3,
   font-weight: var(--font-weight-medium);
   font-style: normal;
   line-height: 1.3;
+  letter-spacing: -0.036em;
   color: var(--color-faint);
 }
 
+h2 {
+  min-height: 2.6em;
+  display: flex;
+  align-items: flex-end;
+}
+
 h2, h3 {
-  margin: 0 0 var(--size-lg);
+  margin-top: 0;
+  margin-bottom: var(--size-xl);
 }
 
 :where(p) {
