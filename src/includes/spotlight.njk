@@ -10,24 +10,28 @@
       <div class="md:columns-7">
         <div class="columns columns-4 lg:columns-2">
           <div>
-            <h3>Technicals</h3>
+            <h3>Industries</h3>
+            <ul>
+            {% for item in spotlight.industries %}
+              <li>{{ item }}</li>
+            {% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h3>Technologies</h3>
             <ul>
               {% for item in spotlight.development %}
                 <li>{{ item }}</li>
               {% endfor %}
             </ul>
           </div>
-          <div>
-            <h3>Focus</h3>
+          <div class="lg:columns-4">
+            <h3>Focus Areas</h3>
             <ul>
               {% for item in spotlight.focus %}
                 <li>{{ item }}</li>
               {% endfor %}
             </ul>
-          </div>
-          <div class="lg:columns-4">
-            <h3>Industry</h3>
-            <p>{{ spotlight.industry }}</p>
           </div>
         </div>
       </div>

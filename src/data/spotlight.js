@@ -1,17 +1,15 @@
 export default function () {
   return {
     client: "Foundation for the National Institutes of Health",
-    industry: "Non-Profit & Charitable Organizations",
+    industries: ["Non-profit", "Public Health"],
     logo: "company/fnih.svg",
-    description: "Led frontend development for multiple award-winning Annual Reports for the Foundation for the National Institutes of Health, delivering responsive, WCAG-compliant frontend experiences optimized for speed and reliability.",
+    description: "Led frontend development for a series of award-winning Annual Reports for the Foundation for the National Institutes of Health (FNIH). Built responsive, high-performance experiences that met WCAG accessibility standards and were optimized for reliability, usability, and Core Web Vitals.",
     focus: [
-      "Accessibility",
-      "WCAG",
-      "Lighthouse",
+      "Accessibility & WCAG Compliance",
+      "Lighthouse Performance Optimization",
       "Core Web Vitals",
       "Responsive Design",
-      "CSS Animations",
-      "Data Tables"
+      "CSS Animations"
     ],
     development: [
       "11ty",
