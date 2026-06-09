@@ -1,6 +1,6 @@
 .accolades {
   contain: layout;
-  height: calc(100vh + 100vw);
+  height: calc(100vh + 25vw);
   view-timeline-name: --accolades;
   view-timeline-axis: block;
 
@@ -11,7 +11,7 @@
   }
 
   .track {
-    --item-width: 100%;
+    --item-width: calc(5 / 12 * 100%);
     --count: 3;
 
     animation-timeline: --accolades;

@@ -8,12 +8,10 @@
         {% for item in accolades %}
           <div class="track--item">
             <figure class="quote">
-              <header>
-                <span class="type-eyebrow">
-                  {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
+              <header class="type-headline">
+                {{ loop.index < 10 and '0' ~ loop.index or loop.index }}
                 &mdash;
                 {{ loop.length < 10 and '0' ~ loop.length or loop.length }}
-                </span>
               </header>
 
               <blockquote>
@@ -21,7 +19,7 @@
               </blockquote>
 
               <figcaption>
-                <cite>{{ item.name }}</cite>
+                <cite class="type-headline color-black-text">{{ item.name }}</cite>
                 <span>{{ item.title }} at {{ item.company }}</span>
               </figcaption>
             </figure>

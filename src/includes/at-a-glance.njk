@@ -10,10 +10,11 @@
           <div class="stat">
             <span class="figure use-inview">
               {% for char in stat.figure.split('') %}
-                <i style="--index:{{loop.index}}">{{ char }}</i>
+                <i class="type-huge" style="--index:{{loop.index}}">{{ char }}</i>
               {% endfor %}
             </span>
-            <span class="text-xl font-normal mb-2xl">{{ stat.title }}</span>
+
+            <span class="type-medium mb-2xl">{{ stat.title }}</span>
 
             <ul class="mt-auto">
               {% for bullet in stat.bullets %}

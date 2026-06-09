@@ -1,13 +1,6 @@
 .quote {
   header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    height: 40px;
-
-    margin-top: calc(var(--size-sm) * -1);
-    margin-bottom: var(--size-sm);
-    color: var(--color-faint);
+    margin-bottom: var(--size-lg);
   }
 
   blockquote {
@@ -34,9 +27,6 @@
   }
 
   cite {
-    font-style: normal;
-    font-weight: 500;
-
     &::before {
       content: '—';
     }

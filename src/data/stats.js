@@ -11,7 +11,7 @@ export default function () {
     },
     {
       "figure": "80+",
-      "title": "Projects",
+      "title": "Launches",
       "bullets": [
         "24 CSR, DEI, ESG & Annual Report Websites",
         "24 Media, News & Editorial Platforms",
@@ -20,13 +20,13 @@ export default function () {
       ]
     },
     {
-      "figure": "25+",
-      "title": "Awards",
+      "figure": "20+",
+      "title": "Fortune 500 Projects",
       "bullets": [
-        "GDUSA Digital Design Awards",
-        "WebAwards Standards of Excellence",
-        "iNOVA Awards Grand Winners",
-        "LACP Worldwide Winners"
+        "Investor relations",
+        "ESG reporting",
+        "Corporate communications",
+        "Multi-year enterprise engagements"
       ]
     },
     {
@@ -39,13 +39,13 @@ export default function () {
       ]
     },
     {
-      "figure": "20+",
-      "title": "Fortune 500 Projects",
+      "figure": "25+",
+      "title": "Awards",
       "bullets": [
-        "Investor relations",
-        "ESG reporting",
-        "Corporate communications",
-        "Multi-year enterprise engagements"
+        "GDUSA Digital Design Awards",
+        "WebAwards Standards of Excellence",
+        "iNOVA Awards Grand Winners",
+        "LACP Worldwide Winners"
       ]
     },
   ]

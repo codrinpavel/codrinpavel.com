@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
 
-  padding-top: var(--size-header-offset-xs);
+  padding-top: var(--size-header-offset);
   padding-bottom: var(--size-4xl);
 
   .figure {
@@ -35,13 +35,8 @@
     overflow: hidden;
 
     i {
-      font-size: max(var(--font-size-7xl), 30vh);
-      font-weight: 375;
-      font-style: normal;
-      letter-spacing: -.06em;
-      line-height: 1.2;
-      transform: translateY(100%);
       will-change: transform;
+      transform: translateY(100%);
       transition: transform 750ms ease;
       transition-delay: calc(var(--index) * 75ms);
     }
@@ -49,7 +44,6 @@
     &.is-inview {
       i {
         transform: translateY(0px);
-        animation-delay: var(--word-delay);
       }
     }
   }

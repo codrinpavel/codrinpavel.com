@@ -7,6 +7,8 @@
 .site-logo {
   svg {
     overflow: visible;
+    width: 60px;
+    height: auto;
   }
 
   path {
@@ -27,7 +29,7 @@
   }
 
   .dot {
-    --size: 10px;
+    --size: 6px;
     --scale: calc(350vmax / var(--size));
 
     transform: scale(var(--scale));

@@ -1,28 +1,51 @@
 @use "../mixins" as *;
 
 .spotlight {
+  padding-top: var(--size-header-offset);
+
+  > .wrapper,
   &__video {
-    height: 200svh;
+    padding-bottom: var(--size-5xl);
+  }
+
+  > .wrapper {
+    position: sticky;
+    top: var(--size-header-offset);
+
+    min-height: calc(100svh - var(--size-header-offset));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    svg {
+      width: calc(25% - var(--column-gap));
+      height: auto;
+      filter: grayscale(1);
+    }
+  }
+
+  &__video {
+    margin-top: var(--size-header-offset);
     position: relative;
     z-index: 101;
-    background-color: var(--color-white);
+    height: 200svh;
+
     view-timeline-name: --spotlight;
     view-timeline-axis: block;
-    padding-block: 5vh;
 
     .wrapper {
       height: 100%;
 
       position: sticky;
-      top: var(--grid-margin);
-      height: calc(100vh - var(--grid-margin)*2);
+      top: var(--size-xl);
+      height: calc(100vh - var(--size-xl)*2);
     }
 
     figure {
       position: relative;
       height: 100%;
       flex-shrink: 0;
-      border-radius: var(--radius-xl);
+      border-radius: 8px;
       overflow: hidden;
 
       transform: scale(.6);
@@ -46,14 +69,6 @@
       inset: 16px 16px auto auto;
       color: white;
     }
-  }
-}
-
-.study {
-  padding-top: var(--size-10xl);
-
-  h3 {
-    margin-bottom: var(--size-lg);
   }
 }
 

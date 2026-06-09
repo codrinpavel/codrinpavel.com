@@ -1,7 +1,7 @@
 @use "sass:math";
 
 $default-min-bp: 360px;
-$default-max-bp: 1600px;
+$default-max-bp: 1900px;
 
 @function round($number, $decimals: 4) {
   $n: 1;

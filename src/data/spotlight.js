@@ -10,8 +10,8 @@ export default function () {
       "Lighthouse",
       "Core Web Vitals",
       "Responsive Design",
-      "Custom CSS Animations",
-      "Charts & Visualizations"
+      "CSS Animations",
+      "Data Tables"
     ],
     development: [
       "11ty",

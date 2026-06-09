@@ -1,31 +1,23 @@
-{% set totalAwards = 0 %}
-
-{% for group in awards %}
-  {% set totalAwards = totalAwards + group.awards.length %}
-{% endfor %}
-
-<section class="pt-header-offset-xs" id="recognition" aria-labelledby="heading-recognition">
+<section class="pt-header-offset" id="recognition" aria-labelledby="heading-recognition">
   <div class="wrapper">
-    <div class="columns row-gap-8xl">
+    <div class="columns justify-between">
       <div class="md:columns-4 lg:columns-3">
-        <div class="sticky top-header-offset-xs">
-          <h2 id="heading-recognition">Awards & Recognition<sup>{{totalAwards}}</sup></h2>
-          <p class="text-md">Selected by international juries for excellence in digital design, sustainability communication, and interactive storytelling.</p>
+        <div class="sticky top-header-offset">
+          <h2 id="heading-recognition">Awards & Recognition</h2>
+          <p>Selected by international juries for excellence in digital design, sustainability communication, and interactive storytelling.</p>
         </div>
       </div>
 
-      <div class="md:columns-7 md:ml-1 lg:ml-2 md:mt-header-offset-xs">
-        <ul class="pb-lg">
+      <div class="md:columns-7">
+        <ul>
           {% for group in awards %}
-            <li class="award">
-              <h3 class="color-black-text text-xl font-normal">
-                {{ group.organization }}
-              </h3>
+            <li class="columns award">
+              <h3 class="columns-2">{{ group.organization }} &times;{{group.awards.length}}</h3>
 
-              <ul>
+              <ul class="columns-8">
                 {% for award in group.awards %}
-                  <li class="uppercase">
-                    <a class="link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">
+                  <li>
+                    <a class="type-headline link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">
                       {{ award.title }} {{ award.year }}
                     </a>
                   </li>

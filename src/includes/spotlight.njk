@@ -1,42 +1,39 @@
 <section id="spotlight" class="spotlight" aria-labelledby="heading-spotlight">
   <h2 id="heading-spotlight" class="sr-only">Spotlight</h2>
 
-  <div class="study">
-    <div class="wrapper">
-      <div class="columns columns-6 row-gap-4xl">
-        <div class="columns-12">
-          {% svg spotlight.logo %}
-        </div>
-
-        <div class="lg:columns-4">
-          <h3>2019&mdash;2022 Annual Reports</h3>
-          <p class="text-md">{{ spotlight.description }}</p>
-        </div>
-
-        <div class="lg:columns-2 ml-2">
-          <h3>Focus Areas</h3>
-          <ul>
-            {% for item in spotlight.focus %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        <div class="lg:columns-2">
-          <h3>Tech Stack</h3>
-          <ul>
-            {% for item in spotlight.development %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-
-        <div class="lg:columns-2">
-          <h3>Project Type</h3>
-          <p>{{ spotlight.industry }}</p>
+  <div class="wrapper">
+    <div class="columns columns-8 row-gap-4xl justify-between">
+      <div class="md:columns-4 lg:columns-3">
+        <h2>2019&mdash;2022 Annual Reports</h2>
+        <p class="mb-2xl">{{ spotlight.description }}</p>
+      </div>
+      <div class="md:columns-7">
+        <div class="columns columns-4 lg:columns-2">
+          <div>
+            <h3>Technicals</h3>
+            <ul>
+              {% for item in spotlight.development %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h3>Focus</h3>
+            <ul>
+              {% for item in spotlight.focus %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="lg:columns-4">
+            <h3>Industry</h3>
+            <p>{{ spotlight.industry }}</p>
+          </div>
         </div>
       </div>
     </div>
+
+    {% svg spotlight.logo %}
   </div>
 
   <div class="spotlight__video">
