@@ -1,14 +1,16 @@
 @use "../mixins" as *;
 
 .spotlight {
-  // https://frontendmasters.com/blog/scoped-scroll-timelines/
-  timeline-scope: --video;
-
-  animation: spotlight-background ease-in both;
-  animation-timeline: --video;
-  animation-range: 0% 50%;
-
   padding-top: var(--size-header-offset);
+  // https://frontendmasters.com/blog/scoped-scroll-timelines/
+
+  @include mq(md) {
+    timeline-scope: --video;
+
+    animation: spotlight-background ease-in both;
+    animation-timeline: --video;
+    animation-range: 0% 50%;
+  }
 
   .use-inview {
     will-change: transform;
@@ -72,8 +74,6 @@
       position: relative;
       height: 100%;
       flex-shrink: 0;
-      border-radius: 8px;
-      overflow: hidden;
 
       @include mq(md) {
         transform: scale(.6);
@@ -90,6 +90,7 @@
       height: 100%;
       object-fit: cover;
       margin: auto;
+      border-radius: 8px;
     }
 
     button {

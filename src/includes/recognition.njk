@@ -1,10 +1,12 @@
-<section class="pt-header-offset" id="recognition" aria-labelledby="heading-recognition">
+{% set index = 0 %}
+
+<section class="recognition" id="recognition" aria-labelledby="heading-recognition">
   <div class="wrapper">
     <div class="columns justify-between">
       <div class="columns-11 md:columns-4 lg:columns-3 mb-4xl">
-        <div class="sticky top-header-offset">
-          <h2 id="heading-recognition">Awards & Recognition</h2>
-          <p>Selected by international juries for excellence in digital design, sustainability communication, and interactive storytelling.</p>
+        <div class="sticky top-header-offset use-inview">
+          <h2 id="heading-recognition" style="--index: 1;">Awards & Recognition</h2>
+          <p style="--index: 2;">Selected by international juries for excellence in digital design, sustainability communication, and interactive storytelling.</p>
         </div>
       </div>
 
@@ -16,7 +18,9 @@
 
               <ul class="columns-6 md:columns-8">
                 {% for award in group.awards %}
-                  <li>
+                  {% set index = index + 1 %}
+
+                  <li style="--index: {{index}}">
                     <a class="type-headline link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">
                       {{ award.title }} {{ award.year }}
                     </a>

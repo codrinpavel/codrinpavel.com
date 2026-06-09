@@ -1,3 +1,20 @@
+.recognition {
+  padding-top: var(--size-header-offset);
+
+  .use-inview {
+    will-change: transform;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: transform 750ms ease, opacity 750ms ease;
+    transition-delay: calc(var(--index) * 125ms);
+
+    &.is-inview {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+
 .award {
   &:not(:last-child) {
     margin-bottom: var(--size-5xl);
@@ -5,5 +22,35 @@
 
   li:not(:last-child) {
     margin-bottom: var(--size-ml);
+  }
+
+  li {
+    transform: translateX(calc(var(--index) * .2em));
+    opacity: 0;
+
+    animation: tableitem ease-out both;
+    animation-timeline: view();
+    animation-range: 0% 20%;
+    will-change: transform, opacity;
+  }
+
+  h3 {
+    opacity: 0;
+
+    animation: tableitem ease-out both;
+    animation-timeline: view();
+    animation-range: 0% 20%;
+    will-change: transform, opacity;
+  }
+}
+
+@keyframes tableitem {
+  60% {
+    opacity: .2;
+  }
+
+  to {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
