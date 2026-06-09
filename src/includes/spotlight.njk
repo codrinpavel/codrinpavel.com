@@ -2,15 +2,15 @@
   <h2 id="heading-spotlight" class="sr-only">Spotlight</h2>
 
   <div class="wrapper">
-    <div class="columns justify-between">
-      <div class="columns-11 md:columns-4 lg:columns-3">
+    <div class="columns justify-between row-gap-5xl mb-5xl">
+      <div class="columns-11 md:columns-4 lg:columns-3 use-inview" style="--index:1">
         <h2>2019&mdash;2022 Annual Reports</h2>
         <p>{{ spotlight.description }}</p>
       </div>
 
       <div class="columns-12 md:columns-7">
-        <div class="columns columns-4 lg:columns-2">
-          <div class="order-last md:order-first">
+        <div class="columns columns-4 lg:columns-2 row-gap-5xl">
+          <div class="order-last md:order-first use-inview" style="--index:2">
             <h3>Industries</h3>
             <ul>
             {% for item in spotlight.industries %}
@@ -19,7 +19,7 @@
             </ul>
           </div>
 
-          <div>
+          <div class="use-inview" style="--index:3">
             <h3>Technologies</h3>
             <ul>
               {% for item in spotlight.development %}
@@ -28,7 +28,7 @@
             </ul>
           </div>
 
-          <div class="columns-8 lg:columns-4">
+          <div class="columns-8 lg:columns-4 use-inview" style="--index:4">
             <h3>Focus Areas</h3>
             <ul>
               {% for item in spotlight.focus %}

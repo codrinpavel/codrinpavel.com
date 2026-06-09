@@ -1,13 +1,26 @@
 @use "../mixins" as *;
 
 .spotlight {
+  // https://frontendmasters.com/blog/scoped-scroll-timelines/
+  timeline-scope: --video;
+
+  animation: spotlight-background ease-in both;
+  animation-timeline: --video;
+  animation-range: 0% 50%;
+
   padding-top: var(--size-header-offset);
 
-  @include mq(md, max) {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .use-inview {
+    will-change: transform;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: transform 750ms ease, opacity 750ms ease;
+    transition-delay: calc(var(--index) * 125ms);
+
+    &.is-inview {
+      transform: translateY(0px);
+      opacity: 1;
+    }
   }
 
   >.wrapper,
@@ -45,7 +58,7 @@
       z-index: 101;
       height: 200svh;
 
-      view-timeline-name: --spotlight;
+      view-timeline-name: --video;
       view-timeline-axis: block;
 
       .wrapper {
@@ -67,7 +80,7 @@
         filter: grayscale(1);
 
         animation: spotlight ease-in both;
-        animation-timeline: --spotlight;
+        animation-timeline: --video;
         animation-range: 0% 50%;
       }
     }
@@ -102,3 +115,14 @@
     transform: scale(1);
   }
 }
+
+@keyframes spotlight-background {
+  65% {
+    background: var(--color-white);
+  }
+
+  to {
+    background: #006394;
+  }
+}
+

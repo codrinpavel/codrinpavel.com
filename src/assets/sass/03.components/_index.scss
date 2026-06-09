@@ -1,12 +1,11 @@
 @use 'sass:meta';
 
 @layer components {
+  @include meta.load-css("site-logo");
   @include meta.load-css("wrapper");
-  @include meta.load-css("section");
-  @include meta.load-css("separator");
-  @include meta.load-css("clogo");
-  @include meta.load-css("quote");
+  @include meta.load-css("hr");
   @include meta.load-css("track");
+  @include meta.load-css("quote");
   @include meta.load-css("animate-wave");
   @include meta.load-css("play-button");
 }

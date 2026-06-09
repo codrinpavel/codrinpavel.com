@@ -25,6 +25,10 @@ body {
   overflow-y: scroll;
 }
 
+main {
+  background: var(--color-white);
+}
+
 :where(a) {
   color: inherit;
   text-decoration: none;

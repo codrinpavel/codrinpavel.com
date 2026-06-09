@@ -6,26 +6,19 @@
   z-index: 100;
   padding-block: var(--size-xl);
 
-  filter: invert(100%);
-  mix-blend-mode: exclusion;
+  nav a {
+    display: inline-flex;
+    opacity: 0;
+    transform: translateY(16px) rotate(2deg);
+    animation: 600ms navFadeUp ease forwards;
+    animation-delay: var(--delay, 0s);
+    will-change: transform, opacity;
 
-  nav {
-    a {
-      display: inline-flex;
-      opacity: 0;
-      transform: translateY(16px) rotate(2deg);
-      animation: 600ms navFadeUp ease forwards;
-      animation-delay: var(--delay, 0s);
-      will-change: transform, opacity;
-
-      &.is-active {
-        color: var(--color-black-text);
-      }
+    &.is-active {
+      color: var(--color-black-text);
     }
-  }
 
-  @include mq(md, max) {
-    nav {
+    @include mq(md, max) {
       display: none;
     }
   }

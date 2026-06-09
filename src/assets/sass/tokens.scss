@@ -19,9 +19,10 @@ $tokens: (
 
     default: (
       "white": hsl(26, 28%, 96%),// hsl(40, 23%, 98%),
-      "black":  hsl(0, 0%, 9%),
+      "black":  hsl(0, 0%, 6%),
       "white-text": hsl(274, 6%, 76%),
       "black-text": hsl(0, 0%, 0%),// hsl(94, 8%, 18%),
+      "balance-text": #333935,
       "faint":  hsl(0, 0%, 41%),
       "border": hsl(0, 0%, 9%),
     ),
