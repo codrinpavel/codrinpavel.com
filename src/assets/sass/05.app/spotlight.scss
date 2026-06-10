@@ -34,7 +34,6 @@
     svg {
       width: 120px;
       height: auto;
-      filter: grayscale(1);
     }
 
     @include mq(md) {

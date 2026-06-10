@@ -2,7 +2,6 @@
 
 @layer app {
   @include meta.load-css('base');
-  @include meta.load-css("typography");
   @include meta.load-css('header');
   @include meta.load-css('hero');
   @include meta.load-css('at-a-glance');
