@@ -9,8 +9,6 @@
     &__container {
       position: sticky;
       top: 0;
-      height: 100svh;
-      overflow: hidden;
     }
   }
 
@@ -24,12 +22,9 @@
 }
 
 .stat {
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
-
-  padding-top: var(--size-header-offset);
-  padding-bottom: var(--size-4xl);
+  min-height: var(--size-fullscreen);
 
   .figure {
     border-top: 1px solid var(--color-border);

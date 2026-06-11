@@ -13,8 +13,8 @@
         <a href="#home" class="site-logo">{% svg "logo.svg" %} <span class="sr-only">Codrin Pavel</span></a>
       </li>
       {% for item in nav %}
-      <li class="site-header__item" style="--index: {{loop.index}}">
-        <a class="link" style="--delay: 2400ms;" href="#{{item | lower | replace(' ', '-')}}">
+      <li class="site-header__item">
+        <a class="link type-headline" href="#{{item | lower | replace(' ', '-')}}">
           {{item}}
           {% if item == "Work" %}
           ({{work.length}})

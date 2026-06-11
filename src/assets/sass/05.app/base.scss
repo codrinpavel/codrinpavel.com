@@ -1,35 +1,27 @@
 @use "../mixins" as *;
 
-html::-webkit-scrollbar {
+html::-webkit-scrollbar,
+section::-webkit-scrollbar {
   display: none;
 }
 
-html {
+html,
+section {
   scrollbar-width: none;
 }
 
-html {
+html,
+section {
   -ms-overflow-style: none;
 }
 
-html {
+html,
+section {
   -webkit-overflow-scrolling: touch;
 }
 
 body {
   background: var(--color-white);
-  color: var(--color-black-text);
-
-  width: 100%;
-  overflow: hidden;
-}
-
-:where(a) {
-  color: inherit;
-  text-decoration: none;
-  transition: all 300ms;
-  outline: 0;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .link {

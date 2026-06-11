@@ -7,7 +7,7 @@
  * Handle hover and click
  */
 
-import lenis from "./lenis.js";
+import lenis from "../modules/lenis.js";
 
 const items = [...document.querySelectorAll('.w li:not(.is-disabled)')];
 const activeClass = 'is-active';

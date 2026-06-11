@@ -1,7 +1,9 @@
-<section class="motion pt-header-offset" id="motion" aria-labelledby="heading-motion">
-  <h2>Motion</h2>
-
-  <div class="wrapper">
-    <div class="columns"></div>
-  </div>
+<section class="motion" id="motion">
+  <figure>
+    <video id="spotlight-video" width="1440" height="900" src="{{ '/assets/video/fnih.mp4' | url }}" muted playsinline loop></video>
+    <button type="button" class="video-btn" aria-label="Play video" aria-controls="spotlight-video" id="spotlight-video-toggle">
+      {% svg "play-button.svg" %}
+    </button>
+    <figcaption class="sr-only">Animated homepage designs from the Foundation for the National Institutes of Health (FNIH) annual reports, featuring the 2018, 2019, and 2020 editions.</figcaption>
+  </figure>
 </section>

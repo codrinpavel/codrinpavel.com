@@ -5,17 +5,19 @@
 
 section {
   overflow: auto; // important, enables scroll
-  scrollbar-width: none;
 
-  top: 0;
   position: fixed;
+  inset: 0;
   z-index: -1;
-  width: 100vw;
-  height: 100vh;
+
+  height: var(--size-fullscreen);
+  margin: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
+
+  // inactive state
   pointer-events: none;
   opacity: 0;
 
-  // loading out state
+  // load out
   transition: opacity var(--transition-opacity-duration) ease-in;
   transition-delay: 0ms;
 
@@ -23,9 +25,8 @@ section {
     position: static;
     opacity: 1;
     pointer-events: auto;
-    translate: 0%;
 
-    // loading in state
+    // load in
     transition: opacity var(--transition-opacity-duration) ease-in;
     transition-delay: var(--transition-in-delay); // allow previous section time to animate before fading out
   }

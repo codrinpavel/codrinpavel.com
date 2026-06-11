@@ -1,6 +1,7 @@
 export default function () {
   return {
     client: "Foundation for the National Institutes of Health",
+    title: "FNIH Annual Reports, 2019&mdash;2022",
     industries: ["Non-profit", "Public Health"],
     logo: "company/fnih.svg",
     description: "Led frontend development for a series of award-winning Annual Reports for the Foundation for the National Institutes of Health (FNIH). Built responsive, high-performance experiences that met WCAG accessibility standards and were optimized for reliability, usability, and Core Web Vitals.",
@@ -11,7 +12,7 @@ export default function () {
       "Responsive Design",
       "CSS Animations"
     ],
-    development: [
+    stack: [
       "11ty",
       "Node.js",
       "JavaScript",

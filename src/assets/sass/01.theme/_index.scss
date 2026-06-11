@@ -9,18 +9,14 @@
   --grid-screenwidth: 1940px;
   --column-gap: var(--size-2xl);
   --row-gap: var(--size-2xl);
-  --header-height: calc(var(--size-ml) * 2 + 19px);
-
-  @include mq(lg) {
-    --header-offset: calc(var(--header-height) + 15vh);
-  }
+  --header-height: calc(var(--grid-margin) * 1.5 * 2 + 19px);
 
   @each $key, $val in tokens("size") {
     --size-#{$key}: #{$val};
   }
 
   @each $key, $val in tokens("ratio") {
-    --ratio-#{$key}: #{$val};
+    //--ratio-#{$key}: #{$val};
   }
 
   @each $key, $val in tokens("font-weight") {
@@ -36,15 +32,15 @@
   }
 
   @each $key, $val in tokens("blur") {
-    --blur-#{$key}: #{$val};
+    //--blur-#{$key}: #{$val};
   }
 
   @each $key, $val in tokens("radius") {
-    --radius-#{$key}: #{$val};
+    //--radius-#{$key}: #{$val};
   }
 
   @each $key, $val in tokens("shadow") {
-    --shadow-#{$key}: #{$val};
+    //--shadow-#{$key}: #{$val};
   }
 
   @each $key, $val in tokens("colors", "default") {

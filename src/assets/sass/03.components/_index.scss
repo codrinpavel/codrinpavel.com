@@ -1,8 +1,9 @@
 @use 'sass:meta';
 
 @layer components {
-  @include meta.load-css("site-logo");
   @include meta.load-css("wrapper");
+  @include meta.load-css("section");
+  @include meta.load-css("site-logo");
   @include meta.load-css("fullscreen");
   @include meta.load-css("hr");
   @include meta.load-css("track");

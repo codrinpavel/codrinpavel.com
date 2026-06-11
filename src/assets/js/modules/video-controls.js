@@ -2,6 +2,7 @@ const video = document.getElementById("spotlight-video");
 const button = document.getElementById("spotlight-video-toggle");
 const pauseAnim = button.querySelector(".button-pause");
 const playAnim = button.querySelector(".button-play");
+const motion = document.getElementById("motion");
 
 let wasPlaying = null;
 let manuallyPaused = false;
@@ -10,26 +11,36 @@ video.addEventListener("loadedmetadata", () => {
   button.style.setProperty("--duration", `${video.duration}s`);
 });
 
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    const inView = entry.isIntersecting && entry.intersectionRatio >= 0.5;
+function syncVideoWithMotion() {
+  const isActive = motion.classList.contains("is-active");
 
-    if (inView) {
-      if (!manuallyPaused) video.play();
-    } else {
-      video.pause();
-    }
-  },
-  { threshold: [0, 0.5, 1] }
-);
+  if (isActive) {
+    console.log('active')
+    if (!manuallyPaused) video.play();
+  } else {
+    console.log('not-active')
+    video.pause();
+  }
+}
 
-observer.observe(video);
+const motionObserver = new MutationObserver(syncVideoWithMotion);
+
+motionObserver.observe(motion, {
+  attributes: true,
+  attributeFilter: ["class"],
+});
+
+// Initial state
+syncVideoWithMotion();
 
 // Button
 button.addEventListener("click", () => {
   if (video.paused) {
     manuallyPaused = false;
-    video.play();
+
+    if (motion.classList.contains("is-active")) {
+      video.play();
+    }
   } else {
     manuallyPaused = true;
     video.pause();

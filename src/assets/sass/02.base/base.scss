@@ -22,6 +22,14 @@ body::before {
   display: none !important;
 }
 
+:where(a) {
+  color: inherit;
+  text-decoration: none;
+  transition: all 300ms;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
 th {
   color: var(--color-white)
 }

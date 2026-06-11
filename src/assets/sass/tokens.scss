@@ -33,7 +33,7 @@ $tokens: (
   ),
 
   font-family: (
-    sans: "system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
+    sans: "system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'"
   ),
 
   font-size: (
@@ -52,16 +52,16 @@ $tokens: (
   ),
 
   font-weight: (
-    thin: 100,
-    extralight: 200,
-    light: 300,
-    normal: 400,
-    medium: 500,
-    semibold: 600,
-    bold: 700,
-    extrabold: 800,
-    black: 900,
-    extrablack: 950,
+    thin: "'wght' 100",
+    extralight: "'wght' 200",
+    light: "'wght' 300",
+    normal: "'wght' 400",
+    medium: "'wght' 500",
+    semibold: "'wght' 600",
+    bold: "'wght' 700",
+    extrabold: "'wght' 800",
+    black: "'wght' 900",
+    extrablack: "'wght' 950",
   ),
 
   radius: (
@@ -131,7 +131,9 @@ $tokens: (
     8xl: fluid(56px, 80px),
     9xl: fluid(64px, 96px),
     10xl: fluid(80px, 120px),
-    header-offset: calc(var(--header-height) + var(--grid-margin)),
+    header-offset: calc(var(--header-height) + 60px),
+    footer-offset: calc(var(--grid-margin) * 2),
+    fullscreen: calc(100svh - var(--size-header-offset) - var(--size-footer-offset)),
     max: 1e5px,
   ),
 );
