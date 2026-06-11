@@ -31,11 +31,11 @@
     --size: 6px;
     --scale: calc(350vmax / var(--size));
 
-    scale: var(--scale);
-    translate: -50px;
-    transform-origin: center center;
-    animation: var(--overlay-duration) logo_scale ease var(--overlay-delay) forwards,
-               var(--move-duration) logo_move ease var(--move-delay) forwards;
+    //scale: var(--scale);
+    //translate: -50px;
+    //transform-origin: center center;
+    //animation: var(--overlay-duration) logo_scale ease var(--overlay-delay) forwards,
+               //var(--move-duration) logo_move ease var(--move-delay) forwards;
   }
 }
 

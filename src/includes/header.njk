@@ -1,34 +1,29 @@
-<header class="site-header type-headline">
-  <nav class="wrapper">
-    <ul class="columns items-end">
-      <li class="md:columns-2 lg:columns-5">
-        <a href="/" class="site-logo">{% svg "logo.svg" %} <span class="sr-only">Codrin Pavel</span></a>
-      </li>
-      <li class="md:columns-2 lg:columns-1 lg:ml-1">
-        <a class="link dashlink" style="--delay:2400ms" href="#at-a-glance">At a Glance</a>
-      </li>
-      <li class="md:columns-2 lg:columns-1">
-        <a class="link dashlink" style="--delay:2500ms" href="#spotlight">Spotlight</a>
-      </li>
-      <li class="md:columns-2 lg:columns-1">
-        <a class="link dashlink" style="--delay:2600ms" href="#work">Selected Work</a>
-      </li>
-      <li class="md:columns-2 lg:columns-1">
-        <a class="link dashlink" style="--delay:2700ms" href="#recognition">Recognition</a>
-      </li>
-      <li class="md:columns-2 lg:columns-1 ml-auto flex justify-end">
-        <a class="link dashlink" style="--delay:2800ms" href="#out-of-scope">Out of Scope</a>
-      </li>
+{% set nav = ["About", "Motion", "Work", "Awards", "Out of Scope"] %}
 
-{#
-      <nav class="md:columns-8 lg:columns-7 type-headline">
-        <ul class="columns md:columns-3">
-          <li><a class="link dashlink" style="--delay:2400ms" href="#at-a-glance">At a Glance</a></li>
-          <li><a class="link dashlink" style="--delay:2500ms" href="#spotlight">Selected Work</a></li>
-          <li><a class="link dashlink" style="--delay:2600ms" href="#recognition">Recognition</a></li>
-          <li class="lg:ml-auto flex justify-end"><a class="link dashlink" style="--delay:2700ms" href="#out-of-scope">Out of Scope</a></li>
-        </ul>
-      </nav>#}
+{% set awardCount = 0 %}
+
+{% for group in awards %}
+  {% set awardCount = awardCount + group.awards.length %}
+{% endfor %}
+
+<header class="site-header">
+  <nav class="wrapper">
+    <ul class="columns md:columns-2 lg:columns-1 items-end">
+      <li class="site-header__item lg:columns-6">
+        <a href="#home" class="site-logo">{% svg "logo.svg" %} <span class="sr-only">Codrin Pavel</span></a>
+      </li>
+      {% for item in nav %}
+      <li class="site-header__item" style="--index: {{loop.index}}">
+        <a class="link" style="--delay: 2400ms;" href="#{{item | lower | replace(' ', '-')}}">
+          {{item}}
+          {% if item == "Work" %}
+          ({{work.length}})
+          {% elif item == "Awards" %}
+          ({{awardCount}})
+          {% endif %}
+        </a>
+      </li>
+      {% endfor %}
     </ul>
   </nav>
 </header>

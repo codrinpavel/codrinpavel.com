@@ -6,9 +6,9 @@ export default function () {
 
     // Site data
     year: new Date().getFullYear(),
-    site_name: 'My name is &mdash;C.',
-    meta_title: 'My name is &mdash;C.',
-    meta_description: "Independent, design-driven frontend developer with 15+ years of experience, working remotely from an island in Spain.",
+    site_name: 'Codrin Pavel | call me &mdash;c.',
+    meta_title: 'Codrin Pavel | call me &mdash;c.',
+    meta_description: "Design-driven developer building fast, accessible websites for mission-driven organizations.",
     //meta_image: '/assets/img/social_image.jpg',  // place in src/assets/favicon
   }
 };

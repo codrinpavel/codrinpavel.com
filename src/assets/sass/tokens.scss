@@ -6,7 +6,7 @@ $tokens: (
     zero: 0px,
     sm: 640px,
     md: 768px,
-    lg: 1280px,
+    lg: 1024px,
     xl: 1600px,
   ),
 
@@ -38,7 +38,7 @@ $tokens: (
 
   font-size: (
     xs: fluid(10px, 12px),
-    sm: 12px,
+    sm: 13px,
     md: fluid(12px, 14px),
     ml: fluid(16px, 20px),
     lg: fluid(18px, 22px),
@@ -131,7 +131,7 @@ $tokens: (
     8xl: fluid(56px, 80px),
     9xl: fluid(64px, 96px),
     10xl: fluid(80px, 120px),
-    header-offset: calc(var(--header-height) + 15vmin),
+    header-offset: calc(var(--header-height) + var(--grid-margin)),
     max: 1e5px,
   ),
 );

@@ -21,12 +21,7 @@ body {
   color: var(--color-black-text);
 
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-main {
-  background: var(--color-white);
+  overflow: hidden;
 }
 
 :where(a) {
@@ -50,24 +45,5 @@ main {
     background-position: 0 100%;
     background-size: 100% 1px;
     color: var(--color-black-text);
-  }
-}
-
-.dashlink {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-
-  &::before {
-    content: "";
-
-    position: relative;
-    left: 0;
-
-    width: 0px;
-    height: 1px;
-
-    background-color: currentColor;
-    transition: all 300ms;
   }
 }

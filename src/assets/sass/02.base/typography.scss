@@ -36,17 +36,6 @@ h2, h3,
   color: var(--color-faint);
 }
 
-h2 {
-  min-height: 2.6em;
-  display: flex;
-  align-items: flex-end;
-}
-
-h2, h3 {
-  margin-top: 0;
-  margin-bottom: var(--size-xl);
-}
-
 :where(p) {
   margin: 0;
 

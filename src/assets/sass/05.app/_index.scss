@@ -2,13 +2,20 @@
 
 @layer app {
   @include meta.load-css('base');
+  @include meta.load-css('section');
   @include meta.load-css('header');
+  
   @include meta.load-css('hero');
-  @include meta.load-css('at-a-glance');
-  @include meta.load-css('spotlight');
-  @include meta.load-css('recognition');
+  @include meta.load-css('home');
+  @include meta.load-css('about');
   @include meta.load-css('work');
-  //@include meta.load-css('table');
-  @include meta.load-css('accolades');
-  @include meta.load-css('footer');
+
+
+
+
+  //@include meta.load-css('spotlight');
+  //@include meta.load-css('awards');
+  ////@include meta.load-css('table');
+  //@include meta.load-css('accolades');
+  //@include meta.load-css('footer');
 }

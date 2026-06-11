@@ -4,7 +4,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         entry.target.classList.add('is-inview');
       } else {
-        //entry.target.classList.remove('is-inview');
+        entry.target.classList.remove('is-inview');
       }
     });
   },

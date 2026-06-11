@@ -1,36 +1,39 @@
 @use "../mixins" as *;
+@use "../02.base/typography" as *;
 
 .site-header {
+  @extend .type-headline;
+
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
-  padding-block: var(--size-ml);
 
-  .md\:columns-2 {
+  padding-block: var(--grid-margin);
+
+  &__item {
     display: flex;
+    --wait-for-loading: var(--transition-in-delay);
+
+    &:last-child {
+      margin-left: auto;
+      justify-content: flex-end;
+    }
   }
 
-  .type-headline {
-    line-height: 0;
-  }
-
-  nav a {
-    display: inline-flex;
-    opacity: 0;
-    transform: translateY(16px) rotate(2deg);
-    animation: 600ms navFadeUp ease forwards;
-    animation-delay: var(--delay, 0s);
-    will-change: transform, opacity;
-    line-height: 1.3;
+  a {
+    white-space: nowrap;
 
     &.is-active {
       color: var(--color-black-text);
     }
+  }
+}
 
-    @include mq(md, max) {
-      &:not(.site-logo) {
-        display: none;
-      }
+.header-position-top {
+  .site-header {
+    &__item {
+      transform: translate3d(0, 0, 0);
+      --wait-for-loading: 0ms;
     }
   }
 }
@@ -40,4 +43,42 @@
     opacity: 1;
     transform: translateY(0) rotate(0deg);
   }
+}
+
+.site-header__item {
+  --i: 0;
+  --total: 1s;
+  --stagger: 58ms;
+  --delay: calc(var(--i) * var(--stagger) + var(--wait-for-loading, 0ms));
+  --duration: calc(var(--total) - calc(var(--i) * var(--stagger)));
+  --ease: cubic-bezier(.19, 1, .22, 1);
+
+  transform: translate3d(0, calc(50vh - 50% - var(--grid-margin)), 0);
+  transition: transform var(--duration) var(--ease) var(--delay);
+  will-change: transform;
+}
+
+.site-header__item:nth-child(1) {
+  --i: 0;
+  --ease: cubic-bezier(.22, 1.15, .28, 1);
+}
+
+.site-header__item:nth-child(2) {
+  --i: 2;
+  --ease: cubic-bezier(.16, .84, .24, 1);
+}
+
+.site-header__item:nth-child(3) {
+  --i: 1;
+  --ease: cubic-bezier(.27, .95, .21, 1);
+}
+
+.site-header__item:nth-child(4) {
+  --i: 4;
+  --ease: cubic-bezier(.18, 1, .18, 1);
+}
+
+.site-header__item:nth-child(5) {
+  --i: 3;
+  --ease: cubic-bezier(.2, .75, .12, 1);
 }

@@ -539,7 +539,7 @@ export default function () {
       client: "Axios",
       project: "U.S. News and Politics Website",
       url: "https://www.axios.com/",
-      tags: ["featured","media"],
+      tags: ["featured", "media"],
       wayback: "20170202003159"
     },
     {
@@ -663,6 +663,7 @@ export default function () {
       year: 2016,
       client: "We Are Mel",
       project: "Company Website",
+      tags: ["media"],
       url: "http://www.wearemel.com/",
       inactive: true,
       nothumb: true
@@ -724,6 +725,7 @@ export default function () {
       wayback: "20160804172937",
       client: "FindMyPast",
       project: "Company Blog",
+      tags: ["media"],
       url: "https://blog.findmypast.com/",
     },
     {
@@ -761,6 +763,7 @@ export default function () {
       year: 2013,
       client: "VisualFreaks",
       project: "Project Website",
+      tags: ["independent"],
       url: "http://www.visualfreaks.com/",
       wayback: "20131010011018"
     },
@@ -768,6 +771,7 @@ export default function () {
       year: 2013,
       client: "KiteOps",
       project: "Project Website",
+      tags: ["independent"],
       url: "https://www.kiteops.com/",
       wayback: "20191210095217"
     },
@@ -775,6 +779,7 @@ export default function () {
       year: 2013,
       client: "ABIS Studio",
       project: "Company Website",
+      tags: ["independent"],
       url: "https://www.abisstudio.ro/",
       inactive: true,
       nothumb: true
@@ -783,8 +788,8 @@ export default function () {
       year: 2012,
       client: "Benevol",
       project: "Company Website",
+      tags: ["nonprofit", "independent"],
       url: "https://www.benevol.ro/",
-      tags: ["nonprofit"],
       wayback: "20150201141440"
     },
     {
@@ -792,7 +797,7 @@ export default function () {
       client: "Domus Caritatis",
       project: "Organization Website",
       url: "https://domuscaritatis.ro/",
-      tags: ["nonprofit"],
+      tags: ["nonprofit", "independent"],
       wayback: "20120112043727",
       inactive: true,
       nothumb: true
@@ -802,6 +807,7 @@ export default function () {
       client: "Ctrl-D",
       project: "In Ctrl Events",
       url: "http://in.ctrl-d.ro/index.php",
+      tags: ["independent"],
       wayback: "20160323031542"
     },
     {
@@ -809,6 +815,7 @@ export default function () {
       client: "Ctrl-D",
       project: "Android Workshop",
       url: "http://in.ctrl-d.ro/dezvoltarea-de-aplicatii-android/",
+      tags: ["independent"],
       wayback: "20140623184916"
     },
     {
@@ -816,12 +823,14 @@ export default function () {
       client: "Ctrl-D",
       project: "Creative Copywriting",
       url: "http://in.ctrl-d.ro/atelier_creativ_copywriting/",
+      tags: ["independent"],
       wayback: "20160323044906"
     },
     {
       year: 2010,
       client: "Cristina Dumitru",
       project: "Personal Website",
+      tags: ["independent"],
       url: "https://cristinadumitru.ro/",
       inactive: true,
       nothumb: true
@@ -830,24 +839,28 @@ export default function () {
       year: 2022,
       client: "PubHub by Monica Rosu",
       project: "Company Website",
+      tags: ["independent"],
       url: "https://pubhub.ro/",
     },
     {
       year: 2010,
       client: "AIOdesign",
       project: "Portfolio Website",
+      tags: ["independent"],
       url: "https://aiodesign.ro/",
     },
     {
       year: 2010,
       client: "Livio Benedetti",
       project: "Portfolio Website",
+      tags: ["independent"],
       url: "https://www.liviobenedetti.com/",
     },
     {
       year: 2010,
       client: "5 Napkin Burger",
       project: "Beer and Bourbon Blog",
+      tags: ["independent"],
       url: "https://www.5napkinburger.com/",
       inactive: true
     },
@@ -855,6 +868,7 @@ export default function () {
       year: 2010,
       client: "Blossom et Partenaires",
       project: "Agency Website",
+      tags: ["independent"],
       url: "https://blossom-partenaires.ch/fr",
       inactive: true
     },
@@ -862,6 +876,7 @@ export default function () {
       year: 2009,
       client: "Harosa & Nemeti",
       project: "Law Firm Website",
+      tags: ["independent"],
       url: "http://harosa-nemeti.ro/",
       inactive: true,
       nothumb: true
@@ -870,6 +885,7 @@ export default function () {
       year: 2009,
       client: "Avocatul dvs",
       project: "Law Firm Website",
+      tags: ["independent"],
       url: "http://avocatuldumneavoastra.ro/",
       inactive: true,
       nothumb: true

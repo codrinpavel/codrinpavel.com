@@ -1,18 +1,21 @@
 @use "../mixins" as *;
 
-.at-a-glance {
-  height: 300vh;
-  view-timeline-name: --at-a-glance;
-  view-timeline-axis: block;
-
+.about {
   .wrapper {
-    position: sticky;
-    top: 0;
-    height: 100svh;
+    height: 300vh;
+    view-timeline-name: --about;
+    view-timeline-axis: block;
+
+    &__container {
+      position: sticky;
+      top: 0;
+      height: 100svh;
+      overflow: hidden;
+    }
   }
 
   .track {
-    animation-timeline: --at-a-glance;
+    animation-timeline: --about;
 
     @include mq(md) {
       --item-width: 50%;//calc(5 / 12 * 100%);

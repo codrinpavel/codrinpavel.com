@@ -1,0 +1,32 @@
+:root {
+  --transition-in-delay: 400ms;
+  --transition-opacity-duration: 300ms;
+}
+
+section {
+  overflow: auto; // important, enables scroll
+  scrollbar-width: none;
+
+  top: 0;
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0;
+
+  // loading out state
+  transition: opacity var(--transition-opacity-duration) ease-in;
+  transition-delay: 0ms;
+
+  &.is-active {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    translate: 0%;
+
+    // loading in state
+    transition: opacity var(--transition-opacity-duration) ease-in;
+    transition-delay: var(--transition-in-delay); // allow previous section time to animate before fading out
+  }
+}

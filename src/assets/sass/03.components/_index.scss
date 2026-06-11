@@ -3,6 +3,7 @@
 @layer components {
   @include meta.load-css("site-logo");
   @include meta.load-css("wrapper");
+  @include meta.load-css("fullscreen");
   @include meta.load-css("hr");
   @include meta.load-css("track");
   @include meta.load-css("quote");

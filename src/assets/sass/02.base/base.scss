@@ -1,3 +1,23 @@
+/*
+body::before {
+  content: "";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+
+  background:
+    linear-gradient(#f00 0 0) center/2px 100% no-repeat,
+    linear-gradient(#f00 0 0) center/100% 2px no-repeat;
+
+  pointer-events: none;
+  z-index: 999999;
+}
+*/
+
 [hidden] {
   display: none !important;
 }

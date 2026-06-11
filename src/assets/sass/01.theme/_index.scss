@@ -5,7 +5,7 @@
 @layer base, components, utilities, app;
 
 :root {
-  --grid-margin: var(--size-ml);
+  --grid-margin: var(--size-sm);
   --grid-screenwidth: 1940px;
   --column-gap: var(--size-2xl);
   --row-gap: var(--size-2xl);
