@@ -1,0 +1,10 @@
+.projects {
+  margin-block: var(--grid-margin);
+  height: calc(100svh - var(--grid-margin) * 2);
+
+  .wrapper,
+  .wrapper__container,
+  .columns {
+    height: 100%;
+  }
+}

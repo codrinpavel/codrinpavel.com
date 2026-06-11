@@ -24,6 +24,7 @@ export default function () {
 
   const archive = CATEGORIES.map((category) => ({
     title: category.title,
+    count: 0,
     clients: [],
   }));
 
@@ -33,6 +34,7 @@ export default function () {
     );
 
     const category = archive[categoryIndex];
+    category.count += 1;
 
     let client = category.clients.find(
       (client) => client.name === project.client
@@ -43,6 +45,7 @@ export default function () {
         name: project.client,
         long: project.long || null,
         projects: [],
+        inactive: project.inactive,
       };
 
       category.clients.push(client);

@@ -5,6 +5,7 @@
 
 section {
   overflow: auto; // important, enables scroll
+  outline: 0;
 
   position: fixed;
   inset: 0;

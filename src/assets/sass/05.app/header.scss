@@ -18,9 +18,8 @@
 
     display: flex;
 
-    transform: translate3d(0, calc(50vh - 50% - var(--grid-margin)), 0);
+    transform: translate3d(0, calc(50vh - 50% - var(--grid-margin)*1.5), 0);
     transition: transform var(--duration) var(--ease) var(--delay);
-    will-change: transform;
 
     &:nth-child(1) {
       --i: 0;
@@ -45,9 +44,6 @@
     &:nth-child(5) {
       --i: 3;
       --ease: cubic-bezier(.2, .75, .12, 1);
-
-      margin-left: auto;
-      justify-content: flex-end;
     }
 
     &:last-child {

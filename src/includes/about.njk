@@ -1,51 +1,39 @@
-<section class="about" id="about" aria-labelledby="heading-about">
-  <h2 id="heading-about" class="sr-only">about</h2>
-
+<section class="about" id="about">
   <div class="wrapper">
     <div class="wrapper__container">
       <div class="track" style="--count: {{stats.length}}">
-        {#}
-        <div class="track--item">
-          <div class="stat">
-            <span class="mt-auto" data-delay="2800">Design-driven developer building fast, accessible websites for mission-driven organizations.</span>
-            <span class=" mt-lg" data-delay="2980">I help agencies across Europe and the US transform complex content into meaningful, engaging digital experiences.</span>
-            <b class=" mt-2xl" data-delay="3280">&mdash;Codrin.</b>
-          </div>
-        </div>
-        {##}
 
         {% for stat in stats %}
           <div class="track--item">
             <div class="stat">
               <span class="figure use-inview">
-                {% for char in stat
-                  .figure
-                  .split('') %}
-                  <i class="type-huge" style="--index:{{loop.index}}">{{ char }}</i>
-                {% endfor %}
+                {%- for char in stat.figure.split('') -%}
+                  <i class="type-huge" style="--index:{{loop.index}}">{{- char -}}</i>
+                {%- endfor -%}
               </span>
 
               <span class="type-medium mb-2xl">{{ stat.title }}</span>
 
               <ul class="mt-auto">
-                {% for bullet in stat.bullets %}
-                  <li>{{ bullet }}</li>
-                {% endfor %}
+                {%- for bullet in stat.bullets -%}
+                  <li>{{- bullet -}}</li>
+                {%- endfor -%}
               </ul>
             </div>
           </div>
         {% endfor %}
 
-        {#}
-        <div class="track--item">
-          <div class="stat">
-            <span class="mt-auto" data-delay="2800">Design-driven developer building fast, accessible websites for mission-driven organizations.</span>
-            <span class=" mt-lg" data-delay="2980">I help agencies across Europe and the US transform complex content into meaningful, engaging digital experiences.</span>
-            <b class=" mt-2xl" data-delay="3280">&mdash;Codrin.</b>
-          </div>
-        </div>
-        {##}
       </div>
     </div>
   </div>
 </section>
+
+{#}
+<div class="track--item">
+  <div class="stat">
+    <span class="mt-auto" data-delay="2800">Design-driven developer building fast, accessible websites for mission-driven organizations.</span>
+    <span class=" mt-lg" data-delay="2980">I help agencies across Europe and the US transform complex content into meaningful, engaging digital experiences.</span>
+    <b class=" mt-2xl" data-delay="3280">&mdash;Codrin.</b>
+  </div>
+</div>
+{##}

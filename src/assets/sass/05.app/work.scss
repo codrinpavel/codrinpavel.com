@@ -1,6 +1,7 @@
 .work {
   ul {
     height: var(--size-fullscreen);
+    color: var(--color-faint);
 
     display: flex;
     flex-direction: column;
@@ -10,19 +11,13 @@
     row-gap: var(--size-3xs);
     column-gap: var(--size-2xl);
 
-    .is-disabled {
-      color: var(--color-faint);
+    a {
+      color: var(--color-black-text);
     }
   }
 
   h2 {
     margin-bottom: var(--size-ml);
-  }
-
-  li:not(:first-child) h2 {
-    margin-top: var(--size-ml);
-    padding-top: var(--size-ml);
-    border-top: 1px solid var(--color-border);
   }
 }
 

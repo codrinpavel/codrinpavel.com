@@ -837,14 +837,14 @@ export default function () {
     },
     {
       year: 2022,
-      client: "PubHub by Monica Rosu",
+      client: "PubHub",
       project: "Company Website",
       tags: ["independent"],
       url: "https://pubhub.ro/",
     },
     {
       year: 2010,
-      client: "AIOdesign",
+      client: "AIO Design",
       project: "Portfolio Website",
       tags: ["independent"],
       url: "https://aiodesign.ro/",

@@ -1,10 +1,6 @@
-<section class="awards" id="awards" aria-labelledby="heading-awards">
+<section class="awards" id="awards">
   <div class="wrapper">
     <div class="columns">
-      <div class="columns-11 md:ml-2 lg:ml-1">
-        <h2 id="heading-awards">Awards & Recognition</h2>
-      </div>
-
       <div class="columns-12">
         <ul>
           {% set index = 0 %}
@@ -19,7 +15,7 @@
                   {% set index = index + 1 %}
 
                   <li style="--index: {{index}}">
-                    <a class="type-headline link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">
+                    <a class="link" href="{{ award.url }}" target="_blank" rel="noopener noreferrer">
                       {{ award.title }}
                       {{ award.year }}
                     </a>

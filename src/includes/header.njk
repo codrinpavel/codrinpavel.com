@@ -1,5 +1,4 @@
 {% set nav = ["About", "Motion", "Work", "Awards", "Out of Scope"] %}
-
 {% set awardCount = 0 %}
 
 {% for group in awards %}
@@ -8,21 +7,25 @@
 
 <header class="site-header">
   <nav class="wrapper">
-    <ul class="columns md:columns-2 lg:columns-1 items-end">
+    <ul class="columns md:columns-2 lg:columns-1 items-start">
       <li class="site-header__item lg:columns-6">
-        <a href="#home" class="site-logo">{% svg "logo.svg" %} <span class="sr-only">Codrin Pavel</span></a>
+        <a href="#home" class="site-logo">
+          {% svg "logo.svg" %}
+          <span class="sr-only">Codrin Pavel</span>
+        </a>
       </li>
+
       {% for item in nav %}
-      <li class="site-header__item">
-        <a class="link type-headline" href="#{{item | lower | replace(' ', '-')}}">
-          {{item}}
-          {% if item == "Work" %}
+        <li class="site-header__item">
+          <a class="link type-headline" href="#{{item | lower | replace(' ', '-')}}">
+            {{item}}
+            {% if item == "Work" %}
           ({{work.length}})
           {% elif item == "Awards" %}
           ({{awardCount}})
           {% endif %}
-        </a>
-      </li>
+          </a>
+        </li>
       {% endfor %}
     </ul>
   </nav>

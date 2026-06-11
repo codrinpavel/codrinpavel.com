@@ -1,25 +1,46 @@
 {% set sortedWork = work | sortByYear %}
 
-<section class="work" id="work" aria-labelledby="heading-work">
-  <div class="wrapper">
-    <div class="columns">
-      <div class="columns-11 md:ml-1 flex column-gap-2xl">
+<section class="work" id="work">
+  <div class="wrapper flex column-gap-2xl">
+    {%- for category in projects -%}
+      <ul>
+        <li>
+          <h2>{{category.title}} ({{category.count}})</h2>
+        </li>
 
-        {%- for cat in projects -%}
-          <ul>
-            <li>
-              <h2>{{cat.title}}</h2>
-            </li>
+        {%- for client in category.clients -%}
+          {% set project_count = (client.projects.length > 1) and ("×"~client.projects.length) or '' %}
 
-            {%- for client in cat.clients -%}
-              <li>
-                {{client.name}}
-                {% if client.projects.length > 1 %} ({{client.projects.length}}) {% endif %}
-              </li>
-            {%- endfor -%}
-          </ul>
+          <li>
+            {% if client.inactive %} {{client.name}} {{project_count | safe}}
+            {% else %}
+              <a class="link js-project" href="#{{client.name | lower | replace(' ', '-') | replace('|', '')}}"
+                data-projects='[
+                {% for item in client.projects | rejectattr("inactive") %}
+                  {% set url = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
+
+                  {% set image_url = 'work/' ~ item.client | lower | replace(' ', '-') | replace('|', '') ~ '-' ~ item.project | lower | replace(' ', '-') ~ '-' ~ item.year ~ '.png' %}
+
+                  {% setAsync "imageHtml" %}
+                    {% img image_url %}
+                  {% endsetAsync %}
+
+                  {% if not loop.first %},{% endif %}
+                  {
+                    "year":"{{ item.year }}",
+                    "client":"{{ item.client }}",
+                    "title":"{{ item.project }}",
+                    "url":"{{ url }}",
+                    "picture": {{ imageHtml | trim | dump | safe }}
+                  }
+                {% endfor %}
+              ]'>
+                {{client.name}} {{project_count}}
+              </a>
+            {% endif %}
+          </li>
         {%- endfor -%}
-      </div>
-    </div>
+      </ul>
+    {%- endfor -%}
   </div>
 </section>
