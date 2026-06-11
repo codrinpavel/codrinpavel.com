@@ -1,3 +1,5 @@
+import { updateProjectView } from "./project-view.js";
+
 function activateSection(hash) {
   const targetSection = document.querySelector(`section${hash}`);
   const headerPosition = `header-position-${targetSection?.dataset.headerPosition || 'top'}`;
@@ -20,6 +22,7 @@ document.addEventListener('click', (e) => {
   if (!link) return;
   e.preventDefault();
   const hash = link.getAttribute('href');
+  updateProjectView(link);
 
   history.pushState(null, '', hash);
   activateSection(hash);
@@ -27,12 +30,14 @@ document.addEventListener('click', (e) => {
 
 // Handle direct visits such as example.com#about
 if (window.location.hash) {
+  updateProjectView(window.location.hash);
   activateSection(window.location.hash);
 }
 
 // Handle browser back/forward through hashes
 window.addEventListener('popstate', () => {
   if (window.location.hash) {
+    updateProjectView(window.location.hash);
     activateSection(window.location.hash);
   }
 });

@@ -6,12 +6,14 @@ const CATEGORIES = [
     test: (project) => project.tags?.includes("report"),
   },
   {
-    title: "Publishing & Media",
-    test: (project) => project.tags?.includes("media"),
+    title: "Websites & Digital Platforms",
+    test: (project) => !project.tags?.some(tag =>
+      ["report", "media", "independent"].includes(tag)
+    ),
   },
   {
-    title: "Websites & Digital Platforms",
-    test: (project) => !project.tags?.includes("independent"),
+    title: "Publishing & Media",
+    test: (project) => project.tags?.includes("media"),
   },
   {
     title: "Independent Work",
