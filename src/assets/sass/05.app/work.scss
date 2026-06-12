@@ -5,6 +5,7 @@
 
   .spotlight {
     position: relative;
+    width: 50%;
 
     button {
       position: absolute;
@@ -38,12 +39,11 @@
       font-variation-settings: var(--font-weight-normal);
       display: flex;
       align-items: center;
-      gap: 2px;
+      gap: 4px;
 
-      &[data-count]::after {
-        content: "("attr(data-count)")";
+      &[data-count]::before {
+        content: attr(data-count)"×";
         color: var(--color-faint);
-        font-size: 11px;
         font-variation-settings: var(--font-weight-medium);
       }
     }

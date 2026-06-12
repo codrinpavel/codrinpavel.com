@@ -18,12 +18,12 @@
       {% for item in nav %}
         <li class="site-header__item">
           <a class="link type-headline" href="#{{item | lower | replace(' ', '-')}}">
-            {{item}}
             {% if item == "Work" %}
-          ({{work.length}})
-          {% elif item == "Awards" %}
-          ({{awardCount}})
-          {% endif %}
+              {{work.length}}&times;
+            {% elif item == "Awards" %}
+              {{awardCount}}&times;
+            {% endif %}
+              {{item}}
           </a>
         </li>
       {% endfor %}

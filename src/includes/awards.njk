@@ -1,19 +1,17 @@
 <section class="awards" id="awards">
   <div class="wrapper">
-    <div class="columns md:columns-6 lg:columns-3">
+    <div class="columns md:columns-6 lg:columns-3 --column-gap-2xl">
 
       {% for group in awards %}
-        <div class="">
+        <div>
           <div class="stat">
-            <h2>
-              {{group.organization}}
-            </h2>
+            <h2 class="type-medium">{{group.organization}}</h2>
 
             <ul>
               {%- for award in group.awards -%}
                 <li>
-                  <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.year }}&mdash;{{ award.title }}">
-                    {{ award.year }}&mdash;{{ award.title }}
+                  <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.title }}">
+                    {{ award.year }}&mdash;{{ award.client }}
                   </a>
                 </li>
               {%- endfor -%}

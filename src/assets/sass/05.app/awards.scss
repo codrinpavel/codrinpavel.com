@@ -2,10 +2,10 @@
 
 .awards {
   h2 {
-    padding: calc(1px + var(--size-sm)) 8px var(--size-sm);
-    background-color: var(--color-balance-text);
-    color: var(--color-white);
-    margin: auto 0 1px;
+    padding-top: var(--size-xl);
+    border-top: 1px solid var(--color-border);
+    margin: 0 0 auto;
+    color: var(--color-black-text);
   }
 
   .stat li {
@@ -14,7 +14,7 @@
 
   a {
     display: block;
-    padding: var(--size-sm) 8px;
+    padding: var(--size-sm) 0;
     transition: background-color 300ms, color 300ms;
 
     position: relative;
@@ -29,6 +29,7 @@
       inset: 0;
       transition: translate 120ms ease;
       translate: 0 105%;
+      text-align: right;
     }
 
     &:hover,
