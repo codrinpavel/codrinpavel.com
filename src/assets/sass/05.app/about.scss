@@ -17,7 +17,7 @@
     animation-timeline: --about;
 
     @include mq(md) {
-      --item-width: 50%;//calc(5 / 12 * 100%);
+      --item-width: 50%; //calc(5 / 12 * 100%);
     }
   }
 }
@@ -28,6 +28,7 @@
   min-height: var(--size-fullscreen);
 
   .figure {
+    padding-top: var(--size-2xl);
     border-top: 1px solid var(--color-border);
     text-indent: -0.3em;
     display: flex;

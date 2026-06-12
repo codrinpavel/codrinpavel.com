@@ -1,0 +1,41 @@
+@use "../mixins" as *;
+
+.awards {
+  h2 {
+    padding: calc(1px + var(--size-sm)) 8px var(--size-sm);
+    background-color: var(--color-balance-text);
+    color: var(--color-white);
+    margin: auto 0 1px;
+  }
+
+  .stat li {
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    padding: var(--size-sm) 8px;
+    transition: background-color 300ms, color 300ms;
+
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: attr(data-title);
+      padding: var(--size-sm) 8px;
+      background-color: var(--color-balance-text);
+      color: var(--color-white);
+      position: absolute;
+      inset: 0;
+      transition: translate 120ms ease;
+      translate: 0 105%;
+    }
+
+    &:hover,
+    &:focus-visible {
+      &::before {
+        translate: 0 0%;
+      }
+    }
+  }
+}

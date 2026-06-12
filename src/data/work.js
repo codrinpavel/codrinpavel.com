@@ -6,14 +6,14 @@ export default function () {
       year: 2025,
       client: "Brilliant Earth",
       project: "2025 Mission Report",
-      tags: ["report"],
+      tags: ["featured", "report"],
       url: "https://www.brilliantearth.com/about/mission/report-2025/",
     },
     {
       year: 2024,
       client: "Brilliant Earth",
       project: "2024 Mission Report",
-      tags: ["featured", "award", "report"],
+      tags: ["award", "report"],
       url: "https://www.brilliantearth.com/about/mission/report-2024/",
       awards: [
         {
@@ -24,8 +24,8 @@ export default function () {
         },
         {
           year: 2025,
-          organization: "iNOVA",
-          title: "Grand Winner - Best of Sustainability Reports",
+          organization: "MerComm",
+          title: "Grand Winner - Best of Sustainability Reports 🏆",
           url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book25.pdf#page=9",
         },
       ]
@@ -75,8 +75,8 @@ export default function () {
       awards: [
         {
           year: 2024,
-          organization: "iNOVA",
-          title: "Grand Winner - Best of Sustainability Reports",
+          organization: "MerComm",
+          title: "Grand Winner - Best of Sustainability Reports 🏆",
           url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book24.pdf#page=5",
         },
       ]
@@ -145,7 +145,7 @@ export default function () {
       awards: [
         {
           year: 2019,
-          organization: "ARC",
+          organization: "MerComm",
           title: "Bronze Winnner - Summary Annual Review",
           url: "https://mercommawards.com/arc/archive/2019/categoryWinners/summary.htm",
         },
@@ -174,7 +174,7 @@ export default function () {
         {
           year: 2019,
           organization: "LACP",
-          title: "Gold Winner Worldwide",
+          title: "Gold Winner, Worldwide 🏆",
           url: "https://www.lacp.com/201718vision/awards-annual-report-competition-13065.htm",
         },
       ]
@@ -291,7 +291,7 @@ export default function () {
       client: "FNIH",
       long: "Foundation for the National Institutes of Health",
       project: "2021 Annual Report",
-      tags: ["report", "nonprofit"],
+      tags: ["featured", "report", "nonprofit"],
       url: "https://2021-annual-report.fnih.org/",
     },
     {
@@ -313,7 +313,7 @@ export default function () {
         {
           year: 2020,
           organization: "LACP",
-          title: "Gold Winner Worldwide",
+          title: "Gold Winner, Worldwide 🏆",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-21303b.htm",
         },
       ]
@@ -344,7 +344,7 @@ export default function () {
       year: 2021,
       client: "Stanley Black & Decker",
       project: "2020 ESG Report",
-      tags: ["fortune", "award", "report"],
+      tags: ["featured", "fortune", "award", "report"],
       url: "https://www.stanleyblackanddecker.com/who-we-are/2020-esg-report/",
       wayback: "20210516061645",
       awards: [
@@ -374,8 +374,8 @@ export default function () {
       awards: [
         {
           year: 2020,
-          organization: "ARC",
-          title: "Gold Winner - Integrated AR & CSR",
+          organization: "MerComm",
+          title: "Gold Winner - Integrated AR & CSR 🏆",
           url: "https://mercommawards.com/arc/archive/2020/categoryWinners/interactive.htm#int",
         },
         {
@@ -387,7 +387,7 @@ export default function () {
         {
           year: 2020,
           organization: "LACP",
-          title: "Gold Winner Worldwide",
+          title: "Gold Winner, Worldwide 🏆",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-agco-sustainability-report-21284b.htm",
         },
       ]
@@ -402,7 +402,7 @@ export default function () {
         {
           year: 2021,
           organization: "WMA",
-          title: "Non-Profit Standard of Excellence",
+          title: "Non-Profit Standard of Excellence 🏆",
           url: "https://www.webaward.org/winner/36065/ideas-on-purpose-wins-2021-webaward-for-bronx-conservatory-of-music.html",
         },
       ]
@@ -440,7 +440,7 @@ export default function () {
         {
           year: 2020,
           organization: "WMA",
-          title: "Financial Services Standard of Excellence",
+          title: "Financial Services Standard of Excellence 🏆",
           url: "https://www.webaward.org/winner/35658/ideas-on-purpose-wins-2020-webaward-for-global-infrastructure-partners-website.html",
         },
       ]
@@ -456,7 +456,7 @@ export default function () {
       year: 2020,
       client: "Tradeweb",
       project: "2019 Annual Report",
-      tags: ["award", "report"],
+      tags: ["featured", "award", "report"],
       url: "https://cdn.tradeweb.com/sites/2019AnnualReport/index.html",
       awards: [
         {
@@ -468,7 +468,7 @@ export default function () {
         {
           year: 2020,
           organization: "LACP",
-          title: "Gold Winner Worldwide",
+          title: "Gold Winner, Worldwide 🏆",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-tradeweb-online-report-21286a.htm",
         },
       ]
@@ -503,7 +503,7 @@ export default function () {
         {
           year: 2019,
           organization: "WMA",
-          title: "Best Design Website",
+          title: "Best Design Website 🏆",
           url: "https://www.webaward.org/winner/35253/ideas-on-purpose-wins-2019-webaward-for-ideas-on-purpose-website.html",
         },
       ]
@@ -527,8 +527,8 @@ export default function () {
     },
     {
       year: 2022,
-      client: "NYU | EI",
-      long: "New York University",
+      client: "NYU",
+      long: "New York University | Entrepreneurial Institute",
       project: "2021 Annual Report",
       tags: ["report"],
       url: "https://entrepreneur.nyu.edu/annual-report-2021/",
@@ -630,7 +630,7 @@ export default function () {
       year: 2018,
       client: "United Airlines",
       project: "Social Hub Redesign",
-      tags: ["fortune", "media"],
+      tags: ["featured", "fortune", "media"],
       url: "https://hub.united.com/",
       wayback: "20181225125338"
     },
@@ -672,7 +672,7 @@ export default function () {
       year: 2016,
       client: "Sports Illustrated",
       project: "Campus Rush Website",
-      tags: ["media"],
+      tags: ["featured", "media"],
       url: "http://www.campusrush.com/",
       wayback: "20150930005223"
     },
@@ -699,9 +699,9 @@ export default function () {
     },
     {
       year: 2016,
-      client: "Discovery Digital Networks",
+      client: "Discovery",
       project: "Seeker",
-      tags: ["fortune", "media"],
+      tags: ["featured", "fortune", "media"],
       url: "http://www.seeker.com/",
       wayback: "20160802220923"
     },
@@ -717,7 +717,7 @@ export default function () {
       year: 2016,
       client: "Paper Magazine",
       project: "Publication Website",
-      tags: ["media"],
+      tags: ["featured", "media"],
       url: "http://www.papermag.com/",
     },
     {
@@ -740,7 +740,7 @@ export default function () {
       year: 2017,
       client: "The Dodo",
       project: "Publication Website",
-      tags: ["media"],
+      tags: ["featured", "media"],
       url: "https://www.thedodo.com/",
       wayback: "20180228182750"
     },

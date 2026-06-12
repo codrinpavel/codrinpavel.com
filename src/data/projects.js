@@ -1,70 +1,41 @@
 import getWork from "./work.js";
 
-const CATEGORIES = [
-  {
-    title: "Corporate Reporting",
-    test: (project) => project.tags?.includes("report"),
-  },
-  {
-    title: "Websites & Digital Platforms",
-    test: (project) => !project.tags?.some(tag =>
-      ["report", "media", "independent"].includes(tag)
-    ),
-  },
-  {
-    title: "Publishing & Media",
-    test: (project) => project.tags?.includes("media"),
-  },
-  {
-    title: "Independent Work",
-    test: (project) => project.tags?.includes("independent"),
-  },
-];
-
 export default function () {
   const work = getWork();
-
-  const archive = CATEGORIES.map((category) => ({
-    title: category.title,
-    count: 0,
-    clients: [],
-  }));
+  const clients = [];
 
   work.forEach((project) => {
-    const categoryIndex = CATEGORIES.findIndex((category) =>
-      category.test(project)
-    );
-
-    const category = archive[categoryIndex];
-    category.count += 1;
-
-    let client = category.clients.find(
-      (client) => client.name === project.client
-    );
+    let client = clients.find((client) => client.name === project.client);
 
     if (!client) {
       client = {
         name: project.client,
         long: project.long || null,
+        count: 0,
         projects: [],
         inactive: project.inactive,
       };
 
-      category.clients.push(client);
+      clients.push(client);
     }
 
+    client.count += 1;
     client.projects.push(project);
   });
 
-  archive.forEach((category) => {
-    category.clients.forEach((client) => {
-      client.projects.sort((a, b) => b.year - a.year);
-    });
+  clients.forEach((client) => {
+    client.projects.sort((a, b) => b.year - a.year);
 
-    category.clients.sort((a, b) => {
-      return b.projects[0].year - a.projects[0].year;
-    });
+    client.latestYear = client.projects[0]?.year || null;
   });
 
-  return archive;
+  clients.sort((a, b) => {
+    if (b.count !== a.count) {
+      return b.count - a.count;
+    }
+
+    return (b.latestYear || 0) - (a.latestYear || 0);
+  });
+
+  return clients;
 }

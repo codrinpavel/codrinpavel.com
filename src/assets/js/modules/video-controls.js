@@ -2,7 +2,7 @@ const video = document.getElementById("spotlight-video");
 const button = document.getElementById("spotlight-video-toggle");
 const pauseAnim = button.querySelector(".button-pause");
 const playAnim = button.querySelector(".button-play");
-const motion = document.getElementById("motion");
+const motion = document.getElementById("work");
 
 let wasPlaying = null;
 let manuallyPaused = false;

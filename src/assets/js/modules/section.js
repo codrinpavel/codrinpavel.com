@@ -33,6 +33,9 @@ if (window.location.hash) {
   updateProjectView(window.location.hash);
   activateSection(window.location.hash);
 }
+else {
+  activateSection('#home');
+}
 
 // Handle browser back/forward through hashes
 window.addEventListener('popstate', () => {

@@ -1,16 +1,12 @@
 .projects {
-  margin-block: var(--grid-margin);
-  height: calc(100svh - var(--grid-margin) * 2);
-
   .wrapper,
   .wrapper__container,
   .columns {
     height: 100%;
   }
 
-  picture {
-    display: block;
-    height: 100%;
-    margin-left: 60px;
+  img {
+    height: var(--size-fullscreen);
+    object-fit: cover;
   }
 }

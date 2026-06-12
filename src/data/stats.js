@@ -11,7 +11,7 @@ export default function () {
     },
     {
       "figure": "80+",
-      "title": "Launches",
+      "title": "Projects",
       "bullets": [
         "24 CSR, DEI, ESG & Annual Report Websites",
         "24 Media, News & Editorial Platforms",

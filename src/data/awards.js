@@ -13,7 +13,6 @@ import work from "./work.js";
     ],
   }
 */
-
 export default function () {
   const grouped = work()
     .filter((item) => item.awards)
@@ -35,8 +34,10 @@ export default function () {
       return groups;
     }, {});
 
-  return Object.entries(grouped).map(([organization, awards]) => ({
-    organization,
-    awards,
-  }));
+  return Object.entries(grouped)
+    .sort(([, aAwards], [, bAwards]) => bAwards.length - aAwards.length)
+    .map(([organization, awards]) => ({
+      organization,
+      awards,
+    }));
 }

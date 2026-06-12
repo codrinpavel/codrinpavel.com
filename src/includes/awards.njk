@@ -1,0 +1,27 @@
+<section class="awards" id="awards">
+  <div class="wrapper">
+    <div class="columns md:columns-6 lg:columns-3">
+
+      {% for group in awards %}
+        <div class="">
+          <div class="stat">
+            <h2>
+              {{group.organization}}
+            </h2>
+
+            <ul>
+              {%- for award in group.awards -%}
+                <li>
+                  <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.year }}&mdash;{{ award.title }}">
+                    {{ award.year }}&mdash;{{ award.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>

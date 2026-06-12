@@ -11,8 +11,8 @@ section {
   inset: 0;
   z-index: -1;
 
-  height: var(--size-fullscreen);
-  margin: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
+  height: 100svh;
+  padding: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
 
   // inactive state
   pointer-events: none;
