@@ -1,24 +1,23 @@
 {% set nav = ["About", "Stats", "Words", "Awards", "Lab"] %}
-{% set awardCount = 0 %}
-
-{% for group in awards %}
-  {% set awardCount = awardCount + group.awards.length %}
-{% endfor %}
 
 <header class="site-header">
   <nav class="wrapper">
     <ul class="columns md:columns-2 lg:columns-1 items-start">
-      <li class="site-header__item lg:columns-7">
+      <li class="site-header__item">
         <a href="#home" class="site-logo">
           {% svg "logo.svg" %}
           <span class="sr-only">Codrin Pavel</span>
         </a>
       </li>
 
+      <li class="site-header__item lg:columns-6">
+        <a class="link type-headline js-project" href="#stanley-black-and-decker-2021">Gallery</a>
+      </li>
+
       {% for item in nav %}
-        <li class="site-header__item">
-          <a class="link type-headline" href="#{{item | lower | replace(' ', '-')}}">{{item}}</a>
-        </li>
+      <li class="site-header__item">
+        <a class="link type-headline" href="#{{item|lower}}">{{item}}</a>
+      </li>
       {% endfor %}
     </ul>
   </nav>
