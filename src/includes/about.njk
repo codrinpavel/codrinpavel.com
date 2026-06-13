@@ -2,20 +2,6 @@
 
 <section class="about" id="about">
   <div class="wrapper">
-    {#}
-    <div class="flex">
-      {% svg "company/paper.svg" %}
-      {% svg "company/axios.svg" %}
-      {% svg "company/nyu.svg" %}
-      {% svg "company/gsk.svg" %}
-      {% svg "company/nrmp.svg" %}
-      {% svg "company/rtx.svg" %}
-      {% svg "company/dominion-energy.svg" %}
-      {% svg "company/united.svg" %}
-      {% svg "company/fnih.svg" %}
-      {% svg "company/agco.svg" %}
-    </div>
-    {##}
     <div class="columns">
       <div class="lg:columns-6">
         <p class="type-large">For more than 15 years, I've helped agencies, nonprofits, public companies, and publishers develop accessible, high-performance websites, reports, and digital communications platforms. Many of the clients featured here have returned for multiple engagements, and I’m grateful for their continued trust.</p>
@@ -41,9 +27,7 @@
             {% if item.tags and "featured" in item.tags %}
               {% set clientSlug = item.client | lower | replace(' ', '-') | replace('&', 'and') %}
               <li>
-                <a class="js-project link" href="#{{clientSlug}}-{{item.year}}">
-                  {{ item.client }}
-                </a>
+                <a class="js-project link" href="#{{clientSlug}}-{{item.year}}">{{ item.client }}</a>
               </li>
             {% endif %}
           {% endfor %}
@@ -85,15 +69,14 @@
       </div>
 
       <div class="about__list">
-        <h2>Work Index</h2>
-        {%- for project in projects -%}
-          <ul>
+        <h2>Work Archive</h2>
+        <ul>
+          {%- for project in projects -%}
             <li {% if project.count > 1 %}data-count="{{project.count}}"{%endif%}>
               {{project.name}}
             </li>
-          </ul>
-        {%- endfor -%}
-
+          {%- endfor -%}
+        </ul>
       </div>
     </div>
   </div>

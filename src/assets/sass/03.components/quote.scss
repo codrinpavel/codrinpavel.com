@@ -1,22 +1,5 @@
 .quote {
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--size-4xl);
-  min-height: var(--size-fullscreen);
-  display: flex;
-  flex-direction: column;
-  //justify-content: flex-end;
-
-  header {
-    margin-bottom: var(--size-lg);
-  }
-
-  blockquote {
-    padding-bottom: var(--size-2xl);
-  }
-
   p {
-    //max-width: 26em;
-
     &::before,
     &::after {
       content: "”";
@@ -24,20 +7,21 @@
   }
 
   figcaption {
-    span {
-      display: block;
-      margin-top: var(--size-3xs);
-      padding-left: 1em;
-    }
-  }
+    position: relative;
+    padding-left: 1em;
+    margin-top: var(--size-4xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3xs);
 
-  cite {
     &::before {
       content: '—';
+      position: absolute;
+      left: 0;
     }
 
-    &::after {
-      content: ',';
+    span {
+      color: var(--color-faint);
     }
   }
 }
