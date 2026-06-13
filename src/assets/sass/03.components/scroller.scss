@@ -4,7 +4,7 @@
   --item-width: 100%;
   --count: 5;
 
-  height: 300vh;
+  height: calc(100svh + calc((var(--count) * 50vh)));
   view-timeline-name: --track;
   view-timeline-axis: block;
 
@@ -21,7 +21,7 @@
 
     transform: translateX(0%);
     animation: track linear both;
-    animation-range: contain 10%;
+    animation-range: contain 0%;
     animation-timeline: --track;
     will-change: transform;
   }

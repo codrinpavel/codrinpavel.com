@@ -19,14 +19,12 @@
 
     &::before {
       content: attr(data-title)" →";
-      padding: var(--size-sm) 8px;
-      background-color: var(--color-balance-text);
-      color: var(--color-white);
+      padding: var(--size-sm) 0;
+      background-color: var(--color-white);
       position: absolute;
       inset: 0;
       transition: translate 120ms ease;
       translate: 0 105%;
-      text-align: right;
     }
 
     &:hover,

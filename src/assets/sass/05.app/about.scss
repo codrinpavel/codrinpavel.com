@@ -24,7 +24,6 @@
 
   &__list {
     li {
-      font-variation-settings: var(--font-weight-normal);
       display: flex;
       align-items: center;
       gap: 4px;
@@ -32,7 +31,6 @@
       &[data-count]::before {
         content: attr(data-count)"×";
         color: var(--color-faint);
-        font-variation-settings: var(--font-weight-medium);
       }
     }
   }

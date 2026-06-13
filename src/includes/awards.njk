@@ -11,7 +11,7 @@
               <ul>
                 {%- for award in group.awards -%}
                   <li>
-                    <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.title }}">
+                    <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.year }}&mdash;{{ award.title }}">
                       {{ award.year }}&mdash;{{ award.client }}
                     </a>
                   </li>

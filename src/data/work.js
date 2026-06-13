@@ -20,7 +20,7 @@ export default function () {
           year: 2025,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards",
+          title: "Digital Design Awards Winner",
           url: "https://gallery.gdusa.com/project/e3563948-f4c7-4797-91f6-754b1d4d054c",
         },
         {
@@ -57,7 +57,7 @@ export default function () {
           year: 2024,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards",
+          title: "Digital Design Awards Winner",
           url: "https://gallery.gdusa.com/project/0c0060c0-669b-4760-a897-69cdb60526d5",
         },
       ]
@@ -114,7 +114,7 @@ export default function () {
           year: 2022,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards",
+          title: "Digital Design Awards Winner",
           url: "https://gallery.gdusa.com/project/95323723-e359-4d7c-b7b6-ef0045b45eef",
         },
       ]
@@ -131,7 +131,7 @@ export default function () {
           year: 2021,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards",
+          title: "Digital Design Awards Winner",
           url: "https://gallery.gdusa.com/project/ef213a58-603d-428d-9fc3-94498d4a68bc",
         },
         {
@@ -179,7 +179,7 @@ export default function () {
           year: 2019,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Web Design Awards",
+          title: "American Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|358",
         },
         {
@@ -219,7 +219,7 @@ export default function () {
           year: 2022,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards",
+          title: "Digital Design Awards Winner",
           url: "https://gallery.gdusa.com/project/f2dc5fc3-184f-4760-acc8-a16af522941f",
         },
       ]
@@ -296,7 +296,7 @@ export default function () {
           year: 2022,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards",
+          title: "Digital Design Awards Winner",
           url: "https://gallery.gdusa.com/project/cd09b376-8b80-4102-8508-fe0e906ff1df",
         },
       ]
@@ -353,7 +353,7 @@ export default function () {
           year: 2019,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Web Design Awards",
+          title: "American Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|357",
         },
       ]
@@ -370,7 +370,7 @@ export default function () {
           year: 2021,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards",
+          title: "Digital Design Awards Winner",
           url: "https://gallery.gdusa.com/project/9b0c9964-20f0-4997-b240-1ae03c03170d",
         },
       ]
@@ -402,7 +402,7 @@ export default function () {
           year: 2020,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Web Design Awards",
+          title: "American Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda20&ids=0|10455",
         },
         {
@@ -487,7 +487,7 @@ export default function () {
           year: 2020,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Web Design Awards",
+          title: "American Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda20&ids=0|10457",
         },
         {
@@ -524,7 +524,7 @@ export default function () {
           year: 2019,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Web Design Awards",
+          title: "American Web Design Awards",
           url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|356",
         },
         {
