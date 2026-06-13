@@ -1,66 +1,73 @@
-const video = document.getElementById("spotlight-video");
-const button = document.getElementById("spotlight-video-toggle");
-const pauseAnim = button.querySelector(".button-pause");
-const playAnim = button.querySelector(".button-play");
-const motion = document.getElementById("about");
+function initSpotlight() {
+  const motion = document.getElementById("about");
 
-let wasPlaying = null;
-let manuallyPaused = false;
+  if (!motion) return;
 
-video.addEventListener("loadedmetadata", () => {
-  button.style.setProperty("--duration", `${video.duration}s`);
-});
+  const video = document.getElementById("spotlight-video");
+  const button = document.getElementById("spotlight-video-toggle");
+  const pauseAnim = button.querySelector(".button-pause");
+  const playAnim = button.querySelector(".button-play");
 
-function syncVideoWithMotion() {
-  const isActive = motion.classList.contains("is-active");
+  let wasPlaying = null;
+  let manuallyPaused = false;
 
-  if (isActive) {
-    console.log('active')
-    if (!manuallyPaused) video.play();
-  } else {
-    console.log('not-active')
-    video.pause();
-  }
-}
+  video.addEventListener("loadedmetadata", () => {
+    button.style.setProperty("--duration", `${video.duration}s`);
+  });
 
-const motionObserver = new MutationObserver(syncVideoWithMotion);
+  function syncVideoWithMotion() {
+    const isActive = motion.classList.contains("is-active");
 
-motionObserver.observe(motion, {
-  attributes: true,
-  attributeFilter: ["class"],
-});
-
-// Initial state
-syncVideoWithMotion();
-
-// Button
-button.addEventListener("click", () => {
-  if (video.paused) {
-    manuallyPaused = false;
-
-    if (motion.classList.contains("is-active")) {
-      video.play();
+    if (isActive) {
+      console.log('active')
+      if (!manuallyPaused) video.play();
+    } else {
+      console.log('not-active')
+      video.pause();
     }
-  } else {
-    manuallyPaused = true;
-    video.pause();
   }
-});
 
-function updateButton() {
-  const playing = !video.paused;
+  const motionObserver = new MutationObserver(syncVideoWithMotion);
 
-  button.classList.toggle("is-playing", playing);
-  button.setAttribute("aria-label", playing ? "Pause video" : "Play video");
+  motionObserver.observe(motion, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
 
-  if (playing === wasPlaying) return;
-  wasPlaying = playing;
+  // Initial state
+  syncVideoWithMotion();
 
-  if (playing) pauseAnim.beginElement();
-  else playAnim.beginElement();
+  // Button
+  button.addEventListener("click", () => {
+    if (video.paused) {
+      manuallyPaused = false;
+
+      if (motion.classList.contains("is-active")) {
+        video.play();
+      }
+    } else {
+      manuallyPaused = true;
+      video.pause();
+    }
+  });
+
+  function updateButton() {
+    const playing = !video.paused;
+
+    button.classList.toggle("is-playing", playing);
+    button.setAttribute("aria-label", playing ? "Pause video" : "Play video");
+
+    if (playing === wasPlaying) return;
+    wasPlaying = playing;
+
+    if (playing) pauseAnim.beginElement();
+    else playAnim.beginElement();
+  }
+
+  video.addEventListener("play", updateButton);
+  video.addEventListener("pause", updateButton);
+
+  updateButton();
 }
 
-video.addEventListener("play", updateButton);
-video.addEventListener("pause", updateButton);
-
-updateButton();
+initSpotlight();

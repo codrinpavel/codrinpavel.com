@@ -42,8 +42,9 @@ h2, h3,
   font-size: max(var(--font-size-7xl), 18vh);
   font-variation-settings:  var(--font-weight-normal);
   font-style: normal;
-  line-height: 1.1;
+  line-height: .8;
   color: var(--color-balance-text);
+  margin-bottom: var(--size-xl);
 }
 
 :where(p) {
