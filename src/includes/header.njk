@@ -1,4 +1,4 @@
-{% set nav = ["About", "Work", "Words", "Awards", "Lab"] %}
+{% set nav = ["About", "Stats", "Words", "Awards", "Lab"] %}
 {% set awardCount = 0 %}
 
 {% for group in awards %}
@@ -17,14 +17,7 @@
 
       {% for item in nav %}
         <li class="site-header__item">
-          <a class="link type-headline" href="#{{item | lower | replace(' ', '-')}}">
-            {% if item == "Work" %}
-              {{work.length}}&times;
-            {% elif item == "Awards" %}
-              {{awardCount}}&times;
-            {% endif %}
-              {{item}}
-          </a>
+          <a class="link type-headline" href="#{{item | lower | replace(' ', '-')}}">{{item}}</a>
         </li>
       {% endfor %}
     </ul>

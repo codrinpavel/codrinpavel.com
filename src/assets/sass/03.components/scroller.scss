@@ -1,0 +1,46 @@
+@use "../mixins" as *;
+
+.scroller {
+  --item-width: 100%;
+  --count: 5;
+
+  height: 300vh;
+  view-timeline-name: --track;
+  view-timeline-axis: block;
+
+  &__container {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    align-items: flex-start;
+    margin-left: calc(-1 * var(--column-gap));
+
+    transform: translateX(0%);
+    animation: track linear both;
+    animation-range: contain 10%;
+    animation-timeline: --track;
+    will-change: transform;
+  }
+
+  &__item {
+    flex: 0 0 var(--item-width);
+
+    >* {
+      margin-left: var(--column-gap);
+    }
+  }
+
+  @include mq(md) {
+    --item-width: 50%; //calc(5 / 12 * 100%);
+  }
+}
+
+@keyframes track {
+  to {
+    transform: translateX(calc(-1 * ((var(--count) * var(--item-width)) - 100%)));
+  }
+}

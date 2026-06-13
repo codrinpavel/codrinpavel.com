@@ -13,18 +13,30 @@ export function updateProjectView(linkOrHash) {
   const project = featuredProjects[hash];
   if (!project) return;
 
+  // circular navigation prev/next
+  const projectKeys = Object.keys(featuredProjects);
+  const currentIndex = projectKeys.indexOf(hash);
+
+  const data = {
+    ...project,
+    prev: `#${projectKeys[(currentIndex - 1 + projectKeys.length) % projectKeys.length]}`,
+    next: `#${projectKeys[(currentIndex + 1) % projectKeys.length]}`
+  };
+
   view.id = hash;
+  bindSlots(view, data);
+}
 
-  Object.entries(project).forEach(([key, value]) => {
-    const slot = view.querySelector(`[data-slot="${key}"]`);
-    if (!slot) return;
+function bindSlots(root, data) {
+  root.querySelectorAll("[data-text]").forEach((el) => {
+    el.textContent = data[el.dataset.text] ?? "";
+  });
 
-    if (key === "picture") {
-      slot.innerHTML = value;
-    } else if (key === "url") {
-      slot.href = value;
-    } else {
-      slot.textContent = value;
-    }
+  root.querySelectorAll("[data-html]").forEach((el) => {
+    el.innerHTML = data[el.dataset.html] ?? "";
+  });
+
+  root.querySelectorAll("[data-href]").forEach((el) => {
+    el.href = data[el.dataset.href] ?? "#";
   });
 }

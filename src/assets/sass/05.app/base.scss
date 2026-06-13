@@ -15,6 +15,10 @@ body {
   background: var(--color-white);
 }
 
+img, video {
+  border-radius: 4px;
+}
+
 .link {
   text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor);

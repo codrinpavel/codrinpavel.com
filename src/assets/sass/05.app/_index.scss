@@ -6,8 +6,7 @@
   
   @include meta.load-css('home');
   @include meta.load-css('about');
-  @include meta.load-css('work');
-  @include meta.load-css('projects');
+  @include meta.load-css('project');
   @include meta.load-css('words');
   @include meta.load-css('awards');
 }

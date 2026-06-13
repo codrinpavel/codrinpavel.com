@@ -1,0 +1,19 @@
+.project {
+  padding-block: var(--grid-margin);
+
+  .wrapper,
+  .wrapper__container,
+  .columns,
+  figure {
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    clip-path: inset(2px);
+    max-height: 100svh;
+    object-fit: contain;
+    object-position: center right;
+  }
+}

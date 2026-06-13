@@ -1,39 +1,100 @@
+{% set sortedWork = work | sortByYear %}
+
 <section class="about" id="about">
   <div class="wrapper">
-    <div class="wrapper__container">
-      <div class="track" style="--count: {{stats.length}}">
+    {#}
+    <div class="flex">
+      {% svg "company/paper.svg" %}
+      {% svg "company/axios.svg" %}
+      {% svg "company/nyu.svg" %}
+      {% svg "company/gsk.svg" %}
+      {% svg "company/nrmp.svg" %}
+      {% svg "company/rtx.svg" %}
+      {% svg "company/dominion-energy.svg" %}
+      {% svg "company/united.svg" %}
+      {% svg "company/fnih.svg" %}
+      {% svg "company/agco.svg" %}
+    </div>
+    {##}
+    <div class="columns">
+      <div class="lg:columns-6">
+        <p class="type-large">For more than 15 years, I've helped agencies, nonprofits, public companies, and publishers develop accessible, high-performance websites, reports, and digital communications platforms. Many of the clients featured here have returned for multiple engagements, and I’m grateful for their continued trust.</p>
+      </div>
 
-        {% for stat in stats %}
-          <div class="track--item">
-            <div class="stat">
-              <span class="figure use-inview">
-                {%- for char in stat.figure.split('') -%}
-                  <i class="type-huge" style="--index:{{loop.index}}">{{- char -}}</i>
-                {%- endfor -%}
-              </span>
+      <div class="lg:columns-4 lg:ml-1">
+        <figure class="spotlight mb-6xl">
+          <video id="spotlight-video" width="1440" height="900" src="{{ '/assets/video/fnih.mp4' | url }}" muted playsinline loop></video>
+          <button type="button" class="video-btn" aria-label="Play video" aria-controls="spotlight-video" id="spotlight-video-toggle">
+            {% svg "play-button.svg" %}
+          </button>
+          <figcaption class="sr-only">Animated homepage designs from the Foundation for the National Institutes of Health (FNIH) annual reports, featuring the 2018, 2019, and 2020 editions.</figcaption>
+        </figure>
+      </div>
+    </div>
 
-              <span class="type-medium mb-2xl">{{ stat.title }}</span>
+    <div class="columns lg:columns-2">
+      <div class="lg:columns-6">
+        <h2>Featured Work</h2>
 
-              <ul class="mt-auto">
-                {%- for bullet in stat.bullets -%}
-                  <li>{{- bullet -}}</li>
-                {%- endfor -%}
-              </ul>
-            </div>
-          </div>
-        {% endfor %}
+        <ul class="about__featured type-medium">
+          {% for item in sortedWork %}
+            {% if item.tags and "featured" in item.tags %}
+              {% set clientSlug = item.client | lower | replace(' ', '-') | replace('&', 'and') %}
+              <li>
+                <a class="js-project link" href="#{{clientSlug}}-{{item.year}}">
+                  {{ item.client }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="lg:ml-1 about__list">
+        <h2>Services</h2>
+        <ul>
+          <li>Sustainability Reports</li>
+          <li>Corporate Communications</li>
+          <li>Annual Reports</li>
+          <li>Investor Relations Websites</li>
+          <li>Microsites & Campaign Sites</li>
+
+          <li>Static Site Architecture</li>
+          <li>Data Visualization</li>
+          <li>Interactive Charts & Tables</li>
+          <li>Accessibility (WCAG)</li>
+          <li>Performance Optimization</li>
+          <li>Analytics & Measurement</li>
+          <li>Technical Consulting</li>
+        </ul>
+
+        <h2 class="mt-6xl">Technology</h2>
+        <ul>
+          <li>11ty</li>
+          <li>Jekyll</li>
+
+          <li>HTML</li>
+          <li>CSS / SCSS</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+
+          <li>Nunjucks</li>
+          <li>Liquid</li>
+          <li>Jinja2</li>
+        </ul>
+      </div>
+
+      <div class="about__list">
+        <h2>Work Index</h2>
+        {%- for project in projects -%}
+          <ul>
+            <li {% if project.count > 1 %}data-count="{{project.count}}"{%endif%}>
+              {{project.name}}
+            </li>
+          </ul>
+        {%- endfor -%}
 
       </div>
     </div>
   </div>
 </section>
-
-{#}
-<div class="track--item">
-  <div class="stat">
-    <span class="mt-auto" data-delay="2800">Design-driven developer building fast, accessible websites for mission-driven organizations.</span>
-    <span class=" mt-lg" data-delay="2980">I help agencies across Europe and the US transform complex content into meaningful, engaging digital experiences.</span>
-    <b class=" mt-2xl" data-delay="3280">&mdash;Codrin.</b>
-  </div>
-</div>
-{##}

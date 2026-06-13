@@ -25,7 +25,7 @@
     {%- for item in sortedWork -%}
       {%- if item.tags and "featured" in item.tags -%}
         {%- set url = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
-        {%- set clientSlug = item.client | lower | replace(' ', '-') | replace('|', '') %}
+        {%- set clientSlug = item.client | lower | replace(' ', '-') | replace('&', 'and') %}
         {%- set projectSlug = item.project | lower | replace(' ', '-') %}
         {%- set projectId = clientSlug ~ '-' ~ projectSlug ~ '-' ~ item.year %}
         {%- set image_url = 'work/' ~ projectId ~ '.png' %}
@@ -35,8 +35,8 @@
 
         "{{clientSlug}}-{{item.year}}": {
           "year":"{{ item.year }}",
-          "client":"{{ item.client }}",
-          "title":"{{ item.project }}",
+          "client":"{{ item.client | safe }}",
+          "title":"{{ item.project | safe }}",
           "url":"{{ url }}",
           "picture": {{- imageHtml | trim | dump | safe -}}
         }
