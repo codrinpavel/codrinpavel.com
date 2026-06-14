@@ -1,3 +1,7 @@
+:root {
+  --transition-animation-duration: 500ms;
+}
+
 picture {
   view-transition-name: image;
 }
@@ -7,26 +11,26 @@ picture {
 }
 
 ::view-transition-old(image) {
-  animation: transition-image 500ms linear forwards;
+  animation: transition-image-old var(--transition-animation-duration) ease forwards;
 }
 
 ::view-transition-new(image) {
-  clip-path: inset(0% 50%);
-  opacity: 0;
-  animation: transition-image 500ms linear forwards;
-  animation-delay: 500ms;
-  animation-direction: reverse;
+  transform: translateY(100%);
+  animation: transition-image-new var(--transition-animation-duration) ease forwards;
 }
 
-@keyframes transition-image {
-  from {
-    clip-path: inset(0%);
-    //transform: translateY(0%);
-    opacity: 1;
-  }
+@keyframes transition-image-old {
   to {
-    clip-path: inset(0% 50%);
-    //transform: translateY(-100%);
-    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes transition-image-new {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
   }
 }
