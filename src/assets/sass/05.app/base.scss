@@ -13,7 +13,10 @@ section {
 
 body {
   background: var(--color-white);
-  padding: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
+}
+
+html, body, main, section {
+  height: 100%;
 }
 
 img, video {

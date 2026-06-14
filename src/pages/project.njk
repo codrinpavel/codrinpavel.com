@@ -16,35 +16,35 @@ permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
 <section class="project">
   <div class="wrapper">
     <div class="wrapper__container">
-      <div class="columns type-headline">
-        <div class="lg:columns-1 flex flex-col justify-center items-start">
+      <div class="columns type-headline items-center">
+        <div class="lg:columns-1">
           <a class="link js-project" href="{{prevHref}}">Prev</a>
         </div>
 
-        <div class="lg:columns-1 flex flex-col justify-center">
+        <div class="lg:columns-1">
           <div class="color-black-text">{{featured.year}}</div>
         </div>
 
-        <div class="lg:columns-4 flex flex-col justify-center">
+        <div class="lg:columns-4">
           <a target="_blank" rel="noopener noreferrer" href="{{project_url}}">
             <figure>{% img image_url %}</figure>
           </a>
         </div>
 
-        <div class="lg:columns-2 lg:ml-1 flex flex-col justify-center">
+        <div class="lg:columns-2 lg:ml-1">
           <div>Client: 
               <span class="color-black-text">{{featured.client}}</span>
           </a>
         </div>
       </div>
 
-      <div class="lg:columns-2 flex flex-col justify-center items-start">
+      <div class="lg:columns-2">
         <div>Project: 
             <a class="link color-black-text" target="_blank" rel="noopener noreferrer" href="{{project_url}}">{{featured.project}}</a>
         </div>
       </div>
 
-      <div class="lg:columns-1 flex flex-col justify-center items-end">
+      <div class="lg:columns-1 flex justify-end">
         <a class="link js-project" href="{{nextHref}}">Next</a>
       </div>
     </div>

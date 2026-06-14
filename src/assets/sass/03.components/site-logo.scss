@@ -15,17 +15,17 @@
     will-change: transform;
   }
 
-  .dash {
-    scale: 0 1;
-    transform-origin: left center;
-    animation: var(--move-duration) logo_scale ease var(--move-delay) forwards;
-  }
-
-  .c {
-    translate: -50px;
-    transform-origin: left center;
-    animation: var(--move-duration) logo_move ease var(--move-delay) forwards;
-  }
+  //.dash {
+  //  scale: 0 1;
+  //  transform-origin: left center;
+  //  animation: var(--move-duration) logo_scale ease var(--move-delay) forwards;
+  //}
+//
+  //.c {
+  //  translate: -50px;
+  //  transform-origin: left center;
+  //  animation: var(--move-duration) logo_move ease var(--move-delay) forwards;
+  //}
 
   .dot {
     --size: 6px;

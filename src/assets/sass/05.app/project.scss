@@ -1,12 +1,9 @@
 .project {
-  padding-block: var(--grid-margin);
-
-  .wrapper,
-  .wrapper__container,
-  .columns,
-  figure {
-    height: 100%;
-  }
+  padding-block: 0;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   img {
     height: 100%;
