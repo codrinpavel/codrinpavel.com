@@ -565,7 +565,7 @@ export default function () {
     {
       year: 2017,
       client: "Axios",
-      project: "U.S. News and Politics Website",
+      project: "News and Politics Website",
       url: "https://www.axios.com/",
       tags: ["featured", "media"],
       wayback: "20170202003159"

@@ -1,3 +1,5 @@
+/*
+
 :root {
   --transition-in-delay: 400ms;
   --transition-opacity-duration: 300ms;
@@ -31,4 +33,13 @@ section {
     transition: opacity var(--transition-opacity-duration) ease-in;
     transition-delay: var(--transition-in-delay); // allow previous section time to animate before fading out
   }
+}
+
+*/
+
+section {
+  overflow: auto; // important, enables scroll
+  outline: 0;
+  height: 100svh;
+  padding: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
 }

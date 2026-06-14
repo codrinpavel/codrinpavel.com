@@ -7,10 +7,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="page-{{bodyClass}}">
     {% include "header.njk" %}
 
     <main id="main-content" aria-label="Main Content">
@@ -18,33 +18,6 @@
     </main>
 
     {#% include "footer.njk" %#}
-
-    <script>
-    {% set sortedWork = work | sortByYear %}
-    const featuredProjects = {
-    {%- for item in sortedWork -%}
-      {%- if item.tags and "featured" in item.tags -%}
-        {%- set url = item.wayback and ("https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url) or item.url %}
-        {%- set clientSlug = item.client | lower | replace(' ', '-') | replace('&', 'and') %}
-        {%- set projectSlug = item.project | lower | replace(' ', '-') %}
-        {%- set projectId = clientSlug ~ '-' ~ projectSlug ~ '-' ~ item.year %}
-        {%- set image_url = 'work/' ~ projectId ~ '.png' %}
-        {%- setAsync "imageHtml" %}
-          {%- img image_url %}
-        {%- endsetAsync -%}
-
-        "{{clientSlug}}-{{item.year}}": {
-          "year":"{{ item.year }}",
-          "client":"{{ item.client | safe }}",
-          "title":"{{ item.project | safe }}",
-          "url":"{{ url }}",
-          "picture": {{- imageHtml | trim | dump | safe -}}
-        }
-        {%- if not loop.last %},{% endif -%}
-      {%- endif -%}
-    {%- endfor -%}
-    }
-    </script>
     {% include "_scripts.njk" %}
   </body>
 </html>

@@ -1,10 +1,14 @@
 ---
 layout: base.njk
+bodyClass: "home"
 ---
 
-{% include "home.njk" %}
-{% include "about.njk" %}
-{% include "project.njk" %}
-{% include "stats.njk" %}
-{% include "words.njk" %}
-{% include "awards.njk" %}
+<section class="home" id="home">
+  <div class="wrapper">
+    <div class="fullscreen columns md:columns-4">
+      <div class="ml-2">
+        {% img "portrait.jpg" %}
+      </div>
+    </div>
+  </div>
+</section>

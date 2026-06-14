@@ -9,4 +9,5 @@
   @include meta.load-css('project');
   @include meta.load-css('words');
   @include meta.load-css('awards');
+  @include meta.load-css('view-transition');
 }

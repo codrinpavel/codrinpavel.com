@@ -4,7 +4,7 @@
   <nav class="wrapper">
     <ul class="columns md:columns-2 lg:columns-1 items-start">
       <li class="site-header__item">
-        <a href="#home" class="site-logo">
+        <a href="/" class="site-logo">
           {% svg "logo.svg" %}
           <span class="sr-only">Codrin Pavel</span>
         </a>
@@ -14,9 +14,9 @@
         <a class="link type-headline js-project" href="#stanley-black-and-decker-2021">Gallery</a>
       </li>
 
-      {% for item in nav %}
+      {% for item in collections.pages | order %}
       <li class="site-header__item">
-        <a class="link type-headline" href="#{{item|lower}}">{{item}}</a>
+        <a class="link type-headline" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
       </li>
       {% endfor %}
     </ul>

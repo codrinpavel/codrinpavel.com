@@ -1,0 +1,51 @@
+---
+pagination:
+  data: featured
+  size: 1
+  alias: featured
+permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
+---
+
+{%- set project_url = featured.wayback and ("https://web.archive.org/web/" ~ featured.wayback ~ "if_/" ~ featured.url) or featured.url -%}
+{%- set image_url = 'work/' ~ featured.client | slugify ~ '-' ~ featured.project | slugify ~ '-' ~ featured.year ~ '.png' -%}
+
+{%- set prevHref = pagination.previousPageHref or pagination.lastPageHref -%}
+{%- set nextHref = pagination.nextPageHref or pagination.firstPageHref -%}
+
+<section class="project">
+  <div class="wrapper">
+    <div class="wrapper__container">
+      <div class="columns type-headline">
+        <div class="lg:columns-1 flex flex-col justify-center items-start">
+          <a class="link js-project" href="{{prevHref}}">Prev</a>
+        </div>
+
+        <div class="lg:columns-1 flex flex-col justify-center">
+          <div class="color-black-text">{{featured.year}}</div>
+        </div>
+
+        <div class="lg:columns-4 flex flex-col justify-center">
+          <a target="_blank" rel="noopener noreferrer" href="{{project_url}}">
+            <figure>{% img image_url %}</figure>
+          </a>
+        </div>
+
+        <div class="lg:columns-2 lg:ml-1 flex flex-col justify-center">
+          <div>Client: 
+              <span class="color-black-text">{{featured.client}}</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:columns-2 flex flex-col justify-center items-start">
+        <div>Project: 
+            <a class="link color-black-text" target="_blank" rel="noopener noreferrer" href="{{project_url}}">{{featured.project}}</a>
+        </div>
+      </div>
+
+      <div class="lg:columns-1 flex flex-col justify-center items-end">
+        <a class="link js-project" href="{{nextHref}}">Next</a>
+      </div>
+    </div>
+  </div>
+</section>

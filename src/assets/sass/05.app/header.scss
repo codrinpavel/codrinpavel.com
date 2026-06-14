@@ -4,6 +4,30 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
+  padding: calc(var(--grid-margin) * 1.5) var(--grid-margin);
+
+  &__item {
+    transform: translate3d(0, 0, 0);
+    display: flex;
+
+    &:last-child {
+      margin-left: auto;
+      justify-content: flex-end;
+    }
+  }
+
+  a {
+    &.is-active {
+      color: var(--color-black-text);
+    }
+  }
+}
+
+/*
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
 
   padding: calc(var(--grid-margin)*1.5) var(--grid-margin);
 
@@ -61,7 +85,8 @@
   }
 }
 
-.header-position-top .site-header__item {
+body:not(.home) .site-header__item {
   --wait-for-loading: 0ms;
   transform: translate3d(0, 0, 0);
 }
+  */

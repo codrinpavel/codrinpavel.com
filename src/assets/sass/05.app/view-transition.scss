@@ -1,0 +1,44 @@
+@use "sass:list";
+
+@view-transition {
+  navigation: auto;
+}
+
+$menu-items:
+  (logo, cubic-bezier(.22, 1.15, .28, 1)),
+  (gallery, cubic-bezier(.16, .84, .24, 1)),
+  (about, cubic-bezier(.27, .95, .21, 1)),
+  (stats, cubic-bezier(.18, 1, .18, 1)),
+  (words, cubic-bezier(.2, .75, .12, 1)),
+  (awards, cubic-bezier(.24, .92, .18, 1)),
+  (lab, cubic-bezier(.14, 1.08, .22, 1));
+
+@for $i from 1 through list.length($menu-items) {
+  $item: list.nth($menu-items, $i);
+  $name: list.nth($item, 1);
+  $ease: list.nth($item, 2);
+  $index: $i - 1;
+
+  .site-header__item:nth-child(#{$i}) {
+    view-transition-name: menu-#{$name};
+  }
+
+  ::view-transition-group(menu-#{$name}) {
+    animation-duration: calc(1s - (#{$index} * 58ms));
+    animation-delay: calc(#{$index} * 58ms);
+    animation-timing-function: #{$ease};
+    animation-fill-mode: both;
+  }
+
+  ::view-transition-old(menu-#{$name}),
+  ::view-transition-new(menu-#{$name}) {
+    animation-duration: inherit;
+    animation-delay: inherit;
+    animation-timing-function: inherit;
+    animation-fill-mode: inherit;
+  }
+}
+
+.page-home .site-header__item {
+  transform: translate3d(0, calc(50vh - 50% - var(--grid-margin) * 1.5), 0);
+}

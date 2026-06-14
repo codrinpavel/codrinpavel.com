@@ -1,3 +1,10 @@
+---
+layout: base.njk
+bodyClass: "about"
+title: "About"
+order: 1
+---
+
 {% set sortedWork = work | sortByYear %}
 
 <section class="about" id="about">
@@ -27,7 +34,7 @@
             {% if item.tags and "featured" in item.tags %}
               {% set clientSlug = item.client | lower | replace(' ', '-') | replace('&', 'and') %}
               <li>
-                <a class="js-project link" href="#{{clientSlug}}-{{item.year}}">{{ item.client }}</a>
+                <a class="js-project link" href="/gallery/{{ item.client | slugify }}-{{item.year}}/">{{ item.client }}</a>
               </li>
             {% endif %}
           {% endfor %}
