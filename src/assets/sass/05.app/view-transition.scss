@@ -1,0 +1,18 @@
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
+::view-transition-group(*) {
+  overflow: hidden;
+}
+
+::view-transition-group(*),
+::view-transition-new(*),
+::view-transition-new(*),
+::view-transition-image-pair(*) {
+  //background-color: var(--color-white);
+  //mix-blend-mode: normal !important;
+  //isolation: auto !important;
+}
