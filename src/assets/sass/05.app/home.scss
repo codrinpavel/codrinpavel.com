@@ -6,15 +6,15 @@
     object-position: top left;
 
     // animation starting state
-    clip-path: inset(10% 0);
-    transition: clip-path 0ms ease-out;
-    transition-delay: 500ms; // wait for page fadeout then immediately revert to default state
+    //clip-path: inset(10% 0);
+    //transition: clip-path 0ms ease-out;
+    //transition-delay: 500ms; // wait for page fadeout then immediately revert to default state
   }
 
   &.is-active img {
     // animation ending state
-    clip-path: inset(0);
-    transition: 600ms ease;
-    transition-delay: 800ms; // wait for page fadein, then run animation on section load
+    //clip-path: inset(0);
+    //transition: 600ms ease;
+    //transition-delay: 800ms; // wait for page fadein, then run animation on section load
   }
 }

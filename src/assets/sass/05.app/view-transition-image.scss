@@ -7,31 +7,26 @@ picture {
 }
 
 ::view-transition-old(image) {
-  animation: transition-image-old 500ms linear forwards;
+  animation: transition-image 500ms linear forwards;
 }
 
 ::view-transition-new(image) {
-  animation: transition-image-new 500ms linear forwards;
+  clip-path: inset(0% 50%);
+  opacity: 0;
+  animation: transition-image 500ms linear forwards;
+  animation-delay: 500ms;
+  animation-direction: reverse;
 }
 
-@keyframes transition-image-old {
+@keyframes transition-image {
   from {
-    transform: translateY(0%);
+    clip-path: inset(0%);
+    //transform: translateY(0%);
     opacity: 1;
   }
   to {
-    transform: translateY(-100%);
+    clip-path: inset(0% 50%);
+    //transform: translateY(-100%);
     opacity: 0;
-  }
-}
-
-@keyframes transition-image-new {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
   }
 }

@@ -1,13 +1,11 @@
-//::view-transition-group(*),
-//::view-transition-new(*),
-//::view-transition-new(*) {
-//  mix-blend-mode: normal !important;
-//  isolation: auto !important;
-//}
-//
-//::view-transition-image-pair(*) {
-//  isolation: auto !important;
-//}
+::view-transition-group(*),
+::view-transition-new(*),
+::view-transition-new(*),
+::view-transition-image-pair(*) {
+  //background-color: var(--color-white);
+  //mix-blend-mode: normal !important;
+  //isolation: auto !important;
+}
 
 main {
   view-transition-name: main;
