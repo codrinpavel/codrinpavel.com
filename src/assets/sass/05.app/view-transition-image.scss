@@ -1,0 +1,37 @@
+picture {
+  view-transition-name: image;
+}
+
+::view-transition-image-pair(image) {
+  overflow: hidden;
+}
+
+::view-transition-old(image) {
+  animation: transition-image-old 500ms linear forwards;
+}
+
+::view-transition-new(image) {
+  animation: transition-image-new 500ms linear forwards;
+}
+
+@keyframes transition-image-old {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes transition-image-new {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

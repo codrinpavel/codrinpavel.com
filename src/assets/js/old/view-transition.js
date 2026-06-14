@@ -1,3 +1,4 @@
+/*
 window.addEventListener("pagereveal", (event) => {
   if (!event.viewTransition) {
     console.log(
@@ -14,6 +15,7 @@ window.addEventListener("pagereveal", (event) => {
     });
 });
 
+/*
 async function performTransition() {
   try {
     const transition = document.startViewTransition(() => {
@@ -28,6 +30,7 @@ async function performTransition() {
     // Transition was skipped, which is often fine
   }
 }
+*/
 
 /**
 function showDetail() {

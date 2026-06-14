@@ -13,7 +13,7 @@ order: 1
       <div class="lg:columns-6">
         <p class="type-large">For more than 15 years, I've helped agencies, nonprofits, public companies, and publishers develop accessible, high-performance websites, reports, and digital communications platforms. Many of the clients featured here have returned for multiple engagements, and I’m grateful for their continued trust.</p>
       </div>
-
+{#
       <div class="lg:columns-4 lg:ml-1">
         <figure class="spotlight mb-6xl">
           <video id="spotlight-video" width="1440" height="900" src="{{ '/assets/video/fnih.mp4' | url }}" muted playsinline loop></video>
@@ -22,7 +22,7 @@ order: 1
           </button>
           <figcaption class="sr-only">Animated homepage designs from the Foundation for the National Institutes of Health (FNIH) annual reports, featuring the 2018, 2019, and 2020 editions.</figcaption>
         </figure>
-      </div>
+      </div>#}
     </div>
 
     <div class="columns lg:columns-2">
@@ -30,13 +30,11 @@ order: 1
         <h2>Featured Work</h2>
 
         <ul class="about__featured type-medium">
-          {% for item in sortedWork %}
-            {% if item.tags and "featured" in item.tags %}
-              {% set clientSlug = item.client | lower | replace(' ', '-') | replace('&', 'and') %}
-              <li>
-                <a class="js-project link" href="/gallery/{{ item.client | slugify }}-{{item.year}}/">{{ item.client }}</a>
-              </li>
-            {% endif %}
+          {% for item in featured %}
+            {% set clientSlug = item.client | slugify %}
+            <li>
+              <a class="js-project link" href="/gallery/{{ item.client | slugify }}-{{item.year}}/">{{ item.client }}</a>
+            </li>
           {% endfor %}
         </ul>
       </div>

@@ -11,13 +11,13 @@
       </li>
 
       <li class="site-header__item lg:columns-6">
-        <a class="link type-headline js-project" href="#stanley-black-and-decker-2021">Gallery</a>
+        <a class="link type-headline js-project" href="{{"/gallery/stanley-black-and-decker-2021/" | url}}">Gallery</a>
       </li>
 
       {% for item in collections.pages | order %}
-      <li class="site-header__item">
-        <a class="link type-headline" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
-      </li>
+        <li class="site-header__item">
+          <a class="link type-headline" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
+        </li>
       {% endfor %}
     </ul>
   </nav>

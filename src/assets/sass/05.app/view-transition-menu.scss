@@ -28,6 +28,7 @@ $menu-items:
     animation-delay: calc(#{$index} * 58ms);
     animation-timing-function: #{$ease};
     animation-fill-mode: both;
+    mix-blend-mode: normal !important;
   }
 
   ::view-transition-old(menu-#{$name}),
@@ -36,9 +37,34 @@ $menu-items:
     animation-delay: inherit;
     animation-timing-function: inherit;
     animation-fill-mode: inherit;
+    mix-blend-mode: normal !important;
+  }
+
+  ::view-transition-old(menu-#{$name}) {
+    animation-name: menu-old;
+  }
+
+  ::view-transition-new(menu-#{$name}) {
+    animation-name: menu-new;
   }
 }
 
-.page-home .site-header__item {
-  transform: translate3d(0, calc(50vh - 50% - var(--grid-margin) * 1.5), 0);
+@keyframes menu-old {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes menu-new {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

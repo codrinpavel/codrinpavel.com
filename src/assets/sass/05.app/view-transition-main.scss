@@ -1,0 +1,36 @@
+//::view-transition-group(*),
+//::view-transition-new(*),
+//::view-transition-new(*) {
+//  mix-blend-mode: normal !important;
+//  isolation: auto !important;
+//}
+//
+//::view-transition-image-pair(*) {
+//  isolation: auto !important;
+//}
+
+main {
+  view-transition-name: main;
+}
+::view-transition-group(main) {
+  mix-blend-mode: normal !important;
+  isolation: auto !important;
+}
+::view-transition-image-pair(main) {
+  mix-blend-mode: normal !important;
+  isolation: auto !important;
+}
+::view-transition-old(main) {
+  opacity: 1;
+  animation: fade-out 500ms ease forwards;
+  animation-delay: 500ms;
+  mix-blend-mode: normal !important;
+  isolation: auto !important;
+}
+
+::view-transition-new(main) {
+}
+
+@keyframes fade-out {
+  to {opacity: 0}
+}

@@ -13,6 +13,7 @@ section {
 
 body {
   background: var(--color-white);
+  padding: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
 }
 
 img, video {
