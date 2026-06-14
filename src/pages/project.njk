@@ -26,7 +26,7 @@ permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
 
         <div class="lg:columns-4">
           <a target="_blank" rel="noopener noreferrer" href="{{project_url}}">
-            <figure>{% img image_url %}</figure>
+            <figure>{% img image_url, "", "", "eager" %}</figure>
           </a>
         </div>
 

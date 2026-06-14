@@ -4,5 +4,6 @@
   @include meta.load-css("reset");
   @include meta.load-css("base");
   @include meta.load-css("columns");
+  @include meta.load-css("fonts");
   @include meta.load-css("typography");
 }

@@ -10,10 +10,6 @@
   view-transition-name: line-2;
 }
 
-::view-transition-group(*) {
-  overflow: hidden;
-}
-
 ::view-transition-old(line),
 ::view-transition-old(line-1),
 ::view-transition-old(line-2) {
@@ -31,22 +27,17 @@
 ::view-transition-new(line-1) {
   animation-delay: 200ms;
 }
+
 ::view-transition-new(line-2),
 ::view-transition-old(line-2) {
   animation-delay: 400ms;
 }
 
 @keyframes transition-projectLineOld {
-  to {
-    transform: translateY(-101%);
-  }
+  to {transform: translateY(-101%)}
 }
 
 @keyframes transition-projectLineNew {
-  from {
-    transform: translateY(101%);
-  }
-  to {
-    transform: translateY(0%);
-  }
+  from {transform: translateY(101%)}
+  to {transform: translateY(0%)}
 }

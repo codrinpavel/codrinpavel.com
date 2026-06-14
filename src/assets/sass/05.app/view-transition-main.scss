@@ -1,23 +1,17 @@
-::view-transition-group(*),
-::view-transition-new(*),
-::view-transition-new(*),
-::view-transition-image-pair(*) {
-  //background-color: var(--color-white);
-  //mix-blend-mode: normal !important;
-  //isolation: auto !important;
-}
-
 main {
   view-transition-name: main;
 }
+
 ::view-transition-group(main) {
   mix-blend-mode: normal !important;
   isolation: auto !important;
 }
+
 ::view-transition-image-pair(main) {
   mix-blend-mode: normal !important;
   isolation: auto !important;
 }
+
 ::view-transition-old(main) {
   opacity: 1;
   animation: fade-out 500ms ease forwards;

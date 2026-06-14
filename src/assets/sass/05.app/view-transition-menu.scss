@@ -1,11 +1,5 @@
 @use "sass:list";
 
-@media (prefers-reduced-motion: no-preference) {
-  @view-transition {
-    navigation: auto;
-  }
-}
-
 $menu-items:
   (logo, cubic-bezier(.22, 1.15, .28, 1)),
   (gallery, cubic-bezier(.16, .84, .24, 1)),
