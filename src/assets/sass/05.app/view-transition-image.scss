@@ -2,35 +2,54 @@
   --transition-animation-duration: 500ms;
 }
 
-picture {
-  view-transition-name: image;
-}
-
 ::view-transition-image-pair(image) {
   overflow: hidden;
 }
 
+html:active-view-transition {
+  picture {
+    view-transition-name: image;
+  }
+}
+
+::view-transition-old(image),
+::view-transition-new(image) {
+  animation-direction: normal;
+  animation-duration: var(--transition-animation-duration);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+
 ::view-transition-old(image) {
-  animation: transition-image-old var(--transition-animation-duration) ease forwards;
+  animation-name: transition-fly-y-out;
 }
 
 ::view-transition-new(image) {
   transform: translateY(100%);
-  animation: transition-image-new var(--transition-animation-duration) ease forwards;
+  animation-name: transition-fly-y-in;
 }
 
-@keyframes transition-image-old {
-  to {
-    transform: translateY(-100%);
-  }
-}
 
-@keyframes transition-image-new {
-  from {
+html:active-view-transition-type(backwards) {
+  &::view-transition-old(image) {
     transform: translateY(100%);
+    animation-name: transition-fly-y-in;
+    animation-direction: reverse;
   }
 
-  to {
-    transform: translateY(0%);
+  &::view-transition-new(image) {
+    animation-name: transition-fly-y-out;
+    animation-direction: reverse;
   }
+}
+
+@keyframes transition-fly-y-out {
+  from {transform: translateY(0%)}
+  to {transform: translateY(-100%)}
+}
+
+@keyframes transition-fly-y-in {
+  from {transform: translateY(100%)}
+  to {transform: translateY(0%)}
 }

@@ -17,7 +17,7 @@ permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
     <div class="wrapper__container">
       <div class="columns lg:columns-1 items-center type-headline">
         <div>
-          <a class="link js-project" href="{{prevHref}}">Prev</a>
+          <a class="link js-project" href="{{prevHref}}" data-transition="backwards">Prev</a>
         </div>
 
         <div>
@@ -45,7 +45,7 @@ permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
         </div>
 
         <div class="flex justify-end">
-          <a class="link js-project" href="{{nextHref}}">Next</a>
+          <a class="link js-project" href="{{nextHref}}" data-transition="forwards">Next</a>
         </div>
       </div>
     </div>
