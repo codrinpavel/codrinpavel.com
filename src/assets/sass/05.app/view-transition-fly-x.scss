@@ -4,35 +4,49 @@
 
 ::view-transition-old(scroller),
 ::view-transition-new(scroller) {
-  animation: var(--transition-animation-duration) cubic-bezier(.76,0,.24,1) forwards;
+  animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
 }
 
-::view-transition-old(scroller) {
-  animation-name: fly-x-out;
+:active-view-transition-type(forwards) {
+  ::view-transition-old(scroller) {
+    animation-name: fly-x-out;
+  }
+
+  ::view-transition-new(scroller) {
+    transform: translateX(100%);
+    animation-name: fly-x-in;
+  }
 }
 
-::view-transition-new(scroller) {
-  transform: translateX(100%);
-  animation-name: fly-x-in;
-}
+:active-view-transition-type(backwards) {
+  &::view-transition-old(scroller) {
+    animation-name: fly-x-in;
+    animation-direction: reverse;
+  }
 
-:active-view-transition-type(backwards)::view-transition-old(scroller) {
-  animation-name: fly-x-in;
-  animation-direction: reverse;
-}
-
-:active-view-transition-type(backwards)::view-transition-new(scroller) {
-  transform: translateX(-100%);
-  animation-name: fly-x-out;
-  animation-direction: reverse;
+  &::view-transition-new(scroller) {
+    transform: translateX(-100%);
+    animation-name: fly-x-out;
+    animation-direction: reverse;
+  }
 }
 
 @keyframes fly-x-out {
-  from {transform: translateX(0%)}
-  to {transform: translateX(-100%)}
+  from {
+    transform: translateX(0%)
+  }
+
+  to {
+    transform: translateX(-100%)
+  }
 }
 
 @keyframes fly-x-in {
-  from {transform: translateX(100%)}
-  to {transform: translateX(0%)}
+  from {
+    transform: translateX(100%)
+  }
+
+  to {
+    transform: translateX(0%)
+  }
 }

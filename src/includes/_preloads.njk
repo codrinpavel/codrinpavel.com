@@ -3,7 +3,7 @@
 
 {# Preload Current Page Image #}
 {% if preload -%}
-  {%- img preload, "", "", "lazy", true -%}
+  {%- img preload, "", "", "eager", "preload" -%}
 {%- endif -%}
 
 {# Prefetch Entire Menu except current page #}
@@ -22,10 +22,10 @@
 
 {%- if prevHref and prevFeatured %}
   <link rel="prefetch" href="{{ prevHref | url }}">
-  {% img "work/" + (prevFeatured.client | slugify) + "-" + (prevFeatured.project | slugify) + "-" + prevFeatured.year + ".png", "", "", "lazy", true -%}
+  {% img "work/" + (prevFeatured.client | slugify) + "-" + (prevFeatured.project | slugify) + "-" + prevFeatured.year + ".png", "", "", "lazy", "prefetch" -%}
 {%- endif %}
 
 {%- if nextHref and nextFeatured %}
   <link rel="prefetch" href="{{ nextHref | url }}">
-  {% img "work/" + (nextFeatured.client | slugify) + "-" + (nextFeatured.project | slugify) + "-" + nextFeatured.year + ".png", "", "", "lazy", true -%}
+  {% img "work/" + (nextFeatured.client | slugify) + "-" + (nextFeatured.project | slugify) + "-" + nextFeatured.year + ".png", "", "", "lazy", "prefetch" -%}
 {%- endif %}

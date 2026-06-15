@@ -34,7 +34,7 @@ export default async function (
   alt = "",
   css_classes = "",
   loading = "lazy",
-  preload = false
+  strategy = null
 ) {
   const metadata = await Image(`./src/assets/img/${src}`, {
     widths: [null, 1024, 2048],
@@ -45,16 +45,32 @@ export default async function (
 
   const sizes = "100vw";
 
-  if (preload) {
+  if (strategy === "preload") {
     const webp = metadata.webp;
 
     const srcset = webp
       .map((img) => `${img.url} ${img.width}w`)
       .join(", ");
 
-    return `<link rel="preload" as="image" fetchpriority="high" type="image/webp" imagesizes="${sizes}"
+    return `<link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      type="image/webp"
+      imagesizes="${sizes}"
       href="${webp[0].url}"
       imagesrcset="${srcset}"
+    >`;
+  }
+
+  if (strategy === "prefetch") {
+    const webp = metadata.webp;
+
+    return `<link
+      rel="prefetch"
+      as="image"
+      type="image/webp"
+      href="${webp[0].url}"
     >`;
   }
 
