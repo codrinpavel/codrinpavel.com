@@ -8,11 +8,11 @@
 }
 
 :active-view-transition-type(forwards) {
-  ::view-transition-old(scroller) {
+  &::view-transition-old(scroller) {
     animation-name: fly-x-out;
   }
 
-  ::view-transition-new(scroller) {
+  &::view-transition-new(scroller) {
     transform: translateX(100%);
     animation-name: fly-x-in;
   }
