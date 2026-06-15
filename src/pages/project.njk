@@ -1,23 +1,26 @@
 ---
 eleventyExcludeFromCollections: true
+
 pagination:
   data: featured
   size: 1
   alias: featured
+
 permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
+
+eleventyComputed:
+  preload: work/{{featured.client | slugify}}-{{featured.project | slugify}}-{{featured.year}}.png
 ---
 
 {%- set project_url = featured.wayback and ("https://web.archive.org/web/" ~ featured.wayback ~ "if_/" ~ featured.url) or featured.url -%}
 {%- set image_url = 'work/' ~ featured.client | slugify ~ '-' ~ featured.project | slugify ~ '-' ~ featured.year ~ '.png' -%}
-{%- set prevHref = pagination.previousPageHref or pagination.lastPageHref -%}
-{%- set nextHref = pagination.nextPageHref or pagination.firstPageHref -%}
 
 <section class="project">
   <div class="wrapper">
     <div class="wrapper__container">
       <div class="columns lg:columns-1 items-center type-headline">
         <div>
-          <a class="link js-project" href="{{prevHref}}" data-transition="backwards">Prev</a>
+          <a class="link js-project" href="{{pagination.href.previous or pagination.href.last}}" data-transition="backwards">Prev</a>
         </div>
 
         <div>
@@ -45,7 +48,7 @@ permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
         </div>
 
         <div class="flex justify-end">
-          <a class="link js-project" href="{{nextHref}}" data-transition="forwards">Next</a>
+          <a class="link js-project" href="{{pagination.href.next or pagination.href.first}}" data-transition="forwards">Next</a>
         </div>
       </div>
     </div>

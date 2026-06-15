@@ -5,10 +5,11 @@
 
     {% include "_meta.njk" %}
     {% include "_favicon.njk" %}
+    {% include "_preloads.njk" %}
     {% include "_styles.njk" %}
   </head>
 
-  <body class="page-{{bodyClass}}">
+  <body {{ (bodyClass and 'class="' ~ bodyClass ~ '"')|safe }}>
     {% include "header.njk" %}
 
     <main id="main-content" aria-label="Main Content">

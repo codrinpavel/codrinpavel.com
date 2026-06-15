@@ -41,6 +41,16 @@ $transitions: image, line, line-1, line-2;
   animation-name: fly-y-in;
 }
 
+::view-transition-old(line-1),
+::view-transition-new(line-1) {
+  animation-delay: 200ms;
+}
+
+::view-transition-new(line-2),
+::view-transition-old(line-2) {
+  animation-delay: 400ms;
+}
+
 #{vt("old", $transitions, ":active-view-transition-type(backwards)")} {
   animation-name: fly-y-in;
   animation-direction: reverse;

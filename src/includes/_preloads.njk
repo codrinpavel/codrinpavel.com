@@ -1,0 +1,21 @@
+{# Preload Current Image #}
+{% if preload -%}
+  {%- img preload, "", "", "lazy", true -%}
+{%- endif -%}
+
+{# Prefetch Previous and Next Project pages + preload their hero images #}
+{%- set prevFeatured = pagination.page.previous or pagination.page.last -%}
+{%- set nextFeatured = pagination.page.next or pagination.page.first -%}
+
+{%- set prevHref = pagination.href.previous or pagination.href.last -%}
+{%- set nextHref = pagination.href.next or pagination.href.first -%}
+
+{%- if prevHref and prevFeatured %}
+  <link rel="prefetch" href="{{ prevHref | url }}">
+  {% img "work/" + (prevFeatured.client | slugify) + "-" + (prevFeatured.project | slugify) + "-" + prevFeatured.year + ".png", "", "", "lazy", true -%}
+{%- endif %}
+
+{%- if nextHref and nextFeatured %}
+  <link rel="prefetch" href="{{ nextHref | url }}">
+  {% img "work/" + (nextFeatured.client | slugify) + "-" + (nextFeatured.project | slugify) + "-" + nextFeatured.year + ".png", "", "", "lazy", true -%}
+{%- endif %}
