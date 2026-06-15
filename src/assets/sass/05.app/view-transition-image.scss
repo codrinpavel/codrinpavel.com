@@ -1,55 +1,63 @@
+@use "sass:list";
+@use "sass:string";
+
 :root {
   --transition-animation-duration: 500ms;
 }
 
-::view-transition-image-pair(image) {
-  overflow: hidden;
+$transitions: image, line, line-1, line-2;
+
+@function vt($type, $names, $prefix: "") {
+  $selectors: ();
+
+  @each $name in $names {
+    $selectors: list.append(
+      $selectors,
+      string.unquote("#{$prefix}::view-transition-#{$type}(#{$name})"),
+      comma
+    );
+  }
+
+  @return $selectors;
 }
 
-html:active-view-transition {
-  picture {
-    view-transition-name: image;
+@each $name in $transitions {
+  .#{$name} {
+    view-transition-name: $name;
   }
 }
 
-::view-transition-old(image),
-::view-transition-new(image) {
-  animation-direction: normal;
-  animation-duration: var(--transition-animation-duration);
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
+#{vt("old", $transitions)},
+#{vt("new", $transitions)} {
+  animation: var(--transition-animation-duration) cubic-bezier(.76,0,.24,1) forwards;
 }
 
-
-::view-transition-old(image) {
-  animation-name: transition-fly-y-out;
+#{vt("old", $transitions)} {
+  animation-name: fly-y-out;
 }
 
-::view-transition-new(image) {
+#{vt("new", $transitions)} {
   transform: translateY(100%);
-  animation-name: transition-fly-y-in;
+  animation-name: fly-y-in;
 }
 
-
-html:active-view-transition-type(backwards) {
-  &::view-transition-old(image) {
-    transform: translateY(100%);
-    animation-name: transition-fly-y-in;
-    animation-direction: reverse;
-  }
-
-  &::view-transition-new(image) {
-    animation-name: transition-fly-y-out;
-    animation-direction: reverse;
-  }
+#{vt("old", $transitions, ":active-view-transition-type(backwards)")} {
+  animation-name: fly-y-in;
+  animation-direction: reverse;
 }
 
-@keyframes transition-fly-y-out {
+#{vt("new", $transitions, ":active-view-transition-type(backwards)")} {
+  transform: translateY(-100%);
+  animation-name: fly-y-out;
+  animation-direction: reverse;
+}
+
+@keyframes fly-y-out {
   from {transform: translateY(0%)}
   to {transform: translateY(-100%)}
 }
 
-@keyframes transition-fly-y-in {
+@keyframes fly-y-in {
   from {transform: translateY(100%)}
   to {transform: translateY(0%)}
 }

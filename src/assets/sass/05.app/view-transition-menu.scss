@@ -23,39 +23,19 @@ $menu-items:
     animation-duration: calc(1s - (#{$index} * 58ms));
     animation-delay: calc(#{$index} * 58ms);
     animation-timing-function: #{$ease};
-    animation-fill-mode: both;
-    mix-blend-mode: normal !important;
-  }
-
-  ::view-transition-old(menu-#{$name}),
-  ::view-transition-new(menu-#{$name}) {
-    animation-duration: inherit;
-    animation-delay: inherit;
-    animation-timing-function: inherit;
-    animation-fill-mode: inherit;
-    mix-blend-mode: normal !important;
   }
 
   ::view-transition-old(menu-#{$name}) {
-    animation-name: menu-old;
+    animation-name: menu;
+    animation-direction: reverse;
   }
 
   ::view-transition-new(menu-#{$name}) {
-    animation-name: menu-new;
+    animation-name: menu;
   }
 }
 
-@keyframes menu-old {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes menu-new {
+@keyframes menu {
   from {
     opacity: 0;
   }

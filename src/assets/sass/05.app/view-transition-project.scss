@@ -1,28 +1,3 @@
-.line {
-  view-transition-name: line;
-}
-
-.line-1 {
-  view-transition-name: line-1;
-}
-
-.line-2 {
-  view-transition-name: line-2;
-}
-
-::view-transition-old(line),
-::view-transition-old(line-1),
-::view-transition-old(line-2) {
-  animation: transition-projectLineOld var(--transition-animation-duration) cubic-bezier(.76,0,.24,1) forwards;
-}
-
-::view-transition-new(line),
-::view-transition-new(line-1),
-::view-transition-new(line-2) {
-  transform: translateY(101%);
-  animation: transition-projectLineNew var(--transition-animation-duration) cubic-bezier(.76,0,.24,1) forwards;
-}
-
 ::view-transition-old(line-1),
 ::view-transition-new(line-1) {
   animation-delay: 200ms;
@@ -31,13 +6,4 @@
 ::view-transition-new(line-2),
 ::view-transition-old(line-2) {
   animation-delay: 400ms;
-}
-
-@keyframes transition-projectLineOld {
-  to {transform: translateY(-101%)}
-}
-
-@keyframes transition-projectLineNew {
-  from {transform: translateY(101%)}
-  to {transform: translateY(0%)}
 }
