@@ -9,20 +9,28 @@
   &__item {
     transform: translate3d(0, 0, 0);
     display: flex;
-
-    &:last-child {
-      margin-left: auto;
-      justify-content: flex-end;
-    }
   }
 
   a[aria-current="page"] {
     color: var(--color-black-text);
   }
-}
 
-.page-home .site-header__item {
-  transform: translate3d(0, calc(50vh - 50% - var(--grid-margin) * 1.5), 0);
+  @include mq(md, max) {
+    a {
+      margin: auto;
+    }
+  }
+
+  @include mq(md) {
+    .page-home & {
+      transform: translate3d(0, calc(50vh - 50% - var(--grid-margin) * 1.5), 0);
+    }
+
+    &__item:last-child {
+      margin-left: auto;
+      justify-content: flex-end;
+    }
+  }
 }
 
 /*

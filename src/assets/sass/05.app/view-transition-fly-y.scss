@@ -1,10 +1,6 @@
 @use "sass:list";
 @use "sass:string";
 
-:root {
-  --transition-animation-duration: 500ms;
-}
-
 $transitions: image, line, line-1, line-2;
 
 @function vt($type, $names, $prefix: "") {

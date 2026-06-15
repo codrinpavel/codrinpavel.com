@@ -28,8 +28,10 @@ eleventyComputed:
         </div>
 
         <div class="lg:columns-4">
-          <a target="_blank" rel="noopener noreferrer" href="{{project_url}}">
-            <figure>{% img image_url, "", "", "eager" %}</figure>
+          <a target="_blank" rel="noopener noreferrer" href="{{project_url}}" aria-label="view live project">
+            <figure>
+              {% img image_url, "", "", "eager" %}
+            </figure>
           </a>
         </div>
 

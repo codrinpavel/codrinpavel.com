@@ -4,6 +4,10 @@
   }
 }
 
+:root {
+  --transition-animation-duration: 500ms;
+}
+
 ::view-transition-group(*) {
   overflow: hidden;
 }
