@@ -52,7 +52,7 @@ export default async function (
       .map((img) => `${img.url} ${img.width}w`)
       .join(", ");
 
-    return `<link rel="preload" as="image" type="image/webp" imagesizes="${sizes}"
+    return `<link rel="preload" as="image" fetchpriority="high" type="image/webp" imagesizes="${sizes}"
       href="${webp[0].url}"
       imagesrcset="${srcset}"
     >`;
