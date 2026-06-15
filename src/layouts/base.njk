@@ -9,7 +9,7 @@
     {% include "_styles.njk" %}
   </head>
 
-  <body {{ (bodyClass and 'class="' ~ bodyClass ~ '"')|safe }}>
+  <body {{ (bodyClass and 'class="page-' ~ bodyClass ~ '"')|safe }}>
     {% include "header.njk" %}
 
     <main id="main-content" aria-label="Main Content">

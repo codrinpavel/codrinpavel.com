@@ -1,7 +1,14 @@
-{# Preload Current Image #}
+{# Preload Current Page Image #}
 {% if preload -%}
   {%- img preload, "", "", "lazy", true -%}
 {%- endif -%}
+
+{# Prefetch Entire Menu except current page #}
+{%- for item in collections.pages | order %}
+  {%- if page.url != item.url %}
+    <link rel="prefetch" href="{{ item.url | url }}">
+  {%- endif %}
+{%- endfor %}
 
 {# Prefetch Previous and Next Project pages + preload their hero images #}
 {%- set prevFeatured = pagination.page.previous or pagination.page.last -%}
