@@ -5,10 +5,10 @@ title: "Stats"
 order: 2
 ---
 
-<section class="stats" id="stats">
+<section class="stats has-scroller" id="stats">
   <div class="wrapper scroller">
     <div class="scroller__container">
-      <div class="scroller__track" style="--count: {{stats.length}}">
+      <div class="scroller__track" style="--count: {{stats.length + 1}}">
 
         {% for stat in stats %}
           <div class="scroller__item">
@@ -30,6 +30,11 @@ order: 2
           </div>
         {% endfor %}
 
+        <div class="scroller__item scroller__next">
+          <a class="js-sequence-link" href="">
+            {% svg "arrow.svg", "icon-arrow" %}
+          </a>
+        </div>
       </div>
     </div>
   </div>
