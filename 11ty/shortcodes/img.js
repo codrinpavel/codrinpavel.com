@@ -62,6 +62,7 @@ export default async function (
     class: `image ${css_classes}`.trim(),
     alt,
     loading,
+    fetchpriority: loading === "eager" ? "high" : undefined,
     decoding: "async",
     sizes,
   });
