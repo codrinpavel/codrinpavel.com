@@ -1,9 +1,12 @@
 .home {
-  .wrapper {
+  .wrapper,
+  picture,
+  .columns {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  }
+
+  picture {
+    display: block;
   }
 
   img {
@@ -11,6 +14,5 @@
     height: 100%;
     object-fit: cover;
     object-position: top left;
-    height: var(--size-fullscreen);
   }
 }

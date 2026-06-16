@@ -102,9 +102,7 @@ window.addEventListener("pageswap", (event) => {
   console.log(type);
   event.viewTransition.types.add(type);
 
-  if (logoType) {
-    event.viewTransition.types.add(logoType);
-  }
+  if (logoType) event.viewTransition.types.add(logoType);
 });
 
 window.addEventListener("pagereveal", (event) => {
@@ -119,9 +117,7 @@ window.addEventListener("pagereveal", (event) => {
   console.log(type);
   event.viewTransition.types.add(type);
 
-  if (logoType) {
-    event.viewTransition.types.add(logoType);
-  }
+  if (logoType) event.viewTransition.types.add(logoType);
 
   clearTransitionOverride();
 });

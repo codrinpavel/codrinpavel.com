@@ -2,11 +2,12 @@
   @view-transition {navigation: auto}
 }
 
+/*
+ * Defaults
+ */
 :root {
-  --transition-animation-duration: 600ms;
+  --transition-animation-duration: 666ms;
 }
-
-::view-transition-group(*) {overflow: hidden}
 
 ::view-transition-image-pair(*),
 ::view-transition-old(*),
@@ -14,6 +15,12 @@
   animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
 }
 
+::view-transition-group(*) {overflow: hidden}
+
+
+/*
+ * Keyframes
+ */
 @keyframes fly-to-top {
   from { transform: translateY(0%) }
   to { transform: translateY(-100%) }
@@ -54,20 +61,12 @@
   to { transform: translateX(0%) }
 }
 
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes fade-out {
   from { opacity: 1; }
   to { opacity: 0; }
-}
-
-
-
-// Old
-@keyframes fly-y-out {
-  from {transform: translateY(0%)}
-  to {transform: translateY(-100%)}
-}
-
-@keyframes fly-y-in {
-  from {transform: translateY(100%)}
-  to {transform: translateY(0%)}
 }

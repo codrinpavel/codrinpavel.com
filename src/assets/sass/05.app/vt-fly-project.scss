@@ -24,12 +24,12 @@ $transitions: image, line, line-1, line-2;
 }
 
 #{vt("old", $transitions)} {
-  animation-name: fly-y-out;
+  animation-name: fly-to-top;
 }
 
 #{vt("new", $transitions)} {
   transform: translateY(100%);
-  animation-name: fly-y-in;
+  animation-name: fly-from-bottom;
 }
 
 ::view-transition-old(line-1),
@@ -43,12 +43,10 @@ $transitions: image, line, line-1, line-2;
 }
 
 #{vt("old", $transitions, ":active-view-transition-type(backwards)")} {
-  animation-name: fly-y-in;
-  animation-direction: reverse;
+  animation-name: fly-to-bottom;
 }
 
 #{vt("new", $transitions, ":active-view-transition-type(backwards)")} {
   transform: translateY(-100%);
-  animation-name: fly-y-out;
-  animation-direction: reverse;
+  animation-name: fly-from-top;
 }

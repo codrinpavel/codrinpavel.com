@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-bodyClass: "about"
+htmlClass: "about"
 title: "About"
 order: 2
 ---
@@ -9,7 +9,7 @@ order: 2
 
 <section class="about" id="about">
   <div class="wrapper">
-    <div class="columns">
+    <div class="columns mb-6xl">
       <div class="lg:columns-6">
         <p class="type-large">For more than 15 years, I've helped agencies, nonprofits, public companies, and publishers develop accessible, high-performance websites, reports, and digital communications platforms. Many of the clients featured here have returned for multiple engagements, and I’m grateful for their continued trust.</p>
       </div>
@@ -25,8 +25,8 @@ order: 2
       </div>#}
     </div>
 
-    <div class="columns lg:columns-2">
-      <div class="lg:columns-6">
+    <div class="columns">
+      <div class="columns-12 lg:columns-6">
         <h2>Featured Work</h2>
 
         <ul class="about__featured type-medium">
@@ -39,7 +39,7 @@ order: 2
         </ul>
       </div>
 
-      <div class="lg:ml-1 about__list">
+      <div class="columns-6 md:columns-4 lg:columns-2 lg:ml-1 about__list">
         <h2>Services</h2>
         <ul>
           <li>Sustainability Reports</li>
@@ -73,7 +73,7 @@ order: 2
         </ul>
       </div>
 
-      <div class="about__list">
+      <div class="columns-6 md:columns-4 lg:columns-2 about__list">
         <h2>Work Archive</h2>
         <ul>
           {%- for project in projects -%}

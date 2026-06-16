@@ -17,41 +17,42 @@ eleventyComputed:
 
 <section class="project">
   <div class="wrapper">
-    <div class="wrapper__container">
-      <div class="columns lg:columns-1 items-center type-headline">
-        <div>
-          <a class="link js-project" href="{{pagination.href.previous or pagination.href.last}}" data-transition="backwards">Prev</a>
-        </div>
+    <div class="columns lg:columns-1 items-center type-headline">
+      <div>
+        <a class="link js-project" href="{{pagination.href.previous or pagination.href.last}}" data-transition="backwards">Prev</a>
+      </div>
 
-        <div>
-          <div class="color-black-text project-year line">{{featured.year}}</div>
-        </div>
+      <div>
+        <div class="color-black-text project-year line text-center">{{featured.year}}</div>
+      </div>
 
-        <div class="lg:columns-4">
-          <a target="_blank" rel="noopener noreferrer" href="{{project_url}}" aria-label="view live project">
-            <figure>
-              {% img image_url, "", "", "eager" %}
-            </figure>
-          </a>
-        </div>
+      <div class="lg:columns-4">
+        <a target="_blank" rel="noopener noreferrer" href="{{project_url}}" aria-label="view live project">
+          <figure>
+            {% img image_url,
+            "",
+            "",
+            "eager" %}
+          </figure>
+        </a>
+      </div>
 
-        <div class="lg:columns-2 lg:ml-1">
-          <div class="line-1">
+      <div class="lg:columns-2 lg:ml-1">
+        <div class="line-1">
             Client: 
             <span class="color-black-text">{{featured.client}}</span>
-          </div>
         </div>
+      </div>
 
-        <div class="lg:columns-2">
-          <div class="line-2">
+      <div class="lg:columns-2">
+        <div class="line-2">
             Project: 
             <a class="link color-black-text" target="_blank" rel="noopener noreferrer" href="{{project_url}}">{{featured.project}}</a>
-          </div>
         </div>
+      </div>
 
-        <div class="flex justify-end">
-          <a class="link js-project" href="{{pagination.href.next or pagination.href.first}}" data-transition="forwards">Next</a>
-        </div>
+      <div class="flex justify-end">
+        <a class="link js-project" href="{{pagination.href.next or pagination.href.first}}" data-transition="forwards">Next</a>
       </div>
     </div>
   </div>

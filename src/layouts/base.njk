@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {{ (htmlClass and 'class="page-' ~ htmlClass ~ '"')|safe }}>
   <head>
     {% include "_meta.njk" %}
     {% include "_favicon.njk" %}
@@ -8,7 +8,7 @@
     {% include "_preloads.njk" %}
   </head>
 
-  <body {{ (bodyClass and 'class="page-' ~ bodyClass ~ '"')|safe }}>
+  <body>
     {% include "header.njk" %}
 
     <main id="main-content" aria-label="Main Content">

@@ -9,7 +9,11 @@
   --grid-screenwidth: 1940px;
   --column-gap: 16px;
   --row-gap: var(--size-2xl);
-  --header-height: 50px;
+  --header-height: 60px;
+
+  @include mq(lg) {
+  --header-height: 30px;
+  }
 
   @each $key, $val in tokens("size") {
     --size-#{$key}: #{$val};
