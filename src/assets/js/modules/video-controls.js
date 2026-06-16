@@ -1,7 +1,7 @@
 function initSpotlight() {
-  const motion = document.getElementById("about");
+  const about = document.getElementById("about");
 
-  if(!motion) return;
+  if(!about) return;
 
   const video = document.getElementById("spotlight-video");
   const button = document.getElementById("spotlight-video-toggle");

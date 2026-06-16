@@ -31,7 +31,7 @@ export default function () {
 
   clients.sort((a, b) => {
     if (b.count !== a.count) {
-      return b.count - a.count;
+      //return b.count - a.count;
     }
 
     return (b.latestYear || 0) - (a.latestYear || 0);

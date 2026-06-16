@@ -10,9 +10,11 @@
   --column-gap: 16px;
   --row-gap: var(--size-2xl);
   --header-height: 60px;
+  --header-spacing: 0px;
 
   @include mq(lg) {
   --header-height: 30px;
+  --header-spacing: 70px;
   }
 
   @each $key, $val in tokens("size") {

@@ -1,15 +1,27 @@
+@use "../mixins" as *;
+
 .about {
   h2 {
-    margin-bottom: var(--size-md);
+    margin-bottom: var(--size-ml);
   }
 
-  .spotlight {
-    position: relative;
+  &__clients {
+    column-count: 2;
 
-    button {
-      position: absolute;
-      z-index: 1;
-      inset: auto auto var(--size-lg) var(--size-lg);
+    li {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+
+      &[data-count]::after {
+        content: "("attr(data-count)")";
+        color: var(--color-faint);
+        font-size: smaller;
+      }
+    }
+
+    @include mq(md) {
+      column-count: 3;
     }
   }
 
@@ -22,16 +34,13 @@
     }
   }
 
-  &__list {
-    li {
-      display: flex;
-      align-items: center;
-      gap: 4px;
+  .spotlight {
+    position: relative;
 
-      &[data-count]::before {
-        content: attr(data-count)"×";
-        color: var(--color-faint);
-      }
+    button {
+      position: absolute;
+      z-index: 1;
+      inset: auto auto var(--size-md) var(--size-md);
     }
   }
 }
