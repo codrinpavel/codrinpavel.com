@@ -1,29 +1,39 @@
 @use "../mixins" as *;
 
+.has-scroller section {
+  //overflow-y: scroll;
+  height: 100%;
+}
+
+
 .scroller {
   --item-width: 100%;
   --count: 5;
 
-  height: calc(100svh + calc((var(--count) * 50vh)));
-  view-timeline-name: --track;
-  view-timeline-axis: block;
+  //height: calc(100svh + calc((var(--count) * 50vh)));
+  //view-timeline-name: --track;
+  //view-timeline-axis: block;
 
-  &__container {
-    position: sticky;
-    top: var(--size-header-offset);
-    overflow: hidden;
+  &__sticky {
+    //position: sticky;
+    //top: 0;
+    //overflow: hidden;
+  overflow: hidden;
+  width: 100%;
+  touch-action: pan-y;
   }
 
   &__track {
+    width: 200vh;
     display: flex;
     align-items: flex-start;
     margin-left: calc(-1 * var(--column-gap));
 
-    transform: translateX(0%);
-    animation: track linear both;
-    animation-range: contain 0%;
-    animation-timeline: --track;
-    will-change: transform;
+    //transform: translateX(0%);
+    //animation: track linear both;
+    //animation-range: contain 0%;
+    //animation-timeline: --track;
+    //will-change: transform;
   }
 
   &__item {
@@ -91,7 +101,7 @@
   }
 
   @include mq(md) {
-    --item-width: 50%; //
+    --item-width: 50%;
   }
 }
 

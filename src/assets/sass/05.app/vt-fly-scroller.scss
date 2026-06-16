@@ -1,0 +1,13 @@
+.has-scroller main {
+  view-transition-name: scroller;
+}
+
+:active-view-transition-type(forwards) {
+  &::view-transition-new(scroller) { animation-name: fly-from-right; }
+  &::view-transition-old(scroller) { animation-name: fly-to-left; }
+}
+
+:active-view-transition-type(backwards) {
+  &::view-transition-new(scroller) { animation-name: fly-from-left; }
+  &::view-transition-old(scroller) { animation-name: fly-to-right; }
+}

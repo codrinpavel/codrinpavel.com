@@ -7,48 +7,50 @@
 }
 
 ::view-transition-group(*) {overflow: hidden}
+
+::view-transition-image-pair(*),
 ::view-transition-old(*),
 ::view-transition-new(*) {
   animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
 }
 
-@keyframes fly-out-to-top {
+@keyframes fly-to-top {
   from { transform: translateY(0%) }
   to { transform: translateY(-100%) }
 }
 
-@keyframes fly-out-to-bottom {
+@keyframes fly-to-bottom {
   from { transform: translateY(0%) }
   to { transform: translateY(100%) }
 }
 
-@keyframes fly-in-from-bottom {
-  from { transform: translateY(100%) }
-  to { transform: translateY(0%) }
-}
-
-@keyframes fly-in-from-top {
-  from { transform: translateY(-100%) }
-  to { transform: translateY(0%) }
-}
-
-@keyframes fly-out-to-right {
-  from { transform: translateX(0%) }
-  to { transform: translateX(100%) }
-}
-
-@keyframes fly-out-to-left {
+@keyframes fly-to-left {
   from { transform: translateX(0%) }
   to { transform: translateX(-100%) }
 }
 
-@keyframes fly-in-from-right {
-  from { transform: translateX(100%) }
+@keyframes fly-to-right {
+  from { transform: translateX(0%) }
+  to { transform: translateX(100%) }
+}
+
+@keyframes fly-from-top {
+  from { transform: translateY(-100%) }
+  to { transform: translateY(0%) }
+}
+
+@keyframes fly-from-bottom {
+  from { transform: translateY(100%) }
+  to { transform: translateY(0%) }
+}
+
+@keyframes fly-from-left {
+  from { transform: translateX(-100%) }
   to { transform: translateX(0%) }
 }
 
-@keyframes fly-in-from-left {
-  from { transform: translateX(-100%) }
+@keyframes fly-from-right {
+  from { transform: translateX(100%) }
   to { transform: translateX(0%) }
 }
 
@@ -68,14 +70,4 @@
 @keyframes fly-y-in {
   from {transform: translateY(100%)}
   to {transform: translateY(0%)}
-}
-
-@keyframes fly-x-out {
-  from {transform: translateX(0%)}
-  to {transform: translateX(-100%)}
-}
-
-@keyframes fly-x-in {
-  from {transform: translateX(100%)}
-  to {transform: translateX(0%)}
 }

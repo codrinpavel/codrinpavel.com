@@ -1,21 +1,21 @@
 @use "../mixins" as *;
 
 ::-webkit-scrollbar {
-  display: none;
+  //display: none;
 }
 
 html,
 section {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
+  //scrollbar-width: none;
+  //-ms-overflow-style: none;
+  //-webkit-overflow-scrolling: touch;
 }
 
 body {
   background: var(--color-white);
 }
 
-html, body, main, section {
+html, body, main {
   height: 100%;
 }
 
