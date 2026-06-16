@@ -1,48 +1,8 @@
 .site-logo {
-  --overlay-delay: 300ms;
-  --overlay-duration: 2250ms;
-  --move-duration: 500ms;
-  --move-delay: calc(var(--overlay-delay) + var(--overlay-duration) + 250ms);
+  display: flex;
+  gap: 0px;
+  overflow: hidden;
 
-  svg {
-    overflow: visible;
-    width: 60px;
-    height: auto;
-  }
-
-  path {
-    transform-box: fill-box;
-    will-change: transform;
-  }
-
-  //.dash {
-  //  scale: 0 1;
-  //  transform-origin: left center;
-  //  animation: var(--move-duration) logo_scale ease var(--move-delay) forwards;
-  //}
-//
-  //.c {
-  //  translate: -50px;
-  //  transform-origin: left center;
-  //  animation: var(--move-duration) logo_move ease var(--move-delay) forwards;
-  //}
-
-  .dot {
-    --size: 6px;
-    --scale: calc(350vmax / var(--size));
-
-    //scale: var(--scale);
-    //translate: -50px;
-    //transform-origin: center center;
-    //animation: var(--overlay-duration) logo_scale ease var(--overlay-delay) forwards,
-               //var(--move-duration) logo_move ease var(--move-delay) forwards;
-  }
-}
-
-@keyframes logo_scale {
-  100% { scale: 1 1; }
-}
-
-@keyframes logo_move {
-  100% { translate: 0px }
+  font-variation-settings: var(--font-weight-black);
+  color: var(--color-black-text);
 }

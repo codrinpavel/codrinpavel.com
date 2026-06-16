@@ -1,21 +1,31 @@
 {% set nav = ["About", "Stats", "Words", "Awards", "Lab"] %}
 
-<header class="site-header">
-  <nav class="wrapper">
-    <ul class="columns columns-3 justify-end lg:columns-1 items-center md:items-start">
-      <li class="site-header__item">
-        <a href="/" class="site-logo">
-          {% svg "logo.svg" %}
-          <span class="sr-only">Codrin Pavel</span>
-        </a>
-      </li>
+{% set logo %}
+<a href="/" class="site-logo">
+  <span class="vt-logo-1">Codrin</span>
+  <span>/</span>
+  <span class="vt-logo-2">Pavel</span>
+</a>
+{% endset %}
 
-      <li class="site-header__item lg:columns-6">
+<header class="header">
+  <nav class="wrapper">
+
+    <ul class="header__mobile columns columns-4">
+      <li>{{logo|safe}}</li>
+      <li class="text-center">Menu</li>
+      <li>0{{order + 1}}&mdash;{{title}}</li>
+    </ul>
+
+    <ul class="header__desktop columns columns-3 md:columns-1">
+      <li>{{logo|safe}}</li>
+
+      <li class="md:columns-6">
         <a class="link type-headline js-project" href="{{"/gallery/stanley-black-and-decker-2021/" | url}}">Gallery</a>
       </li>
 
       {% for item in collections.pages | order %}
-        <li class="site-header__item">
+        <li>
           <a class="link type-headline" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
         </li>
       {% endfor %}

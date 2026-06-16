@@ -1,7 +1,7 @@
 <script>
 window.PAGE_ORDER = {
   "/": -1,
-  {%- for page in collections.pages | order -%}
+  {%- for page in collections.nav | order -%}
     "{{page.url}}": {{loop.index*100}},
   {%- endfor -%}
   {%- for page in featured -%}

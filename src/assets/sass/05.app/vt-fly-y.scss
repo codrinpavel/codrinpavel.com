@@ -57,13 +57,3 @@ $transitions: image, line, line-1, line-2;
   animation-name: fly-y-out;
   animation-direction: reverse;
 }
-
-@keyframes fly-y-out {
-  from {transform: translateY(0%)}
-  to {transform: translateY(-100%)}
-}
-
-@keyframes fly-y-in {
-  from {transform: translateY(100%)}
-  to {transform: translateY(0%)}
-}

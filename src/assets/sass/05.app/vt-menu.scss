@@ -15,7 +15,7 @@ $menu-items:
   $ease: list.nth($item, 2);
   $index: $i - 1;
 
-  .site-header__item:nth-child(#{$i}) {
+  .vt-nav-home .header__desktop li:nth-child(#{$i}) {
     view-transition-name: menu-#{$name};
   }
 

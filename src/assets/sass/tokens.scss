@@ -131,7 +131,7 @@ $tokens: (
     8xl: fluid(56px, 80px),
     9xl: fluid(64px, 96px),
     10xl: fluid(80px, 120px),
-    header-offset: calc(var(--header-height)*2),
+    header-offset: calc(var(--header-height)),
     footer-offset: calc(var(--grid-margin) * 2),
     fullscreen: calc(100svh - var(--size-header-offset) - var(--size-footer-offset)),
     max: 1e5px,

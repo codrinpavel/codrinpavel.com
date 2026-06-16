@@ -1,102 +1,46 @@
 @use "../mixins" as *;
 
-.site-header {
+.header {
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
-  padding: calc(var(--grid-margin) * 1.5) var(--grid-margin);
 
-  &__item {
-    transform: translate3d(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: var(--header-height);
+  padding: 0 var(--grid-margin);
+
+  font-variation-settings: var(--font-weight-semibold);
+
+  li:last-child {
     display: flex;
+    justify-content: flex-end;
+    text-align: right;
   }
+}
+
+.header__mobile {
+  color: var(--color-black-text);
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__desktop {
+  color: var(--color-faint);
 
   a[aria-current="page"] {
     color: var(--color-black-text);
   }
 
+  .page-home & {
+    transform: translate3d(0, calc(50vh - 50% - var(--grid-margin) * 1.5), 0);
+  }
+
   @include mq(md, max) {
-    a {
-      margin: auto;
-    }
-  }
-
-  @include mq(md) {
-    .page-home & {
-      transform: translate3d(0, calc(50vh - 50% - var(--grid-margin) * 1.5), 0);
-    }
-
-    &__item:last-child {
-      margin-left: auto;
-      justify-content: flex-end;
-    }
+    display: none;
   }
 }
-
-/*
-.site-header {
-  position: fixed;
-  inset: 0 0 auto;
-  z-index: 100;
-
-  padding: calc(var(--grid-margin)*1.5) var(--grid-margin);
-
-  &__item {
-    --i: 0;
-    --total: 1s;
-    --stagger: 58ms;
-    --delay: calc(var(--i) * var(--stagger) + var(--wait-for-loading, 0ms));
-    --duration: calc(var(--total) - calc(var(--i) * var(--stagger)));
-    --ease: cubic-bezier(.19, 1, .22, 1);
-    --wait-for-loading: var(--transition-in-delay);
-
-    display: flex;
-
-    transform: translate3d(0, calc(50vh - 50% - var(--grid-margin)*1.5), 0);
-    transition: transform var(--duration) var(--ease) var(--delay);
-
-    &:nth-child(1) {
-      --i: 0;
-      --ease: cubic-bezier(.22, 1.15, .28, 1);
-    }
-
-    &:nth-child(2) {
-      --i: 2;
-      --ease: cubic-bezier(.16, .84, .24, 1);
-    }
-
-    &:nth-child(3) {
-      --i: 1;
-      --ease: cubic-bezier(.27, .95, .21, 1);
-    }
-
-    &:nth-child(4) {
-      --i: 4;
-      --ease: cubic-bezier(.18, 1, .18, 1);
-    }
-
-    &:nth-child(5) {
-      --i: 3;
-      --ease: cubic-bezier(.2, .75, .12, 1);
-    }
-
-    &:last-child {
-      margin-left: auto;
-      justify-content: flex-end;
-    }
-  }
-
-  a {
-    white-space: nowrap;
-
-    &.is-active {
-      color: var(--color-black-text);
-    }
-  }
-}
-
-body:not(.home) .site-header__item {
-  --wait-for-loading: 0ms;
-  transform: translate3d(0, 0, 0);
-}
-  */

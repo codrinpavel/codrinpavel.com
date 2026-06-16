@@ -10,9 +10,9 @@
   @include meta.load-css('words');
   @include meta.load-css('awards');
 
-  @include meta.load-css('view-transition');
-  @include meta.load-css('view-transition-menu');
-  @include meta.load-css('view-transition-main');
-  @include meta.load-css('view-transition-fly-y');
-  @include meta.load-css('view-transition-fly-x');
+  @include meta.load-css('vt');
+  @include meta.load-css('vt-logo');
+  @include meta.load-css('vt-menu');
+  @include meta.load-css('vt-fly-y');
+  @include meta.load-css('vt-fly-x');
 }

@@ -3,12 +3,36 @@
  * https://github.com/mdn/dom-examples/blob/main/view-transitions/mpa-chapter-nav-multiple-transition-types/index.js
  */
 const VT_KEY = "view-transition";
+const VT_HOME_NAV_CLASS = "vt-nav-home";
 
 function getPageKey(url) {
   const pathname = new URL(url, location.href).pathname;
   const segments = pathname.split("/").filter(Boolean);
 
   return segments.length === 0 ? "/" : `/${segments.at(-1)}/`;
+}
+
+function isHome(url) {
+  return getPageKey(url) === "/";
+}
+
+function shouldRunTransition(fromUrl, toUrl) {
+  /**
+   * Disables the logo swipe animation, when the logo moves up/down the homepage
+   * 
+   * home - home: no class
+   * home - page: class
+   * page - home: class
+   * page - page: no class
+   */
+  return isHome(fromUrl) !== isHome(toUrl);
+}
+
+function activateHomeNavTransitionClass(fromUrl, toUrl) {
+  document.body.classList.toggle(
+    VT_HOME_NAV_CLASS,
+    shouldRunTransition(fromUrl, toUrl)
+  );
 }
 
 function getOrder(url) {
@@ -57,8 +81,7 @@ function clearTransitionOverride() {
 function getTransitionType(fromUrl, toUrl) {
   return (
     readTransitionOverride() ??
-    determineTransitionType(fromUrl, toUrl) ??
-    "forwards"
+    determineTransitionType(fromUrl, toUrl) ?? "forwards"
   );
 }
 
@@ -76,10 +99,11 @@ window.addEventListener("pageswap", (event) => {
   console.log("pageswap");
   if (!event.viewTransition || !event.activation) return;
 
-  const type = getTransitionType(
-    event.activation.from.url,
-    event.activation.entry.url
-  );
+  const fromUrl = event.activation.from.url;
+  const toUrl = event.activation.entry.url;
+  const type = getTransitionType(fromUrl, toUrl);
+
+  activateHomeNavTransitionClass(fromUrl, toUrl);
 
   console.log(type);
   event.viewTransition.types.add(type);
@@ -89,12 +113,14 @@ window.addEventListener("pagereveal", (event) => {
   console.log("pagereveal");
   if (!event.viewTransition || !navigation.activation) return;
 
-  const type = getTransitionType(
-    navigation.activation.from.url,
-    navigation.activation.entry.url
-  );
+  const fromUrl = navigation.activation.from.url;
+  const toUrl = navigation.activation.entry.url;
+  const type = getTransitionType(fromUrl, toUrl);
+
+  activateHomeNavTransitionClass(fromUrl, toUrl);
 
   console.log(type);
   event.viewTransition.types.add(type);
+
   clearTransitionOverride();
 });
