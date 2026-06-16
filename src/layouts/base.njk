@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {#<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>#}
-
     {% include "_meta.njk" %}
     {% include "_favicon.njk" %}
     {% include "_styles.njk" %}
     {% include "_dev_scripts.njk" %}
+    {% include "_scripts.njk" %}
     {% include "_preloads.njk" %}
   </head>
 
@@ -17,7 +16,6 @@
       {{ content | safe }}
     </main>
 
-    {% include "_scripts.njk" %}
     {#% include "footer.njk" %#}
   </body>
 </html>
