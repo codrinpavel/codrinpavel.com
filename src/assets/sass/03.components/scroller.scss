@@ -1,18 +1,17 @@
 @use "../mixins" as *;
 
-.has-scroller section {
-  overflow: auto;
-}
-
 .scroller {
   --item-width: 100%;
   --count: 5;
+  overflow: auto;
 
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  gap: var(--grid-margin);
-  height: var(--size-fullscreen);
+  &__track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: var(--grid-margin);
+    height: var(--size-fullscreen);
+  }
 
   &__item {
     height: 100%;

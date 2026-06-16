@@ -7,24 +7,26 @@ order: 5
 
 <section class="awards" id="awards">
   <div class="wrapper scroller" style="--count: {{awards.length}}">
+    <div class="scroller__track">
 
-    {% for group in awards %}
-      <div class="scroller__item">
-        <div class="stat">
-          <h2 class="type-large">{{group.organization}}</h2>
+      {% for group in awards %}
+        <div class="scroller__item">
+          <div class="stat">
+            <h2 class="type-large">{{group.organization}}</h2>
 
-          <ul>
-            {%- for award in group.awards -%}
-              <li>
-                <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.year }}&mdash;{{ award.title }}">
-                  {{ award.year }}&mdash;{{ award.client }}
-                </a>
-              </li>
-            {%- endfor -%}
-          </ul>
+            <ul>
+              {%- for award in group.awards -%}
+                <li>
+                  <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.year }}&mdash;{{ award.title }}">
+                    {{ award.year }}&mdash;{{ award.client }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
 
+    </div>
   </div>
 </section>
