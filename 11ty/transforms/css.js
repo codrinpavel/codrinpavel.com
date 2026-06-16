@@ -33,6 +33,7 @@ export default async function (content) {
           /^js/,
           /^is/,
           /^has/,
+          /^vt-/,
           /sr-only/,
           /animation/,
           /wave-word/,
