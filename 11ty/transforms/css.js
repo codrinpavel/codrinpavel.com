@@ -30,9 +30,9 @@ export default async function (content) {
       rejected: true,
       safelist: {
         greedy: [
-          /^js/,
-          /^is/,
-          /^has/,
+          /^js-/,
+          /^is-/,
+          /^has-/,
           /^vt-/,
           /sr-only/,
           /animation/,

@@ -32,6 +32,31 @@
   to { transform: translateY(0%) }
 }
 
+@keyframes fly-out-to-right {
+  from { transform: translateX(0%) }
+  to { transform: translateX(100%) }
+}
+
+@keyframes fly-out-to-left {
+  from { transform: translateX(0%) }
+  to { transform: translateX(-100%) }
+}
+
+@keyframes fly-in-from-right {
+  from { transform: translateX(100%) }
+  to { transform: translateX(0%) }
+}
+
+@keyframes fly-in-from-left {
+  from { transform: translateX(-100%) }
+  to { transform: translateX(0%) }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 
 
 // Old

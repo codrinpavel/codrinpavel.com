@@ -1,33 +1,21 @@
-.has-scroller main {
+html:has(.has-scroller) {
   view-transition-name: scroller;
 }
 
-html:active-view-transition {
-  .scroller__container {
-    position: static;
-  }
-}
-
 :active-view-transition-type(forwards) {
-  &::view-transition-old(scroller) {
-    animation-name: fly-x-out;
-  }
-
   &::view-transition-new(scroller) {
-    transform: translateX(100%);
-    animation-name: fly-x-in;
+    animation-name: fly-in-from-right;
+  }
+  &::view-transition-old(scroller) {
+    animation-name: fly-out-to-left;
   }
 }
 
 :active-view-transition-type(backwards) {
-  &::view-transition-old(scroller) {
-    animation-name: fly-x-in;
-    animation-direction: reverse;
-  }
-
   &::view-transition-new(scroller) {
-    transform: translateX(-100%);
-    animation-name: fly-x-out;
-    animation-direction: reverse;
+    animation-name: fly-in-from-left;
+  }
+  &::view-transition-old(scroller) {
+    animation-name: fly-out-to-right;
   }
 }
