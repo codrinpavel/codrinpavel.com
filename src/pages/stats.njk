@@ -6,36 +6,33 @@ order: 3
 ---
 
 <section class="stats" id="stats">
-  <div class="wrapper scroller">
-    <div class="scroller__sticky">
-      <div class="scroller__track" style="--count: {{stats.length + 1}}">
+  <div class="wrapper scroller" style="--count: {{stats.length + 1}}">
 
-        {% for stat in stats %}
-          <div class="scroller__item">
-            <div class="stat">
-              <span class="figure use-inview">
-                {%- for char in stat.figure.split('') -%}
-                  <i class="type-huge" style="--index:{{loop.index}}">{{- char -}}</i>
-                {%- endfor -%}
-              </span>
+    {% for stat in stats %}
+      <div class="scroller__item">
+        <div class="stat">
+          <span class="figure use-inview">
+            {%- for char in stat.figure.split('') -%}
+              <i class="type-huge" style="--index:{{loop.index}}">{{- char -}}</i>
+            {%- endfor -%}
+          </span>
 
-              <span class="type-medium">{{ stat.title }}</span>
+          <span class="type-medium">{{ stat.title }}</span>
 
-              <ul class="mt-auto">
-                {%- for bullet in stat.bullets -%}
-                  <li>{{- bullet -}}</li>
-                {%- endfor -%}
-              </ul>
-            </div>
-          </div>
-        {% endfor %}
-
-        <div class="scroller__item scroller__next">
-          <a class="js-sequence-link" href="">
-            {% svg "arrow.svg", "icon-arrow" %}
-          </a>
+          <ul class="mt-auto">
+            {%- for bullet in stat.bullets -%}
+              <li>{{- bullet -}}</li>
+            {%- endfor -%}
+          </ul>
         </div>
       </div>
+    {% endfor %}
+
+    <div class="scroller__item scroller__next">
+      <a class="js-sequence-link" href="">
+        {% svg "arrow.svg", "icon-arrow" %}
+      </a>
     </div>
+
   </div>
 </section>

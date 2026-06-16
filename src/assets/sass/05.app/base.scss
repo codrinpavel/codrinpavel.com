@@ -1,14 +1,14 @@
 @use "../mixins" as *;
 
 ::-webkit-scrollbar {
-  //display: none;
+  display: none;
 }
 
 html,
 section {
-  //scrollbar-width: none;
-  //-ms-overflow-style: none;
-  //-webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {

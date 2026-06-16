@@ -1,29 +1,13 @@
 import Lenis from 'lenis';
 
+const content = document.querySelector('.scroller');
+
 const lenis = new Lenis({
+  wrapper: document.querySelector('section'),
+  content: content || document.documentElement,
+  orientation: content ? 'horizontal' : 'vertical',
   autoRaf: true,
-  autoToggle: true,
-  anchors: true,
-  allowNestedScroll: true,
-  naiveDimensions: true,
-  stopInertiaOnNavigate: true,
   lerp: 0.085,
 });
-
-const wrapper = document.querySelector('.scroller__sticky');
-const track = document.querySelector('.scroller__track');
-
-if (track && wrapper) {
-  const horizontalLenis = new Lenis({
-    wrapper: wrapper,
-    content: track,
-    orientation: 'horizontal',
-    gestureOrientation: 'both',
-    smoothWheel: true,
-    smoothTouch: false,
-    autoRaf: true,
-    lerp: 0.085,
-  });
-}
 
 export default lenis;

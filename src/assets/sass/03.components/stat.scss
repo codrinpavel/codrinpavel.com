@@ -1,9 +1,7 @@
-
-
 .stat {
   display: flex;
   flex-direction: column;
-  min-height: var(--size-fullscreen);
+  height: 100%;
 
   .figure {
     text-indent: -0.3em;

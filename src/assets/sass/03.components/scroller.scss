@@ -1,103 +1,24 @@
 @use "../mixins" as *;
 
 .has-scroller section {
-  //overflow-y: scroll;
-  height: 100%;
+  overflow: auto;
 }
-
 
 .scroller {
   --item-width: 100%;
   --count: 5;
 
-  //height: calc(100svh + calc((var(--count) * 50vh)));
-  //view-timeline-name: --track;
-  //view-timeline-axis: block;
-
-  &__sticky {
-    //position: sticky;
-    //top: 0;
-    //overflow: hidden;
-  overflow: hidden;
-  width: 100%;
-  touch-action: pan-y;
-  }
-
-  &__track {
-    width: 200vh;
-    display: flex;
-    align-items: flex-start;
-    margin-left: calc(-1 * var(--column-gap));
-
-    //transform: translateX(0%);
-    //animation: track linear both;
-    //animation-range: contain 0%;
-    //animation-timeline: --track;
-    //will-change: transform;
-  }
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: var(--grid-margin);
+  height: var(--size-fullscreen);
 
   &__item {
-    flex: 0 0 var(--item-width);
-
-    >* {
-      margin-left: var(--column-gap);
-      border-top: 1px solid var(--color-border);
-      padding-top: var(--size-4xl);
-    }
-  }
-
-  .scroller__next {
-    min-height: var(--size-fullscreen);
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "NEXT";
-      position: absolute;
-      inset: 0 0 auto auto;
-    }
-
-    &::after {
-      inset: auto 0 0 auto;
-    }
-
-    a {
-      padding: 0;
-      position: absolute;
-      z-index: 1;
-      inset: 0;
-      border-top: 0;
-      color: var(--color-balance-text);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 500ms;
-
-      &::before,
-      &::after {
-        content: "NEXT";
-        position: absolute;
-        inset: 0 auto auto 0;
-      }
-
-      &::after {
-        inset: auto auto 0 0;
-      }
-
-      .icon-arrow {
-        width: 24px;
-        height: auto;
-      }
-
-      &:hover {
-        svg {
-          color: var(--color-white);
-        }
-
-        background-color: var(--color-balance-text);
-      }
-    }
+    height: 100%;
+    flex: 0 0 calc(var(--item-width));
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--size-4xl);
   }
 
   @include mq(md) {
@@ -105,8 +26,56 @@
   }
 }
 
-@keyframes track {
-  to {
-    transform: translateX(calc(-1 * ((var(--count) * var(--item-width)) - 100%)));
+.scroller__next {
+  min-height: var(--size-fullscreen);
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "NEXT";
+    position: absolute;
+    inset: 0 0 auto auto;
+  }
+
+  &::after {
+    inset: auto 0 0 auto;
+  }
+
+  a {
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    border-top: 0;
+    color: var(--color-balance-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 500ms;
+
+    &::before,
+    &::after {
+      content: "NEXT";
+      position: absolute;
+      inset: 0 auto auto 0;
+    }
+
+    &::after {
+      inset: auto auto 0 0;
+    }
+
+    .icon-arrow {
+      width: 24px;
+      height: auto;
+    }
+
+    &:hover {
+      svg {
+        color: var(--color-white);
+      }
+
+      background-color: var(--color-balance-text);
+    }
   }
 }
