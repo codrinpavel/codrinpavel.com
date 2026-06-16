@@ -1,5 +1,15 @@
-.has-scroller {
+.has-scroller main {
   view-transition-name: scroller;
+}
+
+html:active-view-transition {
+  .scroller__container {
+    position: static;
+  }
+}
+
+::view-transition-group(scroller) {
+  transform: translateY(0) !important;
 }
 
 ::view-transition-old(scroller),

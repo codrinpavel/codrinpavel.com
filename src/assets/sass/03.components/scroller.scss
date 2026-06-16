@@ -4,10 +4,6 @@
   --item-width: 100%;
   --count: 5;
 
-  position: absolute;
-  inset: var(--grid-margin);
-
-  width: calc(100% - var(--grid-margin) * 2);
   height: calc(100svh + calc((var(--count) * 50vh)));
   view-timeline-name: --track;
   view-timeline-axis: block;

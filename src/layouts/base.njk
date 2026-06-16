@@ -5,8 +5,9 @@
 
     {% include "_meta.njk" %}
     {% include "_favicon.njk" %}
-    {% include "_preloads.njk" %}
     {% include "_styles.njk" %}
+    {% include "_dev_scripts.njk" %}
+    {% include "_preloads.njk" %}
   </head>
 
   <body {{ (bodyClass and 'class="page-' ~ bodyClass ~ '"')|safe }}>
@@ -16,7 +17,7 @@
       {{ content | safe }}
     </main>
 
-    {#% include "footer.njk" %#}
     {% include "_scripts.njk" %}
+    {#% include "footer.njk" %#}
   </body>
 </html>

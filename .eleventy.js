@@ -13,6 +13,8 @@ export default async function (eleventyConfig) {
    */
 
   eleventyConfig.setServerOptions({
+    liveReload: true,
+    domDiff: false,
     showAllHosts: true,
     watch: [
       "dist/assets/min/**/*.css",

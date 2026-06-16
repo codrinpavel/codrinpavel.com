@@ -20,7 +20,7 @@ function determineTransitionType(fromUrl, toUrl) {
   const to = getOrder(toUrl);
 
   if (from == null || to == null) return undefined;
-  return to > from ? "forwards" : "backwards";
+  return to < from ? "backwards" : "forwards";
 }
 
 function storeTransitionOverride(type, toUrl) {
@@ -63,25 +63,38 @@ function getTransitionType(fromUrl, toUrl) {
 }
 
 document.addEventListener("click", (event) => {
-  const link = event.target.closest("a[data-transition]");
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+
+  const link = target.closest("a[data-transition]");
   if (!link) return;
 
   storeTransitionOverride(link.dataset.transition, link.href);
 });
 
 window.addEventListener("pageswap", (event) => {
+  console.log("pageswap");
   if (!event.viewTransition || !event.activation) return;
-  const type = getTransitionType(event.activation.from.url,event.activation.entry.url);
 
-  console.log("pageswap",type);
+  const type = getTransitionType(
+    event.activation.from.url,
+    event.activation.entry.url
+  );
+
+  console.log(type);
   event.viewTransition.types.add(type);
 });
 
 window.addEventListener("pagereveal", (event) => {
+  console.log("pagereveal");
   if (!event.viewTransition || !navigation.activation) return;
-  const type = getTransitionType(navigation.activation.from.url,navigation.activation.entry.url);
 
-  console.log("pagereveal",type);
+  const type = getTransitionType(
+    navigation.activation.from.url,
+    navigation.activation.entry.url
+  );
+
+  console.log(type);
   event.viewTransition.types.add(type);
   clearTransitionOverride();
 });
