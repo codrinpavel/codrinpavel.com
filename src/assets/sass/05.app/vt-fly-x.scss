@@ -8,11 +8,6 @@ html:active-view-transition {
   }
 }
 
-::view-transition-old(scroller),
-::view-transition-new(scroller) {
-  animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
-}
-
 :active-view-transition-type(forwards) {
   &::view-transition-old(scroller) {
     animation-name: fly-x-out;

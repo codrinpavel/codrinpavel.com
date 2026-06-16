@@ -23,11 +23,6 @@ $transitions: image, line, line-1, line-2;
   }
 }
 
-#{vt("old", $transitions)},
-#{vt("new", $transitions)} {
-  animation: var(--transition-animation-duration) cubic-bezier(.76,0,.24,1) forwards;
-}
-
 #{vt("old", $transitions)} {
   animation-name: fly-y-out;
 }

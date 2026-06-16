@@ -1,36 +1,22 @@
 @use "../mixins" as *;
 
-.vt-logo-1 {view-transition-name: vtlogo1}
-.vt-logo-2 {view-transition-name: vtlogo2}
+.vt-logo-1 { view-transition-name: vtlogo1; }
+.vt-logo-2 { view-transition-name: vtlogo2; }
 
-@include mq(md) {
+::view-transition-old(vtlogo1) { animation-name: fly-out-to-top; }
+::view-transition-new(vtlogo1) { animation-name: fly-in-from-bottom; }
+::view-transition-old(vtlogo2) { animation-name: fly-out-to-bottom; }
+::view-transition-new(vtlogo2) { animation-name: fly-in-from-top; }
+
+/*
+ * Disables animations
+ * when menu items are also moving up/down.
+ */
+@include mq(lg) {
   body.vt-nav-home {
     .vt-logo-1,
     .vt-logo-2 {
       view-transition-name: none;
     }
   }
-}
-
-::view-transition-old(vtlogo1),
-::view-transition-new(vtlogo1),
-::view-transition-old(vtlogo2),
-::view-transition-new(vtlogo2) {
-  animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
-}
-
-::view-transition-old(vtlogo1) {
-  animation-name: fly-out-to-top;
-}
-
-::view-transition-old(vtlogo2) {
-  animation-name: fly-out-to-bottom;
-}
-
-::view-transition-new(vtlogo1) {
-  animation-name: fly-in-from-bottom;
-}
-
-::view-transition-new(vtlogo2) {
-  animation-name: fly-in-from-top;
 }
