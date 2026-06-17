@@ -9,6 +9,7 @@
   padding: 0 var(--grid-margin);
 
   font-variation-settings: var(--font-weight-semibold);
+  background-color: var(--color-white);
 
   .header__nav {
     display: flex;
@@ -16,7 +17,6 @@
     justify-content: center;
     position: relative;
     z-index: 10;
-    background-color: var(--color-white);
 
     li:last-child {
       display: flex;
@@ -36,6 +36,7 @@
 }
 
 .header__desktop {
+  align-items: center;
   color: var(--color-faint);
 
   a[aria-current="page"] {

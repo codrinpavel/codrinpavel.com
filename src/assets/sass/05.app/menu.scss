@@ -27,28 +27,15 @@
 
 .menu {
   position: fixed;
-  inset: var(--size-header-offset) 0 var(--grid-margin) 0;
+  inset: var(--size-header-offset) 0 0 0;
   z-index: 1;
 
   font-size: var(--font-size-6xl);
   letter-spacing: 0.04em;
   color: var(--color-faint);
 
-  padding: 0 var(--grid-margin);
+  padding: var(--size-4xl) var(--grid-margin);
   background-color: var(--color-white);
-
-  .wrapper {
-    position: relative;
-    padding-top: var(--size-4xl);
-
-    &::before {
-      content: '';
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 1px;
-      background: #cfcfcf;
-    }
-  }
 
   a[aria-current="page"] {
     color: var(--color-black-text);
@@ -59,21 +46,25 @@
   }
 }
 
+.header__nav {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 0 1px;
+  transition: background-size 666ms;
+}
+
+.menu-open .header__nav {
+  background-position: 0 100%;
+  background-size: 100% 1px;
+}
+
 /*animations*/
 
 .menu {
-  opacity: 0;
   clip-path: inset(0 0 100%);
-  transition: clip-path 0ms, opacity 400ms;
-  transition-delay: 600ms, 0ms;
-  will-change: clip-path, opacity;
-
-  .wrapper::before {
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path 400ms;
-    transition-delay: 200ms;
-    will-change: clip-path;
-  }
+  transition: clip-path 600ms;
+  will-change: clip-path;
 
   li {
     overflow: hidden;
@@ -87,20 +78,14 @@
     transition-duration: 175ms, 200ms;
     transition-delay: 0;
     will-change: opacity, transform;
+    transition-delay: calc(600ms);
   }
 
   &.is-open {
-    opacity: 1;
     clip-path: inset(0 0 0 0);
-    transition: clip-path 600ms, opacity 0ms;
-    transition-delay: 0ms, 0ms;
-
-    .wrapper::before {
-      clip-path: inset(0 0 0 0);
-    }
 
     a {
-      transition-delay: calc(100ms + 80ms * var(--index));
+      transition-delay: calc(220ms + 80ms * var(--index)), calc(200ms + 80ms * var(--index));
       transform: translateY(0%);
       opacity: 1;
     }

@@ -22,7 +22,7 @@ body::before {
   display: none !important;
 }
 
-:where(a) {
+:where(a, button) {
   color: inherit;
   text-decoration: none;
   outline: 0;

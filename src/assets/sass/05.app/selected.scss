@@ -1,0 +1,61 @@
+.selected { 
+  .select {
+    margin-bottom: var(--size-8xl);
+    view-timeline-name: --image;
+
+    &__img {
+      position: relative;
+      overflow: hidden;
+
+      picture:first-child {
+        position: absolute;
+        inset: 0;
+        filter: blur(10px);
+        scale: 2;
+      }
+
+      picture:last-child {
+        padding: 15%;
+      }
+    }
+  }
+
+  picture {
+    display: block;
+    border-radius: 6px;
+    overflow: hidden;
+    //box-shadow: 0 0 var(--size-xl) rgba(0, 0, 0, 0.20);
+
+    //padding: 30px 8px 8px 8px;
+    //background: #F0F2F5;
+  }
+
+  picture:last-child .image {
+    animation: image-parallax linear both;
+    animation-timeline: --image;
+    animation-range: cover;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  figcaption {
+    padding: var(--size-ml) 0;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.8;
+    }
+  }
+}
+
+
+
+@keyframes image-parallax {
+  from {
+    transform: translateY(-25%);
+  }
+  to {
+    transform: translateY(25%);
+  }
+}

@@ -23,12 +23,8 @@
     <ul class="header__desktop columns columns-3 lg:columns-1">
       <li>{{logo|safe}}</li>
 
-      <li class="mr-auto text-center">
-        <a class="link type-headline js-project" href="{{"/gallery/stanley-black-and-decker-2021/" | url}}">Work</a>
-      </li>
-
-      {% for item in collections.pages | order %}
-        <li>
+      {% for item in collections.nav | order %}
+        <li {% if loop.first %}class="mr-auto text-center"{% endif %}>
           <a class="link type-headline" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
         </li>
       {% endfor %}
