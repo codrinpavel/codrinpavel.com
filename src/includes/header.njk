@@ -9,11 +9,12 @@
 {% endset %}
 
 <header class="header">
-  <nav class="wrapper">
-
+  <nav class="wrapper header__nav">
     <ul class="header__mobile columns columns-4">
       <li>{{logo|safe}}</li>
-      <li class="text-center">Menu</li>
+      <li class="text-center">
+        <button class="menu-button type-regular" aria-controls="menu" aria-expanded="false"><span>Menu</span><span>Close</span></button>
+      </li>
       <li>0{{order + 1}}&mdash;{{title}}</li>
     </ul>
 
@@ -21,7 +22,7 @@
       <li>{{logo|safe}}</li>
 
       <li class="mr-auto text-center">
-        <a class="link type-headline js-project" href="{{"/gallery/stanley-black-and-decker-2021/" | url}}">Gallery</a>
+        <a class="link type-headline js-project" href="{{"/gallery/stanley-black-and-decker-2021/" | url}}">Work</a>
       </li>
 
       {% for item in collections.pages | order %}
@@ -29,6 +30,16 @@
           <a class="link type-headline" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
         </li>
       {% endfor %}
+    </ul>
+  </nav>
+
+  <nav class="menu">
+    <ul class="wrapper">
+    {% for item in collections.nav | order %}
+      <li style="--index:{{loop.index}}">
+        <a class="" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
+      </li>
+    {% endfor %}
     </ul>
   </nav>
 </header>

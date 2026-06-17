@@ -5,7 +5,7 @@
 @layer base, components, utilities, app;
 
 :root {
-  --grid-margin: 8px;
+  --grid-margin: 16px;
   --grid-screenwidth: 1940px;
   --column-gap: 16px;
   --row-gap: var(--size-2xl);
@@ -13,6 +13,7 @@
   --header-spacing: 0px;
 
   @include mq(lg) {
+  --grid-margin: 8px;
   --header-height: 30px;
   --header-spacing: 70px;
   }

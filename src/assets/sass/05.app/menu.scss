@@ -1,0 +1,97 @@
+.menu-button {
+  overflow: hidden;
+  height: 1.1em;
+
+  span {
+    display: block;
+    transition: transform 600ms;
+  }
+
+  &[aria-expanded="true"] {
+    span {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  inset: var(--size-header-offset) 0 0 0;
+  z-index: 1;
+
+  font-size: var(--font-size-6xl);
+  letter-spacing: 0.04em;
+  color: var(--color-faint);
+
+  padding: 0 var(--grid-margin);
+  background-color: var(--color-white);
+
+  .wrapper {
+    position: relative;
+    padding-top: var(--size-4xl);
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: #cfcfcf;
+    }
+  }
+
+  a[aria-current="page"] {
+    color: var(--color-black-text);
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+/*animations*/
+
+.menu {
+  opacity: 0;
+  clip-path: inset(0 0 100%);
+  transition: clip-path 400ms, opacity 400ms;
+  transition-delay: 400ms, 0ms;
+  will-change: clip-path, opacity;
+
+  .wrapper::before {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 400ms;
+    transition-delay: 200ms;
+    will-change: clip-path;
+  }
+
+  li {
+    overflow: hidden;
+  }
+
+  a {
+    display: block;
+    opacity: 0;
+    transform: translateY(-75%);
+    transition: opacity, transform;
+    transition-duration: 175ms, 200ms;
+    transition-delay: 0;
+    will-change: opacity, transform;
+  }
+
+  &.is-open {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 400ms, opacity 0ms;
+    transition-delay: 0ms, 0ms;
+
+    .wrapper::before {
+      clip-path: inset(0 0 0 0);
+    }
+
+    a {
+      transition-delay: calc(80ms * var(--index));
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}

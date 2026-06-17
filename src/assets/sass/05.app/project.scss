@@ -1,12 +1,19 @@
+@use "../mixins" as *;
+
+@include mq(lg) {
+  .page-project main {
+    padding-block: 0;
+  }
+}
+
 .project {
-  padding-block: 0;
-  height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   .columns {
     height: 100%;
+    row-gap: var(--size-md);
   }
 
   .image {
@@ -20,12 +27,53 @@
 
   .line {
     display: flex;
-    gap: 4px;
+    gap: 1em;
   }
 
   .vt-line-year,
   .vt-line-client,
   .vt-line-project {
     will-change: transform;
+  }
+
+  @include mq(lg, max) {
+    .columns {
+      height: auto;
+    }
+
+    &__client {
+      order: -100;
+
+      .line {
+        justify-content: space-between;
+      }
+    }
+
+    &__name {
+      order: -99;
+
+      .line {
+        justify-content: space-between;
+      }
+    }
+
+    &__year {
+      order: -101;
+    }
+
+    .image {
+      height: auto;
+      width: auto;
+      clip-path: inset(1px);
+      max-height: none;
+    }
+
+    &__prev {
+      display: none;
+    }
+
+    &__next {
+      display: none;
+    }
   }
 }

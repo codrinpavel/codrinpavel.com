@@ -10,16 +10,19 @@
 
   font-variation-settings: var(--font-weight-semibold);
 
-  li:last-child {
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
-  }
-
-  .wrapper {
+  .header__nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-white);
+
+    li:last-child {
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
+    }
   }
 }
 

@@ -1,4 +1,5 @@
-section:not(.project, .home) {
+html:not(.page-home) main,
+html:not(.page-project) main {
   view-transition-name: scroller;
 }
 
