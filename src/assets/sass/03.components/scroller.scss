@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    gap: var(--grid-margin);
+    gap: var(--column-gap);
     height: 100%;
   }
 
@@ -25,7 +25,7 @@
     --item-width: 50%;
   }
 }
-
+/*
 .scroller__next {
   min-height: 100%;
   position: relative;
@@ -41,6 +41,7 @@
     inset: auto 0 0 auto;
   }
 
+  
   a {
     padding: 0;
     position: absolute;
@@ -79,3 +80,4 @@
     }
   }
 }
+*/

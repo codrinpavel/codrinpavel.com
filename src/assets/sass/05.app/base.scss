@@ -15,12 +15,23 @@ body {
   background: var(--color-white);
 }
 
-html, body, section, .wrapper {
-  height: 100%;
+html, body {
+  height: 100svh;
 }
 
-.image, video {
-  border-radius: 4px;
+main {
+  overflow-y: auto;
+  overscroll-behavior: none;
+  height: 100svh;
+}
+
+section {
+  padding: var(--size-header-offset) var(--grid-margin) var(--size-4xl);
+
+  &.fullscreen {
+    height: 100svh;
+    padding-bottom: var(--size-footer-offset);
+  }
 }
 
 .link {

@@ -1,5 +1,5 @@
 {
   "layout": "base.njk",
-  "tags": ["pages", "nav"],
+  "tags": ["nav"],
   "permalink": "/{{ page.fileSlug }}/index.html"
 }

@@ -7,7 +7,7 @@ pagination:
   size: 1
   alias: featured
 
-permalink: "selected/{{ featured.client | slugify }}-{{featured.year}}/"
+permalink: "featured/{{ featured.client | slugify }}-{{featured.year}}/"
 
 eleventyComputed:
   preload: work/{{featured.client | slugify}}-{{featured.project | slugify}}-{{featured.year}}.png
@@ -25,7 +25,7 @@ eleventyComputed:
 
       <div class="project__year">
         <div class="line">
-          <div class="vt-line-year color-black-text mx-auto">{{featured.year}}</div>
+          <div class="vt-line-year color-black-text">{{featured.year}}</div>
         </div>
       </div>
 

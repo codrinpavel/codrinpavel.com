@@ -2,17 +2,17 @@
 layout: base.njk
 htmlClass: "stats has-scroller"
 title: "Stats"
-order: 3
+order: 4
 ---
 
-<section class="stats" id="stats">
+<section class="stats fullscreen" id="stats">
   <div class="wrapper scroller" style="--count: {{stats.length + 1}}">
     <div class="scroller__track">
 
       {% for stat in stats %}
         <div class="scroller__item">
           <div class="stat">
-            <span class="figure use-inview">
+            <span class="figure use-inview animation-wave">
               {%- for char in stat.figure.split('') -%}
                 <i class="type-huge" style="--index:{{loop.index}}">{{- char -}}</i>
               {%- endfor -%}
@@ -29,12 +29,13 @@ order: 3
         </div>
       {% endfor %}
 
+      {#
       <div class="scroller__item scroller__next">
         <a class="js-sequence-link" href="">
           {% svg "arrow.svg", "icon-arrow" %}
         </a>
       </div>
-
+#}
     </div>
   </div>
 </section>

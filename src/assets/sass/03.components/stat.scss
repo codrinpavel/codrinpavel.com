@@ -5,22 +5,6 @@
 
   .figure {
     text-indent: -0.3em;
-    display: flex;
-    overflow: hidden; 
-
-    i {
-      display: block;
-      will-change: transform;
-      opacity: 0;
-      transform: translateY(.8em);
-      transition: transform 750ms ease, opacity 750ms ease;
-      transition-delay: calc(var(--index) * 45ms);
-    }
-
-    &.is-inview i {
-      transform: translateY(0px);
-      opacity: 1;
-    }
   }
 
   .type-medium {

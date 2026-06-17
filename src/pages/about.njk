@@ -2,7 +2,7 @@
 layout: base.njk
 htmlClass: "about"
 title: "About"
-order: 2
+order: 1
 ---
 
 {% set sortedWork = work | sortByYear %}
@@ -13,7 +13,7 @@ order: 2
       <div class="columns-12 lg:columns-6">
         <p class="type-large">For more than 15 years, I've helped agencies, nonprofits, public companies, and publishers develop accessible, high-performance websites, reports, and digital communications platforms. Many of these partners have returned for multiple engagements, and I’m grateful for their continued trust.</p>
       </div>
-
+      {#
       <div class="columns-12 lg:columns-3 lg:ml-1">
         <figure class="spotlight">
           <video id="spotlight-video" width="1440" height="900" src="{{ '/assets/video/fnih.mp4' | url }}" muted playsinline loop autoplay></video>
@@ -23,6 +23,7 @@ order: 2
           <figcaption class="sr-only">Animated homepage designs from the Foundation for the National Institutes of Health (FNIH) annual reports, featuring the 2018, 2019, and 2020 editions.</figcaption>
         </figure>
       </div>
+      #}
     </div>
 
     <div class="columns row-gap-8xl">

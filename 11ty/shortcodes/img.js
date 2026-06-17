@@ -37,7 +37,7 @@ export default async function (
   strategy = null
 ) {
   const metadata = await Image(`./src/assets/img/${src}`, {
-    widths: [null, 1024, 2048],
+    widths: [null, 600, 1024, 2048],
     formats: ["webp", null],
     urlPath: `${Config.BASEPATH}/assets/img`,
     outputDir: "dist/assets/img",

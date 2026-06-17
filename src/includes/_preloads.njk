@@ -7,7 +7,7 @@
 {%- endif -%}
 
 {# Prefetch Entire Menu except current page #}
-{%- for item in collections.pages | order %}
+{%- for item in collections.nav | order %}
   {%- if page.url != item.url %}
     <link rel="prefetch" href="{{ item.url | url }}">
   {%- endif %}

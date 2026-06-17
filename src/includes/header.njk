@@ -24,7 +24,7 @@
       <li>{{logo|safe}}</li>
 
       {% for item in collections.nav | order %}
-        <li {% if loop.first %}class="mr-auto text-center"{% endif %}>
+        <li {% if loop.first %}class="mr-auto"{% endif %}>
           <a class="link type-headline" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
         </li>
       {% endfor %}

@@ -1,6 +1,5 @@
 import './modules/lenis.js';
 import './modules/view-transition-types.js';
-import './modules/video-controls.js';
 import './modules/menu.js';
 
 // animations
