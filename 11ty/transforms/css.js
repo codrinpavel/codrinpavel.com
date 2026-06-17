@@ -35,6 +35,7 @@ export default async function (content) {
           /^has-/,
           /^vt-/,
           /sr-only/,
+          /aria/,
           /animation/,
           /wave-word/,
           /overflow-hidden/
