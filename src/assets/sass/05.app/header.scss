@@ -27,6 +27,7 @@
 }
 
 .header__mobile {
+  align-items: center;
   color: var(--color-black-text);
 
   @include mq(lg) {

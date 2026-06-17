@@ -12,10 +12,12 @@
   <nav class="wrapper header__nav">
     <ul class="header__mobile columns columns-4">
       <li>{{logo|safe}}</li>
-      <li class="text-center">
-        <button class="menu-button type-regular" aria-controls="menu" aria-expanded="false"><span>Menu</span><span>Close</span></button>
+      <li class="text-center">0{{order}}&mdash;{{title}}</li>
+      <li>
+        <button class="menu-button type-regular" aria-controls="menu" aria-expanded="false">
+          <span><b>Menu</b><b>Close</b></span>
+        </button>
       </li>
-      <li>0{{order + 1}}&mdash;{{title}}</li>
     </ul>
 
     <ul class="header__desktop columns columns-3 lg:columns-1">
@@ -33,7 +35,7 @@
     </ul>
   </nav>
 
-  <nav class="menu">
+  <nav class="menu" >
     <ul class="wrapper">
     {% for item in collections.nav | order %}
       <li style="--index:{{loop.index}}">

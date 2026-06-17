@@ -9,21 +9,28 @@
   --transition-animation-duration: 666ms;
 }
 
+::view-transition-group(root),
+::view-transition-image-pair(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
 ::view-transition-group(*) {
   // overflow: hidden;
   // allow horizontal overflow for text
   clip-path: inset(0 -9999px 0 -9999px);
 }
 
-::view-transition-image-pair(*),
-::view-transition-old(*),
-::view-transition-new(*) {
-  animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
-  inline-size: auto;
-  block-size: auto;
-  width: auto;
-  height: auto;
-}
+//::view-transition-image-pair(*),
+//::view-transition-old(*),
+//::view-transition-new(*) {
+//  animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
+//  inline-size: auto;
+//  block-size: auto;
+//  width: auto;
+//  height: auto;
+//}
 
 /*
  * Keyframes

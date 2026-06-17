@@ -1,14 +1,25 @@
 .menu-button {
-  overflow: hidden;
-  height: 1.1em;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   span {
-    display: block;
+    height: 1.1em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  b {
     transition: transform 600ms;
   }
 
   &[aria-expanded="true"] {
-    span {
+    b {
       transform: translateY(-100%);
     }
   }
@@ -53,7 +64,7 @@
 .menu {
   opacity: 0;
   clip-path: inset(0 0 100%);
-  transition: clip-path 400ms, opacity 400ms;
+  transition: clip-path 0ms, opacity 400ms;
   transition-delay: 400ms, 0ms;
   will-change: clip-path, opacity;
 
@@ -93,5 +104,29 @@
       transform: translateY(0%);
       opacity: 1;
     }
+  }
+}
+
+
+
+
+
+
+/* source page */
+.menu {
+  view-transition-name: menu;
+}
+
+::view-transition-old(menu) {
+  animation: menu-out 600ms cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+@keyframes menu-out {
+  from {
+  clip-path: inset(0 0 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 100% 0);
   }
 }

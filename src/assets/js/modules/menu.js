@@ -4,9 +4,6 @@ const menu = document.querySelector('.menu');
 const BODY_CLASS = 'menu-open';
 const MENU_CLASS = 'is-open';
 
-// Initial state
-menu.inert = true;
-
 function openMenu() {
   menu.classList.add(MENU_CLASS);
   menu.inert = false;
