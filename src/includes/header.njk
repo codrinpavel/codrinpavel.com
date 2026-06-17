@@ -39,7 +39,7 @@
     <ul class="wrapper">
     {% for item in collections.nav | order %}
       <li style="--index:{{loop.index}}">
-        <a class="" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
+        <a {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
       </li>
     {% endfor %}
     </ul>

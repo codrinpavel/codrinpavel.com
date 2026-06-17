@@ -27,7 +27,7 @@
 
 .menu {
   position: fixed;
-  inset: var(--size-header-offset) 0 0 0;
+  inset: var(--size-header-offset) 0 var(--grid-margin) 0;
   z-index: 1;
 
   font-size: var(--font-size-6xl);
@@ -65,7 +65,7 @@
   opacity: 0;
   clip-path: inset(0 0 100%);
   transition: clip-path 0ms, opacity 400ms;
-  transition-delay: 400ms, 0ms;
+  transition-delay: 600ms, 0ms;
   will-change: clip-path, opacity;
 
   .wrapper::before {
@@ -92,7 +92,7 @@
   &.is-open {
     opacity: 1;
     clip-path: inset(0 0 0 0);
-    transition: clip-path 400ms, opacity 0ms;
+    transition: clip-path 600ms, opacity 0ms;
     transition-delay: 0ms, 0ms;
 
     .wrapper::before {
@@ -100,33 +100,9 @@
     }
 
     a {
-      transition-delay: calc(80ms * var(--index));
+      transition-delay: calc(100ms + 80ms * var(--index));
       transform: translateY(0%);
       opacity: 1;
     }
-  }
-}
-
-
-
-
-
-
-/* source page */
-.menu {
-  view-transition-name: menu;
-}
-
-::view-transition-old(menu) {
-  animation: menu-out 600ms cubic-bezier(.22, 1, .36, 1) forwards;
-}
-
-@keyframes menu-out {
-  from {
-  clip-path: inset(0 0 0 0);
-  }
-
-  to {
-    clip-path: inset(0 0 100% 0);
   }
 }
