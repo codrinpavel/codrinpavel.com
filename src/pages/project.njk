@@ -23,7 +23,9 @@ eleventyComputed:
       </div>
 
       <div>
-        <div class="color-black-text project-year line text-center">{{featured.year}}</div>
+        <div class="line">
+          <div class="vt-line-year color-black-text text-center">{{featured.year}}</div>
+        </div>
       </div>
 
       <div class="lg:columns-4">
@@ -38,16 +40,16 @@ eleventyComputed:
       </div>
 
       <div class="lg:columns-2 lg:ml-1">
-        <div class="line-1">
+        <div class="line">
             Client: 
-            <span class="color-black-text">{{featured.client}}</span>
+            <span class="vt-line-client color-black-text">{{featured.client}}</span>
         </div>
       </div>
 
       <div class="lg:columns-2">
-        <div class="line-2">
+        <div class="line">
             Project: 
-            <a class="link color-black-text" target="_blank" rel="noopener noreferrer" href="{{project_url}}">{{featured.project}}</a>
+            <a class="vt-line-project link color-black-text" target="_blank" rel="noopener noreferrer" href="{{project_url}}">{{featured.project}}</a>
         </div>
       </div>
 

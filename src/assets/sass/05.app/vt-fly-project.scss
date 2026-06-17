@@ -1,7 +1,7 @@
 @use "sass:list";
 @use "sass:string";
 
-$transitions: image, line, line-1, line-2;
+$transitions: image, vt-line-year, vt-line-client, vt-line-project;
 
 @function vt($type, $names, $prefix: "") {
   $selectors: ();
@@ -32,13 +32,13 @@ $transitions: image, line, line-1, line-2;
   animation-name: fly-from-bottom;
 }
 
-::view-transition-old(line-1),
-::view-transition-new(line-1) {
+::view-transition-old(vt-line-client),
+::view-transition-new(vt-line-client) {
   animation-delay: 200ms;
 }
 
-::view-transition-new(line-2),
-::view-transition-old(line-2) {
+::view-transition-new(vt-line-project),
+::view-transition-old(vt-line-project) {
   animation-delay: 400ms;
 }
 
