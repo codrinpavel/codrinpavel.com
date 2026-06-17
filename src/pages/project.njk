@@ -7,7 +7,7 @@ pagination:
   size: 1
   alias: featured
 
-permalink: "gallery/{{ featured.client | slugify }}-{{featured.year}}/"
+permalink: "selected/{{ featured.client | slugify }}-{{featured.year}}/"
 
 eleventyComputed:
   preload: work/{{featured.client | slugify}}-{{featured.project | slugify}}-{{featured.year}}.png

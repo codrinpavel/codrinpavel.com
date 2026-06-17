@@ -1,12 +1,15 @@
 import Lenis from 'lenis';
 
-const wrapper = document.querySelector('.scroller');
-const content = document.querySelector('.scroller__track');
+const scrollerWrapper = document.querySelector('.scroller');
+const scrollerContent = document.querySelector('.scroller__track');
+
+const sectionWrapper = document.querySelector('main');
+const sectionContent = document.querySelector('section');
 
 const lenis = new Lenis({
-  wrapper: wrapper || window,
-  content: content || document.documentElement,
-  orientation: content ? 'horizontal' : 'vertical',
+  wrapper: scrollerWrapper || sectionWrapper,
+  content: scrollerContent || sectionContent,
+  orientation: scrollerContent ? 'horizontal' : 'vertical',
   autoRaf: true,
   lerp: 0.085,
 });

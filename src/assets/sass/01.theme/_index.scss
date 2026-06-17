@@ -7,7 +7,7 @@
 :root {
   --grid-margin: 16px;
   --grid-screenwidth: 1940px;
-  --column-gap: 16px;
+  --column-gap: var(--grid-margin);
   --row-gap: var(--size-2xl);
   --header-height: 60px;
   --header-spacing: 0px;

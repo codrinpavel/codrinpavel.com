@@ -306,7 +306,7 @@ export default function () {
       client: "FNIH",
       long: "Foundation for the National Institutes of Health",
       project: "2021 Annual Report",
-      tags: ["featured", "report", "nonprofit"],
+      tags: ["report", "nonprofit"],
       url: "https://2021-annual-report.fnih.org/",
     },
     {

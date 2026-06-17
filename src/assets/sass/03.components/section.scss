@@ -1,6 +1,9 @@
 main {
-  height: 100svh;
-  padding: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
   overflow-y: auto;
   overscroll-behavior: none;
+  height: 100svh;
+}
+
+section {
+  padding: var(--size-header-offset) var(--grid-margin) var(--size-footer-offset);
 }

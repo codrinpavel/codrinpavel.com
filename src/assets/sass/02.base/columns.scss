@@ -50,6 +50,9 @@
       .#{$bpName}ml-#{$span} {
         margin-left: calc(math.percentage(math.div($span, 12)) + var(--column-gap));
       }
+      .#{$bpName}mr-#{$span} {
+        margin-right: calc(math.percentage(math.div($span, 12)));
+      }
     }
 
     /**
