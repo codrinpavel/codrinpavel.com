@@ -26,11 +26,11 @@ $menu-items:
   }
 
   ::view-transition-old(menu-#{$name}) {
-    animation-name: fade-out;
+    //animation-name: fade-out;
   }
 
   ::view-transition-new(menu-#{$name}) {
-    opacity: 0;
-    animation-name: fade-in;
+    //opacity: 0;
+    //animation-name: fade-in;
   }
 }
