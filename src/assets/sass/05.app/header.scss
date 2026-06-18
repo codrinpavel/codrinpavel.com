@@ -13,6 +13,8 @@
 
   @include mq(lg) {
     background-color: transparent;
+    filter: invert(100%);
+    mix-blend-mode: exclusion;
   }
 
   .header__nav {

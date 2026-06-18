@@ -12,10 +12,10 @@ order: 0
   <div class="wrapper">
     <div class="columns mb-10xl">
       <div class="columns-12 md:columns-7">
-        {% set intro ="For more than 15 years, I've partnered with agencies, nonprofits, public companies, and publishers to create accessible, fast websites, reports, and digital communications platforms. Much of my work comes from repeat engagements and long-standing client relationships." %}
+        {% set intro ="For more than 15 years, I've partnered with agencies and nonprofits to create accessible, high-performance websites, reports, and digital communication platforms. Working independently, yet in close collaboration with client teams, I deliver sophisticated digital experiences that are fast, accessible, and built to last." %}
         <h1 class="type-xlarge use-inview animation-wave">
           {%- for char in intro.split(' ') -%}
-            <span class="overflow-hidden"><i style="--index:{{loop.index}}">{{ char }}</i></span>&nbsp;
+            <span class="overflow-hidden"><i style="--index:{{loop.index}}">{{ char }}</i>&nbsp;</span>
           {%- endfor -%}
         </h1>
       </div>
@@ -26,9 +26,9 @@ order: 0
     </div>
 
     <ul class="home__work mb-10xl" role="table" aria-label="Work">
-      <li class="use-inview columns mb-ml" role="row">
+      <li class="use-inview columns" role="row">
         <span role="columnheader" class="columns-5 md:columns-7">Client</span>
-        <span role="columnheader" class="columns-7 md:columns-4 lg:columns-3">Project</span>
+        <span role="columnheader" class="columns-7 md:columns-4 lg:columns-3">Website</span>
         <span role="columnheader" class="md:columns-1">Year</span>
       </li>
 

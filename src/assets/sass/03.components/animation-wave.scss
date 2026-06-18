@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   overflow: hidden;
 
+  >span {
+    display: flex;
+  }
+
   i {
     font-style: normal;
     display: block;
