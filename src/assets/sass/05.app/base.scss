@@ -49,3 +49,8 @@ section {
     color: var(--color-black-text);
   }
 }
+
+.columns-12 > video {
+  width: 100%;
+  max-height: 90svh;
+}

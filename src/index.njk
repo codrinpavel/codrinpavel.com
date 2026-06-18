@@ -20,23 +20,23 @@ order: 0
         </h1>
       </div>
 
-      <div class="columns-6 md:columns-5 lg:columns-2">
+      <div class="columns-6 md:columns-5 lg:columns-2 lg:ml-1">
         {% img "portrait-tall.jpg", "", "", "eager" %}
       </div>
     </div>
 
     <ul class="home__work mb-10xl" role="table" aria-label="Work">
-      <li class="use-inview columns" role="row">
-        <span role="columnheader" class="columns-5 md:columns-7">Client</span>
-        <span role="columnheader" class="columns-7 md:columns-4 lg:columns-3">Website</span>
-        <span role="columnheader" class="md:columns-1">Year</span>
+      <li class="use-inview columns font-bold" role="row">
+        <span role="columnheader" class="columns-5 md:columns-6 lg:columns-8">Client</span>
+        <span role="columnheader" class="columns-7 md:columns-5 lg:columns-2">Website</span>
+        <span role="columnheader" class="md:columns-1 text-right">Year</span>
       </li>
 
       {%- for item in work -%}
         <li class="use-inview columns" role="row">
-          <span role="rowheader" class="columns-5 md:columns-7">{{item.client}}</span>
-          <span role="cell" class="columns-7 md:columns-4 lg:columns-3">{{item.project}}</span>
-          <span role="cell" class="md:columns-1">{{item.year}}</span>
+          <span role="rowheader" class="columns-5 md:columns-6 lg:columns-8">{{item.client}}</span>
+          <span role="cell" class="columns-7 md:columns-5 lg:columns-2">{{item.project}}</span>
+          <span role="cell" class="md:columns-1 text-right">{{item.year}}</span>
         </li>
       {%- endfor -%}
     </ul>
