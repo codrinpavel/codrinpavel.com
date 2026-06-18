@@ -1,9 +1,0 @@
-@use "../mixins" as *;
-
-.words {
-  @include mq(md) {
-    .scroller {
-      --item-width: 75%;
-    }
-  }
-}

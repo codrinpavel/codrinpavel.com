@@ -4,7 +4,7 @@ window.PAGE_ORDER = {
   {%- for page in collections.nav | order -%}
     "{{page.url}}": {{loop.index*100}},
   {%- endfor -%}
-  {%- for page in featured -%}
+  {%- for page in projects -%}
     "/{{ page.client | slugify }}-{{page.year}}/": {{loop.index+10}}
     {%- if not loop.last -%},{%- endif -%}
   {% endfor %}

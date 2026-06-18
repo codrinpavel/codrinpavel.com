@@ -1,15 +1,16 @@
 .animation-wave {
-    display: flex;
-    overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 
   i {
     font-style: normal;
     display: block;
     will-change: transform;
     opacity: 0;
-    transform: translateY(.8em);
-    transition: transform 750ms ease, opacity 750ms ease;
-    transition-delay: calc(var(--index, 0) * 45ms);
+    transform: translateY(.5em);
+    transition: transform 700ms ease, opacity 1000ms ease;
+    transition-delay: calc(var(--index, 0) * 25ms);
   }
 
   &.is-inview i {

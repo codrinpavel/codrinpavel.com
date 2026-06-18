@@ -1,18 +1,18 @@
 ---
 layout: base.njk
-htmlClass: "featured"
-title: "Featured"
+htmlClass: "projects"
+title: "Projects"
 order: 2
 ---
 
-<section class="featured" id="featured">
+<section class="projects" id="projects">
   <div class="wrapper">
-    <div class="columns md:columns-6 lg:columns-5 justify-between --row-gap-8xl --column-gap-8xl">
-      {% for item in featured %}
+    <div class="columns md:columns-6 lg:columns-3 --row-gap-8xl --column-gap-8xl">
+      {% for item in projects %}
         {%- set image_url = 'work/' ~ item.client | slugify ~ '-' ~ item.project | slugify ~ '-' ~ item.year ~ '.png' -%}
-        {%- set permalink = "/featured/" ~ item.client | slugify ~ "-" ~ item.year ~ "/" -%}
+        {%- set permalink = "/projects/" ~ item.client | slugify ~ "-" ~ item.year ~ "/" -%}
 
-        <figure class="select">
+        <figure class="select lg:ml-1 lg:mr-2">
           <a href="{{ permalink | url }}"></a>
 
           <div class="select__img">

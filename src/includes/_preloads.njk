@@ -14,18 +14,18 @@
 {%- endfor %}
 
 {# Prefetch Previous and Next Project pages + preload their hero images #}
-{%- set prevFeatured = pagination.page.previous or pagination.page.last -%}
-{%- set nextFeatured = pagination.page.next or pagination.page.first -%}
+{%- set prevProject = pagination.page.previous or pagination.page.last -%}
+{%- set nextProject = pagination.page.next or pagination.page.first -%}
 
 {%- set prevHref = pagination.href.previous or pagination.href.last -%}
 {%- set nextHref = pagination.href.next or pagination.href.first -%}
 
-{%- if prevHref and prevFeatured %}
+{%- if prevHref and prevProject %}
   <link rel="prefetch" href="{{ prevHref | url }}">
-  {% img "work/" + (prevFeatured.client | slugify) + "-" + (prevFeatured.project | slugify) + "-" + prevFeatured.year + ".png", "", "", "lazy", "prefetch" -%}
+  {% img "work/" + (prevProject.client | slugify) + "-" + (prevProject.project | slugify) + "-" + prevProject.year + ".png", "", "", "lazy", "prefetch" -%}
 {%- endif %}
 
-{%- if nextHref and nextFeatured %}
+{%- if nextHref and nextProject %}
   <link rel="prefetch" href="{{ nextHref | url }}">
-  {% img "work/" + (nextFeatured.client | slugify) + "-" + (nextFeatured.project | slugify) + "-" + nextFeatured.year + ".png", "", "", "lazy", "prefetch" -%}
+  {% img "work/" + (nextProject.client | slugify) + "-" + (nextProject.project | slugify) + "-" + nextProject.year + ".png", "", "", "lazy", "prefetch" -%}
 {%- endif %}

@@ -9,7 +9,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.25, // element is considered in view when 25% visible
+    threshold: 0, // element is considered in view when 25% visible
   }
 );
 

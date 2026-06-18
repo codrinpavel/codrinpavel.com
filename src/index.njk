@@ -1,16 +1,83 @@
 ---
 layout: base.njk
 htmlClass: "home"
-preload: "portrait.jpg"
+preload: "portrait-tall.jpg"
 title: "Home"
 order: 0
 ---
 
-<section class="home fullscreen" id="home">
+{% set sortedWork = work | sortByYear %}
+
+<section class="home" id="home">
   <div class="wrapper">
-    <div class="columns md:columns-4">
-      <div class="md:ml-2">
-        {% img "portrait.jpg", "", "", "eager" %}
+    <div class="columns mb-10xl">
+      <div class="columns-12 md:columns-7">
+        {% set intro ="For more than 15 years, I've partnered with agencies, nonprofits, public companies, and publishers to create accessible, fast websites, reports, and digital communications platforms. Much of my work comes from repeat engagements and long-standing client relationships." %}
+        <h1 class="type-xlarge use-inview animation-wave">
+          {%- for char in intro.split(' ') -%}
+            <span class="overflow-hidden"><i style="--index:{{loop.index}}">{{ char }}</i></span>&nbsp;
+          {%- endfor -%}
+        </h1>
+      </div>
+
+      <div class="columns-6 md:columns-5 lg:columns-2">
+        {% img "portrait-tall.jpg", "", "", "eager" %}
+      </div>
+    </div>
+
+    <ul class="home__work mb-10xl" role="table" aria-label="Work">
+      <li class="use-inview columns mb-ml" role="row">
+        <span role="columnheader" class="columns-5 md:columns-7">Client</span>
+        <span role="columnheader" class="columns-7 md:columns-4 lg:columns-3">Project</span>
+        <span role="columnheader" class="md:columns-1">Year</span>
+      </li>
+
+      {%- for item in work -%}
+        <li class="use-inview columns" role="row">
+          <span role="rowheader" class="columns-5 md:columns-7">{{item.client}}</span>
+          <span role="cell" class="columns-7 md:columns-4 lg:columns-3">{{item.project}}</span>
+          <span role="cell" class="md:columns-1">{{item.year}}</span>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <video class="reel" width="1440" height="900" data-src="{{ '/assets/video/fnih.mp4' | url }}" aria-label="Animated showreel, showcasing motion and designs from various projects over the years." muted playsinline loop></video>
+
+    <div class="columns columns-6 md:columns-2 mt-10xl mb-10xl">
+      <div class="md:ml-7">
+        <h2>Services</h2>
+        <ul>
+          <li>Sustainability Reports</li>
+          <li>Corporate Communications</li>
+          <li>Annual Reports</li>
+          <li>Investor Relations Websites</li>
+          <li>Microsites & Campaign Sites</li>
+
+          <li>Static Site Architecture</li>
+          <li>Data Visualization</li>
+          <li>Interactive Charts & Tables</li>
+          <li>Accessibility (WCAG)</li>
+          <li>Performance Optimization</li>
+          <li>Analytics & Measurement</li>
+          <li>Technical Consulting</li>
+        </ul>
+      </div>
+
+      <div class="md:ml-1">
+        <h2>Technologies</h2>
+        <ul>
+          <li>11ty</li>
+          <li>Jekyll</li>
+
+          <li>HTML</li>
+          <li>CSS / SCSS</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+
+          <li>Nunjucks</li>
+          <li>Liquid</li>
+          <li>Jinja2</li>
+        </ul>
       </div>
     </div>
   </div>

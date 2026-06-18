@@ -4,8 +4,8 @@ export default function () {
       "figure": "15+",
       "title": "Years",
       "bullets": [
-        "Leading projects from concept to launch since 2009",
-        "8+ years in ESG & corporate comms",
+        "Delivering digital projects from concept to launch since 2009.",
+        "8+ years focused on ESG and corporate communications.",
         "Long-term client partnerships"
       ]
     },

@@ -10,19 +10,24 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    gap: var(--column-gap);
     height: 100%;
+    margin-left: calc(var(--column-gap) * -1);
   }
 
   &__item {
     height: 100%;
-    flex: 0 0 calc(var(--item-width));
+    flex: 0 0 calc(var(--item-width) - var(--column-gap));
     border-top: 1px solid var(--color-border);
     padding-top: var(--size-4xl);
+    margin-left: var(--column-gap);
   }
 
-  @include mq(md) {
+  @include mq(lg) {
     --item-width: 50%;
+  }
+
+  @include mq(lg) {
+    --item-width: calc(7/12*100%);
   }
 }
 /*

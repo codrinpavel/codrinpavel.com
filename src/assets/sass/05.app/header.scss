@@ -11,6 +11,10 @@
   font-variation-settings: var(--font-weight-semibold);
   background-color: var(--color-white);
 
+  @include mq(lg) {
+    background-color: transparent;
+  }
+
   .header__nav {
     display: flex;
     flex-direction: column;
@@ -31,7 +35,7 @@
   align-items: center;
   color: var(--color-black-text);
 
-  @include mq(lg) {
+  @include mq(md) {
     display: none;
   }
 }
@@ -44,11 +48,7 @@
     color: var(--color-black-text);
   }
 
-  .page-home & {
-    transform: translate3d(0, calc(50vh - 50% - var(--grid-margin) * 1.5), 0);
-  }
-
-  @include mq(lg, max) {
+  @include mq(md, max) {
     display: none;
   }
 }

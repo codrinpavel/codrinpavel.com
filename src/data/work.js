@@ -918,5 +918,5 @@ export default function () {
       inactive: true,
       nothumb: true
     }
-  ]
+  ].sort((a, b) => b.year - a.year);
 };
