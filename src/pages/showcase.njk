@@ -1,0 +1,27 @@
+---
+layout: base.njk
+htmlClass: "showcase"
+title: "Showcase"
+order: 2
+---
+
+<section class="showcase" id="showcase">
+  <div class="wrapper">
+    <div class="columns md:columns-6 lg:columns-4">
+      {% for item in projects %}
+        {%- set image_url = 'work/' ~ item.client | slugify ~ '-' ~ item.project | slugify ~ '-' ~ item.year ~ '.png' -%}
+        {%- set permalink = "/showcase/" ~ item.client | slugify ~ "-" ~ item.year ~ "/" -%}
+
+        <a class="card" href="{{ permalink | url }}">
+          <span class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}</span>
+          <span class="card__title">{{item.client}}</span>
+
+          <figure class="card__image">
+            {% img image_url, "" %}
+          </figure>
+        </a>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+@use "../mixins" as *;
+
+.card {
+  position: relative;
+
+  &:hover,
+  &:focus-visible {
+    img {
+      filter: none;
+      transform: scale(1.05);
+    }
+  }
+
+  &__title,
+  &__index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__index {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__image {
+    background: #eee;
+    position: relative;
+    padding: 35% 20%;
+    overflow: hidden;
+  }
+
+  img {
+    filter: grayscale(.96) contrast(1.4) brightness(1.05);
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+    padding: var(--size-xl) 0;
+  }
+}
+
+.showcase {
+}

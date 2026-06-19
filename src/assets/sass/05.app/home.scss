@@ -3,12 +3,9 @@
 .home {
   picture {
     filter: grayscale(1);
-    opacity: .4;
-    transition: filter 600ms, opacity 600ms;
 
     &:hover {
       filter: grayscale(0);
-      opacity: 1;
     }
   }
 

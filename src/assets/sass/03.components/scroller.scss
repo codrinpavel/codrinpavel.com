@@ -23,6 +23,6 @@
   }
 
   @include mq(md) {
-    --item-width: 50%;
+    --item-width: calc(7/12*100%);
   }
 }

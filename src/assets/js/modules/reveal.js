@@ -1,7 +1,7 @@
 const SELECTOR = "[data-reveal]";
 const INVIEW_CLASS = "is-inview";
 
-const DEFAULT_STAGGER_MS = 40;
+const DEFAULT_STAGGER_MS = 25;
 const MAX_DELAY_MS = 9999;
 
 const elements = [...document.querySelectorAll(SELECTOR)];
