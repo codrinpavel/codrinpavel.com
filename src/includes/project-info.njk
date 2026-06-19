@@ -1,0 +1,70 @@
+<section class="study" id="study">
+  <div class="wrapper">
+    <div class="columns">
+      <div class="md:columns-6 lg:columns-5">
+        <h2>Overview</h2>
+        <h1>{{overview | safe}}</h1>
+      </div>
+
+      <div class="md:columns-3 md:ml-1 lg:ml-2">
+        <div class="flex gap-md font-black">
+          <h2>Client</h2>
+          {{client | safe}}
+        </div>
+
+        {% if focus %}
+        <h2 class="mt-10xl">Focus Areas</h2>
+        <ul>
+          {% for item in focus %}
+          <li>{{item | safe}}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+      <div class="md:columns-2 flex gap-md font-black">
+        <h2>Period</h2>
+        {{period | safe}}
+      </div>
+
+      <div class="md:columns-3 mt-10xl">
+        <h2>View Projects</h2>
+        <ul>
+          {% for item in work %}
+            {% if item.client == client or item.long == client %}
+              <li>
+                <a class="link" target="_blank" rel="external noreferrer" href="{{ item.url }}">{{ item.project }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="columns columns-6 mt-10xl">
+      <div class="columns-12" style="background:#12355F">
+        <video width="1440" height="900" data-src="{{ '/assets/video/studies/fnih/fnih-2018-short.mp4' | url }}" muted playsinline loop></video>
+      </div>
+      <div>
+        <video width="1440" height="900" data-src="{{ '/assets/video/studies/fnih/button.mp4' | url }}" muted playsinline loop></video>
+      </div>
+      <div>
+        {% img "studies/fnih/home-2021.jpg" %}
+      </div>
+
+      <div class="columns-12" style="background:#000">
+        <video width="1440" height="900" data-src="{{ '/assets/video/studies/fnih/fnih-2020.mp4' | url }}" muted playsinline loop></video>
+      </div>
+
+      <div>
+        {% img "studies/fnih/menu_2.jpg" %}
+      </div>
+      <div>
+        {% img "studies/fnih/impact.jpg" %}
+      </div>
+      <div class="columns-12" style="background:#000">
+        <video width="1440" height="900" data-src="{{ '/assets/video/studies/fnih/fnih-2019.mp4' | url }}" muted playsinline loop></video>
+      </div>
+    </div>
+  </div>
+</section>

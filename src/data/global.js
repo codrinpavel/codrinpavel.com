@@ -6,9 +6,9 @@ export default function () {
 
     // Site data
     year: new Date().getFullYear(),
-    site_name: 'Codrin Pavel | call me &mdash;c.',
-    meta_title: 'Codrin Pavel | call me &mdash;c.',
-    meta_description: "Design-driven developer building fast, accessible websites for mission-driven organizations.",
+    site_name: 'Codrin Pavel | Independent Developer',
+    meta_title: 'Codrin Pavel | Independent Developer',
+    meta_description: "I partner with client teams to build polished user interfaces that are fast, reliable, and easy to use.",
     //meta_image: '/assets/img/social_image.jpg',  // place in src/assets/favicon
   }
 };

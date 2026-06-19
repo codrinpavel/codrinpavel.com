@@ -8,7 +8,7 @@
   height: var(--header-height);
   padding: 0 var(--grid-margin);
 
-  font-variation-settings: var(--font-weight-bold);
+  font-variation-settings: var(--font-weight-black);
   background-color: var(--color-white);
 
   @include mq(lg) {

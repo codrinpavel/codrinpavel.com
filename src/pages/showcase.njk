@@ -13,8 +13,10 @@ order: 2
         {%- set image_url = 'work/' ~ item.client | slugify ~ '-' ~ item.project | slugify ~ '-' ~ item.year ~ '.png' -%}
         {%- set permalink = "/showcase/" ~ item.client | slugify ~ "-" ~ item.year ~ "/" -%}
 
-        <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}. {{item.client}}</div>
+        <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}.</div>
+
         <a href="{{ permalink | url }}">
+          <h2>{{item.long or item.client}}</h2>
           {% img image_url, "" %}
         </a>
       </div>

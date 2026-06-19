@@ -12,8 +12,6 @@
 
     &:hover,
     &:focus-visible {
-      z-index: 2;
-
       img {
         object-fit: cover;
         object-position: bottom center;
@@ -34,7 +32,7 @@
   }
 
   img {
-    height: 33svh;
+    height: 40svh;
     width: 100%;
     object-position: top center;
     object-fit: contain;
@@ -45,12 +43,21 @@
   &__index {
     position: sticky;
     top: 50svh;
-    height: 0;
     line-height: 0;
-    margin: -1em 0;
+    transform: translateY(8px);
 
     filter: invert(100%);
     mix-blend-mode: exclusion;
+    z-index: 1;
+  }
+
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-variation-settings: var(--font-weight-black);
+    color: var(--color-black-text);
+    background-color: #eee;
     z-index: 2;
   }
 }

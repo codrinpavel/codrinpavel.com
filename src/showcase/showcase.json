@@ -1,0 +1,4 @@
+{
+  "layout": "showcase.njk",
+  "permalink": "/showcase/{{ page.fileSlug }}/index.html"
+}
