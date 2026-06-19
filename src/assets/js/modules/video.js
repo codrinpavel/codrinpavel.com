@@ -1,4 +1,4 @@
-const videos = document.querySelectorAll(".reel");
+const videos = document.querySelectorAll("video");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -6,11 +6,7 @@ const observer = new IntersectionObserver(
       const video = entry.target;
 
       if (entry.isIntersecting) {
-        // Lazy-load only once
-        if (!video.src) {
-          video.src = video.dataset.src;
-        }
-
+        if (!video.src) video.src = video.dataset.src;
         video.play().catch(() => {});
       } else {
         video.pause();

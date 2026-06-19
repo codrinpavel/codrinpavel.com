@@ -12,36 +12,36 @@ order: 0
   <div class="wrapper">
     <div class="columns mb-10xl">
       <div class="columns-12 md:columns-7">
-        {% set intro ="For more than 15 years, I've partnered with agencies and nonprofits to create accessible, high-performance websites, reports, and digital communication platforms. Working independently, yet in close collaboration with client teams, I deliver sophisticated digital experiences that are fast, accessible, and built to last." %}
-        <h1 class="type-xlarge use-inview animation-wave">
+        {% set intro ="For more than 15 years, I've partnered with agencies, publishers, and nonprofits to build accessible websites, corporate reports, and digital media platforms. As an independent developer and collaborative partner, I work with client teams to deliver reliable, maintainable user interfaces focused on usability and accessibility." %}
+        <h1 class="type-xlarge flex flex-wrap">
           {%- for char in intro.split(' ') -%}
-            <span class="overflow-hidden"><i style="--index:{{loop.index}}">{{ char }}</i>&nbsp;</span>
+            <span class="overflow-hidden flex"><i data-reveal data-stagger="15">{{ char }}</i>&nbsp;</span>
           {%- endfor -%}
         </h1>
       </div>
 
-      <div class="columns-6 md:columns-5 lg:columns-2 lg:ml-1">
+      <div class="columns-6 md:columns-5 lg:columns-2" data-reveal="clipy" data-delay="500">
         {% img "portrait-tall.jpg", "", "", "eager" %}
       </div>
     </div>
 
     <ul class="home__work mb-10xl" role="table" aria-label="Work">
-      <li class="use-inview columns font-bold" role="row">
-        <span role="columnheader" class="columns-5 md:columns-6 lg:columns-8">Client</span>
-        <span role="columnheader" class="columns-7 md:columns-5 lg:columns-2">Website</span>
-        <span role="columnheader" class="md:columns-1 text-right">Year</span>
+      <li data-reveal class="columns font-bold" role="row">
+        <span role="columnheader" class="columns-5 md:columns-6 lg:columns-7">Client</span>
+        <span role="columnheader" class="columns-7 md:columns-5 lg:columns-3">Website</span>
+        <span role="columnheader" class="md:columns-1">Year</span>
       </li>
 
       {%- for item in work -%}
-        <li class="use-inview columns" role="row">
-          <span role="rowheader" class="columns-5 md:columns-6 lg:columns-8">{{item.client}}</span>
-          <span role="cell" class="columns-7 md:columns-5 lg:columns-2">{{item.project}}</span>
-          <span role="cell" class="md:columns-1 text-right">{{item.year}}</span>
+        <li data-reveal class="columns" role="row">
+          <span role="rowheader" class="columns-5 md:columns-6 lg:columns-7">{{item.client}}</span>
+          <span role="cell" class="columns-7 md:columns-5 lg:columns-3">{{item.project}}</span>
+          <span role="cell" class="md:columns-1">{{item.year}}</span>
         </li>
       {%- endfor -%}
     </ul>
 
-    <video class="reel" width="1440" height="900" data-src="{{ '/assets/video/fnih.mp4' | url }}" aria-label="Animated showreel, showcasing motion and designs from various projects over the years." muted playsinline loop></video>
+    <video width="1440" height="900" data-src="{{ '/assets/video/fnih.mp4' | url }}" aria-label="Animated showreel, showcasing motion and designs from various projects over the years." muted playsinline loop></video>
 
     <div class="columns columns-6 md:columns-2 mt-10xl mb-10xl">
       <div class="md:ml-7">

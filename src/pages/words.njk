@@ -9,20 +9,22 @@ order: 3
   <div class="wrapper scroller" style="--count: {{words.length}}">
     <div class="scroller__track">
 
-    {% for item in words %}
-      <div class="scroller__item">
-        <figure class="quote">
-          <blockquote>
-            <p class="type-large">{{ item.content | safe }}</p>
-          </blockquote>
+      {% for item in words %}
+        <div class="scroller__item">
+          <figure class="quote">
+            <blockquote>
+              <p class="type-large" data-reveal data-stagger="200">
+                {{item.content | safe}}
+              </p>
+            </blockquote>
 
-          <figcaption>
-            <cite class="type-headline color-black-text">{{ item.name }}</cite>
-            <span>{{ item.title }}, {{ item.company }}</span>
-          </figcaption>
-        </figure>
-      </div>
-    {% endfor %}
+            <figcaption data-reveal>
+              <cite class="type-headline color-black-text">{{ item.name }}</cite>
+              <span>{{ item.title }}, {{ item.company }}</span>
+            </figcaption>
+          </figure>
+        </div>
+      {% endfor %}
 
     </div>
   </div>

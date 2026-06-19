@@ -24,12 +24,12 @@
     }
 
     li {
-      opacity: 0;
-      transition: opacity 1s;
-
-      &.is-inview {
-        opacity: 1;
-      }
+      //opacity: 0;
+      //transition: opacity 1s;
+//
+      //&.is-inview {
+      //  opacity: 1;
+      //}
 
       &:first-child {
         margin-bottom: var(--size-ml);

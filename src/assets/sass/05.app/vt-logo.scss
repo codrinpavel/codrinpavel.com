@@ -7,16 +7,3 @@
 ::view-transition-new(vtlogo1) { animation-name: fly-from-bottom; }
 ::view-transition-old(vtlogo2) { animation-name: fly-to-bottom; }
 ::view-transition-new(vtlogo2) { animation-name: fly-from-top; }
-
-/*
- * Disables animations
- * when menu items are also moving up/down.
- */
-@include mq(lg) {
-  html:active-view-transition-type(logo-skip) {
-    .vt-logo-1,
-    .vt-logo-2 {
-      view-transition-name: none;
-    }
-  }
-}

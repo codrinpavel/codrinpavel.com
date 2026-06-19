@@ -23,14 +23,14 @@
 }
 
 //::view-transition-image-pair(*),
-//::view-transition-old(*),
-//::view-transition-new(*) {
-//  animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
-//  inline-size: auto;
-//  block-size: auto;
-//  width: auto;
-//  height: auto;
-//}
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation: var(--transition-animation-duration) cubic-bezier(.76, 0, .24, 1) forwards;
+  inline-size: auto;
+  block-size: auto;
+  width: auto;
+  height: auto;
+}
 
 /*
  * Keyframes

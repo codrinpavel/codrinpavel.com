@@ -1,0 +1,31 @@
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(.5em);
+  transition: transform 700ms ease, opacity 1000ms ease;
+  will-change: transform, opacity;
+}
+
+[data-reveal="fadein"] {
+  opacity: 0;
+  transform: none;
+  transition: opacity 1000ms ease;
+  will-change: opacity;
+}
+
+[data-reveal="clipy"] {
+  opacity: 0;
+  transform: none;
+  clip-path: inset(10% 0);
+  transition: clip-path 1s, opacity 2s ease;
+  will-change: clip-path, opacity;
+
+  &.is-inview {
+    clip-path: inset(0% 0);
+  }
+}
+
+[data-reveal].is-inview {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: var(--animation-delay, 25ms);
+}

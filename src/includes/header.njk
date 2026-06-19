@@ -24,7 +24,7 @@
       <li class="mr-auto">{{logo|safe}}</li>
 
       {% for item in collections.nav | order %}
-        <li {% if loop.first %}class="md:columns-2"{%endif%}>
+        <li {% if loop.first %}class="md:columns-1"{%endif%}>
           <a class="link" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
         </li>
       {% endfor %}

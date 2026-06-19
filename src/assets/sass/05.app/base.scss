@@ -19,6 +19,10 @@ html, body {
   height: 100svh;
 }
 
+i, em {
+  font-style: normal;
+}
+
 main {
   overflow-y: auto;
   overscroll-behavior: none;

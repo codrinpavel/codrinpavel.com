@@ -12,17 +12,17 @@ order: 5
       {% for stat in stats %}
         <div class="scroller__item">
           <div class="stat">
-            <span class="figure use-inview animation-wave">
+            <span class="figure type-huge">
               {%- for char in stat.figure.split('') -%}
-                <i class="type-huge" style="--index:{{loop.index}}">{{- char -}}</i>
+                <i data-reveal data-stagger="100">{{- char -}}</i>
               {%- endfor -%}
             </span>
 
-            <span class="type-medium">{{ stat.title }}</span>
+            <span data-reveal class="type-medium">{{ stat.title }}</span>
 
             <ul class="mt-auto">
               {%- for bullet in stat.bullets -%}
-                <li>{{- bullet -}}</li>
+                <li data-reveal><span>{{- bullet -}}</span></li>
               {%- endfor -%}
             </ul>
           </div>

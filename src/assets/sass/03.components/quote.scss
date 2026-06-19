@@ -1,11 +1,4 @@
 .quote {
-  p {
-    &::before,
-    &::after {
-      content: "”";
-    }
-  }
-
   figcaption {
     position: relative;
     padding-left: 1em;

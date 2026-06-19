@@ -12,15 +12,15 @@ order: 4
       {% for group in awards %}
         <div class="scroller__item">
           <div class="stat">
-            <h2 class="type-large use-inview animation-wave">
+            <h2 class="type-large flex flex-wrap">
               {%- for char in group.organization.split('') -%}
-                <i class="type-large" style="--index:{{loop.index}}">{{- char -}}</i>
+                <i data-reveal data-stagger="25">{{- char -}}</i>
               {%- endfor -%}
             </h2>
 
             <ul>
               {%- for award in group.awards -%}
-                <li>
+                <li data-reveal>
                   <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.year }}&mdash;{{ award.title }}">
                     {{ award.year }}&mdash;{{ award.client }}
                   </a>
