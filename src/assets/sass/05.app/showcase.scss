@@ -9,6 +9,7 @@
   a {
     display: block;
     position: relative;
+    z-index: 2;
 
     &:hover,
     &:focus-visible {
@@ -44,11 +45,11 @@
     position: sticky;
     top: 50svh;
     line-height: 0;
-    transform: translateY(8px);
+    transform: translateY(.5em);
 
-    filter: invert(100%);
-    mix-blend-mode: exclusion;
-    z-index: 1;
+    //filter: invert(100%);
+    //mix-blend-mode: exclusion;
+    z-index: -1;
   }
 
   h2 {
@@ -58,6 +59,5 @@
     font-variation-settings: var(--font-weight-black);
     color: var(--color-black-text);
     background-color: #eee;
-    z-index: 2;
   }
 }

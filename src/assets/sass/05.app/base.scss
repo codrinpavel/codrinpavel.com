@@ -9,6 +9,11 @@ section {
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+}
+
+.lenis {
+overscroll-behavior: none;
 }
 
 body {
@@ -18,6 +23,7 @@ body {
 
 html, body {
   height: 100svh;
+  overscroll-behavior: none;
 }
 
 i, em {
