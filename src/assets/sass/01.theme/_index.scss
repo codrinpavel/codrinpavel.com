@@ -12,7 +12,7 @@
   --header-height: 60px;
   --header-spacing: 0px;
 
-  @include mq(lg) {
+  @include mq(md) {
   --grid-margin: 8px;
   --header-height: 30px;
   --header-spacing: 70px;

@@ -9,18 +9,15 @@ order: 2
   <div class="wrapper">
     <div class="columns md:columns-6 lg:columns-4">
       {% for item in projects %}
+      <div class="card">
         {%- set image_url = 'work/' ~ item.client | slugify ~ '-' ~ item.project | slugify ~ '-' ~ item.year ~ '.png' -%}
         {%- set permalink = "/showcase/" ~ item.client | slugify ~ "-" ~ item.year ~ "/" -%}
 
-        <a class="card" href="{{ permalink | url }}">
-          <span class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}</span>
-          <span class="card__title">{{item.client}}</span>
-
-          <figure class="card__image">
-            {% img image_url, "" %}
-          </figure>
+        <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}. {{item.client}}</div>
+        <a href="{{ permalink | url }}">
+          {% img image_url, "" %}
         </a>
-
+      </div>
       {% endfor %}
     </div>
   </div>

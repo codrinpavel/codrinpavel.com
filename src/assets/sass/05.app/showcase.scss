@@ -2,46 +2,55 @@
 
 .card {
   position: relative;
+  background: #eee;
+  clip-path: inset(0);
+  font-variation-settings: var(--font-weight-black);
 
-  &:hover,
-  &:focus-visible {
-    img {
-      filter: none;
-      transform: scale(1.05);
+  a {
+    display: block;
+    position: relative;
+
+    &:hover,
+    &:focus-visible {
+      z-index: 2;
+
+      img {
+        object-fit: cover;
+        object-position: bottom center;
+        filter: none;
+        height: 50svh;
+        transition: object-position ease 8s;
+        transition-delay: 333ms;
+      }
     }
   }
 
-  &__title,
-  &__index {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
-  &__index {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__image {
-    background: #eee;
+  picture {
+    height: 75svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    padding: 35% 20%;
-    overflow: hidden;
   }
 
   img {
+    height: 33svh;
+    width: 100%;
+    object-position: top center;
+    object-fit: contain;
     filter: grayscale(.96) contrast(1.4) brightness(1.05);
+    clip-path: inset(1px 0px);
   }
 
-  &__meta {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-sm);
-    padding: var(--size-xl) 0;
-  }
-}
+  &__index {
+    position: sticky;
+    top: 50svh;
+    height: 0;
+    line-height: 0;
+    margin: -1em 0;
 
-.showcase {
+    filter: invert(100%);
+    mix-blend-mode: exclusion;
+    z-index: 2;
+  }
 }
