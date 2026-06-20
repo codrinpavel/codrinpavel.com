@@ -12,7 +12,7 @@ order: 0
   <div class="wrapper">
     <div class="columns mb-10xl">
       <div class="columns-12 md:columns-7">
-        {% set intro = "For more than 15 years, I've helped agencies, publishers, and nonprofits create accessible websites, corporate reports, and media platforms. As an independent developer, I partner with client teams to build polished user interfaces that are fast, reliable, and easy to use." %}
+        {% set intro = "For more than 15 years, I've helped agencies, publishers, and nonprofits create accessible websites, corporate reports, and media platforms. As an independent developer, I partner with client teams to translate exceptional design and complex content into fast, reliable, and easy-to-use digital experiences." %}
 
         <h1 class="type-xlarge flex flex-wrap">
           {%- for char in intro.split(' ') -%}
@@ -27,57 +27,62 @@ order: 0
     </div>
 
     <div class="columns my-10xl --row-gap-5xl">
-      <div class="columns-10 md:columns-4">
-        <h2 data-reveal data-delay="300">Work</h2>
-        {% set description1 = "Nunc eleifend tincidunt mi, id sollicitudin justo luctus id. Integer et diam sit amet leo porttitor fermentum. Ut ac turpis vitae quam ultrices vehicula eu eu velit. Nullam sed euismod diam. Suspendisse malesuada vestibulum tortor, eu accumsan leo pretium id. Integer placerat nulla vitae lacus ullamcorper, ac tincidunt elit varius. Sed convallis mauris et massa interdum faucibus." %}
-        {% set description2 ="Sed gravida at urna a posuere. Sed non diam vitae velit rutrum venenatis. In ut libero sem. Phasellus vitae finibus quam, a tempus quam. Fusce auctor, lorem et eleifend laoreet, sapien nisi porta lacus, non aliquet mi risus eget mi. Cras pellentesque neque a ex vestibulum, sed pharetra mi porta. Suspendisse nec pretium erat, sit amet sollicitudin lacus. Vivamus augue est, fermentum at libero et, viverra egestas quam. Sed faucibus dui at enim ultricies, a condimentum arcu faucibus. Pellentesque interdum et orci vitae elementum. Integer tincidunt eu ante eget dapibus." %}
+      <div class="columns-10 md:columns-5 text-md">
+        <h2 data-reveal data-delay="300">Experience</h2>
+        {% set desc1 = "Over the last decade, I've partnered closely with exceptional leaders in technology, communications, and design." %}
+        
+        {% set desc2 = "At RebelMouse, I collaborated closely with founder and former Huffington Post CTO Andrea Berry to launch and scale publishing platforms serving millions of readers. Since 2018, I've partnered daily with Ideas On Purpose leadership, including Managing Partner Michelle Marks, an award-winning communications and sustainability strategist whose narrative-driven approach has shaped reporting and stakeholder communications for leading organizations, and Executive Creative Director John Connolly, a Yale-trained designer and longtime professor of graphic design whose passion for typography and information design is reflected throughout the agency's work." %}
 
-        <p class="flex flex-wrap">
-        {%- for char in description1.split(' ') -%}
+        {% set desc3 ="Together, we've delivered digital experiences for Fortune 500 companies, universities, nonprofits, and some of the world's most recognizable brands. My role has been to translate exceptionally crafted ideas into fast, scalable, and highly accessible frontend systems, combining technical excellence with a deep respect for design and storytelling." %}
+
+        <p class="flex flex-wrap text-lg">
+        {%- for char in desc1.split(' ') -%}
           <span class="overflow-hidden flex"><i data-reveal data-stagger="5">{{ char }}</i>&nbsp;</span>
         {%- endfor -%}
         </p>
 
         <p class="flex flex-wrap">
-        {%- for char in description2.split(' ') -%}
+        {%- for char in desc2.split(' ') -%}
+          <span class="overflow-hidden flex"><i data-reveal data-stagger="5">{{ char }}</i>&nbsp;</span>
+        {%- endfor -%}
+        </p>
+
+        <p class="flex flex-wrap">
+        {%- for char in desc3.split(' ') -%}
           <span class="overflow-hidden flex"><i data-reveal data-stagger="5">{{ char }}</i>&nbsp;</span>
         {%- endfor -%}
         </p>
       </div>
 
-      <div class="columns-6 md:columns-3 md:ml-3">
+      <div class="columns-6 md:columns-3 md:ml-2">
         <h2 data-reveal data-delay="200">Services</h2>
         <ul>
-          <li data-reveal>Sustainability Reports</li>
+          <li data-reveal>Annual & Sustainability Reports</li>
           <li data-reveal>Corporate Communications</li>
-          <li data-reveal>Annual Reports</li>
           <li data-reveal>Investor Relations Websites</li>
           <li data-reveal>Microsites & Campaign Sites</li>
-
-          <li data-reveal>Static Site Architecture</li>
           <li data-reveal>Data Visualization</li>
           <li data-reveal>Bespoke Animations</li>
-          <li data-reveal>Microinteractions</li>
-          <li data-reveal>Interactive Charts & Tables</li>
           <li data-reveal>Accessibility (WCAG)</li>
           <li data-reveal>Performance Optimization</li>
-          <li data-reveal>Analytics & Measurement</li>
+          <li data-reveal>Static Site Architecture</li>
           <li data-reveal>Technical Consulting</li>
         </ul>
       </div>
 
       <div class="columns-4 md:columns-2 ml-1 md:ml-zero">
-        <h2 data-reveal data-delay="200">Technologies</h2>
+        <h2 data-reveal data-delay="200">Expertise</h2>
         <ul>
-          <li data-reveal>11ty</li>
-          <li data-reveal>Jekyll</li>
-          <li data-reveal>HTML</li>
-          <li data-reveal>CSS / SCSS</li>
-          <li data-reveal>JavaScript</li>
-          <li data-reveal>Node.js</li>
-          <li data-reveal>Nunjucks</li>
-          <li data-reveal>Liquid</li>
-          <li data-reveal>Jinja2</li>
+          <li data-reveal>Frontend Architecture</li>
+          <li data-reveal>Accessibility / WCAG Compliance</li>
+          <li data-reveal>Performance Engineering</li>
+          <li data-reveal>Design Systems</li>
+          <li data-reveal>11ty & Static Architecture</li>
+          <li data-reveal>Enterprise WordPress</li>
+          <li data-reveal>Interactive Storytelling</li>
+          <li data-reveal>Data Visualization</li>
+          <li data-reveal>SEO & Structured Data</li>
+          <li data-reveal>Developer Experience</li>
         </ul>
       </div>
     </div>
@@ -100,7 +105,7 @@ order: 0
         {% endif %}
       {% endfor %}
       <div>
-        <a class="button" href="{{ "/showcase/" | url }}">Explore Case Studies {% svg "arrow.svg" %}</a>
+        <a class="button" href="{{ "/showcase/" | url }}">See More Work {% svg "arrow.svg" %}</a>
       </div>
     </div>
 
