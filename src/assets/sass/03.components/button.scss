@@ -1,0 +1,24 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  padding: var(--size-lg);
+  text-align: center;
+  line-height: 2.4;
+  font-variation-settings: var(--font-weight-black);
+  gap: var(--size-lg);
+
+  svg {
+    width: 14px;
+    height: auto;
+  }
+
+  &:hover,
+  &:focus-visible {
+    svg {
+      transform: translateX(100%);
+      transition: 333ms;
+    }
+  }
+}

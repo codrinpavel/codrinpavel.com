@@ -10,7 +10,7 @@ order: 2
     <div class="columns md:columns-6 lg:columns-4">
 
       {% for page in collections.showcase | order %}
-      <div class="card">
+      <div data-reveal data-stagger="250" class="card">
         {%- set image_url = "showcase/" ~ page.data.client | slugify ~ ".png" -%}
 
         <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}.</div>

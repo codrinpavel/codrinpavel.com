@@ -44,10 +44,10 @@
 
 .header__desktop {
   align-items: center;
-  color: var(--color-faint);
+  color: var(--color-black-text);
 
   a[aria-current="page"] {
-    color: var(--color-black-text);
+    color: var(--color-faint);
   }
 
   @include mq(md, max) {

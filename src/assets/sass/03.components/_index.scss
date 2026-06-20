@@ -3,6 +3,7 @@
 @layer components {
   @include meta.load-css("wrapper");
   @include meta.load-css("site-logo");
+  @include meta.load-css("button");
   @include meta.load-css("card");
   @include meta.load-css("scroller");
   @include meta.load-css("stat");

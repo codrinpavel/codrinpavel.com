@@ -25,7 +25,7 @@
 
       {% for item in collections.nav | order %}
         <li {% if loop.first %}class="md:columns-1"{%endif%}>
-          <a class="link" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
+          <a class="link {% if page.url.indexOf(item.url) == 0 %}color-faint{% endif %}" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
         </li>
       {% endfor %}
     </ul>
@@ -35,7 +35,7 @@
     <ul>
     {% for item in collections.nav | order %}
       <li style="--index:{{loop.index}}">
-        <a {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
+        <a {% if page.url.indexOf(item.url) == 0 %}class="color-faint"{% endif %} {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
       </li>
     {% endfor %}
     </ul>
