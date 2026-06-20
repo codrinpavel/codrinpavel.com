@@ -26,26 +26,14 @@ order: 0
       </div>
     </div>
 
-    <ul class="home__work mb-10xl" role="table" aria-label="Work">
-      <li data-reveal class="columns font-black" role="row">
-        <span role="columnheader" class="columns-5 md:columns-6 lg:columns-7">Client</span>
-        <span role="columnheader" class="columns-7 md:columns-5 lg:columns-3">Website</span>
-        <span role="columnheader" class="md:columns-1">Year</span>
-      </li>
+    <div class="columns columns-6 md:columns-2 my-10xl">
+      <div class="md:columns-4">
+        <h2>Work</h2>
+        <p>Nunc eleifend tincidunt mi, id sollicitudin justo luctus id. Integer et diam sit amet leo porttitor fermentum. Ut ac turpis vitae quam ultrices vehicula eu eu velit. Nullam sed euismod diam. Suspendisse malesuada vestibulum tortor, eu accumsan leo pretium id. Integer placerat nulla vitae lacus ullamcorper, ac tincidunt elit varius. Sed convallis mauris et massa interdum faucibus.
 
-      {%- for item in work -%}
-        <li data-reveal class="columns" role="row">
-          <span role="rowheader" class="columns-5 md:columns-6 lg:columns-7">{{item.client}}</span>
-          <span role="cell" class="columns-7 md:columns-5 lg:columns-3">{{item.project}}</span>
-          <span role="cell" class="md:columns-1">{{item.year}}</span>
-        </li>
-      {%- endfor -%}
-    </ul>
-
-    <video width="1440" height="900" data-src="{{ '/assets/video/fnih.mp4' | url }}" aria-label="Animated showreel, showcasing motion and designs from various projects over the years." muted playsinline loop></video>
-
-    <div class="columns columns-6 md:columns-2 mt-10xl mb-10xl">
-      <div class="md:ml-7">
+Sed gravida at urna a posuere. Sed non diam vitae velit rutrum venenatis. In ut libero sem. Phasellus vitae finibus quam, a tempus quam. Fusce auctor, lorem et eleifend laoreet, sapien nisi porta lacus, non aliquet mi risus eget mi. Cras pellentesque neque a ex vestibulum, sed pharetra mi porta. Suspendisse nec pretium erat, sit amet sollicitudin lacus. Vivamus augue est, fermentum at libero et, viverra egestas quam. Sed faucibus dui at enim ultricies, a condimentum arcu faucibus. Pellentesque interdum et orci vitae elementum. Integer tincidunt eu ante eget dapibus.</p>
+      </div>
+      <div class="md:ml-3">
         <h2>Services</h2>
         <ul>
           <li>Sustainability Reports</li>
@@ -81,5 +69,42 @@ order: 0
         </ul>
       </div>
     </div>
+
+    <div class="columns md:columns-6 lg:columns-4 my-10xl">
+      {% set i = 0 %}
+
+      {% for page in collections.showcase %}
+        {% if page.data.client in ["United", "NRMP", "FNIH", "AXIOS", "NYU", "Dominion Energy"] %}
+          {% set i = i + 1 %}
+          <div class="card card--logo">
+            {%- set svg_url = 'company/' ~ page.data.client | slugify ~ '.svg' -%}
+            <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
+
+            <a href="{{ page.url | url }}">
+              <h2>{{page.data.long or page.data.client}}</h2>
+              {% svg svg_url, "" %}
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <ul class="home__work my-10xl" role="table" aria-label="Work">
+      <li data-reveal class="columns font-black" role="row">
+        <span role="columnheader" class="columns-5 md:columns-6 lg:columns-7">Client</span>
+        <span role="columnheader" class="columns-7 md:columns-5 lg:columns-3">Website</span>
+        <span role="columnheader" class="md:columns-1">Year</span>
+      </li>
+
+      {%- for item in work -%}
+        <li data-reveal class="columns" role="row">
+          <span role="rowheader" class="columns-5 md:columns-6 lg:columns-7">{{item.long or item.client}}</span>
+          <span role="cell" class="columns-7 md:columns-5 lg:columns-3">{{item.project}}</span>
+          <span role="cell" class="md:columns-1">{{item.year}}</span>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <video width="1440" height="900" data-src="{{ '/assets/video/fnih.mp4' | url }}" aria-label="Animated showreel, showcasing motion and designs from various projects over the years." muted playsinline loop></video>
   </div>
 </section>

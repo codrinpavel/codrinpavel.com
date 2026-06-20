@@ -46,9 +46,6 @@
     top: 50svh;
     line-height: 0;
     transform: translateY(.5em);
-
-    //filter: invert(100%);
-    //mix-blend-mode: exclusion;
     z-index: -1;
   }
 
@@ -59,5 +56,31 @@
     font-variation-settings: var(--font-weight-black);
     color: var(--color-black-text);
     background-color: #eee;
+  }
+
+  &.card--logo {
+    a {
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:focus-visible {
+        svg {
+          filter: grayscale(0);
+          transition: filter 333ms;
+        }
+      }
+    }
+
+    svg {
+      display: block;
+      width: 50%;
+      max-width: 200px;
+      height: auto;
+      aspect-ratio: 1;
+      filter: grayscale(.96);
+    }
   }
 }

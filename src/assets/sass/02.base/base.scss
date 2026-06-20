@@ -9,6 +9,12 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+::selection {
+  background: var(--color-black);
+  color: var(--color-white-text);
+  text-shadow: none;
+}
+
 button {
   background: none;
   border: 0;

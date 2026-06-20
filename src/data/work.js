@@ -12,6 +12,13 @@ export default function () {
     {
       year: 2024,
       client: "Brilliant Earth",
+      project: "Materiality Statement",
+      tags: ["report"],
+      url: "https://www.brilliantearth.com/about/mission/materiality-statement",
+    },
+    {
+      year: 2024,
+      client: "Brilliant Earth",
       project: "2024 Mission Report",
       tags: ["award", "report"],
       url: "https://www.brilliantearth.com/about/mission/report-2024/",
@@ -20,7 +27,7 @@ export default function () {
           year: 2025,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/e3563948-f4c7-4797-91f6-754b1d4d054c",
         },
         {
@@ -31,13 +38,6 @@ export default function () {
           url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book25.pdf#page=9",
         },
       ]
-    },
-    {
-      year: 2024,
-      client: "Brilliant Earth",
-      project: "Materiality Statement",
-      tags: ["report"],
-      url: "https://www.brilliantearth.com/about/mission/materiality-statement",
     },
     {
       year: 2023,
@@ -57,7 +57,7 @@ export default function () {
           year: 2024,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/0c0060c0-669b-4760-a897-69cdb60526d5",
         },
       ]
@@ -114,7 +114,7 @@ export default function () {
           year: 2022,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/95323723-e359-4d7c-b7b6-ef0045b45eef",
         },
       ]
@@ -131,14 +131,13 @@ export default function () {
           year: 2021,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/ef213a58-603d-428d-9fc3-94498d4a68bc",
         },
         {
           year: 2021,
           organization: "LACP",
           sign: "🥈",
-          title: "Silver Winner, Worldwide",
           url: "https://www.lacp.com/2020vision/awards-annual-report-competition-dominion-energy-inc-online-digital-report-4212b.htm",
         },
       ]
@@ -170,7 +169,7 @@ export default function () {
     {
       year: 2018,
       client: "Dominion Energy",
-      project: "2017 – 2018 SCR Report",
+      project: "2017–18 SCR Report",
       tags: ["fortune", "award", "report"],
       url: "https://sustainability.dominionenergy.com/",
       wayback: "20181221122549",
@@ -186,7 +185,7 @@ export default function () {
           year: 2019,
           organization: "LACP",
           sign: "🥇",
-          title: "Gold Winner, Worldwide",
+          title: "Gold, Worldwide",
           url: "https://www.lacp.com/201718vision/awards-annual-report-competition-13065.htm",
         },
       ]
@@ -219,7 +218,7 @@ export default function () {
           year: 2022,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/f2dc5fc3-184f-4760-acc8-a16af522941f",
         },
       ]
@@ -296,7 +295,7 @@ export default function () {
           year: 2022,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/cd09b376-8b80-4102-8508-fe0e906ff1df",
         },
       ]
@@ -329,7 +328,7 @@ export default function () {
           year: 2020,
           organization: "LACP",
           sign: "🥇",
-          title: "Gold Winner, Worldwide",
+          title: "Gold, Worldwide",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-21303b.htm",
         },
       ]
@@ -346,7 +345,7 @@ export default function () {
           year: 2019,
           organization: "LACP",
           sign: "🏆",
-          title: "Platinum Winner, Worldwide",
+          title: "Platinum, Worldwide",
           url: "https://www.lacp.com/2018vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-1377a.htm",
         },
         {
@@ -370,14 +369,15 @@ export default function () {
           year: 2021,
           organization: "GDUSA",
           sign: "⭐",
-          title: "Digital Design Awards Winner",
+          title: "Digital Design Awards",
           url: "https://gallery.gdusa.com/project/9b0c9964-20f0-4997-b240-1ae03c03170d",
         },
       ]
     },
     {
       year: 2021,
-      client: "AGCO Corporation",
+      client: "AGCO",
+      long: "AGCO Corporation",
       project: "2020 Annual Report",
       tags: ["fortune", "report"],
       url: "https://ar2020.agcocorp.com/",
@@ -385,7 +385,8 @@ export default function () {
     },
     {
       year: 2020,
-      client: "AGCO Corporation",
+      client: "AGCO",
+      long: "AGCO Corporation",
       project: "2019 Annual Report",
       tags: ["featured", "fortune", "award", "report"],
       url: "https://ar2019.agcocorp.com/",
@@ -395,7 +396,7 @@ export default function () {
           year: 2020,
           organization: "MerComm",
           sign: "🥇",
-          title: "Gold Winner - Integrated AR & CSR",
+          title: "Gold - Integrated AR & CSR",
           url: "https://mercommawards.com/arc/archive/2020/categoryWinners/interactive.htm#int",
         },
         {
@@ -408,7 +409,7 @@ export default function () {
         {
           year: 2020,
           organization: "LACP",
-          title: "Gold Winner, Worldwide",
+          title: "Gold, Worldwide",
           sign: "🥇",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-agco-sustainability-report-21284b.htm",
         },
@@ -470,7 +471,7 @@ export default function () {
       ]
     },
     {
-      year: 2020,
+      year: 2019,
       client: "Tradeweb",
       project: "Investor Relations",
       url: "https://investors.tradeweb.com/",
@@ -494,7 +495,7 @@ export default function () {
           year: 2020,
           organization: "LACP",
           sign: "🥇",
-          title: "Gold Winner, Worldwide",
+          title: "Gold, Worldwide",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-tradeweb-online-report-21286a.htm",
         },
       ]

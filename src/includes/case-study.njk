@@ -1,0 +1,102 @@
+{% set hasAwards = false %}
+
+{% for item in work %}
+  {% if (item.client == client or item.long == client) 
+    and item.awards %}
+    {% set hasAwards = true %}
+  {% endif %}
+{% endfor %}
+
+<section class="study" id="study">
+  <div class="wrapper">
+    <div class="columns mb-5xl">
+      <div class="md:columns-4">
+        <div class="flex gap-md font-black">
+          <h2 class="mb-zero">Client</h2>
+          {{long or client | safe}}
+        </div>
+      </div>
+      <div class="md:columns-3">
+        <div class="flex gap-md font-black">
+          <h2 class="mb-zero">Period</h2>
+          {{period | safe}}
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="md:columns-6">
+        <h1>{{overview | safe}}</h1>
+      </div>
+
+      <div class="md:columns-3 md:ml-1">
+        {% if focus %}
+          <h2>Expertise</h2>
+          <ul>
+            {% for item in focus %}
+              <li>{{item | safe}}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        <h2 class="mt-4xl">Deliverables</h2>
+        <ul>
+          {% for item in work %}
+            {% if item.client == client or item.long == client %}
+              <li>
+                <a class="link" target="_blank" rel="external noreferrer" href="{{ item.url }}">{{ item.project }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="md:columns-2">
+        {% if hasAwards %}
+          <h2>Recognition</h2>
+          <ul>
+            {% for item in work %}
+              {% if item.client == client or item.long == client %}
+                {% for award in item.awards %}
+                  <li>
+                    <a class="link" target="_blank" rel="external noreferrer" href="{{ award.url }}">
+                      {{ award.organization }}
+                      {{ award.year | replace('202', "'2") | replace('201', "'1") }}
+                    </a>
+                  </li>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="columns columns-6 mt-10xl">
+    <div class="columns-12" style="background:#12355F">
+      <video width="1440" height="900" data-src="{{ '/assets/video/case-study/fnih/fnih-2018-short.mp4' | url }}" muted playsinline loop></video>
+    </div>
+    <div>
+      <video width="1440" height="900" data-src="{{ '/assets/video/case-study/fnih/button.mp4' | url }}" muted playsinline loop></video>
+    </div>
+    <div>
+      {% img "case-study/fnih/home-2021.jpg" %}
+    </div>
+
+    <div class="columns-12" style="background:#000">
+      <video width="1440" height="900" data-src="{{ '/assets/video/case-study/fnih/fnih-2020.mp4' | url }}" muted playsinline loop></video>
+    </div>
+
+    <div>
+      {% img "case-study/fnih/menu_2.jpg" %}
+    </div>
+    <div>
+      {% img "case-study/fnih/impact.jpg" %}
+    </div>
+    <div class="columns-12" style="background:#000">
+      <video width="1440" height="900" data-src="{{ '/assets/video/case-study/fnih/fnih-2019.mp4' | url }}" muted playsinline loop></video>
+    </div>
+  </div>
+</div>
+</section>
