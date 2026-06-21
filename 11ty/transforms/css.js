@@ -34,6 +34,8 @@ export default async function (content) {
           /^is-/,
           /^has-/,
           /^vt-/,
+          /--row/,
+          /--column/,
           /data-/,
           /sr-only/,
           /aria/,
