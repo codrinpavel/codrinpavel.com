@@ -27,5 +27,5 @@
 [data-reveal].is-inview {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: var(--animation-delay, 25ms);
+  transition-delay: var(--transition-delay, 25ms);
 }

@@ -1,4 +1,5 @@
 @use 'sass:meta';
+@use "../mixins/util" as *;
 
 @layer utilities {
   @include meta.load-css("at-container");
@@ -43,6 +44,9 @@
   @include meta.load-css("text-transform");
   @include meta.load-css("trbl");
   @include meta.load-css("width");
+  @include meta.load-css("white-space");
   @include meta.load-css("translate");
   @include meta.load-css("sr-only");
+
+  @include emit-utils;
 }

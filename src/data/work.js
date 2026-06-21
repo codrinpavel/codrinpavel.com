@@ -42,7 +42,7 @@ export default function () {
     {
       year: 2023,
       client: "Ideas On Purpose",
-      project: "Brand New Brand website",
+      project: "BrandNewBrand.org",
       tags: ["featured", "award"],
       url: "https://brandnewbrand.org/",
       awards: [
@@ -235,7 +235,7 @@ export default function () {
       year: 2021,
       client: "NRMP",
       long: "National Resident Matching Program",
-      project: "The Match",
+      project: "NRMP.org",
       tags: ["featured", "award", "nonprofit"],
       url: "https://www.nrmp.org/",
       awards: [
@@ -268,7 +268,7 @@ export default function () {
       year: 2024,
       client: "NRMP",
       long: "National Resident Matching Program",
-      project: "Program Directory",
+      project: "NRMP Program Directory",
       tags: ["nonprofit"],
       url: "https://programdirectory.nrmp.org/",
     },
@@ -517,7 +517,7 @@ export default function () {
     {
       year: 2018,
       client: "Ideas On Purpose",
-      project: "Agency Website",
+      project: "IdeasOnPurpose.com",
       tags: ["award"],
       url: "https://www.ideasonpurpose.com/",
       awards: [
@@ -565,8 +565,8 @@ export default function () {
     },
     {
       year: 2017,
-      client: "Axios",
-      project: "News and Politics Website",
+      client: "AXIOS Media",
+      project: "Axios.com",
       url: "https://www.axios.com/",
       tags: ["featured", "media"],
       wayback: "20170202003159"
@@ -666,7 +666,7 @@ export default function () {
     {
       year: 2017,
       client: "United Airlines",
-      project: "Social Hub",
+      project: "United Social Hub",
       tags: ["fortune", "media"],
       url: "https://hub.united.com/",
       wayback: "20180503104514"
@@ -700,7 +700,7 @@ export default function () {
     {
       year: 2016,
       client: "Sports Illustrated",
-      project: "Campus Rush Website",
+      project: "CampusRush.com",
       tags: ["featured", "media"],
       url: "http://www.campusrush.com/",
       wayback: "20150930005223"
@@ -729,7 +729,7 @@ export default function () {
     {
       year: 2016,
       client: "Discovery",
-      project: "Seeker",
+      project: "Seeker.com",
       tags: ["featured", "fortune", "media"],
       url: "http://www.seeker.com/",
       wayback: "20160802220923"
@@ -744,8 +744,8 @@ export default function () {
     },
     {
       year: 2016,
-      client: "Paper Magazine",
-      project: "Publication Website",
+      client: "PAPER Magazine",
+      project: "Papermag.com",
       tags: ["featured", "media"],
       url: "http://www.papermag.com/",
     },
@@ -768,7 +768,7 @@ export default function () {
     {
       year: 2017,
       client: "The Dodo",
-      project: "Publication Website",
+      project: "TheDodo.com",
       tags: ["featured", "media"],
       url: "https://www.thedodo.com/",
       wayback: "20180228182750"

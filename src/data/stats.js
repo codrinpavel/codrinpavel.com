@@ -49,16 +49,5 @@ export default function () {
         "American Web Design Awards"
       ]
     },
-    {
-      "figure": "/",
-      "title": "Awards",
-      "bullets": [
-        "7 years of Dominion Energy reporting",
-        "5 giant projects for NRMP",
-        "8+ Years with Ideas On Purpose",
-        "Billions of pageviews across Axios, The Dodo, Discovery, Paper Magazine",
-        "55 Organizations worked with across media, Fortune 500, healthcare, education and nonprofits."
-      ]
-    },
   ]
 };

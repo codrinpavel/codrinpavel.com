@@ -12,16 +12,16 @@ order: 0
   <div class="wrapper">
     <div class="columns mb-10xl">
       <div class="columns-12 md:columns-7">
-        {% set intro = "For more than 15 years, I've helped agencies, publishers, and nonprofits create accessible websites, corporate reports, and media platforms. As an independent developer, I partner with client teams to translate exceptional design and complex content into fast, reliable, and easy-to-use digital experiences." %}
+        {% set intro = "For more than 15 years, I've helped agencies, publishers, nonprofits, and enterprise teams build websites, corporate reports, and media platforms. As an independent frontend partner, I turn design concepts and complex content into accessible, high-performance websites, reports, and media platforms." %}
 
-        <h1 class="type-xlarge flex flex-wrap">
+        <h1 class="type-xlarge flex flex-wrap" data-reveal-batch>
           {%- for char in intro.split(' ') -%}
             <span class="overflow-hidden flex"><i data-reveal data-stagger="15">{{ char }}</i>&nbsp;</span>
           {%- endfor -%}
         </h1>
       </div>
 
-      <div class="columns-6 md:columns-5 lg:columns-2" data-reveal="clipy" data-delay="300">
+      <div class="columns-6 md:columns-5 lg:columns-2" data-reveal="clipy">
         {% img "portrait-tall.jpg", "", "", "eager" %}
       </div>
     </div>
@@ -29,11 +29,11 @@ order: 0
     <div class="columns my-10xl --row-gap-5xl">
       <div class="columns-10 md:columns-5 text-md">
         <h2 data-reveal data-delay="300">Experience</h2>
-        {% set desc1 = "Over the last decade, I've partnered closely with exceptional leaders in technology, communications, and design." %}
-        
-        {% set desc2 = "At RebelMouse, I collaborated closely with founder and former Huffington Post CTO Andrea Berry to launch and scale publishing platforms serving millions of readers. Since 2018, I've partnered daily with Ideas On Purpose leadership, including Managing Partner Michelle Marks, an award-winning communications and sustainability strategist whose narrative-driven approach has shaped reporting and stakeholder communications for leading organizations, and Executive Creative Director John Connolly, a Yale-trained designer and longtime professor of graphic design whose passion for typography and information design is reflected throughout the agency's work." %}
+        {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
 
-        {% set desc3 ="Together, we've delivered digital experiences for Fortune 500 companies, universities, nonprofits, and some of the world's most recognizable brands. My role has been to translate exceptionally crafted ideas into fast, scalable, and highly accessible frontend systems, combining technical excellence with a deep respect for design and storytelling." %}
+        {% set desc2 = "The best projects I’ve been part of had teams that truly care: reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP and United; and publishing systems for Axios, The Dodo, PAPER, Discovery, SI and so many others." %}
+
+        {% set desc3 = "Across all these projects, I’ve contributed more than code: interpreting client feedback, explaining technical decisions in plain english, reviewing code, onboarding developers, and enabling creatives and teammates do their best work." %}
 
         <p class="flex flex-wrap text-lg">
         {%- for char in desc1.split(' ') -%}
@@ -91,14 +91,14 @@ order: 0
       {% set i = 0 %}
 
       {% for page in collections.showcase %}
-        {% if page.data.client in["United","NRMP","FNIH","AXIOS","NYU","Dominion Energy"] %}
+        {% if page.data.client in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
           {% set i = i + 1 %}
           <div data-reveal data-stagger="250" class="card card--logo">
             {%- set svg_url = 'company/' ~ page.data.client | slugify ~ '.svg' -%}
             <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
 
             <a href="{{ page.url | url }}">
-              <h2>{{page.data.long or page.data.client}}</h2>
+              <h2>{{page.data.type}}</h2>
               {% svg svg_url, "" %}
             </a>
           </div>

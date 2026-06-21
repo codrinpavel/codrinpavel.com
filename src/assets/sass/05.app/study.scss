@@ -1,0 +1,7 @@
+@use "../mixins" as *;
+
+.study {
+  @include mq(md, max) {
+    margin-top: var(--size-2xl);
+  }
+}

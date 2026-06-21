@@ -4,7 +4,7 @@ export default function () {
       "content": "”Codrin possesses a unique combination of a remarkable technical aptitude and the ability to interpret and distill client feedback and apply it to achieve the desired goals. He cares deeply about the quality of the end product.",
       "name": "Ryan Bujeker",
       "title": "Digital Engagement Director",
-      "company": "United"
+      "company": "United Airlines"
     },
     {
       "content": "”Fantastic engineer to work with. He really understood the product from a customer point of view and worked hard to find the best solution to any problem. I would love to work with Codrin again and would absolutely recommend him for any team.",
