@@ -1,0 +1,33 @@
+.image-reel {
+  aspect-ratio: 1440 / 900;
+  max-height: 75svh;
+  overflow: hidden;
+
+  .image-reel__track {
+    display: flex;
+    flex-direction: column;
+    animation: scrollLoop 30s ease-in-out infinite;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    .image-reel__track {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes scrollLoop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}

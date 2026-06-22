@@ -1,7 +1,40 @@
 .site-logo {
-  display: flex;
+  display: inline-flex;
   gap: 0px;
+  color: var(--color-black-text);
   overflow: hidden;
 
-  color: var(--color-black-text);
+  &[data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    height: 1em;
+    line-height: 1em;
+    transition: transform 666ms;
+  }
+
+  .vt-logo-1::before {
+    content: 'Codrin';
+  }
+
+  .vt-logo-2::before {
+    content: 'Pavel';
+  }
+
+  .vt-logo-2 {
+    transform: translateY(-100%);
+  }
+
+  &.is-inview {
+    .vt-logo-1 {
+      transform: translateY(-100%);
+    }
+    .vt-logo-2 {
+      transform: translateY(0%);
+    }
+  }
 }

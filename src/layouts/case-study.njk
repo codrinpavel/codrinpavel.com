@@ -3,6 +3,9 @@ layout: base.njk
 htmlClass: "study"
 ---
 
-{% include "case-study.njk" %}
-
-{{ content | safe }}
+<section class="study" id="study">
+  <div class="wrapper">
+    {% include "case-study.njk" %}
+    {{ content | safe }}
+  </div>
+</section>

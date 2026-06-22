@@ -13,7 +13,7 @@
   {%- endif %}
 {%- endfor %}
 
-{# Prefetch Previous and Next Project pages + preload their hero images #}
+{# Prefetch Previous and Next Project pages + preload their hero images
 {%- set prevProject = pagination.page.previous or pagination.page.last -%}
 {%- set nextProject = pagination.page.next or pagination.page.first -%}
 
@@ -29,3 +29,4 @@
   <link rel="prefetch" href="{{ nextHref | url }}">
   {% img "work/" + (nextProject.client | slugify) + "-" + (nextProject.project | slugify) + "-" + nextProject.year + ".png", "", "", "lazy", "prefetch" -%}
 {%- endif %}
+#}

@@ -1,10 +1,10 @@
 {% set nav = ["About", "Stats", "Words", "Awards", "Lab"] %}
 
 {% set logo %}
-<a href="/" class="site-logo">
-  <span class="vt-logo-1">Codrin</span>
+<a href="/" class="site-logo" data-reveal>
+  <span class="vt-logo-1"><b>Codrin</b></span>
   <span>/</span>
-  <span class="vt-logo-2">Pavel</span>
+  <span class="vt-logo-2"><b>Pavel</b></span>
 </a>
 {% endset %}
 
@@ -12,7 +12,7 @@
   <nav class="wrapper header__nav">
     <ul class="header__mobile columns columns-4">
       <li>{{logo|safe}}</li>
-      <li class="text-center">{{title}}</li>
+      <li class="text-center color-faint">{{title}}</li>
       <li>
         <button class="menu-button type-regular" aria-controls="menu" aria-expanded="false">
           <span><b>Menu</b><b>Close</b></span>

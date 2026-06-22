@@ -10,6 +10,24 @@
   }
 
   &__work {
+    font-variation-settings: var(--font-weight-black);
+
+    &:hover {
+      color: var(--color-faint);
+    }
+
+    li:first-child {
+      margin-bottom: var(--size-ml);
+    }
+
+    li {
+      overflow: hidden;
+    }
+
+    a {
+      color: var(--color-black-text);
+    }
+
     @include mq(md, max) {
       span:nth-child(2) {
         text-align: right;
@@ -17,12 +35,6 @@
 
       span:last-child {
         display: none;
-      }
-    }
-
-    li {
-      &:first-child {
-        margin-bottom: var(--size-ml);
       }
     }
   }

@@ -12,7 +12,7 @@ order: 0
   <div class="wrapper">
     <div class="columns mb-10xl">
       <div class="columns-12 md:columns-7">
-        {% set intro = "For more than 15 years, I've helped agencies, publishers, nonprofits, and enterprise teams build websites, corporate reports, and media platforms. As an independent frontend partner, I turn design concepts and complex content into accessible, high-performance websites, reports, and media platforms." %}
+        {% set intro = "For more than 15 years, I’ve been an independent frontend partner to agencies, publishers, nonprofits, and enterprise teams, turning creative concepts and complex content into accessible, high-performance websites, reports, and media platforms." %}
 
         <h1 class="type-xlarge flex flex-wrap" data-reveal-batch>
           {%- for char in intro.split(' ') -%}
@@ -105,22 +105,29 @@ order: 0
         {% endif %}
       {% endfor %}
       <div>
-        <a class="button" href="{{ "/showcase/" | url }}">See More Work {% svg "arrow.svg" %}</a>
+        <a class="button" href="{{ "/showcase/" | url }}">See More Case Studies {% svg "arrow.svg" %}</a>
       </div>
     </div>
 
     <ul class="home__work my-10xl" role="table" aria-label="Work">
-      <li data-reveal class="columns font-black" role="row">
+      <li data-reveal class="columns font-black color-black-text" role="row">
         <span role="columnheader" class="columns-6 md:columns-6 lg:columns-7 border-b-1">Client</span>
         <span role="columnheader" class="columns-6 md:columns-5 lg:columns-3 border-b-1">Website</span>
         <span role="columnheader" class="md:columns-1 lg:columns-2 border-b-1">Year</span>
       </li>
 
       {%- for item in work -%}
-        <li data-reveal data-stagger="15" class="columns" role="row">
-          <span role="rowheader" class="columns-6 md:columns-6 lg:columns-7">{{item.client}}</span>
-          <span role="cell" class="columns-6 md:columns-5 lg:columns-3">{{item.project}}</span>
-          <span role="cell" class="md:columns-1 lg:columns-2">{{item.year}}</span>
+        {% set isCaseStudy = collections.showcase | hasCaseStudy(item.client) %}
+        <li data-reveal data-stagger="15" {% if not isCaseStudy %}class="columns"{% endif %} role="row">
+          {%- if isCaseStudy -%}
+            <a href="/showcase/{{item.client | slugify}}/" class="columns">
+          {% endif %}
+            <span role="rowheader" class="columns-6 md:columns-6 lg:columns-7">{{item.client}}</span>
+            <span role="cell" class="columns-6 md:columns-5 lg:columns-3">{{item.project}}</span>
+            <span role="cell" class="md:columns-1 lg:columns-2">{{item.year}}</span>
+          {%- if isCaseStudy -%}
+            </a>
+          {% endif %}
         </li>
       {%- endfor -%}
     </ul>
