@@ -20,7 +20,7 @@
   will-change: clip-path, opacity;
 
   &.is-inview {
-    clip-path: inset(0% 0);
+    clip-path: inset(-1px);
   }
 }
 
