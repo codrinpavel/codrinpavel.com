@@ -37,7 +37,9 @@ section {
   }
 }
 
-.columns-12 > video {
+.columns-12 > video,
+.columns-12 > picture img {
   width: 100%;
   max-height: 90svh;
+  object-fit: contain;
 }
