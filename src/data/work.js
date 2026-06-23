@@ -3,6 +3,24 @@ export default function () {
 
   return [
     {
+      year: 2026,
+      client: "Confidential Client",
+      project: "2025 ESG Report",
+      tags: ["report"],
+    },
+    {
+      year: 2025,
+      client: "Confidential Client",
+      project: "2024 ESG Report",
+      tags: ["report"],
+    },
+    {
+      year: 2024,
+      client: "Confidential Client",
+      project: "2023 ESG Report",
+      tags: ["report"],
+    },
+    {
       year: 2025,
       client: "Brilliant Earth",
       project: "2025 Mission Report",

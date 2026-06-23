@@ -90,7 +90,7 @@ order: 0
     <div class="columns md:columns-6 lg:columns-4 justify-center my-10xl">
       {% set i = 0 %}
 
-      {% for page in collections.showcase %}
+      {% for page in collections.work %}
         {% if page.data.client in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
           {% set i = i + 1 %}
           <div data-reveal data-stagger="250" class="card card--logo">
@@ -105,7 +105,7 @@ order: 0
         {% endif %}
       {% endfor %}
       <div>
-        <a class="button" href="{{ "/showcase/" | url }}">See More Case Studies {% svg "arrow.svg" %}</a>
+        <a class="button" href="{{ "/work/" | url }}">See More Case Studies {% svg "arrow.svg" %}</a>
       </div>
     </div>
 
@@ -117,10 +117,10 @@ order: 0
       </li>
 
       {%- for item in work -%}
-        {% set isCaseStudy = collections.showcase | hasCaseStudy(item.client) %}
+        {% set isCaseStudy = collections.work | hasCaseStudy(item.client) %}
         <li data-reveal data-stagger="15" {% if not isCaseStudy %}class="columns"{% endif %} role="row">
           {%- if isCaseStudy -%}
-            <a href="/showcase/{{item.client | slugify}}/" class="columns">
+            <a href="/work/{{item.client | slugify}}/" class="columns">
           {% endif %}
             <span role="rowheader" class="columns-6 md:columns-6 lg:columns-7">{{item.client}}</span>
             <span role="cell" class="columns-6 md:columns-5 lg:columns-3">{{item.project}}</span>

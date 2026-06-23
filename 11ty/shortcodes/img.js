@@ -37,8 +37,9 @@ export default async function (
   strategy = null
 ) {
   const metadata = await Image(`./src/assets/img/${src}`, {
-    widths: [null, 600, 1024, 2048],
-    formats: ["webp", null],
+    transformOnRequest: process.env.ELEVENTY_ENV === "dev",
+    widths: [1024, 1920],
+    formats: ["webp"],
     urlPath: `${Config.BASEPATH}/assets/img`,
     outputDir: "dist/assets/img",
   });

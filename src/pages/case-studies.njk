@@ -1,17 +1,17 @@
 ---
 layout: base.njk
-htmlClass: "showcase"
-title: "Showcase"
+htmlClass: "work"
+title: "Work"
 order: 2
 ---
 
-<section class="showcase" id="showcase">
+<section class="work" id="work">
   <div class="wrapper">
     <div class="columns md:columns-6 lg:columns-4">
 
-      {% for page in collections.showcase | order %}
+      {% for page in collections.work | order %}
       <div data-reveal data-stagger="150" class="card">
-        {%- set image_url = "showcase/" ~ page.data.client | slugify ~ ".png" -%}
+        {%- set image_url = "case-studies/" ~ page.data.client | slugify ~ ".png" -%}
 
         <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}.</div>
 

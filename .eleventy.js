@@ -1,8 +1,17 @@
 import Config from './11ty/config.js';
 import fs from 'node:fs';
+import { eleventyImageOnRequestDuringServePlugin } from "@11ty/eleventy-img";
 
 export default async function (eleventyConfig) {
   console.log({ Config });
+
+
+  /**
+   * Plugins
+   * @link https://www.11ty.dev/docs/plugins/image-shortcodes/#boost-performance-optimize-images-on-request
+   */
+  eleventyConfig.addPlugin(eleventyImageOnRequestDuringServePlugin);
+
 
   /**
    * 11ty Server Options

@@ -16,8 +16,9 @@
     "build:11ty": "npx @11ty/eleventy",
     "clean:dist": "rimraf dist",
     "clean:min": "rimraf dist/assets/min/",
-    "start": "npm-run-all clean:dist -p start:*",
-    "build": "cross-env ELEVENTY_ENV=production npm-run-all clean:dist build:* clean:min"
+    "start": "cross-env ELEVENTY_ENV=dev npm-run-all clean:dist -p start:*",
+    "build": "cross-env ELEVENTY_ENV=production npm-run-all clean:dist build:* clean:min",
+    "debug": "cross-env DEBUG=Eleventy:Benchmark* npm run start"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
