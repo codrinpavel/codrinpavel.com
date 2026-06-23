@@ -11,15 +11,17 @@
     position: relative;
     z-index: 2;
 
-    &:hover,
-    &:focus-visible {
-      img {
-        object-fit: cover;
-        object-position: bottom center;
-        filter: none;
-        height: 50svh;
-        transition: object-position ease 8s;
-        transition-delay: 333ms;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover,
+      &:focus-visible {
+        img {
+          object-fit: cover;
+          object-position: bottom center;
+          filter: none;
+          height: 50svh;
+          transition: object-position ease 8s;
+          transition-delay: 333ms;
+        }
       }
     }
   }
