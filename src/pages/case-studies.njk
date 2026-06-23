@@ -17,7 +17,9 @@ order: 2
 
         <a href="{{ page.url | url }}">
           <h2>{{page.data.long or page.data.client}}</h2>
-          {% img image_url, "" %}
+          <figure>
+            {% img image_url, "" %}
+          </figure>
         </a>
       </div>
       {% endfor %}

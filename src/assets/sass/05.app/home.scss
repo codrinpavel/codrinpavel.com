@@ -1,7 +1,7 @@
 @use "../mixins" as *;
 
 .home {
-  picture {
+  img {
     filter: grayscale(1);
 
     &:hover {
