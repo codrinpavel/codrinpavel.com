@@ -31,7 +31,7 @@ order: 0
         <h2 data-reveal data-delay="300">Experience</h2>
         {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
 
-        {% set desc2 = "The best projects I’ve been part of had teams that truly care: reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP and United; publishing systems for Axios, The Dodo, PAPER, Discovery, SI and so many others." %}
+        {% set desc2 = "The best projects I’ve been part of had teams that truly care: reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP and United; publishing systems for Axios, The Dodo, PAPER, Discovery and so many others." %}
 
         {% set desc3 = "Across all these projects, I’ve contributed more than code: interpreting client feedback, explaining technical decisions in plain english, reviewing code, onboarding developers, and enabling creatives and teammates do their best work." %}
 
@@ -109,22 +109,22 @@ order: 0
       </div>
     </div>
 
-    <ul class="home__work my-10xl" role="table" aria-label="Work">
-      <li data-reveal class="columns font-black color-black-text" role="row">
-        <span role="columnheader" class="columns-6 md:columns-6 lg:columns-7 border-b-1">Client</span>
-        <span role="columnheader" class="columns-6 md:columns-5 lg:columns-3 border-b-1">Website</span>
-        <span role="columnheader" class="md:columns-1 lg:columns-2 border-b-1">Year</span>
+    <ul class="home__work my-10xl" aria-label="Work List">
+      <li data-reveal class="columns font-black color-black-text">
+        <span class="columns-6 md:columns-6 lg:columns-7 border-b-1">Client</span>
+        <span class="columns-6 md:columns-5 lg:columns-3 border-b-1">Website</span>
+        <span class="md:columns-1 lg:columns-2 border-b-1">Year</span>
       </li>
 
       {%- for item in work -%}
         {% set isCaseStudy = collections.work | hasCaseStudy(item.client) %}
-        <li data-reveal data-stagger="15" {% if not isCaseStudy %}class="columns"{% endif %} role="row">
+        <li data-reveal data-stagger="15" {% if not isCaseStudy %}class="columns"{% endif %}>
           {%- if isCaseStudy -%}
             <a href="/case-studies/{{item.client | slugify}}/" class="columns">
           {% endif %}
-            <span role="rowheader" class="columns-6 md:columns-6 lg:columns-7">{{item.client}}</span>
-            <span role="cell" class="columns-6 md:columns-5 lg:columns-3">{{item.project}}</span>
-            <span role="cell" class="md:columns-1 lg:columns-2">{{item.year}}</span>
+            <span class="columns-6 md:columns-6 lg:columns-7">{{item.client}}</span>
+            <span class="columns-6 md:columns-5 lg:columns-3">{{item.project}}</span>
+            <span class="md:columns-1 lg:columns-2">{{item.year}}</span>
           {%- if isCaseStudy -%}
             </a>
           {% endif %}
@@ -132,6 +132,6 @@ order: 0
       {%- endfor -%}
     </ul>
 
-    <video width="1440" height="900" data-src="{{ '/assets/video/fnih.mp4' | url }}" aria-label="Animated showreel, showcasing motion and designs from various projects over the years." muted playsinline loop></video>
+    <video width="1440" height="900" data-src="{{ '/assets/video/fnih.mp4' | url }}" muted playsinline loop aria-hidden="true"></video>
   </div>
 </section>

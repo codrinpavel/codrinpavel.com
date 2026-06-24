@@ -717,14 +717,6 @@ export default function () {
     },
     {
       year: 2016,
-      client: "Sports Illustrated",
-      project: "CampusRush.com",
-      tags: ["featured", "media"],
-      url: "http://www.campusrush.com/",
-      wayback: "20150930005223"
-    },
-    {
-      year: 2016,
       client: "7x7",
       project: "Media & Lifestyle Website",
       tags: ["media"],
