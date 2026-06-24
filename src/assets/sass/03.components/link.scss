@@ -13,3 +13,27 @@
     color: var(--color-black-text);
   }
 }
+
+a[data-title] {
+  display: block;
+  transition: background-color 300ms, color 300ms;
+
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: attr(data-title)" →";
+    background-color: var(--color-white);
+    position: absolute;
+    inset: 0;
+    transition: translate 120ms ease;
+    translate: 0 105%;
+  }
+
+  &:hover,
+  &:focus-visible {
+    &::before {
+      translate: 0%;
+    }
+  }
+}

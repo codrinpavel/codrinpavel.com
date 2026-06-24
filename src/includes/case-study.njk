@@ -1,4 +1,5 @@
 {% set hasAwards = false %}
+{% set hasArchive = false %}
 
 {% for item in work %}
   {% if (item.client == client or item.long == client) and item.awards %}
@@ -41,14 +42,7 @@
         <ul>
           {% for item in work %}
             {% if item.client == client or item.long == client %}
-              {% set deliverable_url = item.url %}
-              {% if item.wayback %}
-                {% set deliverable_url = "https://web.archive.org/web/" ~ item.wayback ~ "if_/" ~ item.url %}
-              {% endif %}
-
-              <li data-reveal>
-                <a class="link" target="_blank" rel="external noreferrer" href="{{ deliverable_url }}">{{ item.project }}</a>
-              </li>
+              <li data-reveal>{{- item.project -}}</li>
             {% endif %}
           {% endfor %}
         </ul>
@@ -62,7 +56,7 @@
             {% if item.client == client or item.long == client %}
               {% for award in item.awards %}
                 <li data-reveal>
-                  <a class="link" target="_blank" rel="external noreferrer" href="{{ award.url }}">
+                  <a data-title="{{ award.title }}" target="_blank" rel="external noreferrer" href="{{ award.url }}">
                     {{ award.organization }}
                     {{ award.year | replace('202', "'2") | replace('201', "'1") }}
                   </a>

@@ -52,7 +52,7 @@ export default function () {
           year: 2025,
           organization: "MerComm",
           sign: "🏆",
-          title: "Grand Winner - Best of Sustainability Reports",
+          title: "Best of Sustainability Reports",
           url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book25.pdf#page=9",
         },
       ]
@@ -99,7 +99,7 @@ export default function () {
           year: 2024,
           organization: "MerComm",
           sign: "🏆",
-          title: "Grand Winner - Best of Sustainability Reports",
+          title: "Best of Sustainability Reports",
           url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book24.pdf#page=5",
         },
       ]
@@ -156,6 +156,7 @@ export default function () {
           year: 2021,
           organization: "LACP",
           sign: "🥈",
+          title: "Silver Vision Awards",
           url: "https://www.lacp.com/2020vision/awards-annual-report-competition-dominion-energy-inc-online-digital-report-4212b.htm",
         },
       ]
@@ -172,7 +173,7 @@ export default function () {
           year: 2019,
           organization: "MerComm",
           sign: "🥉",
-          title: "Bronze Winnner - Summary Annual Review",
+          title: "Summary Annual Review",
           url: "https://mercommawards.com/arc/archive/2019/categoryWinners/summary.htm",
         },
         {
@@ -203,7 +204,7 @@ export default function () {
           year: 2019,
           organization: "LACP",
           sign: "🥇",
-          title: "Gold, Worldwide",
+          title: "Gold Vision Awards",
           url: "https://www.lacp.com/201718vision/awards-annual-report-competition-13065.htm",
         },
       ]
@@ -346,7 +347,7 @@ export default function () {
           year: 2020,
           organization: "LACP",
           sign: "🥇",
-          title: "Gold, Worldwide",
+          title: "Gold Vision Awards",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-21303b.htm",
         },
       ]
@@ -363,7 +364,7 @@ export default function () {
           year: 2019,
           organization: "LACP",
           sign: "🏆",
-          title: "Platinum, Worldwide",
+          title: "Platinum Vision Awards",
           url: "https://www.lacp.com/2018vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-1377a.htm",
         },
         {
@@ -414,7 +415,7 @@ export default function () {
           year: 2020,
           organization: "MerComm",
           sign: "🥇",
-          title: "Gold - Integrated AR & CSR",
+          title: "Integrated AR & CSR",
           url: "https://mercommawards.com/arc/archive/2020/categoryWinners/interactive.htm#int",
         },
         {
@@ -427,7 +428,7 @@ export default function () {
         {
           year: 2020,
           organization: "LACP",
-          title: "Gold, Worldwide",
+          title: "Gold Vision Awards",
           sign: "🥇",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-agco-sustainability-report-21284b.htm",
         },
@@ -513,7 +514,7 @@ export default function () {
           year: 2020,
           organization: "LACP",
           sign: "🥇",
-          title: "Gold, Worldwide",
+          title: "Gold Vision Awards",
           url: "https://www.lacp.com/2019vision/awards-annual-report-competition-tradeweb-online-report-21286a.htm",
         },
       ]
@@ -758,6 +759,7 @@ export default function () {
       project: "Papermag.com",
       tags: ["featured", "media"],
       url: "http://www.papermag.com/",
+      wayback: "20170305022907"
     },
     {
       year: 2015,
