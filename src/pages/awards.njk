@@ -12,7 +12,7 @@ order: 4
       {% for group in awards %}
         <div class="scroller__item">
           <div class="stat">
-            <h2 class="type-xlarge flex flex-wrap">
+            <h2 class="type-xlarge flex flex-wrap mb-2xl">
               {%- for char in group.organization.split('') -%}
                 <i data-reveal data-stagger="25">{{- char -}}</i>
               {%- endfor -%}

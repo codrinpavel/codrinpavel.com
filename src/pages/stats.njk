@@ -18,9 +18,9 @@ order: 3
               {%- endfor -%}
             </span>
 
-            <span data-reveal class="type-medium">{{ stat.title }}</span>
+            <span data-reveal class="type-medium mb-2xl">{{ stat.title }}</span>
 
-            <ul class="mt-auto">
+            <ul>
               {%- for bullet in stat.bullets -%}
                 <li data-reveal><span>{{- bullet -}}</span></li>
               {%- endfor -%}

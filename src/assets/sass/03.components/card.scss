@@ -2,7 +2,7 @@
 
 .card {
   position: relative;
-  background: #eee;
+  background: var(--color-gray-light);
   clip-path: inset(0);
   font-variation-settings: var(--font-weight-black);
 
@@ -44,10 +44,12 @@
   }
 
   &__index {
-    position: sticky;
+    //position: sticky;
+    position: fixed;
     top: 50svh;
-    line-height: 0;
-    transform: translateY(.5em);
+    //line-height: 0;
+    //transform: translateY(.5em);
+    transform: translateY(-100%);
     z-index: -1;
   }
 
@@ -57,7 +59,7 @@
     left: 0;
     font-variation-settings: var(--font-weight-black);
     color: var(--color-black-text);
-    background-color: #eee;
+    background-color: var(--color-gray-light);
   }
 
   &.card--logo {
