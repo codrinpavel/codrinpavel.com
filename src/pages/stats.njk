@@ -10,7 +10,7 @@ order: 3
     <div class="scroller__track">
 
       {% for stat in stats %}
-        <div class="scroller__item">
+        <div class="scroller__item" data-inview data-counter="0{{loop.index}}.">
           <div class="stat">
             <span class="figure type-huge">
               {%- for char in stat.figure.split('') -%}

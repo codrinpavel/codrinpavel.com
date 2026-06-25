@@ -1,4 +1,4 @@
-const SELECTOR = "[data-reveal]";
+const SELECTOR = "[data-reveal],[data-inview]";
 const INVIEW_CLASS = "is-inview";
 
 const DEFAULT_STAGGER_MS = 25;
