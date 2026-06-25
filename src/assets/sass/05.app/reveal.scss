@@ -4,12 +4,6 @@
   will-change: transform, opacity;
 }
 
-[data-reveal="fadein"] {
-  opacity: 0;
-  transform: none;
-  will-change: opacity;
-}
-
 [data-reveal="clipy"] {
   opacity: 0;
   transform: none;
@@ -18,27 +12,15 @@
 }
 
 [data-reveal].is-inview {
-  animation-name: reveal-y-transform, reveal-opacity;
-  animation-duration: 700ms, 1000ms;
-  animation-timing-function: ease, ease;
-  animation-delay: var(--transition-delay, 25ms), var(--transition-delay, 25ms);
-  animation-fill-mode: both, both;
-}
-
-[data-reveal="fadein"].is-inview {
-  animation-name: reveal-opacity;
-  animation-duration: 1000ms;
-  animation-timing-function: ease;
-  animation-delay: var(--transition-delay, 25ms);
-  animation-fill-mode: both;
+  animation: 
+    reveal-y-transform 700ms ease var(--transition-delay, 25ms) both,
+    reveal-opacity 1000ms ease var(--transition-delay, 25ms) both;
 }
 
 [data-reveal="clipy"].is-inview {
-  animation-name: reveal-clipy, reveal-opacity;
-  animation-duration: 1000ms, 2000ms;
-  animation-timing-function: ease, ease;
-  animation-delay: var(--transition-delay, 25ms), var(--transition-delay, 25ms);
-  animation-fill-mode: both, both;
+  animation:
+    reveal-clipy 1000ms ease var(--transition-delay, 25ms) both,
+    reveal-opacity 2000ms ease var(--transition-delay, 25ms) both;
 }
 
 @keyframes reveal-y-transform {
@@ -72,15 +54,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal],
-  [data-reveal="fadein"],
-  [data-reveal="clipy"],
-  [data-reveal].is-inview,
-  [data-reveal="fadein"].is-inview,
-  [data-reveal="clipy"].is-inview {
-    opacity: 1;
-    transform: none;
-    clip-path: none;
-    animation: none;
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    animation: none !important;
   }
 }

@@ -32,11 +32,10 @@
       inset: 2em 0 auto;
       transform: scaleX(0%);
       transform-origin: center left;
-      transition: 2s;
     }
 
     &.is-inview::after {
-      transform: scaleX(100%);
+      animation: scrollerBar 2s ease both;
     }
 
     @include mq(md, max) {
@@ -54,5 +53,15 @@
 
   @include mq(md) {
     --item-width: calc(7/12*100%);
+  }
+}
+
+@keyframes scrollerBar {
+  from {
+    transform: scaleX(0%);
+  }
+
+  to {
+    transform: scaleX(100%);
   }
 }

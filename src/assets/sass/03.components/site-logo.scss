@@ -31,19 +31,11 @@
 
    &.is-inview {
     .vt-logo-1 {
-      animation-name: logo-slide-up;
-      animation-duration: 666ms;
-      animation-timing-function: ease;
-      animation-delay: var(--transition-delay, 25ms);
-      animation-fill-mode: both;
+      animation: logo-slide-up 666ms ease var(--transition-delay, 25ms) both;
     }
 
     .vt-logo-2 {
-      animation-name: logo-slide-in;
-      animation-duration: 666ms;
-      animation-timing-function: ease;
-      animation-delay: var(--transition-delay, 25ms);
-      animation-fill-mode: both;
+      animation: logo-slide-in 666ms ease var(--transition-delay, 25ms) both;
     }
   }
 }
