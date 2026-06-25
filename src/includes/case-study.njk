@@ -42,7 +42,13 @@
         <ul>
           {% for item in work %}
             {% if item.client == client or item.long == client %}
-              <li data-reveal>{{- item.project -}}</li>
+              {% if not item.wayback %}
+                <li data-reveal>
+                  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" data-title="View live website">{{- item.project -}}</a>
+                </li>
+              {% else %}
+                <li data-reveal class="color-faint">{{- item.project -}}</li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
@@ -56,7 +62,7 @@
             {% if item.client == client or item.long == client %}
               {% for award in item.awards %}
                 <li data-reveal>
-                  <a data-title="{{ award.title }}" target="_blank" rel="external noreferrer" href="{{ award.url }}">
+                  <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.title }}">
                     {{ award.organization }}
                     {{ award.year | replace('202', "'2") | replace('201', "'1") }}
                   </a>

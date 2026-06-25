@@ -19,7 +19,7 @@ export default async function (body, url, classes) {
       href="${url}"
       ${classAttr}
       target="_blank"
-      rel="external noreferrer">${body}<span class="visually-hidden">opens in a new window</span></a>`;
+      rel="noopener noreferrer">${body}<span class="visually-hidden">opens in a new window</span></a>`;
   } else {
     anchor = `<a href="${urlFilter(url, "")}" ${classAttr}>${body}</a>`;
   }

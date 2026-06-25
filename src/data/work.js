@@ -756,7 +756,7 @@ export default function () {
     {
       year: 2016,
       client: "PAPER Magazine",
-      project: "Papermag.com",
+      project: "PAPERmag.com",
       tags: ["featured", "media"],
       url: "http://www.papermag.com/",
       wayback: "20170305022907"
