@@ -12,58 +12,66 @@ let elementOrder = new Map();
 
 let nextRevealAt = 0;
 let ready = false;
-let pending = [];
+let pending = new Set();
 
 function initReveals() {
   if (observer) {
     observer.disconnect();
   }
 
-  const elements = [...document.querySelectorAll(SELECTOR)];
+  document.documentElement.classList.add("js-reveals");
+
+  const elements = Array.from(document.querySelectorAll(SELECTOR));
 
   elementOrder = new Map(elements.map((el, index) => [el, index]));
   nextRevealAt = 0;
   ready = false;
-  pending = [];
+  pending = new Set();
+
+  for (const el of elements) {
+    el.classList.remove(INVIEW_CLASS);
+    el.style.removeProperty("--transition-delay");
+    el.style.removeProperty("--reveal-delay");
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    afterFirstPaint(() => {
+      reveal(elements);
+    });
+
+    return;
+  }
 
   observer = new IntersectionObserver(handleIntersect, {
     threshold: 0.1,
   });
 
   for (const el of elements) {
-    el.classList.remove(INVIEW_CLASS);
-    el.style.removeProperty("--transition-delay");
-
     observer.observe(el);
   }
 
-  forceHiddenState(elements);
+  /*
+    Wait until the browser has had a real paint opportunity with the hidden CSS.
 
+    This replaces the old forced-layout hack.
+
+    No getBoundingClientRect().
+    No offsetHeight.
+    No synchronous layout read.
+  */
   afterFirstPaint(() => {
     ready = true;
 
     const queuedEntries = observer.takeRecords();
     const queuedEntering = getEnteringFromEntries(queuedEntries);
 
-    const initiallyVisible = elements.filter(el => {
-      return (
-        !el.classList.contains(INVIEW_CLASS) &&
-        isInViewport(el)
-      );
-    });
+    for (const el of queuedEntering) {
+      pending.add(el);
+    }
 
-    const toReveal = [
-      ...new Set([
-        ...pending,
-        ...queuedEntering,
-        ...initiallyVisible,
-      ]),
-    ];
-
-    pending = [];
-
-    if (toReveal.length) {
-      reveal(toReveal);
+    if (pending.size) {
+      reveal(Array.from(pending));
+      pending.clear();
     }
   });
 }
@@ -74,7 +82,10 @@ function handleIntersect(entries) {
   if (!entering.length) return;
 
   if (!ready) {
-    pending.push(...entering);
+    for (const el of entering) {
+      pending.add(el);
+    }
+
     return;
   }
 
@@ -140,14 +151,19 @@ function reveal(entering) {
         MAX_DELAY_MS
       );
 
-      el.style.setProperty("--transition-delay", `${Math.round(delay)}ms`);
+      /*
+        Keep the old custom property for compatibility,
+        but also expose a clearer one for animation CSS.
+      */
+      const delayValue = `${Math.round(delay)}ms`;
+
+      el.style.setProperty("--transition-delay", delayValue);
+      el.style.setProperty("--reveal-delay", delayValue);
 
       /*
-        Force the browser to recognize the current hidden style
-        before switching to the revealed style.
+        This now triggers a keyframe animation, not a transition that depends
+        on a previously flushed layout state.
       */
-      el.getBoundingClientRect();
-
       el.classList.add(INVIEW_CLASS);
 
       revealAt = delayAt + stagger;
@@ -168,62 +184,12 @@ function reveal(entering) {
   }
 }
 
-function forceHiddenState(elements) {
-  for (const el of elements) {
-    /*
-      Reading layout here forces style recalculation after removing
-      .is-inview. This helps avoid hidden/revealed states being collapsed
-      into the same render cycle.
-    */
-    el.getBoundingClientRect();
-  }
-}
-
 function afterFirstPaint(callback) {
-  /*
-    requestAnimationFrame runs before paint.
-
-    The first RAF lets the browser reach a paint opportunity.
-    The timeout lets that paint actually commit.
-    The second RAF starts the reveal on the next visual frame.
-  */
   requestAnimationFrame(() => {
     setTimeout(() => {
       requestAnimationFrame(callback);
     }, 0);
   });
-}
-
-function isInViewport(el) {
-  const rect = el.getBoundingClientRect();
-
-  const viewportWidth =
-    window.innerWidth || document.documentElement.clientWidth;
-
-  const viewportHeight =
-    window.innerHeight || document.documentElement.clientHeight;
-
-  return (
-    rect.bottom > 0 &&
-    rect.right > 0 &&
-    rect.top < viewportHeight &&
-    rect.left < viewportWidth
-  );
-}
-
-function revealVisibleElements() {
-  if (!ready) return;
-
-  const visible = [...document.querySelectorAll(SELECTOR)].filter(el => {
-    return (
-      !el.classList.contains(INVIEW_CLASS) &&
-      isInViewport(el)
-    );
-  });
-
-  if (visible.length) {
-    reveal(visible);
-  }
 }
 
 function toNumber(value, fallback) {
@@ -242,7 +208,5 @@ window.addEventListener("pageshow", event => {
     initReveals();
   }
 });
-
-window.addEventListener("load", revealVisibleElements, { once: true });
 
 window.initReveals = initReveals;

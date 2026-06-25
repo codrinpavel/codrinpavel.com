@@ -29,12 +29,41 @@
     transform: translateY(-100%);
   }
 
-  &.is-inview {
+   &.is-inview {
     .vt-logo-1 {
-      transform: translateY(-100%);
+      animation-name: logo-slide-up;
+      animation-duration: 666ms;
+      animation-timing-function: ease;
+      animation-delay: var(--transition-delay, 25ms);
+      animation-fill-mode: both;
     }
+
     .vt-logo-2 {
-      transform: translateY(0%);
+      animation-name: logo-slide-in;
+      animation-duration: 666ms;
+      animation-timing-function: ease;
+      animation-delay: var(--transition-delay, 25ms);
+      animation-fill-mode: both;
     }
+  }
+}
+
+@keyframes logo-slide-up {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes logo-slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
   }
 }

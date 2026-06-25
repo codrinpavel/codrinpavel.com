@@ -1,14 +1,12 @@
 [data-reveal] {
   opacity: 0;
   transform: translateY(.5em);
-  transition: transform 700ms ease, opacity 1000ms ease;
   will-change: transform, opacity;
 }
 
 [data-reveal="fadein"] {
   opacity: 0;
   transform: none;
-  transition: opacity 1000ms ease;
   will-change: opacity;
 }
 
@@ -16,16 +14,73 @@
   opacity: 0;
   transform: none;
   clip-path: inset(10% 0);
-  transition: clip-path 1s, opacity 2s ease;
   will-change: clip-path, opacity;
+}
 
-  &.is-inview {
+[data-reveal].is-inview {
+  animation-name: reveal-y-transform, reveal-opacity;
+  animation-duration: 700ms, 1000ms;
+  animation-timing-function: ease, ease;
+  animation-delay: var(--transition-delay, 25ms), var(--transition-delay, 25ms);
+  animation-fill-mode: both, both;
+}
+
+[data-reveal="fadein"].is-inview {
+  animation-name: reveal-opacity;
+  animation-duration: 1000ms;
+  animation-timing-function: ease;
+  animation-delay: var(--transition-delay, 25ms);
+  animation-fill-mode: both;
+}
+
+[data-reveal="clipy"].is-inview {
+  animation-name: reveal-clipy, reveal-opacity;
+  animation-duration: 1000ms, 2000ms;
+  animation-timing-function: ease, ease;
+  animation-delay: var(--transition-delay, 25ms), var(--transition-delay, 25ms);
+  animation-fill-mode: both, both;
+}
+
+@keyframes reveal-y-transform {
+  from {
+    transform: translateY(.5em);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal-clipy {
+  from {
+    clip-path: inset(10% 0);
+  }
+
+  to {
     clip-path: inset(-1px);
   }
 }
 
-[data-reveal].is-inview {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: var(--transition-delay, 25ms);
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal="fadein"],
+  [data-reveal="clipy"],
+  [data-reveal].is-inview,
+  [data-reveal="fadein"].is-inview,
+  [data-reveal="clipy"].is-inview {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    animation: none;
+  }
 }
