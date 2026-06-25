@@ -9,7 +9,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-::selection {
+html::selection {
   background: var(--color-black);
   color: var(--color-white-text);
   text-shadow: none;
