@@ -3,9 +3,8 @@
   <head>
     {% include "_meta.njk" %}
     {% include "_favicon.njk" %}
-    {% include "_styles.njk" %}
-    {% include "_scripts.njk" %}
     {% include "_preloads.njk" %}
+    {% include "_styles.njk" %}
   </head>
 
   <body>
@@ -16,5 +15,6 @@
     </main>
 
     {#% include "footer.njk" %#}
+    {% include "_scripts.njk" %}
   </body>
 </html>
