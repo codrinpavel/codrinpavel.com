@@ -19,8 +19,6 @@ function initReveals() {
     observer.disconnect();
   }
 
-  document.documentElement.classList.add("js-reveals");
-
   const elements = Array.from(document.querySelectorAll(SELECTOR));
 
   elementOrder = new Map(elements.map((el, index) => [el, index]));
@@ -31,7 +29,6 @@ function initReveals() {
   for (const el of elements) {
     el.classList.remove(INVIEW_CLASS);
     el.style.removeProperty("--transition-delay");
-    el.style.removeProperty("--reveal-delay");
   }
 
   if (!("IntersectionObserver" in window)) {
@@ -151,14 +148,8 @@ function reveal(entering) {
         MAX_DELAY_MS
       );
 
-      /*
-        Keep the old custom property for compatibility,
-        but also expose a clearer one for animation CSS.
-      */
       const delayValue = `${Math.round(delay)}ms`;
-
       el.style.setProperty("--transition-delay", delayValue);
-      el.style.setProperty("--reveal-delay", delayValue);
 
       /*
         This now triggers a keyframe animation, not a transition that depends

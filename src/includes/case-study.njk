@@ -33,16 +33,6 @@
         </span>
       {%- endfor -%}
     </h1>
-
-    {% for line in description %}
-      <p class="mt-2xl flex flex-wrap" data-reveal-batch>
-        {%- for char in line.split(' ') -%}
-          <span class="overflow-hidden flex">
-            <i data-reveal data-stagger="15">{{ char }}</i>&nbsp;
-          </span>
-        {%- endfor -%}
-      </p>
-    {% endfor %}
   </div>
 
   <div class="md:columns-7 lg:columns-2 lg:ml-2">

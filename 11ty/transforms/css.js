@@ -34,12 +34,10 @@ export default async function (content) {
           /^is-/,
           /^has-/,
           /^vt-/,
-          /--row/,
-          /--column/,
+          /lenis/,
           /data-/,
           /sr-only/,
-          /aria/,
-          /overflow-hidden/
+          /aria/
         ]
       }
     });
