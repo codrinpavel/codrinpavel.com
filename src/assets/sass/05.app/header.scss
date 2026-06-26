@@ -35,7 +35,6 @@
 
 .header__mobile {
   align-items: center;
-  color: var(--color-black-text);
 
   @include mq(md) {
     display: none;
@@ -44,7 +43,6 @@
 
 .header__desktop {
   align-items: center;
-  color: var(--color-black-text);
 
   @include mq(md, max) {
     display: none;

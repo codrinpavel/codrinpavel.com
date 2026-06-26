@@ -19,11 +19,11 @@ main,
   overscroll-behavior: none;
 }
 
-a[href*="http"] {
+[target="_blank"] {
   cursor: alias;
 }
 
-a[aria-current="page"] {
+[aria-current="page"] {
   color: var(--color-faint);
 }
 

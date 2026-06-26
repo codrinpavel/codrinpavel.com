@@ -10,7 +10,7 @@ body,
   font-variant-numeric: tabular-nums;
   text-wrap: pretty;
 
-  color: var(--color-black-text);
+  color: var(--color-black);
 }
 
 h1,
@@ -18,7 +18,7 @@ h1,
   font-size: var(--font-size-lg);
   font-variation-settings: var(--font-weight-semibold);
   line-height: 1.15;
-  color: var(--color-black-text);
+  color: var(--color-black);
 }
 
 h2, h3,
@@ -33,14 +33,14 @@ h2, h3,
   font-size: var(--font-size-3xl);
   font-variation-settings: var(--font-weight-extrabold);
   line-height: 1.1;
-  color: var(--color-black-text);
+  color: var(--color-black);
 }
 
 .type-xlarge {
   font-size: var(--font-size-5xl);
   font-variation-settings: var(--font-weight-extrabold);
   line-height: 1em;
-  color: var(--color-black-text);
+  color: var(--color-black);
 }
 
 .type-huge {

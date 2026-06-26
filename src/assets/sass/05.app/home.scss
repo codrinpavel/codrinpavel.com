@@ -15,7 +15,7 @@
   &__work {
     font-variation-settings: var(--font-weight-black);
 
-    &:hover {
+    &:hover li:not(:first-child) > span {
       color: var(--color-faint);
     }
 
@@ -25,10 +25,6 @@
       &:first-child {
         margin-bottom: var(--size-ml);
       }
-    }
-
-    a {
-      color: var(--color-black-text);
     }
 
     span:last-child {
