@@ -8,6 +8,7 @@
   @include meta.load-css('home');
   @include meta.load-css('study');
   @include meta.load-css('awards');
+  @include meta.load-css('footer');
 
   @include meta.load-css('reveal');
   //@include meta.load-css('vt');

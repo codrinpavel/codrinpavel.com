@@ -6,12 +6,12 @@
 
 html, body {
   cursor: default;
-  height: 100svh;
   background: var(--color-white);
 }
 
 html, body,
 section,
+main,
 .lenis {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -19,10 +19,12 @@ section,
   overscroll-behavior: none;
 }
 
-main {
-  overflow-y: auto;
-  overscroll-behavior: none;
-  height: 100svh;
+a[href*="http"] {
+  cursor: alias;
+}
+
+a[aria-current="page"] {
+  color: var(--color-faint);
 }
 
 section {

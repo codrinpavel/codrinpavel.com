@@ -1,0 +1,35 @@
+.logomark {
+  --count: 19;
+  --radius: 64px;
+
+  position: relative;
+  width: calc(var(--radius) * 2 + 2em);
+  height: calc(var(--radius) * 2 + 2em);
+  animation: spin 28s linear infinite;
+
+  b {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    font-size: 32px;
+    line-height: 1;
+    padding: 8px;
+    font-variation-settings: 'wght' var(--w);
+
+    transform:
+      translate(-50%, -50%) 
+      rotate(calc(360deg / var(--count) * var(--i))) 
+      translateY(calc(var(--radius) * -1));
+
+    &:hover {
+      font-variation-settings: 'wght' 900;
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

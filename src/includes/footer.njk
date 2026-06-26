@@ -1,0 +1,39 @@
+<footer class="footer wrapper">
+  <div class="wrapper">
+    <div>
+      <p class="type-xlarge color-faint-balance">Available for interface work & visual systems.</p>
+      <p class="type-xlarge m-zero">
+        <a class="link" href="mailto:hello@codrin.eu">hello@codrin.eu</a>
+      </p>
+    </div>
+
+    <div class="columns items-end type-eyebrow">
+      <div class="columns-7">
+        <span class="type-xlarge font-black">C/P</span>
+      </div>
+
+      <div class="columns-4 --row-gap-zero">
+        <h2 class="color-faint">Selected Work</h2>
+
+        <ul class="columns columns-6">
+          {% for item in collections.work | order %}
+            <li>
+              <a class="link" href="{{item.url | url}}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{item.data.client}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="columns-1">
+        <ul>
+          <li>
+            <a class="link" href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+          <li>
+            <a class="link" href="https://github.com/ZeroSpree" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

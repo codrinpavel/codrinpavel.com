@@ -15,17 +15,17 @@ export default function () {
       tags: ["report"],
     },
     {
-      year: 2024,
-      client: "Confidential Client",
-      project: "2023 ESG Report",
-      tags: ["report"],
-    },
-    {
       year: 2025,
       client: "Brilliant Earth",
       project: "2025 Mission Report",
       tags: ["featured", "report"],
       url: "https://www.brilliantearth.com/about/mission/report-2025",
+    },
+    {
+      year: 2024,
+      client: "Confidential Client",
+      project: "2023 ESG Report",
+      tags: ["report"],
     },
     {
       year: 2024,
@@ -58,9 +58,34 @@ export default function () {
       ]
     },
     {
+      year: 2024,
+      client: "Dominion Energy",
+      project: "2023 SCR Report",
+      tags: ["featured", "fortune", "award", "report"],
+      url: "https://sustainability.dominionenergy.com/scr-report",
+      wayback: "20240924193718",
+      awards: [
+        {
+          year: 2024,
+          organization: "MerComm",
+          sign: "🏆",
+          title: "Best of Sustainability Reports",
+          url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book24.pdf#page=5",
+        },
+      ]
+    },
+    {
+      year: 2024,
+      client: "NRMP",
+      long: "National Resident Matching Program",
+      project: "Program Directory",
+      tags: ["nonprofit"],
+      url: "https://programdirectory.nrmp.org",
+    },
+    {
       year: 2023,
       client: "Ideas On Purpose",
-      project: "BrandNewBrand.org",
+      project: "Brand New Brand website",
       tags: ["featured", "award"],
       url: "https://brandnewbrand.org",
       awards: [
@@ -81,30 +106,6 @@ export default function () {
       ]
     },
     {
-      year: 2022,
-      client: "GWBS",
-      long: "Groombridge, Wu, Baughman & Stone",
-      project: "Company Website",
-      url: "https://www.groombridgewu.com",
-    },
-    {
-      year: 2024,
-      client: "Dominion Energy",
-      project: "2023 SCR Report",
-      tags: ["featured", "fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com/scr-report",
-      wayback: "20240924193718",
-      awards: [
-        {
-          year: 2024,
-          organization: "MerComm",
-          sign: "🏆",
-          title: "Best of Sustainability Reports",
-          url: "https://mercommawards.com/inova/inovamedia/INOVA_Grand_Book24.pdf#page=5",
-        },
-      ]
-    },
-    {
       year: 2023,
       client: "Dominion Energy",
       project: "2022 SCR Report",
@@ -113,12 +114,74 @@ export default function () {
       wayback: "20240414085500"
     },
     {
+      year: 2023,
+      client: "Dominion Energy",
+      project: "2022 DEI Report",
+      tags: ["fortune", "report"],
+      url: "https://dei.dominionenergy.com",
+      wayback: "20240629163410"
+    },
+    {
+      year: 2023,
+      client: "NYU",
+      long: "New York University",
+      project: "Summer Housing",
+      tags: ["featured", "nonprofit"],
+      url: "https://housing.nyu.edu/summer",
+    },
+    {
+      year: 2022,
+      client: "GWBS",
+      long: "Groombridge, Wu, Baughman & Stone",
+      project: "Firm website",
+      url: "https://www.groombridgewu.com",
+    },
+    {
       year: 2022,
       client: "Dominion Energy",
       project: "2021 SCR Report",
       tags: ["fortune", "report"],
       url: "https://sustainability.dominionenergy.com",
       wayback: "20221002150238",
+    },
+    {
+      year: 2022,
+      client: "Dominion Energy",
+      project: "2021 DEI Report",
+      tags: ["fortune", "report"],
+      url: "https://dei.dominionenergy.com",
+      wayback: "20230426035603"
+    },
+    {
+      year: 2022,
+      client: "FNIH",
+      long: "Foundation for the National Institutes of Health",
+      project: "2021 Annual Report",
+      tags: ["report", "nonprofit"],
+      url: "https://2021-annual-report.fnih.org",
+    },
+    {
+      year: 2022,
+      client: "Lucas' Fitness Lab",
+      project: "Non-Profit organization",
+      inactive: true,
+      nothumb: true
+    },
+    {
+      year: 2022,
+      client: "NYU",
+      long: "New York University | Entrepreneurial Institute",
+      project: "2021 Annual Report",
+      tags: ["report"],
+      url: "https://entrepreneur.nyu.edu/annual-report-2021",
+      wayback: "20220623171806"
+    },
+    {
+      year: 2022,
+      client: "PubHub",
+      project: "Agency website",
+      tags: ["independent"],
+      url: "https://pubhub.ro",
     },
     {
       year: 2021,
@@ -136,94 +199,6 @@ export default function () {
           url: "https://gallery.gdusa.com/project/95323723-e359-4d7c-b7b6-ef0045b45eef",
         },
       ]
-    },
-    {
-      year: 2020,
-      client: "Dominion Energy",
-      project: "2019 SCR Report",
-      tags: ["fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com",
-      wayback: "20210421075237",
-      awards: [
-        {
-          year: 2021,
-          organization: "GDUSA",
-          sign: "⭐",
-          title: "Digital Design Awards",
-          url: "https://gallery.gdusa.com/project/ef213a58-603d-428d-9fc3-94498d4a68bc",
-        },
-        {
-          year: 2021,
-          organization: "LACP",
-          sign: "🥈",
-          title: "Silver Vision Awards",
-          url: "https://www.lacp.com/2020vision/awards-annual-report-competition-dominion-energy-inc-online-digital-report-4212b.htm",
-        },
-      ]
-    },
-    {
-      year: 2019,
-      client: "Dominion Energy",
-      project: "2018 SCR Report",
-      tags: ["fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com",
-      wayback: "20200629133002",
-      awards: [
-        {
-          year: 2019,
-          organization: "MerComm",
-          sign: "🥉",
-          title: "Summary Annual Review",
-          url: "https://mercommawards.com/arc/archive/2019/categoryWinners/summary.htm",
-        },
-        {
-          year: 2020,
-          organization: "WebAward",
-          sign: "⭐",
-          title: "Outstanding Website",
-          url: "https://www.webaward.org/winner/35660/ideas-on-purpose-wins-2020-webaward-for-dominion-energy-sustainability-report-microsite.html",
-        },
-      ]
-    },
-    {
-      year: 2018,
-      client: "Dominion Energy",
-      project: "2017–18 SCR Report",
-      tags: ["fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com",
-      wayback: "20181221122549",
-      awards: [
-        {
-          year: 2019,
-          organization: "GDUSA",
-          sign: "⭐",
-          title: "American Web Design Awards",
-          url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|358",
-        },
-        {
-          year: 2019,
-          organization: "LACP",
-          sign: "🥇",
-          title: "Gold Vision Awards",
-          url: "https://www.lacp.com/201718vision/awards-annual-report-competition-13065.htm",
-        },
-      ]
-    },
-    {
-      year: 2023,
-      client: "Dominion Energy",
-      project: "2022 DEI Report",
-      tags: ["fortune", "report"],
-      url: "https://dei.dominionenergy.com",
-      wayback: "20240629163410"
-    },
-    {
-      year: 2022,
-      client: "Dominion Energy",
-      project: "2021 DEI Report",
-      tags: ["fortune", "report"],
-      url: "https://dei.dominionenergy.com",
-      wayback: "20230426035603"
     },
     {
       year: 2021,
@@ -254,7 +229,7 @@ export default function () {
       year: 2021,
       client: "NRMP",
       long: "National Resident Matching Program",
-      project: "NRMP.org",
+      project: "Organization website",
       tags: ["featured", "award", "nonprofit"],
       url: "https://www.nrmp.org",
       awards: [
@@ -271,7 +246,7 @@ export default function () {
       year: 2021,
       client: "NRMP",
       long: "National Resident Matching Program",
-      project: "National Matching Program",
+      project: "National Matching Program website",
       tags: ["nonprofit"],
       url: "https://www.nationalmatchingprogram.org",
     },
@@ -279,28 +254,10 @@ export default function () {
       year: 2021,
       client: "NRMP",
       long: "National Resident Matching Program",
-      project: "NRMP International",
+      project: "NRMP International website",
       tags: ["nonprofit"],
       url: "https://www.nrmpinternational.org",
     },
-    {
-      year: 2024,
-      client: "NRMP",
-      long: "National Resident Matching Program",
-      project: "NRMP Program Directory",
-      tags: ["nonprofit"],
-      url: "https://programdirectory.nrmp.org",
-    },
-    /*
-    {
-      year: 2024,
-      client: "NRMP",
-      long: "National Resident Matching Program",
-      project: "Application Forms",
-      tags: ["nonprofit"],
-      url: "https://forms.nrmp.org",
-    },
-    */
     {
       year: 2021,
       client: "FNIH",
@@ -320,61 +277,12 @@ export default function () {
       ]
     },
     {
-      year: 2022,
-      client: "FNIH",
-      long: "Foundation for the National Institutes of Health",
-      project: "2021 Annual Report",
-      tags: ["report", "nonprofit"],
-      url: "https://2021-annual-report.fnih.org",
-    },
-    {
       year: 2021,
       client: "FNIH",
       long: "Foundation for the National Institutes of Health",
       project: "2020 Annual Report",
       tags: ["report", "nonprofit"],
       url: "https://2020-annual-report.fnih.org",
-    },
-    {
-      year: 2020,
-      client: "FNIH",
-      long: "Foundation for the National Institutes of Health",
-      project: "2019 Annual Report",
-      tags: ["award", "report", "nonprofit"],
-      url: "https://2019-annual-report.fnih.org",
-      awards: [
-        {
-          year: 2020,
-          organization: "LACP",
-          sign: "🥇",
-          title: "Gold Vision Awards",
-          url: "https://www.lacp.com/2019vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-21303b.htm",
-        },
-      ]
-    },
-    {
-      year: 2019,
-      client: "FNIH",
-      long: "Foundation for the National Institutes of Health",
-      project: "2018 Annual Report",
-      tags: ["featured", "award", "report", "nonprofit"],
-      url: "https://2018-annual-report.fnih.org",
-      awards: [
-        {
-          year: 2019,
-          organization: "LACP",
-          sign: "🏆",
-          title: "Platinum Vision Awards",
-          url: "https://www.lacp.com/2018vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-1377a.htm",
-        },
-        {
-          year: 2019,
-          organization: "GDUSA",
-          sign: "⭐",
-          title: "American Web Design Awards",
-          url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|357",
-        },
-      ]
     },
     {
       year: 2021,
@@ -401,6 +309,56 @@ export default function () {
       tags: ["fortune", "report"],
       url: "https://ar2020.agcocorp.com",
       wayback: "20211215124050"
+    },
+    {
+      year: 2021,
+      client: "NYU",
+      long: "New York University",
+      project: "Summer Housing",
+      tags: ["nonprofit"],
+      url: "https://housing.nyu.edu/summer",
+      wayback: "20210316191246"
+    },
+    {
+      year: 2020,
+      client: "Dominion Energy",
+      project: "2019 SCR Report",
+      tags: ["fortune", "award", "report"],
+      url: "https://sustainability.dominionenergy.com",
+      wayback: "20210421075237",
+      awards: [
+        {
+          year: 2021,
+          organization: "GDUSA",
+          sign: "⭐",
+          title: "Digital Design Awards",
+          url: "https://gallery.gdusa.com/project/ef213a58-603d-428d-9fc3-94498d4a68bc",
+        },
+        {
+          year: 2021,
+          organization: "LACP",
+          sign: "🥈",
+          title: "Silver Vision Awards",
+          url: "https://www.lacp.com/2020vision/awards-annual-report-competition-dominion-energy-inc-online-digital-report-4212b.htm",
+        },
+      ]
+    },
+    {
+      year: 2020,
+      client: "FNIH",
+      long: "Foundation for the National Institutes of Health",
+      project: "2019 Annual Report",
+      tags: ["award", "report", "nonprofit"],
+      url: "https://2019-annual-report.fnih.org",
+      awards: [
+        {
+          year: 2020,
+          organization: "LACP",
+          sign: "🥇",
+          title: "Gold Vision Awards",
+          url: "https://www.lacp.com/2019vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-21303b.htm",
+        },
+      ]
     },
     {
       year: 2020,
@@ -437,7 +395,7 @@ export default function () {
     {
       year: 2020,
       client: "The Bronx Conservatory",
-      project: "Organization Website",
+      project: "Organization website",
       tags: ["featured", "award", "nonprofit"],
       url: "https://www.bronxconservatory.org",
       awards: [
@@ -451,16 +409,9 @@ export default function () {
       ]
     },
     {
-      year: 2022,
-      client: "Lucas' Fitness Lab",
-      project: "Organization Website",
-      inactive: true,
-      nothumb: true
-    },
-    {
       year: 2020,
       client: "Avenda Health",
-      project: "Company Website",
+      project: "Healthcare website",
       url: "https://www.avendahealth.com",
       wayback: "20200805045705"
     },
@@ -475,7 +426,7 @@ export default function () {
     {
       year: 2020,
       client: "Global Infrastructure Partners",
-      project: "Organization Website",
+      project: "Corporate website",
       tags: ["award"],
       url: "https://www.global-infra.com",
       wayback: "20200722204954",
@@ -488,13 +439,6 @@ export default function () {
           url: "https://www.webaward.org/winner/35658/ideas-on-purpose-wins-2020-webaward-for-global-infrastructure-partners-website.html",
         },
       ]
-    },
-    {
-      year: 2019,
-      client: "Tradeweb",
-      project: "Investor Relations",
-      url: "https://investors.tradeweb.com",
-      wayback: "20200721234131"
     },
     {
       year: 2020,
@@ -522,21 +466,110 @@ export default function () {
     {
       year: 2020,
       client: "Sam Simon Foundation",
-      project: "Assistance Dogs",
+      project: "Assistance Dogs website",
       tags: ["nonprofit"],
       url: "https://www.ssfdogs.org",
     },
     {
       year: 2020,
       client: "Sam Simon Foundation",
-      project: "Feeding Families",
+      project: "Feeding Families website",
       tags: ["nonprofit"],
       url: "https://ssf-feedingfamilies.org",
     },
     {
+      year: 2019,
+      client: "Dominion Energy",
+      project: "2018 SCR Report",
+      tags: ["fortune", "award", "report"],
+      url: "https://sustainability.dominionenergy.com",
+      wayback: "20200629133002",
+      awards: [
+        {
+          year: 2019,
+          organization: "MerComm",
+          sign: "🥉",
+          title: "Summary Annual Review",
+          url: "https://mercommawards.com/arc/archive/2019/categoryWinners/summary.htm",
+        },
+        {
+          year: 2020,
+          organization: "WebAward",
+          sign: "⭐",
+          title: "Outstanding Website",
+          url: "https://www.webaward.org/winner/35660/ideas-on-purpose-wins-2020-webaward-for-dominion-energy-sustainability-report-microsite.html",
+        },
+      ]
+    },
+    {
+      year: 2019,
+      client: "FNIH",
+      long: "Foundation for the National Institutes of Health",
+      project: "2018 Annual Report",
+      tags: ["featured", "award", "report", "nonprofit"],
+      url: "https://2018-annual-report.fnih.org",
+      awards: [
+        {
+          year: 2019,
+          organization: "LACP",
+          sign: "🏆",
+          title: "Platinum Vision Awards",
+          url: "https://www.lacp.com/2018vision/awards-annual-report-competition-foundation-for-the-national-institutes-of-health-online-report-1377a.htm",
+        },
+        {
+          year: 2019,
+          organization: "GDUSA",
+          sign: "⭐",
+          title: "American Web Design Awards",
+          url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|357",
+        },
+      ]
+    },
+    {
+      year: 2019,
+      client: "Tradeweb",
+      project: "Investor Relations",
+      url: "https://investors.tradeweb.com",
+      wayback: "20200721234131"
+    },
+    {
+      year: 2018,
+      client: "Dominion Energy",
+      project: "2017–18 SCR Report",
+      tags: ["fortune", "award", "report"],
+      url: "https://sustainability.dominionenergy.com",
+      wayback: "20181221122549",
+      awards: [
+        {
+          year: 2019,
+          organization: "GDUSA",
+          sign: "⭐",
+          title: "American Web Design Awards",
+          url: "http://contests.gdusa.com/gdusa-contest-winner?cc=awda19&ids=0|358",
+        },
+        {
+          year: 2019,
+          organization: "LACP",
+          sign: "🥇",
+          title: "Gold Vision Awards",
+          url: "https://www.lacp.com/201718vision/awards-annual-report-competition-13065.htm",
+        },
+      ]
+    },
+    /*
+    {
+      year: 2024,
+      client: "NRMP",
+      long: "National Resident Matching Program",
+      project: "Application Forms",
+      tags: ["nonprofit"],
+      url: "https://forms.nrmp.org",
+    },
+    */
+    {
       year: 2018,
       client: "Ideas On Purpose",
-      project: "IdeasOnPurpose.com",
+      project: "Agency website",
       tags: ["award"],
       url: "https://www.ideasonpurpose.com",
       awards: [
@@ -557,74 +590,40 @@ export default function () {
       ]
     },
     {
-      year: 2023,
-      client: "NYU",
-      long: "New York University",
-      project: "Summer Housing",
-      tags: ["featured", "nonprofit"],
-      url: "https://housing.nyu.edu/summer",
-    },
-    {
-      year: 2021,
-      client: "NYU",
-      long: "New York University",
-      project: "Summer Housing",
-      tags: ["nonprofit"],
-      url: "https://housing.nyu.edu/summer",
-      wayback: "20210316191246"
-    },
-    {
-      year: 2022,
-      client: "NYU",
-      long: "New York University | Entrepreneurial Institute",
-      project: "2021 Annual Report",
-      tags: ["report"],
-      url: "https://entrepreneur.nyu.edu/annual-report-2021",
-      wayback: "20220623171806"
-    },
-    {
-      year: 2017,
-      client: "AXIOS Media",
-      project: "Axios.com",
-      url: "https://www.axios.com",
-      tags: ["featured", "media"],
-      wayback: "20170202003159"
-    },
-    {
       year: 2018,
       client: "LaVerita",
-      project: "News and Media Website",
+      project: "Media website",
       tags: ["media"],
       url: "https://www.laverita.info",
     },
     {
       year: 2018,
-      wayback: "20180326144547",
       client: "The Odyssey Online",
-      project: "Media Website",
+      project: "Media website",
       tags: ["media"],
       url: "https://www.theodysseyonline.com",
+      wayback: "20180326144547",
     },
     {
       year: 2018,
-      wayback: "20180326145052",
       client: "Pop Matters",
-      project: "International Publication",
+      project: "Culture magazine",
       tags: ["media"],
       url: "https://www.popmatters.com",
+      wayback: "20180326145052",
     },
     {
       year: 2018,
       wayback: 20180315093517,
       client: "Popdust",
-      project: "Entertainment Publication",
+      project: "Entertainment magazine",
       tags: ["media"],
       url: "https://www.popdust.com",
     },
     {
       year: 2018,
       client: "PayPath",
-      project: "Entertainment Publication",
+      project: "Personal finance website",
       tags: ["media"],
       url: "https://www.paypath.com",
       inactive: true,
@@ -634,7 +633,7 @@ export default function () {
       year: 2018,
       wayback: 20160420152431,
       client: "One Country",
-      project: "News and Media Website",
+      project: "Lifestyle media website",
       tags: ["media"],
       url: "https://onecountry.com",
     },
@@ -642,37 +641,8 @@ export default function () {
       year: 2018,
       wayback: 20180224060527,
       client: "GeistM",
-      project: "Agency Website",
+      project: "Marketing website",
       url: "https://geistm.com",
-    },
-    {
-      year: 2015,
-      client: "GSK",
-      long: "GlaxoSmithKline",
-      project: "Flonase Fall of Fame",
-      tags: ["fortune", "media"],
-      url: "https://falloffame.flonase.com",
-      wayback: "20180309130524"
-    },
-    {
-      year: 2017,
-      client: "GSK",
-      long: "GlaxoSmithKline",
-      project: "Flonase Be Greater",
-      tags: ["fortune", "media"],
-      url: "https://begreater.flonase.com",
-      wayback: "20180326213621"
-    },
-    {
-      year: 2016,
-      client: "GSK",
-      long: "GlaxoSmithKline",
-      project: "Flonase Be Greater",
-      tags: ["fortune", "media"],
-      url: "https://gart.flonase.com/the-greater-american-roadtrip",
-      wayback: "20170629052449",
-      inactive: true,
-      nothumb: true
     },
     {
       year: 2018,
@@ -684,16 +654,60 @@ export default function () {
     },
     {
       year: 2017,
+      client: "AXIOS Media",
+      project: "News website",
+      url: "https://www.axios.com",
+      tags: ["featured", "media"],
+      wayback: "20170202003159"
+    },
+    {
+      year: 2017,
+      client: "GSK",
+      long: "GlaxoSmithKline",
+      project: "Be Greater campaign website",
+      tags: ["fortune", "media"],
+      url: "https://begreater.flonase.com",
+      wayback: "20180326213621"
+    },
+    {
+      year: 2017,
       client: "United Airlines",
-      project: "United Social Hub",
+      project: "Social Hub",
       tags: ["fortune", "media"],
       url: "https://hub.united.com",
       wayback: "20180503104514"
     },
     {
+      year: 2017,
+      client: "The Dodo",
+      project: "Animal media website",
+      tags: ["featured", "media"],
+      url: "https://www.thedodo.com",
+      wayback: "20180228182750"
+    },
+    {
+      year: 2017,
+      client: "Simple Organic Life",
+      project: "Organic lifestyle website",
+      tags: ["media"],
+      url: "http://www.simpleorganiclife.org",
+      wayback: "20170304183922"
+    },
+    {
+      year: 2016,
+      client: "GSK",
+      long: "GlaxoSmithKline",
+      project: "Greater American Roadtrip",
+      tags: ["fortune", "media"],
+      url: "https://gart.flonase.com/the-greater-american-roadtrip",
+      wayback: "20170629052449",
+      inactive: true,
+      nothumb: true
+    },
+    {
       year: 2016,
       client: "GearBrain",
-      project: "Company Website",
+      project: "Technology media website",
       tags: ["media"],
       url: "http://www.gearbrain.com",
       wayback: 20170824031436
@@ -701,7 +715,7 @@ export default function () {
     {
       year: 2016,
       client: "TopDust",
-      project: "Digital Publication",
+      project: "Entertainment media website",
       tags: ["media"],
       url: "http://www.topdust.com",
       inactive: true,
@@ -710,7 +724,7 @@ export default function () {
     {
       year: 2016,
       client: "We Are Mel",
-      project: "Company Website",
+      project: "Media website",
       tags: ["media"],
       url: "http://www.wearemel.com",
       inactive: true,
@@ -719,21 +733,21 @@ export default function () {
     {
       year: 2016,
       client: "7x7",
-      project: "Media & Lifestyle Website",
+      project: "City magazine",
       tags: ["media"],
       url: "https://www.7x7.com",
     },
     {
       year: 2016,
       client: "EcoWatch",
-      project: "Environmental News Website",
+      project: "Environmental news website",
       tags: ["media"],
       url: "http://www.ecowatch.com",
     },
     {
       year: 2016,
       client: "Love Meow",
-      project: "Cat-centric Media & News Website",
+      project: "Cat media website",
       tags: ["media"],
       url: "http://www.lovemeow.com",
     },
@@ -746,102 +760,45 @@ export default function () {
       wayback: "20160802220923"
     },
     {
-      year: 2015,
-      client: "Univision",
-      project: "The Flama",
-      tags: ["media"],
-      url: "http://www.theflama.com",
-      wayback: "20160802173825"
-    },
-    {
       year: 2016,
       client: "PAPER Magazine",
-      project: "PAPERmag.com",
+      project: "Magazine website",
       tags: ["featured", "media"],
       url: "http://www.papermag.com",
       wayback: "20170305022907"
     },
     {
-      year: 2015,
-      wayback: "20160804172937",
-      client: "FindMyPast",
-      project: "Company Blog",
-      tags: ["media"],
-      url: "https://blog.findmypast.com",
-    },
-    {
       year: 2016,
       client: "Time Inc.",
-      project: "The Outfit",
+      project: "Fashion media website",
       tags: ["media"],
       url: "https://www.theoutfit.com",
       wayback: "20160614054931"
     },
     {
-      year: 2017,
-      client: "The Dodo",
-      project: "TheDodo.com",
-      tags: ["featured", "media"],
-      url: "https://www.thedodo.com",
-      wayback: "20180228182750"
+      year: 2015,
+      client: "GSK",
+      long: "GlaxoSmithKline",
+      project: "Fall of Fame campaign website",
+      tags: ["fortune", "media"],
+      url: "https://falloffame.flonase.com",
+      wayback: "20180309130524"
     },
     {
-      year: 2017,
-      client: "Simple Organic Life",
-      project: "Publication Website",
+      year: 2015,
+      client: "Univision",
+      project: "TheFlama.com",
       tags: ["media"],
-      url: "http://www.simpleorganiclife.org",
-      wayback: "20170304183922if_"
+      url: "http://www.theflama.com",
+      wayback: "20160802173825"
     },
     {
-      year: 2012,
-      client: "MyGov",
-      project: "Public administration platform",
-      url: "https://mygov.us",
-      wayback: "20130309200438"
-    },
-    {
-      year: 2013,
-      client: "VisualFreaks",
-      project: "Project Website",
-      tags: ["independent"],
-      url: "http://www.visualfreaks.com",
-      wayback: "20131010011018"
-    },
-    {
-      year: 2013,
-      client: "KiteOps",
-      project: "Project Website",
-      tags: ["independent"],
-      url: "https://www.kiteops.com",
-      wayback: "20191210095217"
-    },
-    {
-      year: 2013,
-      client: "ABIS Studio",
-      project: "Company Website",
-      tags: ["independent"],
-      url: "https://www.abisstudio.ro",
-      inactive: true,
-      nothumb: true
-    },
-    {
-      year: 2012,
-      client: "Benevol",
-      project: "Company Website",
-      tags: ["nonprofit", "independent"],
-      url: "https://www.benevol.ro",
-      wayback: "20150201141440"
-    },
-    {
-      year: 2010,
-      client: "Domus Caritatis",
-      project: "Organization Website",
-      url: "https://domuscaritatis.ro",
-      tags: ["nonprofit", "independent"],
-      wayback: "20120112043727",
-      inactive: true,
-      nothumb: true
+      year: 2015,
+      client: "FindMyPast",
+      project: "Company Blog",
+      tags: ["media"],
+      url: "https://blog.findmypast.com",
+      wayback: "20160804172937",
     },
     {
       year: 2014,
@@ -868,39 +825,82 @@ export default function () {
       wayback: "20160323044906"
     },
     {
+      year: 2013,
+      client: "VisualFreaks",
+      project: "Premium stock graphics",
+      tags: ["independent"],
+      url: "http://www.visualfreaks.com",
+      wayback: "20131010011018"
+    },
+    {
+      year: 2013,
+      client: "KiteOps",
+      project: "Product website",
+      tags: ["independent"],
+      url: "https://www.kiteops.com",
+      wayback: "20191210095217"
+    },
+    {
+      year: 2013,
+      client: "ABIS Studio",
+      project: "Creative production studio",
+      tags: ["independent"],
+      url: "https://www.abisstudio.ro",
+      inactive: true,
+      nothumb: true
+    },
+    {
+      year: 2012,
+      client: "MyGov",
+      project: "Public administration platform",
+      url: "https://mygov.us",
+      wayback: "20130309200438"
+    },
+    {
+      year: 2012,
+      client: "Benevol",
+      project: "Nonprofit website",
+      tags: ["nonprofit", "independent"],
+      url: "https://www.benevol.ro",
+      wayback: "20150201141440"
+    },
+    {
+      year: 2010,
+      client: "Domus Caritatis",
+      project: "Nonprofit website",
+      url: "https://domuscaritatis.ro",
+      tags: ["nonprofit", "independent"],
+      wayback: "20120112043727",
+      inactive: true,
+      nothumb: true
+    },
+    {
       year: 2010,
       client: "Cristina Dumitru",
-      project: "Personal Website",
+      project: "Personal website",
       tags: ["independent"],
       url: "https://cristinadumitru.ro",
       inactive: true,
       nothumb: true
     },
     {
-      year: 2022,
-      client: "PubHub",
-      project: "Company Website",
-      tags: ["independent"],
-      url: "https://pubhub.ro",
-    },
-    {
       year: 2010,
       client: "AIO Design",
-      project: "Portfolio Website",
+      project: "Design studio website",
       tags: ["independent"],
       url: "https://aiodesign.ro",
     },
     {
       year: 2010,
       client: "Livio Benedetti",
-      project: "Portfolio Website",
+      project: "Artist website",
       tags: ["independent"],
       url: "https://www.liviobenedetti.com",
     },
     {
       year: 2010,
       client: "5 Napkin Burger",
-      project: "Beer and Bourbon Blog",
+      project: "Beer & Bourbon Blog",
       tags: ["independent"],
       url: "https://www.5napkinburger.com",
       inactive: true
@@ -908,7 +908,7 @@ export default function () {
     {
       year: 2010,
       client: "Blossom et Partenaires",
-      project: "Agency Website",
+      project: "Consultancy agency website",
       tags: ["independent"],
       url: "https://blossom-partenaires.ch/fr",
       inactive: true
@@ -916,7 +916,7 @@ export default function () {
     {
       year: 2009,
       client: "Harosa & Nemeti",
-      project: "Law Firm Website",
+      project: "Law firm website",
       tags: ["independent"],
       url: "http://harosa-nemeti.ro",
       inactive: true,

@@ -46,10 +46,6 @@
   align-items: center;
   color: var(--color-black-text);
 
-  a[aria-current="page"] {
-    color: var(--color-faint);
-  }
-
   @include mq(md, max) {
     display: none;
   }

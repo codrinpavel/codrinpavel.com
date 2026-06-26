@@ -19,16 +19,20 @@
       color: var(--color-faint);
     }
 
-    li:first-child {
-      margin-bottom: var(--size-ml);
-    }
-
     li {
       overflow: hidden;
+
+      &:first-child {
+        margin-bottom: var(--size-ml);
+      }
     }
 
     a {
       color: var(--color-black-text);
+    }
+
+    span:last-child {
+      text-align: right;
     }
 
     @include mq(md, max) {
@@ -48,6 +52,8 @@
     background-color: var(--color-black);
     filter: grayscale(1);
     transition: filter 600ms;
+    object-fit: contain;
+    object-position: right;
 
     &:hover {
       filter: grayscale(0);

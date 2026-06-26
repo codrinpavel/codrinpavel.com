@@ -2,17 +2,12 @@ const SELECTOR = "[data-reveal],[data-inview]";
 const INVIEW_CLASS = "is-inview";
 
 const DEFAULT_STAGGER_MS = 25;
-const MAX_DELAY_MS = 2500;
-
-const BATCH_SELECTOR = "[data-reveal-batch]";
-const MAX_BATCH_BLOCK_MS = 500;
 
 let observer;
 let elementOrder = new Map();
 
-let nextRevealAt = 0;
-let ready = false;
-let pending = new Set();
+let queued = new Set();
+let revealFrame = 0;
 
 function initReveals() {
   if (observer) {
@@ -22,9 +17,9 @@ function initReveals() {
   const elements = Array.from(document.querySelectorAll(SELECTOR));
 
   elementOrder = new Map(elements.map((el, index) => [el, index]));
-  nextRevealAt = 0;
-  ready = false;
-  pending = new Set();
+
+  queued.clear();
+  revealFrame = 0;
 
   for (const el of elements) {
     el.classList.remove(INVIEW_CLASS);
@@ -32,65 +27,22 @@ function initReveals() {
   }
 
   if (!("IntersectionObserver" in window)) {
-    afterFirstPaint(() => {
-      reveal(elements);
-    });
-
+    reveal(elements);
     return;
   }
 
   observer = new IntersectionObserver(handleIntersect, {
-    threshold: 0.1,
+    threshold: 0,
+    rootMargin: "0px 0px 25% 0px",
   });
 
   for (const el of elements) {
     observer.observe(el);
   }
-
-  /*
-    Wait until the browser has had a real paint opportunity with the hidden CSS.
-
-    This replaces the old forced-layout hack.
-
-    No getBoundingClientRect().
-    No offsetHeight.
-    No synchronous layout read.
-  */
-  afterFirstPaint(() => {
-    ready = true;
-
-    const queuedEntries = observer.takeRecords();
-    const queuedEntering = getEnteringFromEntries(queuedEntries);
-
-    for (const el of queuedEntering) {
-      pending.add(el);
-    }
-
-    if (pending.size) {
-      reveal(Array.from(pending));
-      pending.clear();
-    }
-  });
 }
 
 function handleIntersect(entries) {
-  const entering = getEnteringFromEntries(entries);
-
-  if (!entering.length) return;
-
-  if (!ready) {
-    for (const el of entering) {
-      pending.add(el);
-    }
-
-    return;
-  }
-
-  reveal(entering);
-}
-
-function getEnteringFromEntries(entries) {
-  return entries
+  const entering = entries
     .filter(entry => {
       return (
         entry.isIntersecting &&
@@ -98,89 +50,68 @@ function getEnteringFromEntries(entries) {
       );
     })
     .map(entry => entry.target);
-}
-
-function reveal(entering) {
-  const now = performance.now();
-
-  entering = entering.filter(el => {
-    return !el.classList.contains(INVIEW_CLASS);
-  });
 
   if (!entering.length) return;
 
-  entering.sort((a, b) => {
+  queueReveal(entering);
+}
+
+function queueReveal(elements) {
+  for (const el of elements) {
+    queued.add(el);
+  }
+
+  if (revealFrame) return;
+
+  revealFrame = requestAnimationFrame(() => {
+    revealFrame = 0;
+
+    const elements = Array.from(queued);
+    queued.clear();
+
+    reveal(elements);
+  });
+}
+
+function reveal(elements) {
+  elements = elements.filter(el => {
+    return !el.classList.contains(INVIEW_CLASS);
+  });
+
+  if (!elements.length) return;
+
+  elements.sort((a, b) => {
     return elementOrder.get(a) - elementOrder.get(b);
   });
 
-  nextRevealAt = Math.max(nextRevealAt, now);
+  /*
+    Local timeline.
 
-  const groups = [];
+    This resets every time reveal() runs.
+    So visible elements sequence together,
+    but later scroll reveals start from 0 again.
+  */
+  let delay = 0;
 
-  for (const el of entering) {
-    const batch = el.closest(BATCH_SELECTOR);
+  for (const el of elements) {
+    const extraDelay = toNumber(el.dataset.delay, 0);
+    const stagger = toNumber(el.dataset.stagger, DEFAULT_STAGGER_MS);
 
-    if (batch) {
-      let group = groups.find(group => group.batch === batch);
+    delay += extraDelay;
 
-      if (!group) {
-        group = { batch, elements: [] };
-        groups.push(group);
-      }
+    el.style.setProperty(
+      "--transition-delay",
+      `${Math.round(delay)}ms`
+    );
 
-      group.elements.push(el);
-    } else {
-      groups.push({ batch: null, elements: [el] });
+    el.classList.add(INVIEW_CLASS);
+
+    delay += stagger;
+
+    if (observer) {
+      observer.unobserve(el);
     }
   }
-
-  for (const group of groups) {
-    const groupStartAt = nextRevealAt;
-    let revealAt = groupStartAt;
-
-    for (const el of group.elements) {
-      const extraDelay = toNumber(el.dataset.delay, 0);
-      const stagger = toNumber(el.dataset.stagger, DEFAULT_STAGGER_MS);
-
-      const delayAt = revealAt + extraDelay;
-      const delay = Math.min(
-        Math.max(delayAt - now, 0),
-        MAX_DELAY_MS
-      );
-
-      const delayValue = `${Math.round(delay)}ms`;
-      el.style.setProperty("--transition-delay", delayValue);
-
-      /*
-        This now triggers a keyframe animation, not a transition that depends
-        on a previously flushed layout state.
-      */
-      el.classList.add(INVIEW_CLASS);
-
-      revealAt = delayAt + stagger;
-
-      if (observer) {
-        observer.unobserve(el);
-      }
-    }
-
-    if (group.batch) {
-      nextRevealAt = Math.min(
-        revealAt,
-        groupStartAt + MAX_BATCH_BLOCK_MS
-      );
-    } else {
-      nextRevealAt = revealAt;
-    }
-  }
-}
-
-function afterFirstPaint(callback) {
-  requestAnimationFrame(() => {
-    setTimeout(() => {
-      requestAnimationFrame(callback);
-    }, 0);
-  });
 }
 
 function toNumber(value, fallback) {

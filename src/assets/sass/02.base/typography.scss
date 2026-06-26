@@ -31,8 +31,15 @@ h2, h3,
 
 .type-large {
   font-size: var(--font-size-3xl);
-  font-variation-settings: var(--font-weight-semibold);
+  font-variation-settings: var(--font-weight-extrabold);
   line-height: 1.1;
+  color: var(--color-black-text);
+}
+
+.type-xlarge {
+  font-size: var(--font-size-5xl);
+  font-variation-settings: var(--font-weight-extrabold);
+  line-height: 1em;
   color: var(--color-black-text);
 }
 

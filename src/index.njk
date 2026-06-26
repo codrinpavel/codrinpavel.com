@@ -28,7 +28,7 @@ order: 0
 
     <div class="columns my-10xl --row-gap-5xl">
       <div class="columns-10 md:columns-5 text-md">
-        <h2 data-reveal data-delay="300">Experience</h2>
+        <h2 data-reveal data-delay="400">Experience</h2>
         {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
 
         {% set desc2 = "The best projects I’ve been part of had teams that truly care: reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP and United; publishing systems for Axios, The Dodo, PAPER, Discovery and so many others." %}
@@ -55,7 +55,7 @@ order: 0
       </div>
 
       <div class="columns-6 md:columns-3 md:ml-2">
-        <h2 data-reveal data-delay="200">Services</h2>
+        <h2 data-reveal data-delay="100">Services</h2>
         <ul>
           <li data-reveal>Annual & Sustainability Reports</li>
           <li data-reveal>Corporate Communications</li>
@@ -71,7 +71,7 @@ order: 0
       </div>
 
       <div class="columns-4 md:columns-2 ml-1 md:ml-zero">
-        <h2 data-reveal data-delay="200">Expertise</h2>
+        <h2 data-reveal data-delay="100">Expertise</h2>
         <ul>
           <li data-reveal>Frontend Architecture</li>
           <li data-reveal>Accessibility / WCAG Compliance</li>
@@ -105,7 +105,7 @@ order: 0
         {% endif %}
       {% endfor %}
       <div>
-        <a class="button" href="{{ "/case-studies/" | url }}">See More Case Studies {% svg "arrow.svg" %}</a>
+        <a class="button" href="{{ "/work/" | url }}">See More Work {% svg "arrow.svg" %}</a>
       </div>
     </div>
 
@@ -120,7 +120,7 @@ order: 0
         {% set isCaseStudy = collections.work | hasCaseStudy(item.client) %}
         <li data-reveal data-stagger="15" {% if not isCaseStudy %}class="columns"{% endif %}>
           {%- if isCaseStudy -%}
-            <a href="/case-studies/{{item.client | slugify}}/" class="columns">
+            <a href="/work/{{item.client | slugify}}/" class="columns">
           {% endif %}
             <span class="columns-6 md:columns-6 lg:columns-7">{{item.client}}</span>
             <span class="columns-6 md:columns-5 lg:columns-3">{{item.project}}</span>

@@ -1,0 +1,9 @@
+.footer {
+  .wrapper {
+    height: 100svh;
+    padding: var(--size-header-offset) var(--grid-margin) var(--size-4xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
