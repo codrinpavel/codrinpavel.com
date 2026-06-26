@@ -5,11 +5,8 @@
 }
 
 html, body {
-  height: 100svh;
-}
-
-body {
   cursor: default;
+  height: 100svh;
   background: var(--color-white);
 }
 
@@ -42,12 +39,4 @@ section {
   width: 100%;
   max-height: 90svh;
   object-fit: contain;
-}
-
-.disclaimer {
-  padding-top: 2px;
-  font-size: 10px;
-  margin-top: var(--size-ml);
-  color: var(--color-faint);
-  padding-right: var(--size-xl);
 }

@@ -26,6 +26,10 @@ a[data-title] {
     inset: 0;
     transition: translate 120ms ease;
     translate: 0 105%;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   &:hover,

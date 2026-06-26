@@ -35,7 +35,7 @@
     }
 
     &.is-inview::after {
-      animation: scrollerBar 2s ease both;
+      animation: scrollerBar 2s ease var(--transition-delay, 25ms) both;
     }
 
     @include mq(md, max) {

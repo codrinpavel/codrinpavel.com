@@ -44,7 +44,7 @@
             {% if item.client == client or item.long == client %}
               {% if not item.wayback %}
                 <li data-reveal>
-                  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" data-title="Explore the Website">{{- item.project -}}</a>
+                  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" data-title="View Live Site">{{- item.project -}}</a>
                 </li>
               {% else %}
                 <li data-reveal class="color-faint">{{- item.project -}}</li>

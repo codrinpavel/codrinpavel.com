@@ -14,7 +14,7 @@ order: 0
       <div class="columns-12 md:columns-7">
         {% set intro = "For more than 15 years, I’ve been an independent frontend partner to agencies, publishers, nonprofits, and enterprise teams, turning creative concepts and complex content into accessible, high-performance websites, reports, and media platforms." %}
 
-        <h1 class="type-xlarge flex flex-wrap" data-reveal-batch>
+        <h1 class="type-large flex flex-wrap" data-reveal-batch>
           {%- for char in intro.split(' ') -%}
             <span class="overflow-hidden flex"><i data-reveal data-stagger="15">{{ char }}</i>&nbsp;</span>
           {%- endfor -%}
@@ -35,7 +35,7 @@ order: 0
 
         {% set desc3 = "Across all these projects, I’ve contributed more than code: interpreting client feedback, explaining technical decisions in plain english, reviewing code, onboarding developers, and enabling creatives and teammates do their best work." %}
 
-        <p class="flex flex-wrap text-lg">
+        <p class="flex flex-wrap type-medium">
         {%- for char in desc1.split(' ') -%}
           <span class="overflow-hidden flex"><i data-reveal data-stagger="5">{{ char }}</i>&nbsp;</span>
         {%- endfor -%}

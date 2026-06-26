@@ -25,7 +25,7 @@ export default function () {
       client: "Brilliant Earth",
       project: "2025 Mission Report",
       tags: ["featured", "report"],
-      url: "https://www.brilliantearth.com/about/mission/report-2025/",
+      url: "https://www.brilliantearth.com/about/mission/report-2025",
     },
     {
       year: 2024,
@@ -39,7 +39,7 @@ export default function () {
       client: "Brilliant Earth",
       project: "2024 Mission Report",
       tags: ["award", "report"],
-      url: "https://www.brilliantearth.com/about/mission/report-2024/",
+      url: "https://www.brilliantearth.com/about/mission/report-2024",
       awards: [
         {
           year: 2025,
@@ -62,7 +62,7 @@ export default function () {
       client: "Ideas On Purpose",
       project: "BrandNewBrand.org",
       tags: ["featured", "award"],
-      url: "https://brandnewbrand.org/",
+      url: "https://brandnewbrand.org",
       awards: [
         {
           year: 2024,
@@ -85,14 +85,14 @@ export default function () {
       client: "GWBS",
       long: "Groombridge, Wu, Baughman & Stone",
       project: "Company Website",
-      url: "https://www.groombridgewu.com/",
+      url: "https://www.groombridgewu.com",
     },
     {
       year: 2024,
       client: "Dominion Energy",
       project: "2023 SCR Report",
       tags: ["featured", "fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com/scr-report/",
+      url: "https://sustainability.dominionenergy.com/scr-report",
       wayback: "20240924193718",
       awards: [
         {
@@ -109,7 +109,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2022 SCR Report",
       tags: ["fortune", "report"],
-      url: "https://sustainability.dominionenergy.com/",
+      url: "https://sustainability.dominionenergy.com",
       wayback: "20240414085500"
     },
     {
@@ -117,7 +117,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2021 SCR Report",
       tags: ["fortune", "report"],
-      url: "https://sustainability.dominionenergy.com/",
+      url: "https://sustainability.dominionenergy.com",
       wayback: "20221002150238",
     },
     {
@@ -125,7 +125,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2020 SCR Report",
       tags: ["fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com/",
+      url: "https://sustainability.dominionenergy.com",
       wayback: "20220205061426",
       awards: [
         {
@@ -142,7 +142,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2019 SCR Report",
       tags: ["fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com/",
+      url: "https://sustainability.dominionenergy.com",
       wayback: "20210421075237",
       awards: [
         {
@@ -166,7 +166,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2018 SCR Report",
       tags: ["fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com/",
+      url: "https://sustainability.dominionenergy.com",
       wayback: "20200629133002",
       awards: [
         {
@@ -190,7 +190,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2017–18 SCR Report",
       tags: ["fortune", "award", "report"],
-      url: "https://sustainability.dominionenergy.com/",
+      url: "https://sustainability.dominionenergy.com",
       wayback: "20181221122549",
       awards: [
         {
@@ -214,7 +214,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2022 DEI Report",
       tags: ["fortune", "report"],
-      url: "https://dei.dominionenergy.com/",
+      url: "https://dei.dominionenergy.com",
       wayback: "20240629163410"
     },
     {
@@ -222,7 +222,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2021 DEI Report",
       tags: ["fortune", "report"],
-      url: "https://dei.dominionenergy.com/",
+      url: "https://dei.dominionenergy.com",
       wayback: "20230426035603"
     },
     {
@@ -230,7 +230,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2020 DEI Report",
       tags: ["fortune", "award", "report"],
-      url: "https://dei.dominionenergy.com/",
+      url: "https://dei.dominionenergy.com",
       wayback: "20211119163649",
       awards: [
         {
@@ -247,7 +247,7 @@ export default function () {
       client: "Dominion Energy",
       project: "2020 ESG Report",
       tags: ["fortune", "report"],
-      url: "https://esg.dominionenergy.com/",
+      url: "https://esg.dominionenergy.com",
       wayback: "20211204044231"
     },
     {
@@ -256,7 +256,7 @@ export default function () {
       long: "National Resident Matching Program",
       project: "NRMP.org",
       tags: ["featured", "award", "nonprofit"],
-      url: "https://www.nrmp.org/",
+      url: "https://www.nrmp.org",
       awards: [
         {
           year: 2022,
@@ -273,7 +273,7 @@ export default function () {
       long: "National Resident Matching Program",
       project: "National Matching Program",
       tags: ["nonprofit"],
-      url: "https://www.nationalmatchingprogram.org/",
+      url: "https://www.nationalmatchingprogram.org",
     },
     {
       year: 2021,
@@ -281,7 +281,7 @@ export default function () {
       long: "National Resident Matching Program",
       project: "NRMP International",
       tags: ["nonprofit"],
-      url: "https://www.nrmpinternational.org/",
+      url: "https://www.nrmpinternational.org",
     },
     {
       year: 2024,
@@ -289,7 +289,7 @@ export default function () {
       long: "National Resident Matching Program",
       project: "NRMP Program Directory",
       tags: ["nonprofit"],
-      url: "https://programdirectory.nrmp.org/",
+      url: "https://programdirectory.nrmp.org",
     },
     /*
     {
@@ -298,7 +298,7 @@ export default function () {
       long: "National Resident Matching Program",
       project: "Application Forms",
       tags: ["nonprofit"],
-      url: "https://forms.nrmp.org/",
+      url: "https://forms.nrmp.org",
     },
     */
     {
@@ -307,7 +307,7 @@ export default function () {
       long: "Foundation for the National Institutes of Health",
       project: "25th Anniversary Timeline",
       tags: ["award", "nonprofit"],
-      url: "https://25annivesarytimeline.fnih.org/",
+      url: "https://25annivesarytimeline.fnih.org",
       wayback: "20210702130518",
       awards: [
         {
@@ -325,7 +325,7 @@ export default function () {
       long: "Foundation for the National Institutes of Health",
       project: "2021 Annual Report",
       tags: ["report", "nonprofit"],
-      url: "https://2021-annual-report.fnih.org/",
+      url: "https://2021-annual-report.fnih.org",
     },
     {
       year: 2021,
@@ -333,7 +333,7 @@ export default function () {
       long: "Foundation for the National Institutes of Health",
       project: "2020 Annual Report",
       tags: ["report", "nonprofit"],
-      url: "https://2020-annual-report.fnih.org/",
+      url: "https://2020-annual-report.fnih.org",
     },
     {
       year: 2020,
@@ -341,7 +341,7 @@ export default function () {
       long: "Foundation for the National Institutes of Health",
       project: "2019 Annual Report",
       tags: ["award", "report", "nonprofit"],
-      url: "https://2019-annual-report.fnih.org/",
+      url: "https://2019-annual-report.fnih.org",
       awards: [
         {
           year: 2020,
@@ -358,7 +358,7 @@ export default function () {
       long: "Foundation for the National Institutes of Health",
       project: "2018 Annual Report",
       tags: ["featured", "award", "report", "nonprofit"],
-      url: "https://2018-annual-report.fnih.org/",
+      url: "https://2018-annual-report.fnih.org",
       awards: [
         {
           year: 2019,
@@ -381,7 +381,7 @@ export default function () {
       client: "Stanley Black & Decker",
       project: "2020 ESG Report",
       tags: ["featured", "fortune", "award", "report"],
-      url: "https://www.stanleyblackanddecker.com/who-we-are/2020-esg-report/",
+      url: "https://www.stanleyblackanddecker.com/who-we-are/2020-esg-report",
       wayback: "20210516061645",
       awards: [
         {
@@ -399,7 +399,7 @@ export default function () {
       long: "AGCO Corporation",
       project: "2020 Annual Report",
       tags: ["fortune", "report"],
-      url: "https://ar2020.agcocorp.com/",
+      url: "https://ar2020.agcocorp.com",
       wayback: "20211215124050"
     },
     {
@@ -408,7 +408,7 @@ export default function () {
       long: "AGCO Corporation",
       project: "2019 Annual Report",
       tags: ["featured", "fortune", "award", "report"],
-      url: "https://ar2019.agcocorp.com/",
+      url: "https://ar2019.agcocorp.com",
       wayback: "20220225092644",
       awards: [
         {
@@ -439,7 +439,7 @@ export default function () {
       client: "The Bronx Conservatory",
       project: "Organization Website",
       tags: ["featured", "award", "nonprofit"],
-      url: "https://www.bronxconservatory.org/",
+      url: "https://www.bronxconservatory.org",
       awards: [
         {
           year: 2021,
@@ -461,7 +461,7 @@ export default function () {
       year: 2020,
       client: "Avenda Health",
       project: "Company Website",
-      url: "https://www.avendahealth.com/",
+      url: "https://www.avendahealth.com",
       wayback: "20200805045705"
     },
     {
@@ -469,7 +469,7 @@ export default function () {
       client: "Raytheon Technologies",
       project: "Investor Relations",
       tags: ["fortune", "report"],
-      url: "https://investors.rtx.com/",
+      url: "https://investors.rtx.com",
       wayback: "20200721180209"
     },
     {
@@ -477,7 +477,7 @@ export default function () {
       client: "Global Infrastructure Partners",
       project: "Organization Website",
       tags: ["award"],
-      url: "https://www.global-infra.com/",
+      url: "https://www.global-infra.com",
       wayback: "20200722204954",
       awards: [
         {
@@ -493,7 +493,7 @@ export default function () {
       year: 2019,
       client: "Tradeweb",
       project: "Investor Relations",
-      url: "https://investors.tradeweb.com/",
+      url: "https://investors.tradeweb.com",
       wayback: "20200721234131"
     },
     {
@@ -524,21 +524,21 @@ export default function () {
       client: "Sam Simon Foundation",
       project: "Assistance Dogs",
       tags: ["nonprofit"],
-      url: "https://www.ssfdogs.org/",
+      url: "https://www.ssfdogs.org",
     },
     {
       year: 2020,
       client: "Sam Simon Foundation",
       project: "Feeding Families",
       tags: ["nonprofit"],
-      url: "https://ssf-feedingfamilies.org/",
+      url: "https://ssf-feedingfamilies.org",
     },
     {
       year: 2018,
       client: "Ideas On Purpose",
       project: "IdeasOnPurpose.com",
       tags: ["award"],
-      url: "https://www.ideasonpurpose.com/",
+      url: "https://www.ideasonpurpose.com",
       awards: [
         {
           year: 2019,
@@ -562,7 +562,7 @@ export default function () {
       long: "New York University",
       project: "Summer Housing",
       tags: ["featured", "nonprofit"],
-      url: "https://housing.nyu.edu/summer/",
+      url: "https://housing.nyu.edu/summer",
     },
     {
       year: 2021,
@@ -570,7 +570,7 @@ export default function () {
       long: "New York University",
       project: "Summer Housing",
       tags: ["nonprofit"],
-      url: "https://housing.nyu.edu/summer/",
+      url: "https://housing.nyu.edu/summer",
       wayback: "20210316191246"
     },
     {
@@ -579,14 +579,14 @@ export default function () {
       long: "New York University | Entrepreneurial Institute",
       project: "2021 Annual Report",
       tags: ["report"],
-      url: "https://entrepreneur.nyu.edu/annual-report-2021/",
+      url: "https://entrepreneur.nyu.edu/annual-report-2021",
       wayback: "20220623171806"
     },
     {
       year: 2017,
       client: "AXIOS Media",
       project: "Axios.com",
-      url: "https://www.axios.com/",
+      url: "https://www.axios.com",
       tags: ["featured", "media"],
       wayback: "20170202003159"
     },
@@ -595,7 +595,7 @@ export default function () {
       client: "LaVerita",
       project: "News and Media Website",
       tags: ["media"],
-      url: "https://www.laverita.info/",
+      url: "https://www.laverita.info",
     },
     {
       year: 2018,
@@ -603,7 +603,7 @@ export default function () {
       client: "The Odyssey Online",
       project: "Media Website",
       tags: ["media"],
-      url: "https://www.theodysseyonline.com/",
+      url: "https://www.theodysseyonline.com",
     },
     {
       year: 2018,
@@ -611,7 +611,7 @@ export default function () {
       client: "Pop Matters",
       project: "International Publication",
       tags: ["media"],
-      url: "https://www.popmatters.com/",
+      url: "https://www.popmatters.com",
     },
     {
       year: 2018,
@@ -619,14 +619,14 @@ export default function () {
       client: "Popdust",
       project: "Entertainment Publication",
       tags: ["media"],
-      url: "https://www.popdust.com/",
+      url: "https://www.popdust.com",
     },
     {
       year: 2018,
       client: "PayPath",
       project: "Entertainment Publication",
       tags: ["media"],
-      url: "https://www.paypath.com/",
+      url: "https://www.paypath.com",
       inactive: true,
       nothumb: true
     },
@@ -636,14 +636,14 @@ export default function () {
       client: "One Country",
       project: "News and Media Website",
       tags: ["media"],
-      url: "https://onecountry.com/",
+      url: "https://onecountry.com",
     },
     {
       year: 2018,
       wayback: 20180224060527,
       client: "GeistM",
       project: "Agency Website",
-      url: "https://geistm.com/",
+      url: "https://geistm.com",
     },
     {
       year: 2015,
@@ -651,7 +651,7 @@ export default function () {
       long: "GlaxoSmithKline",
       project: "Flonase Fall of Fame",
       tags: ["fortune", "media"],
-      url: "https://falloffame.flonase.com/",
+      url: "https://falloffame.flonase.com",
       wayback: "20180309130524"
     },
     {
@@ -660,7 +660,7 @@ export default function () {
       long: "GlaxoSmithKline",
       project: "Flonase Be Greater",
       tags: ["fortune", "media"],
-      url: "https://begreater.flonase.com/",
+      url: "https://begreater.flonase.com",
       wayback: "20180326213621"
     },
     {
@@ -669,7 +669,7 @@ export default function () {
       long: "GlaxoSmithKline",
       project: "Flonase Be Greater",
       tags: ["fortune", "media"],
-      url: "https://gart.flonase.com/the-greater-american-roadtrip/",
+      url: "https://gart.flonase.com/the-greater-american-roadtrip",
       wayback: "20170629052449",
       inactive: true,
       nothumb: true
@@ -679,7 +679,7 @@ export default function () {
       client: "United Airlines",
       project: "Social Hub Redesign",
       tags: ["featured", "fortune", "media"],
-      url: "https://hub.united.com/",
+      url: "https://hub.united.com",
       wayback: "20181225125338"
     },
     {
@@ -687,7 +687,7 @@ export default function () {
       client: "United Airlines",
       project: "United Social Hub",
       tags: ["fortune", "media"],
-      url: "https://hub.united.com/",
+      url: "https://hub.united.com",
       wayback: "20180503104514"
     },
     {
@@ -695,7 +695,7 @@ export default function () {
       client: "GearBrain",
       project: "Company Website",
       tags: ["media"],
-      url: "http://www.gearbrain.com/",
+      url: "http://www.gearbrain.com",
       wayback: 20170824031436
     },
     {
@@ -703,7 +703,7 @@ export default function () {
       client: "TopDust",
       project: "Digital Publication",
       tags: ["media"],
-      url: "http://www.topdust.com/",
+      url: "http://www.topdust.com",
       inactive: true,
       nothumb: true
     },
@@ -712,7 +712,7 @@ export default function () {
       client: "We Are Mel",
       project: "Company Website",
       tags: ["media"],
-      url: "http://www.wearemel.com/",
+      url: "http://www.wearemel.com",
       inactive: true,
       nothumb: true
     },
@@ -721,28 +721,28 @@ export default function () {
       client: "7x7",
       project: "Media & Lifestyle Website",
       tags: ["media"],
-      url: "https://www.7x7.com/",
+      url: "https://www.7x7.com",
     },
     {
       year: 2016,
       client: "EcoWatch",
       project: "Environmental News Website",
       tags: ["media"],
-      url: "http://www.ecowatch.com/",
+      url: "http://www.ecowatch.com",
     },
     {
       year: 2016,
       client: "Love Meow",
       project: "Cat-centric Media & News Website",
       tags: ["media"],
-      url: "http://www.lovemeow.com/",
+      url: "http://www.lovemeow.com",
     },
     {
       year: 2016,
       client: "Discovery",
       project: "Seeker.com",
       tags: ["featured", "fortune", "media"],
-      url: "http://www.seeker.com/",
+      url: "http://www.seeker.com",
       wayback: "20160802220923"
     },
     {
@@ -750,7 +750,7 @@ export default function () {
       client: "Univision",
       project: "The Flama",
       tags: ["media"],
-      url: "http://www.theflama.com/",
+      url: "http://www.theflama.com",
       wayback: "20160802173825"
     },
     {
@@ -758,7 +758,7 @@ export default function () {
       client: "PAPER Magazine",
       project: "PAPERmag.com",
       tags: ["featured", "media"],
-      url: "http://www.papermag.com/",
+      url: "http://www.papermag.com",
       wayback: "20170305022907"
     },
     {
@@ -767,14 +767,14 @@ export default function () {
       client: "FindMyPast",
       project: "Company Blog",
       tags: ["media"],
-      url: "https://blog.findmypast.com/",
+      url: "https://blog.findmypast.com",
     },
     {
       year: 2016,
       client: "Time Inc.",
       project: "The Outfit",
       tags: ["media"],
-      url: "https://www.theoutfit.com/",
+      url: "https://www.theoutfit.com",
       wayback: "20160614054931"
     },
     {
@@ -782,7 +782,7 @@ export default function () {
       client: "The Dodo",
       project: "TheDodo.com",
       tags: ["featured", "media"],
-      url: "https://www.thedodo.com/",
+      url: "https://www.thedodo.com",
       wayback: "20180228182750"
     },
     {
@@ -790,14 +790,14 @@ export default function () {
       client: "Simple Organic Life",
       project: "Publication Website",
       tags: ["media"],
-      url: "http://www.simpleorganiclife.org/",
+      url: "http://www.simpleorganiclife.org",
       wayback: "20170304183922if_"
     },
     {
       year: 2012,
       client: "MyGov",
       project: "Public administration platform",
-      url: "https://mygov.us/",
+      url: "https://mygov.us",
       wayback: "20130309200438"
     },
     {
@@ -805,7 +805,7 @@ export default function () {
       client: "VisualFreaks",
       project: "Project Website",
       tags: ["independent"],
-      url: "http://www.visualfreaks.com/",
+      url: "http://www.visualfreaks.com",
       wayback: "20131010011018"
     },
     {
@@ -813,7 +813,7 @@ export default function () {
       client: "KiteOps",
       project: "Project Website",
       tags: ["independent"],
-      url: "https://www.kiteops.com/",
+      url: "https://www.kiteops.com",
       wayback: "20191210095217"
     },
     {
@@ -821,7 +821,7 @@ export default function () {
       client: "ABIS Studio",
       project: "Company Website",
       tags: ["independent"],
-      url: "https://www.abisstudio.ro/",
+      url: "https://www.abisstudio.ro",
       inactive: true,
       nothumb: true
     },
@@ -830,14 +830,14 @@ export default function () {
       client: "Benevol",
       project: "Company Website",
       tags: ["nonprofit", "independent"],
-      url: "https://www.benevol.ro/",
+      url: "https://www.benevol.ro",
       wayback: "20150201141440"
     },
     {
       year: 2010,
       client: "Domus Caritatis",
       project: "Organization Website",
-      url: "https://domuscaritatis.ro/",
+      url: "https://domuscaritatis.ro",
       tags: ["nonprofit", "independent"],
       wayback: "20120112043727",
       inactive: true,
@@ -855,7 +855,7 @@ export default function () {
       year: 2014,
       client: "Ctrl-D",
       project: "Android Workshop",
-      url: "http://in.ctrl-d.ro/dezvoltarea-de-aplicatii-android/",
+      url: "http://in.ctrl-d.ro/dezvoltarea-de-aplicatii-android",
       tags: ["independent"],
       wayback: "20140623184916"
     },
@@ -863,7 +863,7 @@ export default function () {
       year: 2014,
       client: "Ctrl-D",
       project: "Creative Copywriting",
-      url: "http://in.ctrl-d.ro/atelier_creativ_copywriting/",
+      url: "http://in.ctrl-d.ro/atelier_creativ_copywriting",
       tags: ["independent"],
       wayback: "20160323044906"
     },
@@ -872,7 +872,7 @@ export default function () {
       client: "Cristina Dumitru",
       project: "Personal Website",
       tags: ["independent"],
-      url: "https://cristinadumitru.ro/",
+      url: "https://cristinadumitru.ro",
       inactive: true,
       nothumb: true
     },
@@ -881,28 +881,28 @@ export default function () {
       client: "PubHub",
       project: "Company Website",
       tags: ["independent"],
-      url: "https://pubhub.ro/",
+      url: "https://pubhub.ro",
     },
     {
       year: 2010,
       client: "AIO Design",
       project: "Portfolio Website",
       tags: ["independent"],
-      url: "https://aiodesign.ro/",
+      url: "https://aiodesign.ro",
     },
     {
       year: 2010,
       client: "Livio Benedetti",
       project: "Portfolio Website",
       tags: ["independent"],
-      url: "https://www.liviobenedetti.com/",
+      url: "https://www.liviobenedetti.com",
     },
     {
       year: 2010,
       client: "5 Napkin Burger",
       project: "Beer and Bourbon Blog",
       tags: ["independent"],
-      url: "https://www.5napkinburger.com/",
+      url: "https://www.5napkinburger.com",
       inactive: true
     },
     {
@@ -918,7 +918,7 @@ export default function () {
       client: "Harosa & Nemeti",
       project: "Law Firm Website",
       tags: ["independent"],
-      url: "http://harosa-nemeti.ro/",
+      url: "http://harosa-nemeti.ro",
       inactive: true,
       nothumb: true
     },
@@ -927,7 +927,7 @@ export default function () {
       client: "Avocatul dvs",
       project: "Law Firm Website",
       tags: ["independent"],
-      url: "http://avocatuldumneavoastra.ro/",
+      url: "http://avocatuldumneavoastra.ro",
       inactive: true,
       nothumb: true
     }
