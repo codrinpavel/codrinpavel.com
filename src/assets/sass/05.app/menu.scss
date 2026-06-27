@@ -43,10 +43,6 @@
     flex-direction: column;
     justify-content: space-between;
 
-    a[aria-current="page"] {
-      color: var(--color-faint);
-    }
-
     li {
       list-style: none;
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" {{ (htmlClass and 'class="page-' ~ htmlClass ~ '"')|safe }}>
+<html lang="en">
   <head>
     {% include "_meta.njk" %}
     {% include "_favicon.njk" %}
@@ -14,7 +14,10 @@
       {{ content | safe }}
     </main>
 
-    {% include "footer.njk" %}
+    {% if not isHorizontal %}
+      {% include "footer.njk" %}
+    {% endif %}
+
     {% include "_scripts.njk" %}
   </body>
 </html>
