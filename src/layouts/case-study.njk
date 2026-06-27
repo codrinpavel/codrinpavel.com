@@ -6,6 +6,9 @@ htmlClass: "study"
 <section class="study" id="study">
   <div class="wrapper">
     {% include "case-study.njk" %}
-    {{ content | safe }}
+
+    <div class="columns md:--column-gap-2xl md:--row-gap-2xl">
+      {{ content | safe }}
+    </div>
   </div>
 </section>
