@@ -1,12 +1,11 @@
 @use "../mixins" as *;
 
 .card {
-  background: var(--color-gray-light);
-  clip-path: inset(1px 0);
-  font-variation-settings: var(--font-weight-black);
-
   position: relative;
   z-index: 2;
+
+  background: var(--color-gray-light);
+  clip-path: inset(1px 0);
 
   @media (hover: hover) and (pointer: fine) {
     &:hover,
@@ -48,6 +47,7 @@
     position: sticky;
     top: 50svh;
     margin-block: -1em;
+    font-variation-settings: var(--font-weight-black);
   }
 
   h2 {
