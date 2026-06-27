@@ -11,12 +11,6 @@
   font-variation-settings: var(--font-weight-black);
   background-color: var(--color-white);
 
-  @include mq(lg) {
-    background-color: transparent;
-    filter: invert(100%);
-    mix-blend-mode: exclusion;
-  }
-
   .header__nav {
     display: flex;
     flex-direction: column;
@@ -31,20 +25,10 @@
       text-align: right;
     }
   }
-}
 
-.header__mobile {
-  align-items: center;
-
-  @include mq(md) {
-    display: none;
-  }
-}
-
-.header__desktop {
-  align-items: center;
-
-  @include mq(md, max) {
-    display: none;
+  @include mq(lg) {
+    background-color: transparent;
+    filter: invert(100%);
+    mix-blend-mode: exclusion;
   }
 }

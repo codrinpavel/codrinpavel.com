@@ -1,18 +1,20 @@
 {% set nav = ["About", "Stats", "Words", "Awards", "Lab"] %}
 
 {% set logo %}
-<a href="/" class="site-logo" data-reveal>
-  <span class="vt-logo-1"><b>Codrin</b></span>
-  <span>/</span>
-  <span class="vt-logo-2"><b>Pavel</b></span>
+<a href="/" class="site-logo" data-inview>
+  <div class="flex overflow-hidden">
+    <span data-rickroll="Codrin"><b>Codrin</b></span>
+    <span>/</span>
+    <span data-rickroll="Pavel"><b>Pavel</b></span>
+  </div>
 </a>
 {% endset %}
 
 <header class="header">
   <nav class="wrapper header__nav">
-    <ul class="header__mobile columns columns-4">
+    <ul class="columns columns-4 md:hidden">
       <li>{{logo|safe}}</li>
-      <li class="text-center color-faint">{{title or client}}</li>
+      <li class="flex items-center justify-center color-faint">{{title or client}}</li>
       <li>
         <button class="menu-button type-regular" aria-controls="menu" aria-expanded="false">
           <span><b>Menu</b><b>Close</b></span>
@@ -20,7 +22,7 @@
       </li>
     </ul>
 
-    <ul class="header__desktop columns md:columns-1">
+    <ul class="columns md:columns-1 items-center hidden md:flex">
       <li class="mr-auto">{{logo|safe}}</li>
 
       {% for item in collections.nav | order %}
