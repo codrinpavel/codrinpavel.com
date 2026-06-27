@@ -13,11 +13,19 @@
   <meta name="robots" content="noindex, nofollow">
 {%- endif -%}
 
+{% if tags and ("work" in tags) %}
+  {% set metaTitle = metaTitle ~ " " ~ type %}
+{% endif %}
+
+{% if not meta_title %}
+  {% set metaTitle = metaTitle ~ " / Codrin Pavel" %}
+{% endif %}
+
 {# Title #}
 {% if metaTitle %}
-  <title>{{ metaTitle }}</title>
-  <meta property="og:title" content="{{ metaTitle }}">
-  <meta name="twitter:title" content="{{ metaTitle }}">
+  <title>{{ metaTitle | safe }}</title>
+  <meta property="og:title" content="{{ metaTitle | safe }}">
+  <meta name="twitter:title" content="{{ metaTitle | safe  }}">
 {%- endif -%}
 
 {# Description #}

@@ -2,7 +2,7 @@
 {% set hasArchive = false %}
 
 {% for item in work %}
-  {% if (item.client == client or item.long == client) and item.awards %}
+  {% if (item.client == title or item.long == title) and item.awards %}
     {% set hasAwards = true %}
   {% endif %}
 {% endfor %}
@@ -11,7 +11,7 @@
   <div class="md:columns-7">
     <div class="flex gap-md justify-between md:justify-start" data-reveal>
       <h2 class="mb-zero color-faint">Client</h2>
-      {{long or client | safe}}
+      {{long or title | safe}}
     </div>
   </div>
 
@@ -41,7 +41,7 @@
         <h2 class="color-faint" data-reveal>Deliverables</h2>
         <ul>
           {% for item in work %}
-            {% if item.client == client or item.long == client %}
+            {% if item.client == title or item.long == title %}
               {% if not item.wayback %}
                 <li data-reveal>
                   <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" data-title="View Live Site">{{- item.project -}}</a>
@@ -59,7 +59,7 @@
         <h2 class="color-faint" data-reveal>Recognition</h2>
         <ul>
           {% for item in work %}
-            {% if item.client == client or item.long == client %}
+            {% if item.client == title or item.long == title %}
               {% for award in item.awards %}
                 <li data-reveal>
                   <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.title }}">

@@ -10,10 +10,10 @@ order: 2
 
       {% for page in collections.work | order %}
         <a href="{{ page.url | url }}" class="card">
-          {%- set image_url = "case-studies/" ~ page.data.client | slugify ~ "/cover.png" -%}
+          {%- set image_url = "case-studies/" ~ page.data.title | slugify ~ "/cover.png" -%}
 
           <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}.</div>
-          <h2>{{page.data.long or page.data.client}}</h2>
+          <h2>{{page.data.long or page.data.title}}</h2>
 
           <figure data-reveal data-stagger="150">
             {% img image_url, "" %}

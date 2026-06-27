@@ -2,6 +2,7 @@
 layout: base.njk
 preload: "portrait-tall-optimized.jpg"
 title: "Home"
+meta_title: "Codrin Pavel / Independent Frontend Developer & Consultant"
 order: 0
 ---
 
@@ -90,10 +91,10 @@ order: 0
       {% set i = 0 %}
 
       {% for page in collections.work %}
-        {% if page.data.client in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
+        {% if page.data.title in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
           {% set i = i + 1 %}
           <a class="card card--logo" href="{{ page.url | url }}">
-            {%- set svg_url = 'company/' ~ page.data.client | slugify ~ '.svg' -%}
+            {%- set svg_url = 'company/' ~ page.data.title | slugify ~ '.svg' -%}
             <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
             <h2>{{page.data.type}}</h2>
 
@@ -116,7 +117,7 @@ order: 0
       </li>
 
       {%- for item in work -%}
-        {% set isCaseStudy = collections.work | hasCaseStudy(item.client) %}
+        {% set isCaseStudy = collections.work | hasCaseStudy(item.title) %}
         <li data-reveal data-stagger="25" {% if not isCaseStudy %}class="columns"{% endif %}>
           {%- if isCaseStudy -%}
             <a href="/work/{{item.client | slugify}}/" class="columns">

@@ -25,7 +25,7 @@
         <ul class="columns columns-6">
           {% for item in collections.work | order %}
             <li data-reveal>
-              <a class="link" href="{{item.url | url}}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{item.data.client}}</a>
+              <a class="link" href="{{item.url | url}}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{item.data.title}}</a>
             </li>
           {% endfor %}
         </ul>

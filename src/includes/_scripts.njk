@@ -1,16 +1,3 @@
-<script>
-window.PAGE_ORDER = {
-  "/": -1,
-  {%- for page in collections.nav | order -%}
-    "{{page.url}}": {{loop.index*100}},
-  {%- endfor -%}
-  {%- for page in projects -%}
-    "/{{ page.client | slugify }}-{{page.year}}/": {{loop.index+10}}
-    {%- if not loop.last -%},{%- endif -%}
-  {% endfor %}
-};
-</script>
-
 {%- if global.environment == "production" -%}
 --INLINE JS--
 {% else %}
