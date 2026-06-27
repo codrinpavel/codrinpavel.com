@@ -1,41 +1,42 @@
 @use "../mixins" as *;
 
 .card {
-  position: relative;
   background: var(--color-gray-light);
-  clip-path: inset(0);
+  clip-path: inset(1px 0);
   font-variation-settings: var(--font-weight-black);
 
-  a {
-    display: block;
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover,
-      &:focus-visible {
-        img {
-          object-fit: cover;
-          object-position: bottom center;
-          filter: none;
-          height: 50svh;
-          transition: object-position ease 8s;
-          transition-delay: 333ms;
-        }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &:focus-visible {
+      img {
+        object-fit: cover;
+        object-position: bottom center;
+        filter: none;
+        height: 50svh;
+        transition: object-position ease 8s;
+        transition-delay: 333ms;
+      }
+
+      svg {
+        filter: grayscale(0);
+        transition: filter 333ms;
       }
     }
   }
 
   figure {
-    height: 75svh;
+    width: 100%;
+    aspect-ratio: 6/7;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
   }
 
   img {
-    height: 40svh;
+    height: 50%;
     width: 100%;
     object-position: top center;
     object-fit: contain;
@@ -44,13 +45,9 @@
   }
 
   &__index {
-    //position: sticky;
-    position: fixed;
+    position: sticky;
     top: 50svh;
-    //line-height: 0;
-    //transform: translateY(.5em);
-    transform: translateY(-100%);
-    z-index: -1;
+    margin-block: -1em;
   }
 
   h2 {
@@ -62,19 +59,8 @@
   }
 
   &.card--logo {
-    a {
+    figure {
       aspect-ratio: 4/3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &:hover,
-      &:focus-visible {
-        svg {
-          filter: grayscale(0);
-          transition: filter 333ms;
-        }
-      }
     }
 
     svg {

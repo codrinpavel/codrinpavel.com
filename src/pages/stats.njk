@@ -10,9 +10,11 @@ order: 3
     <div class="scroller__track">
 
       {% for stat in stats %}
-        <div class="scroller__item" data-inview data-counter="0{{loop.index}}.">
+        <div class="scroller__item" data-inview>
+          <div class="scroller__counter" style="z-index:{{loop.index}}">0{{loop.index}}.</div>
+
           <div class="stat">
-            <span class="figure type-huge">
+            <span class="figure type-huge mb-xl">
               {%- for char in stat.figure.split('') -%}
                 <i data-reveal data-stagger="100">{{- char -}}</i>
               {%- endfor -%}

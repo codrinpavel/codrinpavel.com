@@ -10,7 +10,9 @@ order: 4
     <div class="scroller__track">
 
       {% for group in awards %}
-        <div class="scroller__item" data-inview data-counter="0{{loop.index}}.">
+        <div class="scroller__item" data-inview>
+          <div class="scroller__counter" style="z-index:{{loop.index}}">0{{loop.index}}.</div>
+
           <div class="stat">
             <h2 class="type-large flex flex-wrap mb-2xl">
               {%- for char in group.organization.split('') -%}

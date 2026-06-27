@@ -11,6 +11,8 @@ order: 5
 
       {% for item in words %}
         <div class="scroller__item" data-inview data-counter="0{{loop.index}}.">
+          <div class="scroller__counter" style="z-index:{{loop.index}}">0{{loop.index}}.</div>
+
           <figure class="quote">
             <blockquote>
               <p class="type-medium" data-reveal data-stagger="200">

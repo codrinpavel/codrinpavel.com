@@ -9,20 +9,17 @@ order: 2
     <div class="columns md:columns-6 lg:columns-4">
 
       {% for page in collections.work | order %}
-      <div class="card">
-        {%- set image_url = "case-studies/" ~ page.data.client | slugify ~ "/cover.png" -%}
+        <a href="{{ page.url | url }}" class="card">
+          {%- set image_url = "case-studies/" ~ page.data.client | slugify ~ "/cover.png" -%}
 
-        <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}.</div>
-
-        <a data-reveal data-stagger="150" href="{{ page.url | url }}">
+          <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}.</div>
           <h2>{{page.data.long or page.data.client}}</h2>
-          <figure>
+
+          <figure data-reveal data-stagger="150">
             {% img image_url, "" %}
           </figure>
         </a>
-      </div>
-      {% endfor %}
+    {% endfor %}
 
-    </div>
   </div>
 </section>
