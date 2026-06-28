@@ -28,7 +28,7 @@ main,
 }
 
 section {
-  padding: var(--size-header-offset) var(--grid-margin) var(--size-4xl);
+  padding: var(--size-header-offset) var(--grid-margin) 0;
 
   &.fullscreen {
     height: 100svh;

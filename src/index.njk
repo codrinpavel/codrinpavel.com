@@ -117,7 +117,7 @@ order: 0
       </li>
 
       {%- for item in work -%}
-        {% set isCaseStudy = collections.work | hasCaseStudy(item.title) %}
+        {% set isCaseStudy = collections.work | hasCaseStudy(item.client) %}
         <li data-reveal data-stagger="25" {% if not isCaseStudy %}class="columns"{% endif %}>
           {%- if isCaseStudy -%}
             <a href="/work/{{item.client | slugify}}/" class="columns">

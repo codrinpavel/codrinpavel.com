@@ -10,7 +10,7 @@ export default function () {
       period: "2023&mdash;2025",
       thumb: "lab/purposeUI.jpg",
       extra: {
-        "Product": "Ideas On Purpose"
+        "Collaborators": "Ideas On Purpose"
       },
       overview: "PurposeUI is an opinionated internal design system developed in collaboration with Ideas On Purpose. It establishes a consistent approach to responsive design through fluid design tokens, a configurable grid system, automatic color shade generation, theme support, reusable components, and utility classes. Typography, spacing, sizing, radii, and shadows all derive from a shared token system, allowing designers to focus on mobile and desktop layouts while the system seamlessly scales every viewport in between, significantly reducing the effort required to design and build responsive websites.",
       features: [
@@ -53,8 +53,8 @@ export default function () {
       ],
       meta: {
         "Links": [
+          '<a target="_blank" rel="noopener noreferrer" class="link" href="https://zerospree.github.io/CSSans.Pro/">CSSans.Pro</a>',
           '<a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/ZeroSpree/CSSans.Pro#readme">View on GitHub</a>',
-          '<a target="_blank" rel="noopener noreferrer" class="link" href="https://www.behance.net/gallery/92726887/CSSans-Pro-CSS-based-Typeface">View on Behance</a>'
         ],
         "Recognition": [
           '<a href="https://www.csswinner.com/details/cssans-pro/13320" target="_blank" rel="noopener noreferrer" data-title="Star of The Day">CSS Winner</a>',
