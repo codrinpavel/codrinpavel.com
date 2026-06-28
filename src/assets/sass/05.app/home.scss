@@ -13,7 +13,7 @@
   }
 
   &__work {
-    font-variation-settings: var(--font-weight-black);
+    font-variation-settings: var(--font-weight-bold);
 
     &:hover li:not(:first-child) > span {
       color: var(--color-faint);

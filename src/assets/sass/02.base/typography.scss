@@ -2,7 +2,7 @@ body,
 .type-regular {
   font-family: var(--font-family-sans);
   font-size: var(--font-size-sm);
-  font-variation-settings: var(--font-weight-semibold);
+  font-variation-settings: var(--font-weight-regular);
   line-height: 1.2;
   font-style: normal; 
   letter-spacing: -.04em;
@@ -16,7 +16,7 @@ body,
 h1,
 .type-medium {
   font-size: var(--font-size-lg);
-  font-variation-settings: var(--font-weight-semibold);
+  font-variation-settings: var(--font-weight-bold);
   line-height: 1.15;
   color: var(--color-black);
 }
@@ -31,21 +31,21 @@ h2, h3,
 
 .type-large {
   font-size: var(--font-size-3xl);
-  font-variation-settings: var(--font-weight-extrabold);
+  font-variation-settings: var(--font-weight-bold);
   line-height: 1.1;
   color: var(--color-black);
 }
 
 .type-xlarge {
   font-size: var(--font-size-5xl);
-  font-variation-settings: var(--font-weight-extrabold);
+  font-variation-settings: var(--font-weight-bold);
   line-height: 1.1em;
   color: var(--color-black);
 }
 
 .type-huge {
   font-size: max(var(--font-size-7xl), 18vh);
-  font-variation-settings:  var(--font-weight-normal);
+  font-variation-settings:  var(--font-weight-regular);
   font-style: normal;
   line-height: .8;
   color: var(--color-balance-text);

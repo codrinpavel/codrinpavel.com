@@ -47,14 +47,14 @@
     position: sticky;
     top: 50svh;
     margin-block: -1em;
-    font-variation-settings: var(--font-weight-black);
+    font-variation-settings: var(--font-weight-bold);
   }
 
   h2 {
     position: absolute;
     top: 0;
     left: 0;
-    font-variation-settings: var(--font-weight-black);
+    font-variation-settings: var(--font-weight-bold);
     background-color: var(--color-gray-light);
   }
 
