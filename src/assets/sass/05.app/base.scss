@@ -42,3 +42,9 @@ section {
   max-height: 90svh;
   object-fit: contain;
 }
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}

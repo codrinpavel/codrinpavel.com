@@ -1,4 +1,4 @@
-const videos = document.querySelectorAll("video");
+const videos = document.querySelectorAll("video, iframe");
 
 const observer = new IntersectionObserver(
   (entries) => {

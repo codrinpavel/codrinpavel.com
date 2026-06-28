@@ -4,36 +4,112 @@ title: "Lab"
 order: 6
 ---
 
-<section class="lab" id="lab">
-  <div class="wrapper">lab</div>
+<section class="lab">
+  {% for item in lab %}
+  <article class="wrapper">
+    <div class="columns lg:columns-2 --row-gap-sm lg:--column-gap-10xl mb-8xl whitespace-nowrap font-bold">
+      <div class="md:columns-3">
+        <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
+          <h2 class="mb-zero color-faint">Project</h2>
+          {{item.title}}
+        </div>
+      </div>
+
+      <div class="md:columns-4">
+        <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
+          <h2 class="mb-zero color-faint">Period</h2>
+          {{item.period | safe}}
+        </div>
+      </div>
+
+      {% if item.extra %}
+        {% for key, value in item.extra %}
+          <div class="md:columns-3">
+            <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
+              <h2 class="mb-zero color-faint">{{ key }}</h2>
+              {{ value }}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="columns --row-gap-8xl">
+      <div class="md:columns-10 lg:columns-5">
+        <h2 class="color-faint" data-reveal>Overview</h2>
+
+        <h1 class="flex flex-wrap" data-reveal-batch>
+          {%- for char in item.overview.split(' ') -%}
+            <span class="overflow-hidden flex">
+              <i data-reveal data-stagger="15">{{ char | safe}}</i>&nbsp;
+            </span>
+          {%- endfor -%}
+        </h1>
+
+        {% if item.thumb %}
+        <figure data-reveal>
+          {% img item.thumb, "", "mt-6xl" %}
+        </figure>
+        {% endif %}
+
+        {% if item.figure %}
+        <figure data-reveal class="mt-6xl">
+          {{ item.figure | safe }}
+
+          {% if item.caption %}
+          <figcaption class="mt-sm" data-reveal>
+            <p>{{item.caption | safe}}</p>
+          </figcaption>
+          {% endif %}
+        </figure>
+        {% endif %}
+      </div>
+
+      <div class="md:columns-7 lg:columns-2 lg:ml-2">
+        <div class="columns columns-6 lg:columns-12 --row-gap-4xl">
+          {% if item.meta %}
+            {% for key, value in item.meta %}
+            <div>
+              <h2 class="color-faint" data-reveal>{{ key }}</h2>
+
+              <ul>
+                {% for thing in value %}
+                  <li data-reveal>{{ thing | safe}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+      {% if item.features %}
+      <div class="md:columns-5 lg:columns-3">
+        <h2 class="color-faint" data-reveal>Features</h2>
+        <ul>
+          {% for feature in item.features %}
+          <li data-reveal>{{feature}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
 </section>
 
-
-
 {#
-<footer class="site-footer" id="afterword" aria-labelledby="heading-afterword">
-  <h2 id="heading-afterword" class="sr-only">Afterword</h2>
 
-  <div class="wrapper">
-    <div class="columns md:columns-10 justify-center bio">
-      <div class="editorial-columns">
-        <p>We used tables back in high school. Then came floats. Flexbox before it worked properly &mdash; and flex after it finally did. Then grid.</p>
-        <p>Fireworks turned into photoshop, .psd became .sketch, which then became .fig.</p>
-        <p>Flash faded. jQuery took over. Frameworks came and went. Browsers eventually grew web components, and the internet survived the cookie notice war.</p>
-        <p>Eventually, the goal stopped being keeping up and became building things that last.</p>
-        <p>My focus shifted toward semantic, accessible, performant sites designed to age slowly.</p>
-        <p>Somewhere between client launches, side projects, rebuilds, and late-night deploys, I turned 36. I wear glasses now.</p>
-        <p>These days I live in ☀️ Las Palmas de Gran Canaria with my beautiful wife and two rag-cats. We love the ocean, documentaries, coffee breaks and blue skies.</p>
-        <p class="font-bold">&mdash; c.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+<h2>WIP Agency-oriented white label website audits</h2>
+<h2>PixelArt generator</h2>
+<h2>CodePen experiments</h2>
 
-  <span data-delay="2800">Design-driven developer building fast, accessible websites for mission-driven organizations.</span>
-  <span class="mt-lg" data-delay="2980">I help agencies across Europe and the US transform complex content into meaningful, engaging digital experiences.</span>
-  <b class="mt-2xl" data-delay="3280">&mdash;Codrin.</b>
-
-  <a data-delay="2400" href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">linkedin</a>
-  <a data-delay="2500" href="mailto:hello@codrin.eu" target="_blank" rel="noopener noreferrer">hello@codrin.eu</a>
+<h2 class="color-faint">About</h2>
+<p class="mb-ml">We used tables back in high school. Then came floats. Flexbox before it worked properly &mdash; and flex after it finally did. Then grid. Fireworks became Photoshop, .psd became .sketch, which then became .fig.</p>
+<p class="mb-ml">Flash faded. jQuery took over. Frameworks came and went. Browsers eventually grew Web Components, and the internet survived the cookie notice war.</p>
+<p class="mb-ml">At some point, the goal stopped being keeping up and started being building things that last. My focus shifted toward semantic, accessible, performant websites designed to age slowly.</p>
+<p class="mb-ml">Somewhere between client launches, side projects, and redesigns, I turned 36. I wear glasses now.
+<p class="mb-ml">These days I live in ☀️ Las Palmas de Gran Canaria with my beautiful wife and two ragcats. We love the ocean, documentaries, coffee breaks, and blue skies.</p>
+<p class="font-bold">/codrin</p>
+</div>
 #}
