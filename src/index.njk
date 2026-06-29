@@ -31,7 +31,7 @@ order: 0
     </div>
 
     <div class="columns --row-gap-8xl">
-      <div class="columns-10 md:columns-5 text-md" data-reveal-batch>
+      <div class="md:columns-5 text-md" data-reveal-batch>
         <h2 class="color-faint" data-reveal data-delay="400">About</h2>
         {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
 
@@ -91,28 +91,6 @@ order: 0
       </div>
     </div>
 
-    <div class="columns md:columns-6 lg:columns-4 justify-center my-10xl">
-      {% set i = 0 %}
-
-      {% for page in collections.work %}
-        {% if page.data.title in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
-          {% set i = i + 1 %}
-          <a class="card card--logo" href="{{ page.url | url }}">
-            {%- set svg_url = 'company/' ~ page.data.title | slugify ~ '.svg' -%}
-            <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
-            <h2>{{page.data.type}}</h2>
-
-            <figure data-reveal data-stagger="250">
-              {% svg svg_url, "" %}
-            </figure>
-          </a>
-        {% endif %}
-      {% endfor %}
-      <div>
-        <a class="button" href="{{ "/work/" | url }}">See More Work {% svg "arrow.svg" %}</a>
-      </div>
-    </div>
-
     <ul class="home__work my-10xl" aria-label="Work List">
       <li data-reveal class="columns">
         <span class="columns-6 md:columns-6 lg:columns-7 border-b-1">Client</span>
@@ -135,5 +113,24 @@ order: 0
         </li>
       {%- endfor -%}
     </ul>
+
+    <div class="columns md:columns-6 lg:columns-4 justify-center my-10xl">
+      {% set i = 0 %}
+
+      {% for page in collections.work %}
+        {% if page.data.title in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
+          {% set i = i + 1 %}
+          <a class="card card--logo" href="{{ page.url | url }}">
+            {%- set svg_url = 'company/' ~ page.data.title | slugify ~ '.svg' -%}
+            <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
+            <h2>{{page.data.type}}</h2>
+
+            <figure data-reveal data-stagger="250">
+              {% svg svg_url, "" %}
+            </figure>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>

@@ -31,7 +31,7 @@ export default function () {
     },
     {
       "figure": "1B+",
-      "title": "Millions of Readers Served",
+      "title": "1.000 Millions of Readers Served",
       "bullets": [
         "Axios, The Dodo & other major media platforms",
         "High-traffic publishing ecosystems",
@@ -44,8 +44,8 @@ export default function () {
       "bullets": [
         "GDUSA Digital Design Awards",
         "WebAwards Standards of Excellence",
-        "MerComm Awards Grand Winners",
-        "LACP Worldwide Winners",
+        "MerComm Grand Awards",
+        "LACP International Winners",
         "American Web Design Awards"
       ]
     },

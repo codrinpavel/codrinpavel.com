@@ -1,40 +1,20 @@
 <footer class="site-footer">
   <div class="wrapper">
-    <div class="columns items-end">
-      <div class="md:columns-5 md:ml-auto">
-        {% set text = "Inquiries:" %}
-
-        <p class="type-xlarge color-faint flex flex-wrap" data-reveal-batch>
-          {%- for char in text.split(' ') -%}
-            <span class="overflow-hidden flex">
-              <i data-reveal data-stagger="150">{{ char }}</i>&nbsp;
-            </span>
-          {%- endfor -%}
-        </p>
-
-        <ul class="mt-10xl">
-          <li data-reveal>
-            <a href="mailto:hello@codrin.eu" target="_blank" rel="noopener noreferrer">
-              <span>Email</span>
-              <span>hello@codrin.eu</span>
-            </a>
-          </li>
-          <li data-reveal>
-            <a href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">
-              <span>LinkedIn</span>
-              <span>Codrin Pavel</span>
-            </a>
-          </li>
-          <li data-reveal>
-            <a href="https://github.com/ZeroSpree" target="_blank" rel="noopener noreferrer">
-              <span>GitHub</span>
-              <span>@zerospree</span>
-            </a>
-          </li>
-        </ul>
+    <div class="columns --row-gap-10xl">
+      <div class="type-medium">
+        <a href="/" target="_blank" rel="noopener noreferrer">
+          <span class="color-faint block">Next</span>
+          Some Page
+        </a>
       </div>
-      <div class="type-huge mt-10xl">
-        codrin/pavel
+      <div class="md:columns-5 ml-auto flex justify-between items-end type-medium">
+        <a href="mailto:hello@codrin.eu" target="_blank" rel="noopener noreferrer">
+          <span class="color-faint block">Inquiries</span>
+          hello@codrin.eu
+        </a>
+        <a href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
       </div>
     </div>
   </div>
@@ -60,7 +40,7 @@
         <a class="link" href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </li>
       <li data-reveal>
-        <a class="link" href="https://github.com/ZeroSpree" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="link" href="https://github.com/codrinpavel" target="_blank" rel="noopener noreferrer">GitHub</a>
       </li>
     </ul>
   </div>

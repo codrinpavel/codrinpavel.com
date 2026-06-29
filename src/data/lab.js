@@ -53,8 +53,8 @@ export default function () {
       ],
       meta: {
         "Links": [
-          '<a target="_blank" rel="noopener noreferrer" class="link" href="https://zerospree.github.io/CSSans.Pro/">CSSans.Pro</a>',
-          '<a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/ZeroSpree/CSSans.Pro#readme">View on GitHub</a>',
+          '<a target="_blank" rel="noopener noreferrer" class="link" href="https://codrinpavel.github.io/CSSans.Pro/">CSSans.Pro</a>',
+          '<a target="_blank" rel="noopener noreferrer" class="link" href="https://github.com/codrinpavel/CSSans.Pro#readme">View on GitHub</a>',
         ],
         "Recognition": [
           '<a href="https://www.csswinner.com/details/cssans-pro/13320" target="_blank" rel="noopener noreferrer" data-title="Star of The Day">CSS Winner</a>',
