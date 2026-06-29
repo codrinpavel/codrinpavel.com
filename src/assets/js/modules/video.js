@@ -1,15 +1,22 @@
-const videos = document.querySelectorAll("video, iframe");
+const media = document.querySelectorAll("video, iframe");
 
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      const video = entry.target;
+      const el = entry.target;
 
       if (entry.isIntersecting) {
-        if (!video.src) video.src = video.dataset.src;
-        video.play();
+        if (!el.src && el.dataset.src) {
+          el.src = el.dataset.src;
+        }
+
+        if (el instanceof HTMLVideoElement) {
+          el.play();
+        }
       } else {
-        video.pause();
+        if (el instanceof HTMLVideoElement) {
+          el.pause();
+        }
       }
     });
   },
@@ -18,6 +25,6 @@ const observer = new IntersectionObserver(
   }
 );
 
-videos.forEach((video) => {
-  observer.observe(video);
+media.forEach((el) => {
+  observer.observe(el);
 });
