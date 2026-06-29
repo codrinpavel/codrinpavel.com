@@ -1,48 +1,68 @@
 <footer class="site-footer">
   <div class="wrapper">
-
-    <div class="columns items-end type-eyebrow">
-      <div class="columns-6 md:columns-7 order-last md:order-first"></div>
-
-      <div class="columns-10 md:columns-4 --row-gap-zero my-10xl md:my-zero" data-reveal-batch>
-        <h2 class="color-faint" data-reveal>Selected Work</h2>
-
-        <ul class="columns columns-6">
-          {% for item in collections.work | order %}
-            <li data-reveal>
-              <a class="link" href="{{item.url | url}}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{item.data.title}}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="columns-1 ml-auto my-10xl md:my-zero" data-reveal-batch>
-        <ul class="flex flex-col items-end">
-          <li data-reveal>
-            <a class="link" href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </li>
-          <li data-reveal>
-            <a class="link" href="https://github.com/ZeroSpree" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="columns">
-      <div>
-        {% set text = "Collaborations & inquiries:" %}
+    <div class="columns items-end">
+      <div class="md:columns-5 md:ml-auto">
+        {% set text = "Inquiries:" %}
 
         <p class="type-xlarge color-faint flex flex-wrap" data-reveal-batch>
           {%- for char in text.split(' ') -%}
             <span class="overflow-hidden flex">
-              <i data-reveal data-stagger="150">{{ char }}</i>&nbsp;</span>
+              <i data-reveal data-stagger="150">{{ char }}</i>&nbsp;
+            </span>
           {%- endfor -%}
         </p>
 
-        <p class="type-xlarge" data-reveal>
-          <a class="link" href="mailto:hello@codrin.eu">hello@codrin.eu</a>
-        </p>
+        <ul class="mt-10xl">
+          <li data-reveal>
+            <a href="mailto:hello@codrin.eu" target="_blank" rel="noopener noreferrer">
+              <span>Email</span>
+              <span>hello@codrin.eu</span>
+            </a>
+          </li>
+          <li data-reveal>
+            <a href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">
+              <span>LinkedIn</span>
+              <span>Codrin Pavel</span>
+            </a>
+          </li>
+          <li data-reveal>
+            <a href="https://github.com/ZeroSpree" target="_blank" rel="noopener noreferrer">
+              <span>GitHub</span>
+              <span>@zerospree</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="type-huge mt-10xl">
+        codrin/pavel
       </div>
     </div>
   </div>
 </footer>
+
+{#
+<div class="columns items-end type-eyebrow">
+  <div class="columns-10 md:columns-4 --row-gap-zero my-10xl md:my-zero" data-reveal-batch>
+    <h2 class="color-faint" data-reveal>Selected Work</h2>
+
+    <ul class="columns columns-6">
+      {% for item in collections.work | order %}
+        <li data-reveal>
+          <a class="link" href="{{item.url | url}}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{item.data.title}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="columns-1 ml-auto my-10xl md:my-zero" data-reveal-batch>
+    <ul class="flex flex-col items-end">
+      <li data-reveal>
+        <a class="link" href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </li>
+      <li data-reveal>
+        <a class="link" href="https://github.com/ZeroSpree" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </li>
+    </ul>
+  </div>
+</div>
+#}

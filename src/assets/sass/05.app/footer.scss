@@ -1,9 +1,19 @@
 .site-footer {
   .wrapper {
     height: 100svh;
-    padding: var(--size-header-offset) var(--grid-margin) var(--size-4xl);
+    padding: var(--size-header-offset) var(--grid-margin) var(--grid-margin);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  li {
+    border-bottom: 1px solid;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--size-sm) 0;
+    }
   }
 }
