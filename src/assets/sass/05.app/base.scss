@@ -28,11 +28,10 @@ main,
 }
 
 section {
-  padding: var(--size-header-offset) var(--grid-margin) 0;
+  padding: var(--size-header-offset) var(--grid-margin) var(--footer-height);
 
   &.fullscreen {
     height: 100svh;
-    padding-bottom: var(--size-footer-offset);
   }
 }
 

@@ -14,10 +14,7 @@
       {{ content | safe }}
     </main>
 
-    {% if not isHorizontal %}
-      {% include "footer.njk" %}
-    {% endif %}
-
+    {% include "footer.njk" %}
     {% include "_scripts.njk" %}
   </body>
 </html>

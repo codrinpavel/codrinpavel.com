@@ -9,7 +9,8 @@
   --grid-screenwidth: 1940px;
   --column-gap: var(--grid-margin);
   --row-gap: var(--grid-margin);
-  --header-height: 60px;
+  --header-height: 40px;
+  --footer-height: 40px;
   --header-spacing: 0px;
 
   @include mq(md) {
