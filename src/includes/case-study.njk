@@ -2,30 +2,26 @@
 {% set hasArchive = false %}
 
 {% for item in work %}
-  {% if (item.client == title or item.long == title) and item.awards %}
+  {% if (item.client == title or item.long == title) 
+    and item.awards %}
     {% set hasAwards = true %}
   {% endif %}
 {% endfor %}
 
-<div class="columns md:columns-5 lg:columns-2 --row-gap-sm lg:--column-gap-10xl mb-8xl whitespace-nowrap font-bold">
-  <div class="md:columns-7">
-    <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
+<div class="columns --row-gap-8xl mb-10xl">
+  <div class="md:flex md:column-gap-10xl">
+    <div class="flex gap-md mb-sm" data-reveal>
       <h2 class="mb-zero color-faint">Client</h2>
       {{long or title | safe}}
     </div>
-  </div>
 
-  <div>
-    <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
+    <div class="flex gap-md" data-reveal>
       <h2 class="mb-zero color-faint">Period</h2>
       {{period | safe}}
     </div>
   </div>
-</div>
 
-<div class="columns --row-gap-8xl mb-8xl">
-  <div class="md:columns-10 lg:columns-5">
-    <h2 class="color-faint" data-reveal>Overview</h2>
+  <div>
     <h1 class="flex flex-wrap" data-reveal-batch>
       {%- for char in overview.split(' ') -%}
         <span class="overflow-hidden flex">
@@ -35,48 +31,7 @@
     </h1>
   </div>
 
-  <div class="md:columns-7 lg:columns-2 lg:ml-2">
-    <div class="columns columns-6 lg:columns-12 --row-gap-4xl">
-      <div>
-        <h2 class="color-faint" data-reveal>Deliverables</h2>
-        <ul>
-          {% for item in work %}
-            {% if item.client == title or item.long == title %}
-              {% if not item.wayback %}
-                <li data-reveal>
-                  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" data-title="View Live Site">{{- item.project -}}</a>
-                </li>
-              {% else %}
-                <li data-reveal class="color-faint">{{- item.project -}}</li>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-
-      {% if hasAwards %}
-      <div>
-        <h2 class="color-faint" data-reveal>Recognition</h2>
-        <ul>
-          {% for item in work %}
-            {% if item.client == title or item.long == title %}
-              {% for award in item.awards %}
-                <li data-reveal>
-                  <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.title }}">
-                    {{ award.organization }}
-                    {{ award.year | replace('202', "'2") | replace('201', "'1") }}
-                  </a>
-                </li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-    </div>
-  </div>
-
-  <div class="md:columns-5 lg:columns-3">
+  <div class="md:columns-7">
     <h2 class="color-faint" data-reveal>Expertise</h2>
     <ul>
       {% for item in focus %}
@@ -84,4 +39,41 @@
       {% endfor %}
     </ul>
   </div>
+
+  <div class="columns-6 md:columns-3">
+    <h2 class="color-faint" data-reveal>Deliverables</h2>
+    <ul>
+      {% for item in work %}
+        {% if item.client == title or item.long == title %}
+          {% if not item.wayback %}
+            <li data-reveal>
+              <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" data-title="View Live Site">{{- item.project -}}</a>
+            </li>
+          {% else %}
+            <li data-reveal class="color-faint">{{- item.project -}}</li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if hasAwards %}
+  <div class="columns-6 md:columns-2">
+    <h2 class="color-faint" data-reveal>Recognition</h2>
+    <ul>
+      {% for item in work %}
+        {% if item.client == title or item.long == title %}
+          {% for award in item.awards %}
+            <li data-reveal>
+              <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer" data-title="{{ award.title }}">
+                {{ award.organization }}
+                {{ award.year | replace('202', "'2") | replace('201', "'1") }}
+              </a>
+            </li>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 </div>

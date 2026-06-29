@@ -1,22 +1,25 @@
 <footer class="site-footer">
   <div class="wrapper">
-    <div>
-      {% set text = "Available for interface implementation & consulting." %}
 
-      <p class="type-xlarge color-faint flex flex-wrap" data-reveal-batch>
-        {%- for char in text.split(' ') -%}
-          <span class="overflow-hidden flex"><i data-reveal data-stagger="150">{{ char }}</i>&nbsp;</span>
-        {%- endfor -%}
-      </p>
+    <div class="columns">
+      <div>
+        {% set text = "Your next project could be your best one yet." %}
 
-      <p class="type-xlarge" data-reveal>
-        <a class="link" href="mailto:hello@codrin.eu">hello@codrin.eu</a>
-      </p>
+        <p class="type-xlarge color-faint flex flex-wrap" data-reveal-batch>
+          {%- for char in text.split(' ') -%}
+            <span class="overflow-hidden flex">
+              <i data-reveal data-stagger="150">{{ char }}</i>&nbsp;</span>
+          {%- endfor -%}
+        </p>
+
+        <p class="type-xlarge" data-reveal>
+          <a class="link" href="mailto:hello@codrin.eu">hello@codrin.eu</a>
+        </p>
+      </div>
     </div>
 
     <div class="columns items-end type-eyebrow">
-      <div class="columns-6 md:columns-7 order-last md:order-first">
-      </div>
+      <div class="columns-6 md:columns-7 order-last md:order-first"></div>
 
       <div class="columns-10 md:columns-4 --row-gap-zero my-10xl md:my-zero" data-reveal-batch>
         <h2 class="color-faint" data-reveal>Selected Work</h2>

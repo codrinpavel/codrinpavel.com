@@ -8,15 +8,17 @@ order: 0
 
 {% set sortedWork = work | sortByYear %}
 
-<section class="home" id="home">
+<section class="home">
   <div class="wrapper">
     <div class="columns mb-10xl --row-gap-4xl">
       <div class="columns-12 md:columns-7">
         {% set intro = "For more than 15 years, I’ve been an independent frontend partner to agencies, publishers, nonprofits, and enterprise teams, turning creative concepts and complex content into accessible, high-performance websites, reports, and media platforms." %}
 
-        <h1 class="type-large flex flex-wrap" data-reveal-batch>
+        <h1 class="flex flex-wrap" data-reveal-batch>
           {%- for char in intro.split(' ') -%}
-            <span class="overflow-hidden flex"><i data-reveal data-stagger="15">{{ char }}</i>&nbsp;</span>
+            <span class="overflow-hidden flex">
+              <i data-reveal data-stagger="15">{{ char }}</i>&nbsp;
+            </span>
           {%- endfor -%}
         </h1>
       </div>
@@ -26,14 +28,14 @@ order: 0
       </div>
     </div>
 
-    <div class="columns my-10xl --row-gap-5xl">
+    <div class="columns my-10xl --row-gap-8xl">
       <div class="columns-10 md:columns-5 text-md" data-reveal-batch>
         <h2 class="color-faint" data-reveal data-delay="400">Experience</h2>
         {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
 
-        {% set desc2 = "The best projects I’ve been part of had teams that truly care: reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP and United; publishing systems for Axios, The Dodo, PAPER, Discovery and so many others." %}
+        {% set desc2 = "The best projects I’ve been part of had teams that truly care: reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP, United and MyGov.us; publishing systems for Axios, The Dodo, PAPER, Discovery, and so many others." %}
 
-        {% set desc3 = "Across all these projects, I’ve contributed more than code: interpreting client feedback, explaining technical decisions in plain english, reviewing code, onboarding developers, and enabling creatives and teammates do their best work." %}
+        {% set desc3 = "Across all these projects, I’ve contributed more than code: interpreting client feedback, explaining technical decisions in plain english, reviewing code, onboarding and training developers, and enabling creatives and teammates do their best work." %}
 
         <p class="flex flex-wrap type-medium mb-2xl">
         {%- for char in desc1.split(' ') -%}

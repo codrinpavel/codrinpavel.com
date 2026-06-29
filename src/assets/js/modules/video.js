@@ -7,7 +7,7 @@ const observer = new IntersectionObserver(
 
       if (entry.isIntersecting) {
         if (!video.src) video.src = video.dataset.src;
-        video.play().catch(() => {});
+        video.play();
       } else {
         video.pause();
       }

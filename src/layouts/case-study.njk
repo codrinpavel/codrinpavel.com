@@ -2,12 +2,52 @@
 layout: base.njk
 ---
 
-<section class="study" id="study">
+{% set previousPost = collections.work | order | getPreviousCollectionItem %}
+{% set nextPost = collections.work | order | getNextCollectionItem %}
+
+<section class="study">
   <div class="wrapper">
     {% include "case-study.njk" %}
 
     <div class="columns md:--column-gap-2xl md:--row-gap-2xl">
       {{ content | safe }}
     </div>
+
+    <footer class="whitecards">
+      <div class="columns columns-6 md:--column-gap-2xl md:--row-gap-2xl">
+        <div>
+          {% if previousPost %}
+            <a href="{{ previousPost.url }}">
+              <div class="flex items-start justify-between">
+                <p>
+                  <span>{{ previousPost.data.type | safe }}</span>
+                  <span class="block">{{ previousPost.data.title | safe }}</span>
+                </p>
+                <p>{{ previousPost.data.period | safe }}</p>
+              </div>
+              <div class="flex items-center">
+                <p>Previous Project</p>
+              </div>
+            </a>
+          {% endif %}
+        </div>
+        <div>
+          {% if nextPost %}
+            <a class="" href="{{ nextPost.url }}">
+              <div class="flex items-start justify-between">
+                <p>
+                  <span>{{ nextPost.data.type | safe }}</span>
+                  <span class="block">{{ nextPost.data.title | safe }}</span>
+                </p>
+                <p>{{ nextPost.data.period | safe }}</p>
+              </div>
+              <div class="flex items-center justify-end">
+                <p>Next Project</p>
+              </div>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </footer>
   </div>
 </section>
