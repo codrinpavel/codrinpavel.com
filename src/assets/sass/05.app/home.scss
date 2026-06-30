@@ -27,10 +27,6 @@
       }
     }
 
-    span:last-child {
-      text-align: right;
-    }
-
     @include mq(md, max) {
       span:nth-child(2) {
         text-align: right;

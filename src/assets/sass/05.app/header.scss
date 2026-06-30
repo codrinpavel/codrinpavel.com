@@ -19,10 +19,12 @@
     z-index: 10;
     height: 100%;
 
-    li:last-child {
-      display: flex;
-      justify-content: flex-end;
-      text-align: right;
+    @include mq(md) {
+      li:last-child {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+      }
     }
   }
 

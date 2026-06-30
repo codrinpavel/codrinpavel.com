@@ -30,7 +30,26 @@ order: 0
       </div>
     </div>
 
-    <div class="columns --row-gap-8xl">
+    <div class="columns md:columns-5 justify-end my-10xl">
+      {% set i = 0 %}
+
+      {% for page in collections.work %}
+        {% if page.data.title in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
+          {% set i = i + 1 %}
+          <a class="card card--logo" href="{{ page.url | url }}">
+            {%- set svg_url = 'company/' ~ page.data.title | slugify ~ '.svg' -%}
+            <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
+            <h2>{{page.data.type}}</h2>
+
+            <figure data-reveal data-stagger="250">
+              {% svg svg_url, "" %}
+            </figure>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="columns --row-gap-8xl my-10xl">
       <div class="md:columns-5 text-md" data-reveal-batch>
         <h2 class="color-faint" data-reveal data-delay="400">About</h2>
         {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
@@ -91,29 +110,10 @@ order: 0
       </div>
     </div>
 
-    <div class="columns md:columns-6 lg:columns-4 justify-center my-10xl">
-      {% set i = 0 %}
-
-      {% for page in collections.work %}
-        {% if page.data.title in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
-          {% set i = i + 1 %}
-          <a class="card card--logo" href="{{ page.url | url }}">
-            {%- set svg_url = 'company/' ~ page.data.title | slugify ~ '.svg' -%}
-            <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
-            <h2>{{page.data.type}}</h2>
-
-            <figure data-reveal data-stagger="250">
-              {% svg svg_url, "" %}
-            </figure>
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-
     <ul class="home__work" aria-label="Work List">
       <li data-reveal class="columns">
-        <span class="columns-6 md:columns-6 lg:columns-7 border-b-1">Client</span>
-        <span class="columns-6 md:columns-5 lg:columns-3 border-b-1">Website</span>
+        <span class="columns-6 md:columns-7 border-b-1">Client</span>
+        <span class="columns-6 md:columns-3 border-b-1">Website</span>
         <span class="md:columns-1 lg:columns-2 border-b-1">Year</span>
       </li>
 
@@ -123,8 +123,8 @@ order: 0
           {%- if isCaseStudy -%}
             <a href="/work/{{item.client | slugify}}/" class="columns">
           {% endif %}
-            <span class="columns-6 md:columns-6 lg:columns-7">{{item.client}}</span>
-            <span class="columns-6 md:columns-5 lg:columns-3">{{item.project}}</span>
+            <span class="columns-6 md:columns-7">{{item.client}}</span>
+            <span class="columns-6 md:columns-3">{{item.project}}</span>
             <span class="md:columns-1 lg:columns-2">{{item.year}}</span>
           {%- if isCaseStudy -%}
             </a>

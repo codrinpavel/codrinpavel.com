@@ -11,13 +11,15 @@
   --row-gap: var(--grid-margin);
   --header-height: 40px;
   --footer-height: 40px;
-  --header-spacing: 0px;
+  --header-spacing: 40px;
+  --footer-spacing: 40px;
 
   @include mq(md) {
   --grid-margin: 8px;
   --header-height: 30px;
   --footer-height: 30px;
   --header-spacing: 70px;
+  --footer-spacing: 70px;
   }
 
   @each $key, $val in tokens("size") {

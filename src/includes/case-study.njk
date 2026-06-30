@@ -31,8 +31,13 @@
     {%- endfor -%}
   </h1>
 
-  <div class="columns --row-gap-8xl mt-auto">
-    <div class="md:columns-7">
+  <div class="columns columns-6 --row-gap-8xl mt-auto">
+    <div class="md:columns-7 lg:columns-3">
+      <h2 class="color-faint" data-reveal>Type</h2>
+      <p data-reveal>{{type}}</p>
+    </div>
+
+    <div class="md:columns-5 lg:columns-4">
       <h2 class="color-faint" data-reveal>Deliverables</h2>
       <ul>
         {% for item in work %}
@@ -49,7 +54,7 @@
       </ul>
     </div>
 
-    <div class="columns-6 md:columns-3">
+    <div class="md:columns-7 lg:columns-3">
       <h2 class="color-faint" data-reveal>Services</h2>
       <ul>
         {% for item in focus %}
@@ -59,7 +64,7 @@
     </div>
 
     {% if hasAwards %}
-      <div class="columns-6 md:columns-2">
+      <div class="md:columns-5 lg:columns-2">
         <h2 class="color-faint" data-reveal>Recognition</h2>
         <ul>
           {% for item in work %}

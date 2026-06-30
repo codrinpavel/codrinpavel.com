@@ -28,11 +28,11 @@ main,
 }
 
 section {
-  padding: var(--size-header-offset) var(--grid-margin) 0;
+  padding: var(--size-header-offset) var(--grid-margin) calc(var(--footer-spacing));
 
   &.fullscreen {
-    height: 100svh;
-    padding-bottom: var(--footer-height);
+    padding: var(--size-header-offset) var(--grid-margin) 0;
+    height: calc(100svh - var(--footer-height));
   }
 }
 

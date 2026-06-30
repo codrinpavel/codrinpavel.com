@@ -31,13 +31,13 @@
 
   .menu {
     position: fixed;
-    inset: var(--size-header-offset) 0 0 0;
+    inset: var(--header-height) 0 0 0;
     z-index: 1;
 
     font-size: var(--font-size-5xl);
 
     padding: var(--size-4xl) var(--grid-margin);
-    background-color: rgba(255, 255, 255, .9);
+    background-color: white;
 
     display: flex;
     flex-direction: column;
@@ -91,11 +91,9 @@
     a {
       display: block;
       opacity: 0;
-      transform: translateY(-75%);
+      transform: translateY(-110%);
       transition: opacity, transform;
-      transition-delay: 0;
-      will-change: opacity, transform;
-      transition-delay: calc(600ms);
+      transition-delay: calc(0ms);
       transition-duration: 0ms, 0ms;
     }
 
@@ -121,8 +119,8 @@
       }
 
       a {
-        transition-delay: calc(220ms + 80ms * var(--index)), calc(200ms + 80ms * var(--index));
-        transition-duration: 175ms, 200ms;
+        transition-delay: calc(100ms + 80ms * var(--index));
+        transition-duration: 800ms, 300ms;
         transform: translateY(0%);
         opacity: 1;
       }

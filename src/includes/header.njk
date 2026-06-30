@@ -12,10 +12,11 @@
 
 <header class="header">
   <nav class="wrapper header__nav">
-    <ul class="columns columns-4 md:hidden">
-      <li>{{logo|safe}}</li>
-      <li class="flex items-center justify-center color-faint">{{title or client}}</li>
-      <li>
+    <ul class="columns md:hidden">
+      <li class="columns-6">{{logo|safe}}</li>
+      <li class="columns-6 flex items-center justify-between">
+        <span class="color-faint">{{title or client}}</span>
+
         <button class="menu-button type-regular" aria-controls="menu" aria-expanded="false">
           <span><b>Menu</b><b>Close</b></span>
         </button>
