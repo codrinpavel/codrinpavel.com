@@ -34,6 +34,7 @@ export default async function (content) {
           /^is-/,
           /^has-/,
           /^vt-/,
+          /^menu-/,
           /lenis/,
           /data-/,
           /sr-only/,

@@ -70,27 +70,11 @@
     background-position: 0 0;
   }
 
-  .menu-open .header__nav {
-    background-position: 0 100%;
-    background-size: 100% 1px;
-  }
-
-  .menu-open .site-footer::before {
-    background-position: 100% 0;
-    background-size: 100% 1px;
-  }
-
   main {
     opacity: 1;
     filter: blur(0px);
     transform: scale(1);
     transition: all 666ms;
-  }
-
-  .menu-open main {
-    opacity: .1;
-    filter: blur(2px);
-    transform: scale(0.995);
   }
 
   /*animations*/
@@ -117,6 +101,22 @@
 
     &.is-open {
       clip-path: inset(0 0 0 0);
+
+      .header__nav {
+        background-position: 0 100%;
+        background-size: 100% 1px;
+      }
+
+      .site-footer::before {
+        background-position: 100% 0;
+        background-size: 100% 1px;
+      }
+
+      main {
+        opacity: .1;
+        filter: blur(2px);
+        transform: scale(0.995);
+      }
 
       a {
         transition-delay: calc(220ms + 80ms * var(--index)), calc(200ms + 80ms * var(--index));
