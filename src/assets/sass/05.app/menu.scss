@@ -100,7 +100,9 @@
     }
 
     &-open {
-      clip-path: inset(0 0 0 0);
+      .menu {
+        clip-path: inset(0 0 0 0);
+      }
 
       .header__nav {
         background-position: 0 100%;

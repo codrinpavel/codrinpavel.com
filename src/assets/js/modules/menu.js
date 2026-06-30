@@ -1,3 +1,5 @@
+import lenis from "./lenis";
+
 const menuButton = document.querySelector('.menu-button');
 const menu = document.querySelector('.menu');
 
@@ -11,6 +13,7 @@ function openMenu() {
   menuButton.setAttribute('aria-expanded', 'true');
   document.body.classList.add(BODY_CLASS);
 
+  lenis.stop();
   const firstFocusable = menu.querySelector('a');
   firstFocusable?.focus();
 }
@@ -22,6 +25,7 @@ function closeMenu() {
   menuButton.setAttribute('aria-expanded', 'false');
   document.body.classList.remove(BODY_CLASS);
 
+  lenis.start();
   menuButton.focus();
 }
 
