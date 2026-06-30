@@ -29,7 +29,7 @@
     &::after {
       content: '';
       width: 100%;
-      border-top: 1px solid var(--color-border);
+      border-top: 1px solid var(--color-black);
       position: absolute;
       inset: 2em 0 auto;
       transform: scaleX(0%);

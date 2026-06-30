@@ -1,16 +1,13 @@
 .site-footer {
   position: sticky;
   bottom: 0;
-  background-color: white;
   z-index: 9999;
-  padding: var(--grid-margin);
+
+  background-color: white;
   height: var(--footer-height);
+  padding: 0 var(--grid-margin);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  a {
-    padding: var(--size-sm) 0;
-  }
 }

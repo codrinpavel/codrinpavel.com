@@ -33,15 +33,6 @@
 
   <div class="columns --row-gap-8xl mt-auto">
     <div class="md:columns-7">
-      <h2 class="color-faint" data-reveal>Expertise</h2>
-      <ul>
-        {% for item in focus %}
-          <li data-reveal>{{item | safe}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="columns-6 md:columns-3">
       <h2 class="color-faint" data-reveal>Deliverables</h2>
       <ul>
         {% for item in work %}
@@ -54,6 +45,15 @@
               <li data-reveal class="color-faint">{{- item.project -}}</li>
             {% endif %}
           {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="columns-6 md:columns-3">
+      <h2 class="color-faint" data-reveal>Services</h2>
+      <ul>
+        {% for item in focus %}
+          <li data-reveal>{{item | safe}}</li>
         {% endfor %}
       </ul>
     </div>

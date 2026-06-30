@@ -28,10 +28,23 @@ main,
 }
 
 section {
-  padding: var(--size-header-offset) var(--grid-margin) var(--footer-height);
+  padding: var(--size-header-offset) var(--grid-margin) 0;
 
   &.fullscreen {
     height: 100svh;
+    padding-bottom: var(--footer-height);
+  }
+}
+
+.screen {
+  min-height: calc(100svh - var(--size-header-offset) - var(--footer-height));
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--size-10xl);
+
+  &--reveal {
+    min-height: calc(100svh - var(--size-header-offset) - var(--footer-height) - var(--size-10xl) - 10vh);
+    margin-bottom: var(--size-10xl);
   }
 }
 

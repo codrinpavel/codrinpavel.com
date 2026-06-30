@@ -37,7 +37,7 @@
     font-size: var(--font-size-5xl);
 
     padding: var(--size-4xl) var(--grid-margin);
-    background-color: var(--color-white);
+    background-color: rgba(255, 255, 255, .9);
 
     display: flex;
     flex-direction: column;
@@ -49,11 +49,12 @@
 
     &__contact {
       padding-block: var(--size-2xl);
-      border-top: 1px solid var(--color-border);
+      border-top: 1px solid var(--color-black);
     }
   }
 
-  .header__nav {
+  .header__nav,
+  .site-footer::before {
     background-image: linear-gradient(currentColor, currentColor);
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -61,9 +62,35 @@
     transition: background-size 666ms;
   }
 
+  .site-footer::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 100% 0;
+    height: 1px;
+    background-position: 0 0;
+  }
+
   .menu-open .header__nav {
     background-position: 0 100%;
     background-size: 100% 1px;
+  }
+
+  .menu-open .site-footer::before {
+    background-position: 100% 0;
+    background-size: 100% 1px;
+  }
+
+  main {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+    transition: all 666ms;
+  }
+
+  .menu-open main {
+    opacity: .1;
+    filter: blur(2px);
+    transform: scale(0.995);
   }
 
   /*animations*/
@@ -82,10 +109,10 @@
       opacity: 0;
       transform: translateY(-75%);
       transition: opacity, transform;
-      transition-duration: 175ms, 200ms;
       transition-delay: 0;
       will-change: opacity, transform;
       transition-delay: calc(600ms);
+      transition-duration: 0ms, 0ms;
     }
 
     &.is-open {
@@ -93,6 +120,7 @@
 
       a {
         transition-delay: calc(220ms + 80ms * var(--index)), calc(200ms + 80ms * var(--index));
+        transition-duration: 175ms, 200ms;
         transform: translateY(0%);
         opacity: 1;
       }

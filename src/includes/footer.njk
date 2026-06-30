@@ -1,40 +1,19 @@
 <footer class="site-footer">
   <div class="wrapper">
     <div class="columns">
-      <div class="columns-4 md:columns-2 md:ml-auto flex">
-        <a href="https://github.com/codrinpavel" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <div class="md:columns-7 hidden md:flex justify-end items-center color-faint">Inquire</div>
+
+      <div class="columns-6 md:columns-3 flex">
+        <a href="mailto:hello@codrin.eu" class="link" target="_blank" rel="noopener noreferrer">
+          <span class="color-faint md:hidden">Inquire</span>
+          hello@codrin.eu
+        </a>
       </div>
-      <div class="columns-8 md:columns-3 flex justify-between">
-        <a href="mailto:hello@codrin.eu" target="_blank" rel="noopener noreferrer"> <span class="color-faint">Inquiries:</span> hello@codrin.eu</a>
-        <a href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+      <div class="columns-6 md:columns-2 flex justify-between">
+        <a href="https://www.linkedin.com/in/codrin-pavel/" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/codrinpavel" class="link" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </div>
 </footer>
-
-{#
-<div class="columns items-end type-eyebrow">
-  <div class="columns-10 md:columns-4 --row-gap-zero my-10xl md:my-zero" data-reveal-batch>
-    <h2 class="color-faint" data-reveal>Selected Work</h2>
-
-    <ul class="columns columns-6">
-      {% for item in collections.work | order %}
-        <li data-reveal>
-          <a class="link" href="{{item.url | url}}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{item.data.title}}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="columns-1 ml-auto my-10xl md:my-zero" data-reveal-batch>
-    <ul class="flex flex-col items-end">
-      <li data-reveal>
-        <a class="link" href="https://www.linkedin.com/in/codrin-pavel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </li>
-      <li data-reveal>
-        <a class="link" href="https://github.com/codrinpavel" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </li>
-    </ul>
-  </div>
-</div>
-#}

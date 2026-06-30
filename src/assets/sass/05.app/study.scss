@@ -5,16 +5,3 @@
     margin-top: var(--size-2xl);
   }
 }
-
-
-.screen {
-  min-height: calc(100svh - var(--size-header-offset) - var(--grid-margin));
-  display: flex;
-  flex-direction: column;
-  margin-bottom: var(--size-10xl);
-
-  &--reveal {
-    min-height: calc(100svh - var(--size-header-offset) - var(--size-10xl) - 10vh);
-    margin-bottom: var(--size-10xl);
-  }
-}
