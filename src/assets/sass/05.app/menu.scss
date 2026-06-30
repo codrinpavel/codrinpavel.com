@@ -99,7 +99,7 @@
       transition-duration: 0ms, 0ms;
     }
 
-    &.is-open {
+    &-open {
       clip-path: inset(0 0 0 0);
 
       .header__nav {
