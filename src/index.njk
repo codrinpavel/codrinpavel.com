@@ -13,7 +13,7 @@ order: 0
     <div class="screen screen--reveal">
       <div class="columns --row-gap-4xl">
         <div class="columns-12 md:columns-7">
-          {% set intro = "For more than 15 years, I’ve been an independent frontend partner to agencies, publishers, nonprofits, and enterprise teams, turning creative concepts and complex content into accessible, high-performance websites, reports, and media platforms." %}
+          {% set intro = "For more than 15 years, I've partnered with agencies, publishers, and organizations to build accessible, high-performance websites, reports, and media platforms." %}
 
           <h1 class="flex flex-wrap" data-reveal-batch>
             {%- for char in intro.split(' ') -%}
@@ -30,7 +30,7 @@ order: 0
       </div>
     </div>
 
-    <div class="columns md:columns-5 justify-end my-10xl">
+    <div class="columns md:columns-5 justify-end mt-10xl">
       {% set i = 0 %}
 
       {% for page in collections.work %}
@@ -49,14 +49,14 @@ order: 0
       {% endfor %}
     </div>
 
-    <div class="columns --row-gap-8xl my-10xl pt-header-offset">
+    <div class="columns --row-gap-8xl mt-10xl pt-10xl">
       <div class="md:columns-5 text-md" data-reveal-batch>
         <h2 class="color-faint" data-reveal data-delay="400">About</h2>
-        {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
+        {% set desc1 = "I enjoy working closely with strategists and designers, and pride myself on the quality of my work." %}
 
-        {% set desc2 = "The best projects I’ve been part of had teams that truly care: reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP, United and MyGov.us; publishing systems for Axios, The Dodo, PAPER, Discovery, and so many others." %}
+        {% set desc2 = "The best projects I’ve been part of include reporting programs for Dominion Energy, FNIH, Brilliant Earth, AGCO, Tradeweb, and Stanley Black & Decker; enterprise platforms for NRMP, United and MyGov.us; publishing systems for Axios, The Dodo, PAPER, Discovery, and many others." %}
 
-        {% set desc3 = "Across all these projects, I’ve contributed more than code: interpreting client feedback, explaining technical decisions in plain english, reviewing code, onboarding and training developers, and enabling creatives and teammates do their best work." %}
+        {% set desc3 = "I started my career building government software, so attention to detail, accessibility, and performance have shaped the way I approach every project ever since. Development is where I spend most of my time, but not all of it. I've worked closely with clients, collaborated with designers to improve workflows, onboarded teammates, and made sure everyone understood what we were building, in plain English." %}
 
         <p class="flex flex-wrap type-medium mb-2xl">
         {%- for char in desc1.split(' ') -%}
@@ -83,11 +83,11 @@ order: 0
           <li data-reveal>Annual & Sustainability Reports</li>
           <li data-reveal>Corporate Communications</li>
           <li data-reveal>Investor Relations Websites</li>
-          <li data-reveal>Microsites & Campaign Sites</li>
           <li data-reveal>Reporting & Data Visualization</li>
-          <li data-reveal>Bespoke Animations</li>
           <li data-reveal>Accessibility Audits & WCAG Compliance</li>
           <li data-reveal>Performance Optimization</li>
+          <li data-reveal>Microsites & Campaign Sites</li>
+          <li data-reveal>Bespoke Animations</li>
           <li data-reveal>Static Site Architecture</li>
           <li data-reveal>Technical Consulting</li>
         </ul>
@@ -97,21 +97,33 @@ order: 0
         <h2 class="color-faint" data-reveal>Expertise</h2>
         <ul>
           <li data-reveal>Frontend Architecture</li>
-          <li data-reveal>ARIA/Assistive Technology</li>
+          <li data-reveal>ARIA & Assistive Technology</li>
           <li data-reveal>Interactive Storytelling</li>
           <li data-reveal>Performance Engineering</li>
           <li data-reveal>User Experience (UX)</li>
           <li data-reveal>Design Systems</li>
           <li data-reveal>Data Visualization</li>
           <li data-reveal>Enterprise Systems</li>
-          <li data-reveal>11ty & Static Architecture</li>
+          <li data-reveal>Eleventy & Static Architecture</li>
           <li data-reveal>SEO & Structured Data</li>
         </ul>
       </div>
     </div>
 
+    <div class="columns columns-6 --row-gap-8xl mt-10xl pt-10xl">
+      <div class="md:columns-5 ml-auto text-md" data-reveal-batch>
+        {% set archivetext = "Below is a complete archive spanning 87 projects across 17 years—from corporate communications and media to enterprise platforms and interactive experiences." %}
+
+        <p class="flex flex-wrap color-faint">
+        {%- for char in archivetext.split(' ') -%}
+          <span class="overflow-hidden flex"><i data-reveal data-stagger="5">{{ char }}</i>&nbsp;</span>
+        {%- endfor -%}
+        </p>
+      </div>
+    </div>
+
     <div class="archive">
-      <ul aria-label="Work List">
+      <ul aria-label="Work Archive">
         <li data-reveal class="columns">
           <span class="columns-6 md:columns-7 border-b-1">Projects</span>
           <span class="columns-6 md:columns-4 lg:columns-3 border-b-1">Client</span>
