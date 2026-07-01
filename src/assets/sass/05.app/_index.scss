@@ -2,14 +2,17 @@
 
 @layer app {
   @include meta.load-css('base');
+
+  // chrome
   @include meta.load-css('header');
   @include meta.load-css('menu');
-  
+  @include meta.load-css('footer');
+
+  // pages
   @include meta.load-css('home');
-  @include meta.load-css('study');
   @include meta.load-css('awards');
   @include meta.load-css('lab');
 
+  // animations
   @include meta.load-css('reveal');
-  @include meta.load-css('footer');
 }

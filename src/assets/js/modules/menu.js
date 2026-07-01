@@ -30,18 +30,13 @@ function closeMenu() {
 }
 
 function toggleMenu() {
-  menu.classList.contains(MENU_CLASS)
-    ? closeMenu()
-    : openMenu();
+  menu.classList.contains(MENU_CLASS) ? closeMenu() : openMenu();
 }
 
 menuButton.addEventListener('click', toggleMenu);
 
 document.addEventListener('keydown', (event) => {
-  if (
-    event.key === 'Escape' &&
-    menu.classList.contains(MENU_CLASS)
-  ) {
+  if (event.key === 'Escape' && menu.classList.contains(MENU_CLASS)) {
     closeMenu();
   }
 });

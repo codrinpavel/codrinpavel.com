@@ -1,5 +1,5 @@
 (() => {
-  const work = document.querySelector(".home__work");
+  const work = document.querySelector(".archive");
   if (!work) return;
 
   const rows = [...work.querySelectorAll("ul > li")];

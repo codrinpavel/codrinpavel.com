@@ -1,7 +1,5 @@
-.lab {
-  article + article {
-    margin-top: var(--size-10xl);
-    padding-top: var(--size-10xl);
-    border-top: 1px solid var(--color-black);
-  }
+.lab article + article {
+  margin-top: var(--size-10xl);
+  padding-top: var(--size-10xl);
+  border-top: 1px solid var(--color-black);
 }
