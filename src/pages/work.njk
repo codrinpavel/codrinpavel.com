@@ -10,13 +10,13 @@ meta_description: "Explore frontend development projects spanning ESG reports, c
     <div class="columns md:columns-6 lg:columns-4">
 
       {% for page in collections.work | order %}
-        <a href="{{ page.url | url }}" class="card">
+        <a href="{{ page.url | url }}" class="card" data-reveal data-stagger="250">
           {%- set image_url = "case-studies/" ~ page.data.title | slugify ~ "/cover.png" -%}
 
           <div class="card__index">{{ loop.index < 10 and '0' + loop.index or loop.index }}.</div>
           <h2>{{page.data.long or page.data.title}}</h2>
 
-          <figure data-reveal data-stagger="150">
+          <figure>
             {% img image_url, "" %}
           </figure>
         </a>

@@ -36,12 +36,12 @@ order: 0
       {% for page in collections.work %}
         {% if page.data.title in["United Airlines","NRMP","FNIH","AXIOS Media","NYU","Dominion Energy"] %}
           {% set i = i + 1 %}
-          <a class="card card--logo" href="{{ page.url | url }}">
+          <a class="card card--logo" href="{{ page.url | url }}" data-reveal data-stagger="250">
             {%- set svg_url = 'company/' ~ page.data.title | slugify ~ '.svg' -%}
             <div class="card__index">{{ i < 10 and '0' + i or i }}.</div>
             <h2>{{page.data.type}}</h2>
 
-            <figure data-reveal data-stagger="250">
+            <figure >
               {% svg svg_url, "" %}
             </figure>
           </a>
