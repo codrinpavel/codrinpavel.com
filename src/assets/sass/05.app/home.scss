@@ -1,9 +1,9 @@
 @use "../mixins" as *;
 
 .home {
-  img {
-    width: 230px;
-    height: 100%;
+  .screen img {
+    //max-width: 230px;
+    //height: 100%;
 
     filter: grayscale(1);
 
@@ -13,17 +13,50 @@
   }
 
   &__work {
-    font-variation-settings: var(--font-weight-bold);
-
-    a:hover {
-      color: var(--color-faint);
-    }
+    position: relative;
+    line-height: 1.4;
 
     li {
       overflow: hidden;
 
       &:first-child {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        padding-top: var(--size-header-offset);
+        padding-bottom: 1px;
+        background-color: var(--color-white);
         margin-bottom: var(--size-ml);
+      }
+    }
+
+    ul:hover li:not(:first-child):not(:hover) {
+      color: var(--color-faint);
+    }
+
+    a {
+      span:first-child::after {
+        content: "▪";
+        color: var(--color-faint);
+        margin-left: auto;
+      }
+
+      &:hover span:first-child::after {
+        content: "→";
+        color: var(--color-black);
+      }
+    }
+
+    @include mq(md) {
+      span:last-child {
+        text-align: right;
+      }
+    }
+
+    @include mq(md) {
+      span:last-child {
+        text-align: left;
       }
     }
 

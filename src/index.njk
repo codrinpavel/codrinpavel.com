@@ -24,7 +24,7 @@ order: 0
           </h1>
         </div>
 
-        <div class="columns-6 md:columns-5 lg:columns-2" data-reveal="clipy">
+        <div class="columns-6 md:columns-3 lg:columns-2" data-reveal="clipy">
           {% img "portrait-tall-optimized.jpg", "", "", "eager" %}
         </div>
       </div>
@@ -49,7 +49,7 @@ order: 0
       {% endfor %}
     </div>
 
-    <div class="columns --row-gap-8xl my-10xl">
+    <div class="columns --row-gap-8xl my-10xl pt-header-offset">
       <div class="md:columns-5 text-md" data-reveal-batch>
         <h2 class="color-faint" data-reveal data-delay="400">About</h2>
         {% set desc1 = "I love staying close to the process and take great pride in the quality of my work." %}
@@ -110,27 +110,31 @@ order: 0
       </div>
     </div>
 
-    <ul class="home__work" aria-label="Work List">
-      <li data-reveal class="columns">
-        <span class="columns-6 md:columns-7 border-b-1">Client</span>
-        <span class="columns-6 md:columns-3 border-b-1">Website</span>
-        <span class="md:columns-1 lg:columns-2 border-b-1">Year</span>
-      </li>
-
-      {%- for item in work -%}
-        {% set isCaseStudy = collections.work | hasCaseStudy(item.client) %}
-        <li data-reveal data-stagger="25" {% if not isCaseStudy %}class="columns"{% endif %}>
-          {%- if isCaseStudy -%}
-            <a href="/work/{{item.client | slugify}}/" class="columns">
-          {% endif %}
-            <span class="columns-6 md:columns-7">{{item.client}}</span>
-            <span class="columns-6 md:columns-3">{{item.project}}</span>
-            <span class="md:columns-1 lg:columns-2">{{item.year}}</span>
-          {%- if isCaseStudy -%}
-            </a>
-          {% endif %}
+    <div class="home__work">
+      <ul aria-label="Work List">
+        <li data-reveal class="columns">
+          <span class="columns-6 md:columns-7 border-b-1">Projects</span>
+          <span class="columns-6 md:columns-4 lg:columns-3 border-b-1">Client</span>
+          <span class="md:columns-1 lg:columns-2 border-b-1">Years</span>
         </li>
-      {%- endfor -%}
-    </ul>
+
+        {%- for item in work -%}
+          {% set isCaseStudy = collections.work | hasCaseStudy(item.client) %}
+          <li data-reveal data-stagger="25" {% if not isCaseStudy %}class="columns"{% endif %} style="--i: {{ loop.index }}">
+            {%- if isCaseStudy -%}
+              <a href="/work/{{item.client | slugify}}/" class="columns">
+                <span class="columns-6 md:columns-7 flex gap-sm">{{item.project}}</span>
+                <span class="columns-6 md:columns-4 lg:columns-3" data-client="{{item.long or item.client}}">{{item.client}}</span>
+                <span class="md:columns-1 lg:columns-2">{{item.year}}</span>
+              </a>
+            {% else %}
+              <span class="columns-6 md:columns-7">{{item.project}}</span>
+              <span class="columns-6 md:columns-4 lg:columns-3" data-client="{{item.long or item.client}}">{{item.client}}</span>
+              <span class="md:columns-1 lg:columns-2">{{item.year}}</span>
+            {% endif %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
   </div>
 </section>

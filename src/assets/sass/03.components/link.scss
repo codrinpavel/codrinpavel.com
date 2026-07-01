@@ -13,7 +13,7 @@
   }
 }
 
-a[data-title] {
+[data-title] {
   display: block;
   position: relative;
   overflow: hidden;
@@ -38,3 +38,11 @@ a[data-title] {
     }
   }
 }
+
+
+  a:hover > [data-title],
+  a:focus-visible > [data-title]{
+    &::before {
+      translate: 0%;
+    }
+  }

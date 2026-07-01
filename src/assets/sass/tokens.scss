@@ -16,12 +16,11 @@ $tokens: (
     ),
 
     default: (
-      "white": white,
-      "black":  black,
-      "white-text": hsl(274, 6%, 76%),
+      "white": hsl(0, 0%, 100%),
+      "black":  hsl(0, 0%, 0%),
       "balance-text": #333935,
       "faint": hsl(0deg 0% 65%),
-      "gray-light": hsl(0, 0%, 93%),
+      "gray": hsl(0, 0%, 93%),
     ),
 
     theme: (
@@ -53,14 +52,12 @@ $tokens: (
     //extralight: "'wght' 200",
     //light: "'wght' 300",
     //normal: "'wght' 400",
-    //medium: "'wght' 500",
+    medium: "'wght' 500",
     //semibold: "'wght' 550",
-    //bold: "'wght' 650",
+    bold: "'wght' 650",
     //extrabold: "'wght' 800",
     //black: "'wght' 900",
     //extrablack: "'wght' 950",
-    regular: "'wght' 650",
-    bold: "'wght' 650",
   ),
 
   radius: (

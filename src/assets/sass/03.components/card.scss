@@ -4,7 +4,7 @@
   position: relative;
   z-index: 2;
 
-  background: var(--color-gray-light);
+  background: var(--color-gray);
   clip-path: inset(1px 0);
 
   @media (hover: hover) and (pointer: fine) {
@@ -55,14 +55,13 @@
     position: sticky;
     top: 50svh;
     margin-block: -1.3em;
-    font-variation-settings: var(--font-weight-bold);
   }
 
   h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--color-gray-light);
+    background-color: var(--color-gray);
   }
 
   &.card--logo {

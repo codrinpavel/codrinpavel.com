@@ -569,7 +569,7 @@ export default function () {
     {
       year: 2018,
       client: "Ideas On Purpose",
-      project: "Agency website",
+      project: "Creative Agency website",
       tags: ["award"],
       url: "https://www.ideasonpurpose.com",
       awards: [
@@ -670,7 +670,7 @@ export default function () {
       wayback: "20180326213621"
     },
     {
-      year: 2017,
+      year: 2016,
       client: "United Airlines",
       project: "Social Hub",
       tags: ["fortune", "media"],
@@ -680,7 +680,7 @@ export default function () {
     {
       year: 2017,
       client: "The Dodo",
-      project: "Animal media website",
+      project: "Pet Lifestyle",
       tags: ["featured", "media"],
       url: "https://www.thedodo.com",
       wayback: "20180228182750"
@@ -859,7 +859,7 @@ export default function () {
     {
       year: 2012,
       client: "Benevol",
-      project: "Nonprofit website",
+      project: "Nonprofit Organization",
       tags: ["nonprofit", "independent"],
       url: "https://www.benevol.ro",
       wayback: "20150201141440"
@@ -867,7 +867,7 @@ export default function () {
     {
       year: 2010,
       client: "Domus Caritatis",
-      project: "Nonprofit website",
+      project: "Nonprofit Organization",
       url: "https://domuscaritatis.ro",
       tags: ["nonprofit", "independent"],
       wayback: "20120112043727",
@@ -908,7 +908,7 @@ export default function () {
     {
       year: 2010,
       client: "Blossom et Partenaires",
-      project: "Consultancy agency website",
+      project: "Consultancy Agency website",
       tags: ["independent"],
       url: "https://blossom-partenaires.ch/fr",
       inactive: true
@@ -925,7 +925,7 @@ export default function () {
     {
       year: 2009,
       client: "Avocatul dvs",
-      project: "Law Firm Website",
+      project: "Law firm Website",
       tags: ["independent"],
       url: "http://avocatuldumneavoastra.ro",
       inactive: true,

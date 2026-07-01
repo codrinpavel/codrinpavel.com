@@ -7,7 +7,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-variation-settings: var(--font-weight-bold);
 
     span {
       height: 1.1em;
@@ -37,7 +36,7 @@
     font-size: var(--font-size-5xl);
 
     padding: var(--size-4xl) var(--grid-margin);
-    background-color: white;
+    background-color: var(--color-white);
 
     display: flex;
     flex-direction: column;
