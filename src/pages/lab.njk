@@ -1,101 +1,97 @@
 ---
 layout: base.njk
 title: "Lab"
-order: 6
+order: 5
 meta_description: "Explore creative frontend experiments, open source projects, CSS art, design systems, and browser-based tools built to push the limits of modern web development."
 ---
 
 <section class="lab">
   {% for item in lab %}
-  <article class="wrapper">
-    <div class="columns lg:columns-2 --row-gap-sm lg:--column-gap-10xl mb-8xl whitespace-nowrap font-bold">
-      <div class="md:columns-3">
+    <article class="wrapper">
+      <div class="columns lg:columns-2 --row-gap-sm mb-8xl whitespace-nowrap font-bold">
         <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
           <h2 class="mb-zero color-faint">Project</h2>
           {{item.title}}
         </div>
-      </div>
 
-      <div class="md:columns-4">
         <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
           <h2 class="mb-zero color-faint">Period</h2>
           {{item.period | safe}}
         </div>
-      </div>
 
-      {% if item.extra %}
-        {% for key, value in item.extra %}
-          <div class="md:columns-3">
+        {% if item.extra %}
+          {% for key, value in item.extra %}
             <div class="flex items-center justify-between gap-md md:justify-start" data-reveal>
               <h2 class="mb-zero color-faint">{{ key }}</h2>
               {{ value }}
             </div>
-          </div>
-        {% endfor %}
-      {% endif %}
-    </div>
-
-    <div class="columns --row-gap-8xl">
-      <div class="md:columns-10 lg:columns-5">
-        <h2 class="color-faint" data-reveal>Overview</h2>
-
-        <h1 class="type-medium flex flex-wrap" data-reveal-batch>
-          {%- for char in item.overview.split(' ') -%}
-            <span class="overflow-hidden flex">
-              <i data-reveal data-stagger="15">{{ char | safe}}</i>&nbsp;
-            </span>
-          {%- endfor -%}
-        </h1>
-
-        {% if item.thumb %}
-        <figure data-reveal>
-          {% img item.thumb, "", "mt-6xl" %}
-        </figure>
-        {% endif %}
-
-        {% if item.figure %}
-        <figure data-reveal class="mt-6xl">
-          {{ item.figure | safe }}
-
-          {% if item.caption %}
-          <figcaption class="mt-sm" data-reveal>
-            <p>{{item.caption | safe}}</p>
-          </figcaption>
-          {% endif %}
-        </figure>
+          {% endfor %}
         {% endif %}
       </div>
 
-      <div class="md:columns-7 lg:columns-2 lg:ml-2">
-        <div class="columns columns-6 lg:columns-12 --row-gap-4xl">
-          {% if item.meta %}
-            {% for key, value in item.meta %}
-            <div>
-              <h2 class="color-faint" data-reveal>{{ key }}</h2>
+      <div class="columns --row-gap-8xl">
+        <div class="md:columns-10 lg:columns-5">
+          <h2 class="color-faint" data-reveal>Overview</h2>
 
-              <ul>
-                {% for thing in value %}
-                  <li data-reveal>{{ thing | safe}}</li>
-                {% endfor %}
-              </ul>
-            </div>
-            {% endfor %}
+          <h1 class="type-medium flex flex-wrap" data-reveal-batch>
+            {%- for char in item.overview.split(' ') -%}
+              <span class="overflow-hidden flex">
+                <i data-reveal data-stagger="15">{{ char | safe}}</i>&nbsp;
+            </span>
+            {%- endfor -%}
+          </h1>
+
+          {% if item.thumb %}
+            <figure data-reveal>
+              {% img item.thumb,
+              "",
+              "mt-6xl" %}
+            </figure>
+          {% endif %}
+
+          {% if item.figure %}
+            <figure data-reveal class="mt-6xl">
+              {{ item.figure | safe }}
+
+              {% if item.caption %}
+                <figcaption class="mt-sm" data-reveal>
+                  <p>{{item.caption | safe}}</p>
+                </figcaption>
+              {% endif %}
+            </figure>
           {% endif %}
         </div>
-      </div>
 
-      {% if item.features %}
-      <div class="md:columns-5 lg:columns-3">
-        <h2 class="color-faint" data-reveal>Features</h2>
-        <ul>
-          {% for feature in item.features %}
-          <li data-reveal>{{feature}}</li>
-          {% endfor %}
-        </ul>
+        <div class="md:columns-7 lg:columns-2 lg:ml-2">
+          <div class="columns columns-6 lg:columns-12 --row-gap-4xl">
+            {% if item.meta %}
+              {% for key, value in item.meta %}
+                <div>
+                  <h2 class="color-faint" data-reveal>{{ key }}</h2>
+
+                  <ul>
+                    {% for thing in value %}
+                      <li data-reveal>{{ thing | safe}}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+        {% if item.features %}
+          <div class="md:columns-5 lg:columns-3">
+            <h2 class="color-faint" data-reveal>Features</h2>
+            <ul>
+              {% for feature in item.features %}
+                <li data-reveal>{{feature}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
       </div>
-      {% endif %}
-    </div>
-  </article>
+    </article>
   {% endfor %}
 </section>
 

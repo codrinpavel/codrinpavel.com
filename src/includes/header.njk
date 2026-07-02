@@ -22,10 +22,10 @@
     </ul>
 
     <ul class="columns md:columns-1 items-center hidden md:flex">
-      <li class="mr-auto">{{logo|safe}}</li>
+      <li>{{logo|safe}}</li>
 
       {% for item in collections.nav | order %}
-        <li {% if loop.first %}class="md:columns-1"{%endif%}>
+        <li {% if loop.first %}class="md:ml-1 md:mr-auto"{%endif%}>
           <a class="link {% if page.url.indexOf(item.url) == 0 %}color-faint{% endif %}" {% if page.url == item.url %} aria-current="page"{% endif %} href="{{item.url | url}}">{{item.data.title}}</a>
         </li>
       {% endfor %}
